@@ -1,0 +1,68 @@
+import { Language, translations } from '../translations';
+import { Footer } from './Footer';
+import { ProjectCard } from './ProjectCard';
+import { Button } from './ui/button';
+import { ArrowLeft } from 'lucide-react';
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  tags: string[];
+  year: string;
+  role: string;
+}
+
+interface ProjectsPageProps {
+  onBack: () => void;
+  language: Language;
+  onProjectClick?: (projectId: string) => void;
+  projects: Project[];
+  onProjectsClick?: () => void;
+  onProcessesClick?: () => void;
+  onAboutClick?: () => void;
+}
+
+export function ProjectsPage({ onBack, language, onProjectClick, projects, onProjectsClick, onProcessesClick, onAboutClick }: ProjectsPageProps) {
+  const t = translations[language];
+
+  return (
+    <div className="min-h-screen bg-background pt-24">
+      {/* Back Button */}
+      <div className="container mx-auto max-w-6xl px-6 mb-8">
+        <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
+          <ArrowLeft className="w-4 h-4" />
+          {t.projects.backToHome}
+        </Button>
+      </div>
+
+      <section className="px-6 pb-20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex items-end justify-between mb-16">
+            <div>
+              <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">{t.home.featuredWorkLabel}</p>
+              <h2 className="text-5xl">{t.home.featuredWorkTitle}</h2>
+              <p className="text-muted-foreground mt-3">{t.home.featuredWorkDescription}</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <div key={project.id} style={{ animationDelay: `${index * 100}ms` }} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <ProjectCard {...project} onClick={() => onProjectClick?.(project.id)} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer 
+        language={language}
+        onHomeClick={onBack}
+        onProjectsClick={onProjectsClick}
+        onProcessesClick={onProcessesClick}
+        onAboutClick={onAboutClick}
+      />
+    </div>
+  );
+}

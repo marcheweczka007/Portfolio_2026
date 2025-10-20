@@ -1,0 +1,278 @@
+import { Button } from './ui/button';
+import { ArrowLeft, Calendar, User, Target, Search, Lightbulb, Palette, Rocket, Mail, ArrowRight } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Language, translations } from '../translations';
+import {
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from './ui/breadcrumb';
+
+interface ProjectDetailProps {
+  project: {
+    id: string;
+    title: string;
+    description: string;
+    imageUrl: string;
+    tags: string[];
+    year: string;
+    role: string;
+    client?: string;
+    duration?: string;
+    overview: string;
+    challenge: string;
+    solution: string;
+    discovery: string;
+    exploration: string;
+    design: string;
+    shipping: string;
+    results: string[];
+    images: string[];
+  };
+  onBack: () => void;
+  language: Language;
+  fromProjectsPage?: boolean;
+  onNavigateToProjects?: () => void;
+}
+
+export function ProjectDetail({ project, onBack, language, fromProjectsPage, onNavigateToProjects }: ProjectDetailProps) {
+  const t = translations[language].projects;
+  const phases = [
+    {
+      icon: Search,
+      title: "Discovery",
+      description: project.discovery,
+      color: "from-blue-500/10 to-blue-500/5"
+    },
+    {
+      icon: Lightbulb,
+      title: "Exploration",
+      description: project.exploration,
+      color: "from-amber-500/10 to-amber-500/5"
+    },
+    {
+      icon: Palette,
+      title: "Design",
+      description: project.design,
+      color: "from-purple-500/10 to-purple-500/5"
+    },
+    {
+      icon: Rocket,
+      title: "Shipping",
+      description: project.shipping,
+      color: "from-green-500/10 to-green-500/5"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background pt-24">
+      {/* Breadcrumb and Back Button */}
+      <div className="container mx-auto max-w-6xl px-6 mb-8">
+        {fromProjectsPage && onNavigateToProjects && (
+          <Breadcrumb className="mb-4">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink 
+                  onClick={onNavigateToProjects}
+                  className="cursor-pointer"
+                >
+                  {t.projects}
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{project.title}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        )}
+        <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
+          <ArrowLeft className="w-4 h-4" />
+          {fromProjectsPage ? t.backToProjects : t.backToHome}
+        </Button>
+      </div>
+
+      {/* Hero Section */}
+      <section className="container mx-auto max-w-6xl px-6 mb-20">
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="px-4 py-1.5 bg-accent border border-border rounded-full text-sm"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <h1 className="text-6xl mb-6 max-w-3xl leading-tight">{project.title}</h1>
+        <p className="text-xl text-muted-foreground max-w-2xl mb-12">{project.description}</p>
+        
+        {/* Project Meta */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div>
+            <div className="flex items-center gap-2 text-muted-foreground mb-2">
+              <Calendar className="w-4 h-4" />
+              <span className="text-sm">Year</span>
+            </div>
+            <p>{project.year}</p>
+          </div>
+          <div>
+            <div className="flex items-center gap-2 text-muted-foreground mb-2">
+              <User className="w-4 h-4" />
+              <span className="text-sm">Role</span>
+            </div>
+            <p>{project.role}</p>
+          </div>
+          {project.client && (
+            <div>
+              <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                <Target className="w-4 h-4" />
+                <span className="text-sm">Client</span>
+              </div>
+              <p>{project.client}</p>
+            </div>
+          )}
+          {project.duration && (
+            <div>
+              <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                <Target className="w-4 h-4" />
+                <span className="text-sm">Duration</span>
+              </div>
+              <p>{project.duration}</p>
+            </div>
+          )}
+        </div>
+
+        {/* Hero Image */}
+        <div className="rounded-2xl overflow-hidden bg-muted aspect-video">
+          <ImageWithFallback
+            src={project.imageUrl}
+            alt={project.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Project Content */}
+      <section className="container mx-auto max-w-4xl px-6 mb-20">
+        {/* Overview */}
+        <div className="mb-20">
+          <h2 className="text-3xl mb-6">Overview</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {project.overview}
+          </p>
+        </div>
+
+        {/* Challenge */}
+        <div className="mb-20 p-8 rounded-2xl bg-accent/30 border-l-4 border-primary">
+          <h2 className="text-3xl mb-6">The Challenge</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {project.challenge}
+          </p>
+        </div>
+
+        {/* Solution */}
+        <div className="mb-20">
+          <h2 className="text-3xl mb-6">The Solution</h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            {project.solution}
+          </p>
+        </div>
+      </section>
+
+      {/* Process Phases */}
+      <section className="container mx-auto max-w-6xl px-6 mb-20">
+        <div className="text-center mb-16">
+          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">Process</p>
+          <h2 className="text-4xl mb-4">How We Got There</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            A structured approach to solving complex design challenges through research, ideation, refinement, and delivery.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {phases.map((phase, index) => {
+            const Icon = phase.icon;
+            return (
+              <div 
+                key={phase.title}
+                className={`group relative p-8 rounded-2xl bg-gradient-to-br ${phase.color} border border-border hover:border-border/60 transition-all duration-300`}
+              >
+                <div className="absolute top-6 right-6 text-6xl font-mono opacity-[0.05] select-none">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl">{phase.title}</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  {phase.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Project Images */}
+      <section className="container mx-auto max-w-6xl px-6 mb-20">
+        <h2 className="text-3xl mb-8">Visual Showcase</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {project.images.map((image, index) => (
+            <div key={index} className="rounded-xl overflow-hidden bg-muted aspect-[4/3]">
+              <ImageWithFallback
+                src={image}
+                alt={`${project.title} - Image ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Results */}
+      <section className="container mx-auto max-w-4xl px-6 mb-20">
+        <h2 className="text-3xl mb-8">Results & Impact</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {project.results.map((result, index) => (
+            <div key={index} className="p-6 rounded-xl bg-accent/30 border border-border">
+              <div className="text-4xl mb-3">{index + 1}</div>
+              <p className="text-muted-foreground leading-relaxed">{result}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="container mx-auto max-w-4xl px-6 py-20 mb-20">
+        <div className="relative p-12 rounded-2xl overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80" />
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
+          </div>
+          <div className="relative z-10 text-center">
+            <h2 className="text-4xl mb-4 text-primary-foreground">Interested in working together?</h2>
+            <p className="text-lg text-primary-foreground/80 mb-8">
+              Let's discuss your project and how I can help bring your vision to life.
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="gap-2">
+                <Mail className="w-5 h-5" />
+                Get in Touch
+              </Button>
+              <Button size="lg" variant="outline" className="gap-2 bg-transparent text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                View More Projects <ArrowRight className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
