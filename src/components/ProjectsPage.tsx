@@ -1,3 +1,4 @@
+import React from 'react';
 import { Language, translations } from '../translations';
 import { Footer } from './Footer';
 import { ProjectCard } from './ProjectCard';

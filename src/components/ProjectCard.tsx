@@ -1,3 +1,4 @@
+import React from 'react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ArrowUpRight } from 'lucide-react';
 

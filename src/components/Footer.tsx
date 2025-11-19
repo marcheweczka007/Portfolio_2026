@@ -14,7 +14,7 @@ export function Footer({ language, onHomeClick, onProjectsClick, onProcessesClic
 
   return (
     <footer className="py-12 px-6 border-t border-border">
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-8xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <nav className="flex gap-8">
             {onHomeClick && (

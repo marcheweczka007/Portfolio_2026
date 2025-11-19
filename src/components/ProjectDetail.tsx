@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from './ui/button';
 import { ArrowLeft, Calendar, User, Target, Search, Lightbulb, Palette, Rocket, Mail, ArrowRight } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';

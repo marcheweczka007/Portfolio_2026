@@ -35,7 +35,7 @@ export default function App() {
   const [selectedProjectId, setSelectedProjectId] = useState<
     string | null
   >(null);
-  const [language, setLanguage] = useState<Language>("en");
+  const language: Language = "en";
   const [previousView, setPreviousView] = useState<
     "home" | "projects"
   >("home");
@@ -81,21 +81,21 @@ export default function App() {
       ],
     },
     {
-      id: "dashboard-interface",
-      title: "Dashboard Interface",
+      id: "Component Library",
+      title: "Evolving the Component Library",
       description:
-        "Creating an intuitive analytics platform for data-driven decision making.",
+        "A story about joining a team with an existing design system and discovering the challenges of maintaining alignment between designers and developers. Through this experience, I learned that true consistency comes from collaboration, communication, and shared ownership.",
       imageUrl:
         "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMHV4JTIwaW50ZXJmYWNlfGVufDF8fHx8MTc2MDEyNjE5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["Web", "SaaS", "Analytics"],
-      year: "2024",
+      tags: ["Design Library", "SaaS", "White Labelling"],
+      year: "2024-2025",
       role: "Product Designer",
-      client: "DataViz Pro",
-      duration: "6 months",
+      client: "Internal Project",
+      duration: "4 months",
       overview:
-        "DataViz Pro needed a complete overhaul of their analytics dashboard to compete with modern BI tools. Their existing platform was functional but dated, making it difficult for non-technical users to extract insights from their data.",
+        "When I joined Ascent, I was introduced to our existing component library - which already included a wide range of components. However, many were inconsistent, outdated, or “broken”. I was advised to create new components if I designed improved versions, rather than editing the existing ones. This approach made sense to me, especially after coming from my previous company, where no official design system existed. In that role, I noticed major inconsistencies across projects and took the initiative to create reusable components to bridge that gap. I aimed to bring visual and functional consistency to the product, even without formal guidance or a structured system.",
       challenge:
-        "The main challenge was balancing power-user features with accessibility for beginners. The platform needed to handle complex data visualizations while remaining approachable. Users reported feeling overwhelmed by the sheer number of customization options and struggled to create meaningful reports.",
+        "A few months later, a large bank client requested a custom loan application flow. The project became a turning point — it led to the decision to develop white-labelling capabilities so that the same flow could be adapted for multiple clients.Working closely with a developer, I conducted a page-by-page audit to align design and code. During this process, I discovered a critical issue:Our Figma components and the developers’ code library were based on different versions of Material UI.This mismatch explained the frequent misalignments we had been seeing in design reviews and build outputs. At the same time, our internal design review process was overly rigid and pixel-perfect–focused. Instead of collaborative UI reviews to ensure usability and alignment, the reviews became detailed inspections of spacing, layer naming, and colour application. This slowed down progress and discouraged iteration.",
       solution:
         "I designed a modular dashboard system with pre-built templates and drag-and-drop functionality. The new interface features intelligent defaults, contextual help, and a progressive learning curve that reveals advanced features as users become more comfortable. We introduced data storytelling capabilities and collaborative features that transformed how teams work with data.",
       discovery:
@@ -311,10 +311,6 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleLanguageChange = (lang: Language) => {
-    setLanguage(lang);
-  };
-
   const selectedProject = projects.find(
     (p) => p.id === selectedProjectId,
   );
@@ -328,7 +324,6 @@ export default function App() {
         onAboutClick={handleViewAbout}
         language={language}
         currentView={currentView}
-        onLanguageChange={handleLanguageChange}
       />
 
       {currentView === "home" && (

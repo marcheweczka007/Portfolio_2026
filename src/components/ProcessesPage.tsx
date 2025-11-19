@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { ArrowLeft, ArrowRight, Check, X } from 'lucide-react';
@@ -14,15 +14,15 @@ interface ProcessesPageProps {
 }
 
 const sections = [
-  { id: 'design-systems', label: 'Design Systems' },
-  { id: 'design-methods', label: 'Design Methods' },
-  { id: 'software', label: 'Software Tools' },
-  { id: 'dev-handoff', label: 'Dev Handoff' }
+  { id: 'prototyping', label: 'Lean prototyping in code' },
+  { id: 'component-first', label: 'Component-first thinking' },
+  { id: 'feedback-loop', label: 'Design → Code feedback loop' },
+  { id: 'small-team', label: 'Making small teams faster' }
 ];
 
 export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesClick, onAboutClick }: ProcessesPageProps) {
   const t = translations[language].processes;
-  const [activeSection, setActiveSection] = useState('design-systems');
+  const [activeSection, setActiveSection] = useState('prototyping');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -101,42 +101,43 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
       </div>
 
       <div className="container mx-auto max-w-6xl px-6">
-        {/* Design Systems Section */}
-        <section id="design-systems" className="scroll-mt-32 mb-24">
+        {/* Lean Prototyping in code */}
+        <section id="prototyping" className="scroll-mt-32 mb-24">
           <div className="mb-12">
-            <h2 className="mb-3">Design systems: build or buy?</h2>
+            <h2 className="mb-3">Lean prototyping in code</h2>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              I believe that building from scratch is a poor choice for start-ups, that's doing more harm than building the actual product. The most important thing for a VC-funded start-up is product-market-fit and traction.
+              Section about the lean prototyping.
+              Add here why you think lean prototyping is best approach for a start-up and how you use it at work or in your experiments.
             </p>
           </div>
 
-          {/* The Reality */}
+          {/* Lean prototyping - more info */}
           <div className="mb-12">
-            <h3 className="mb-4">The reality</h3>
+            <h3 className="mb-4">More information about the lean prototyping.</h3>
             <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-              At my current role here, I'm seeing Team leads using a 3rd party. What went wrong with the Design System built in-house? I would say everything. Time and money wasted on building a library instead of moving fast and making actual value.
+              Tell us how you are applying the lean prototyping in your work or projects.
             </p>
 
             <div className="grid lg:grid-cols-2 gap-6">
-              {/* Build in-house (Library) */}
-              <Card className="border-destructive/30 bg-destructive/5">
+              {/* Benefits of lean prototyping */}
+              <Card className="bg-muted/50">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <X className="w-5 h-5 text-destructive" />
-                    Build in-house (Library)
+                    <Check className="w-6 h-6 " />
+                    Benefits of lean prototyping
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {[
-                      "Designers are building components",
-                      "Devs are building components",
-                      "Harder token management",
-                      "Great for older startups (raise of funds)",
-                      "Slower to deploy (as we need to design + build component + documentation)"
+                      "Validate ideas fast",
+                      "You cut down on endless design cycles",
+                      "Engineers love it — it removes ambiguity",
+                      "It reveals technical constraints early",
+                      "Users give better feedback on real interactions"
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <X className="w-4 h-4 text-destructive mt-0.5 flex-shrink-0" />
+                        <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <span className="text-muted-foreground text-sm">{item}</span>
                       </li>
                     ))}
@@ -144,14 +145,14 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                 </CardContent>
               </Card>
 
-              {/* Why is not working */}
+              {/* Why is working well */}
               <Card className="bg-muted/50">
                 <CardHeader>
-                  <CardTitle>Why is not working?</CardTitle>
+                  <CardTitle>Why this approach works well?</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed text-sm">
-                    You have it, it only looks nice — it's right way to prototype/design, which doesn't align with the actual dev-made one. You don't move in the same pace as the team, things will get out of sync as a Designer you could be making <span className="italic">otter things</span>.
+                  Lean prototyping works well because it lets teams test ideas quickly without wasting time on perfect designs. You build something simple, real, and interactive so you can learn fast, get clear feedback, and spot technical issues early. This keeps everyone aligned, reduces back-and-forth, and helps a small team move forward with  <span className="italic">confidence and speed</span>.
                   </p>
                 </CardContent>
               </Card>
@@ -238,40 +239,40 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
           </Card>
         </section>
 
-        {/* Design Methods Section */}
-        <section id="design-methods" className="scroll-mt-32 mb-24">
-          <h2 className="mb-12">Design Methods</h2>
+        {/* Component First Thinking */}
+        <section id="component-first" className="scroll-mt-32 mb-24">
+          <h2 className="mb-12">Component first thinking</h2>
 
-          {/* About UX */}
+          {/* Reasuable pieces */}
           <div className="mb-12">
-            <h3 className="mb-4">About UX</h3>
+            <h3 className="mb-4">Build reusable pieces for your UI</h3>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              Users talk is an agile approach to designing focused, we understand input, good research, and iteration. I'd like to position the development process of a design product as a single day fast-paced flow, making it easier to build up require context.
+              Tools like story book are amazing for applying this approach, it keeps the components and their interactions all in one place. This way design and developers have a plce witha  single source of truth. 
             </p>
           </div>
 
-          {/* Better UX Flow */}
+          {/* Components life cycle */}
           <div className="mb-8">
-            <h3 className="mb-8">Better UX Process</h3>
+            {/* <h3 className="mb-8">Component life cycle</h3> */}
             <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
               <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="font-medium mb-2">Define</p>
-                  <p className="text-sm text-primary-foreground/80">Set your mission</p>
+                  <p className="text-lg mb-2">Identify</p>
+                  <p className="text-md text-primary-foreground/80">Look for repetition and patterns</p>
                 </CardContent>
               </Card>
               <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90 md:rotate-0 flex-shrink-0" />
               <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="font-medium mb-2">Design (low-fid)</p>
-                  <p className="text-sm text-primary-foreground/80">Mock up your idea</p>
+                  <p className="text-lg mb-2">Build</p>
+                  <p className="text-md text-primary-foreground/80">Create your components and reuse</p>
                 </CardContent>
               </Card>
               <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90 md:rotate-0 flex-shrink-0" />
               <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="font-medium mb-2">Validate</p>
-                  <p className="text-sm text-primary-foreground/80">Get feedback (internal or external)</p>
+                  <p className="text-lg mb-2">Assemble</p>
+                  <p className="text-md text-primary-foreground/80">Use the componnts as lego blocks</p>
                 </CardContent>
               </Card>
             </div>
@@ -296,12 +297,14 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
           </div>
         </section>
 
-        {/* Best Software Section */}
-        <section id="software" className="scroll-mt-32 mb-24">
+        {/* Feedback loop */}
+        <section id="feedback-loop" className="scroll-mt-32 mb-24">
           <div className="mb-8">
-            <h2 className="mb-3">Best software for start-up team?</h2>
+            <h2 className="mb-3">Design and development feedback loop
+
+            </h2>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              In small startup teams, I keep the structure simple to focus & improve culture at a focused - run through it with cross functional collaboration so everyone is part of the flow. Design is a community sport, not an individual practice.
+             In this section talk about the design and development feedback loop and how important it is, especially in small teams.
             </p>
           </div>
 
@@ -326,29 +329,34 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
           </Card>
         </section>
 
-        {/* Dev Handoff Section */}
-        <section id="dev-handoff" className="scroll-mt-32 mb-24">
-          <h2 className="mb-8">Dev handoff for a start-up, detailed or lightweight?</h2>
+        {/* Small team */}
+        <section id="small-team" className="scroll-mt-32 mb-24">
+          <h2 className="mb-4 mt-8">How you reduce friction between design and engineering</h2>
+          <p className="mb-8 text-muted-foreground leading-relaxed max-w-3xl">
+              Section about the lean prototyping.
+              Add here why you think lean prototyping is best approach for a start-up and how you use it at work or in your experiments.
+            </p>
 
           <div className="grid lg:grid-cols-2 gap-6 mb-8">
             {/* Detailed */}
-            <Card className="bg-destructive text-destructive-foreground border-destructive">
+            <Card className="bg-primary text-black border-primary">
               <CardHeader>
-                <CardTitle className="text-destructive-foreground flex items-center gap-2">
-                  <X className="w-5 h-5" />
-                  Detailed
+                <CardTitle className="text-primary-foreground flex items-center gap-2">
+                  <Check className="w-5 h-5" />
+                  Lightweight
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   {[
-                    "Time-consuming",
-                    "Over-documented",
-                    "Slows down development"
+                    "Key points to embark action",
+                    "Not heavy at specs → light note",
+                    "You can ping easily",
+                    "Agile and fast"
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <X className="w-4 h-4 text-destructive-foreground mt-0.5 flex-shrink-0" />
-                      <span className="text-destructive-foreground/90">{item}</span>
+                      <Check className="w-4 h-4 text-primary-foreground mt-0.5 flex-shrink-0" />
+                      <span className="text-primary-foreground/90">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -381,7 +389,7 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
             </Card>
           </div>
 
-          <Card className="border-l-4 border-l-primary bg-muted/30">
+          <Card className="border-4 border bg-muted/30">
             <CardContent className="p-8">
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In fast-moving startups, lightweight handoffs result in faster execution. Detailed files are not always the most effective way to move into product design / start early. I've noticed that over-documenting in the previous startup I was at delayed dev work while lightweight specs helped both designers and developers iterate faster and align better.
@@ -402,7 +410,7 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
               <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
             </div>
             <CardContent className="relative z-10 text-center p-12">
-              <h2 className="mb-4 text-primary-foreground">Ready to collaborate?</h2>
+              <h2 className="mb-4 text-lg text-primary-foreground">Ready to collaborate?</h2>
               <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
                 Let's discuss how these processes can help bring your product vision to life.
               </p>

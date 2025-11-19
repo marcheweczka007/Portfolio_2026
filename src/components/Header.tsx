@@ -1,4 +1,5 @@
-import logoImage from 'figma:asset/c786fea75c292a244aa8144109c0551648265bf4.png';
+import React from 'react';
+import logoImage from '../assets/LogoZuPortfolioV2.svg?url';
 import { Language, translations } from '../translations';
 
 interface HeaderProps {
@@ -7,11 +8,10 @@ interface HeaderProps {
   onProcessesClick?: () => void;
   onAboutClick?: () => void;
   language: Language;
-  onLanguageChange: (lang: Language) => void;
   currentView?: 'home' | 'projects' | 'project' | 'processes' | 'about';
 }
 
-export function Header({ onHomeClick, onProjectsClick, onProcessesClick, onAboutClick, language, onLanguageChange, currentView = 'home' }: HeaderProps) {
+export function Header({ onHomeClick, onProjectsClick, onProcessesClick, onAboutClick, language, currentView = 'home' }: HeaderProps) {
   const t = translations[language].nav;
   
   // For project detail pages, consider "projects" as active
@@ -82,28 +82,6 @@ export function Header({ onHomeClick, onProjectsClick, onProcessesClick, onAbout
               }`} />
             </a>
           </nav>
-          <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 p-1">
-            <button
-              onClick={() => onLanguageChange('en')}
-              className={`px-3 py-1 rounded-full text-sm transition-all ${
-                language === 'en'
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              EN
-            </button>
-            <button
-              onClick={() => onLanguageChange('pl')}
-              className={`px-3 py-1 rounded-full text-sm transition-all ${
-                language === 'pl'
-                  ? 'bg-primary text-primary-foreground shadow-sm'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              PL
-            </button>
-          </div>
         </div>
       </div>
     </header>

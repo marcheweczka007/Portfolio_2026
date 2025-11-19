@@ -1,3 +1,4 @@
+import React from 'react';
 import { ProjectCard } from './ProjectCard';
 import { Button } from './ui/button';
 import { ArrowRight, Lightbulb, Users, Target, Mail, Sparkles } from 'lucide-react';
@@ -34,21 +35,27 @@ export function HomePage({ onProjectClick, projects, language, onViewProjects, o
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] blob-purple animate-pulse-glow -z-10" style={{ animationDelay: '2s' }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full gradient-mesh -z-20" />
         
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-12xl">
           <div className="flex flex-col items-center text-center relative">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-xs text-primary">{t.availability}</span>
-            </div>
-            <h1 className="text-[4rem] leading-[0.95] mb-6 tracking-tight max-w-4xl">
-              {t.heroTitle1} <span className="italic font-light">{t.heroTitle2}</span>
-              <br />
-              <span className="text-muted-foreground">{t.heroTitle3}</span>
+            <h1 className="text-5xl md:text-6xl leading-tight mb-8 tracking-tight font-medium max-w-4xl">
+              Hey, I'm Zuza 👋 <br /> A SaaS {' '}
+              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-3xl md:text-5xl font-medium mx-1">
+                Product designer 
+              </span>
+               learning to build in code and {' '}
+              <span 
+                className="relative inline-block underline decoration-2 decoration-[#7c3aed] underline-offset-4"
+                style={{
+                  textDecorationLine: 'underline',
+                  textDecorationColor: '#7c3aed',
+                  textDecorationThickness: '2px',
+                  textDecorationStyle: 'wavy'
+                }}
+              >
+                collaborate
+              </span>
+              {' '}more closely with engineering.
             </h1>
-            <p className="text-xl text-muted-foreground mb-4">{t.name}</p>
-            <p className="text-base text-muted-foreground max-w-xl mb-12">
-              {t.heroDescription}
-            </p>
             <div className="flex gap-4">
               <Button size="lg" className="gap-2" onClick={onViewProjects}>
                 {t.viewProjects} <ArrowRight className="w-4 h-4" />
@@ -98,7 +105,7 @@ export function HomePage({ onProjectClick, projects, language, onViewProjects, o
                   <div key={item.num} className="flex items-center py-4 gap-4 group/item">
                     <span className="text-xs text-muted-foreground/50 font-mono">{item.num}</span>
                     <div className="flex-1 h-px bg-border" />
-                    <span className="text-sm text-foreground">{item.label}</span>
+                    <span className="text-md text-foreground">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -161,26 +168,6 @@ export function HomePage({ onProjectClick, projects, language, onViewProjects, o
         </div>
       </section>
 
-      {/* Work Philosophy */}
-      <section id="about" className="py-24 px-6">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-accent to-accent/50 mb-6">
-              <Users className="w-10 h-10 text-foreground" />
-            </div>
-            <h2 className="text-5xl mb-6">{t.philosophyTitle}</h2>
-          </div>
-          <div className="space-y-6 text-center">
-            <p className="text-xl text-foreground leading-relaxed">
-              {t.philosophyQuote}
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t.philosophyDescription}
-            </p>
-          </div>
-         
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="relative py-24 px-6 overflow-hidden">
@@ -190,8 +177,8 @@ export function HomePage({ onProjectClick, projects, language, onViewProjects, o
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary-foreground rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <h2 className="text-5xl mb-4 text-primary-foreground">{t.ctaTitle}</h2>
-          <p className="text-xl text-primary-foreground/80 mb-10">
+          <p className="text-6xl mb-8 font-black text-primary-foreground">{t.ctaTitle}</p>
+          <p className="text-md text-primary-foreground/80 mb-10">
             {t.ctaDescription}
           </p>
           <div className="flex gap-4 justify-center">
@@ -201,7 +188,8 @@ export function HomePage({ onProjectClick, projects, language, onViewProjects, o
               className="gap-2"
               asChild
             >
-              <a href="mailto:your.email@example.com?subject=Let's work together">
+              <a href="mailto:zuzanna.marchewka1@example.com?subject=Let's work together">
+
                 <Mail className="w-5 h-5" />
                 {t.getInTouch}
               </a>

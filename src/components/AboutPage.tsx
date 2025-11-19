@@ -1,5 +1,7 @@
+import React from 'react';
 import { Button } from './ui/button';
 import { ArrowLeft, Zap, Search, Box, Sparkles, Layers, Code2 } from 'lucide-react';
+import portraitImage from '../assets/zuza_portfolio.jpg';
 import {
   Accordion,
   AccordionContent,
@@ -39,17 +41,12 @@ export function AboutPage({ onBack, language, onProjectsClick, onProcessesClick,
       <section className="container mx-auto max-w-4xl px-6 mb-20">
         <div className="flex flex-col md:flex-row gap-12 items-start">
           <div className="md:w-2/5">
-            <div className="aspect-[3/4] rounded-2xl overflow-hidden gradient-purple flex items-center justify-center relative group">
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full blur-3xl animate-float" />
-                <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-white rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
-              </div>
-              <div className="text-center relative z-10">
-                <div className="w-32 h-32 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-4 border-2 border-white/30">
-                  <span className="text-6xl">👋</span>
-                </div>
-                <p className="text-sm text-white/80">Zuza Marchewka</p>
-              </div>
+            <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
+              <ImageWithFallback
+                src={portraitImage}
+                alt="Zuza Marchewka"
+                className="w-full h-full object-cover rounded-8xl"
+              />
             </div>
           </div>
           
