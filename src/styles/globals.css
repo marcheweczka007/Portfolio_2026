@@ -7,23 +7,23 @@
   --card-foreground: #0a0118;
   --popover: #ffffff;
   --popover-foreground: #0a0118;
-  --primary: #2b0964;
+  --primary: #DE5516;
   --primary-foreground: #ffffff;
-  --secondary: #f3f0ff;
-  --secondary-foreground: #5b21b6;
-  --muted: #f5f3ff;
+  --secondary: #fff4ef;
+  --secondary-foreground: #B84512;
+  --muted: #fef8f5;
   --muted-foreground: #6b7280;
-  --accent: #ede9fe;
-  --accent-foreground: #5b21b6;
+  --accent: #ffe8dc;
+  --accent-foreground: #B84512;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: rgba(124, 58, 237, 0.15);
+  --border: rgba(222, 85, 22, 0.15);
   --input: transparent;
   --input-background: #f9fafb;
   --switch-background: #e5e7eb;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #7c3aed;
+  --ring: #F17A47;
   --radius: 0.75rem;
 }
 
@@ -34,19 +34,19 @@
   --card-foreground: #fafafa;
   --popover: #1a1027;
   --popover-foreground: #fafafa;
-  --primary: #a78bfa;
-  --primary-foreground: #1a1027;
-  --secondary: #2d1b4e;
-  --secondary-foreground: #e9d5ff;
-  --muted: #2d1b4e;
+  --primary: #F17A47;
+  --primary-foreground: #0a0118;
+  --secondary: #4a1f0f;
+  --secondary-foreground: #ffe8dc;
+  --muted: #4a1f0f;
   --muted-foreground: #a1a1aa;
-  --accent: #3b2667;
-  --accent-foreground: #e9d5ff;
+  --accent: #5a2512;
+  --accent-foreground: #ffe8dc;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: rgba(167, 139, 250, 0.2);
-  --input: rgba(167, 139, 250, 0.1);
-  --ring: #a78bfa;
+  --border: rgba(241, 122, 71, 0.2);
+  --input: rgba(241, 122, 71, 0.1);
+  --ring: #F17A47;
 }
 
 .globals-reset * {
@@ -60,34 +60,34 @@ body {
 }
 
 .gradient-purple {
-  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 50%, #c4b5fd 100%);
+  background: linear-gradient(135deg, #DE5516 0%, #F17A47 50%, #F4A068 100%);
 }
 
 .gradient-purple-radial {
-  background: radial-gradient(circle at 50% 50%, #7c3aed, #5b21b6);
+  background: radial-gradient(circle at 50% 50%, #DE5516, #B84512);
 }
 
 .gradient-mesh {
   background:
-    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(167, 139, 250, 0.1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(196, 181, 253, 0.15) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.1) 0px, transparent 50%);
+    radial-gradient(at 0% 0%, rgba(222, 85, 22, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(241, 122, 71, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(244, 160, 104, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(248, 197, 137, 0.1) 0px, transparent 50%);
 }
 
 .blob-purple {
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.4) 0%, rgba(124, 58, 237, 0) 70%);
+  background: radial-gradient(circle, rgba(222, 85, 22, 0.4) 0%, rgba(222, 85, 22, 0) 70%);
   filter: blur(40px);
 }
 
 .glow-purple {
-  box-shadow: 0 0 60px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 0 60px rgba(222, 85, 22, 0.3);
 }
 
 .border-gradient-purple {
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-    linear-gradient(135deg, #7c3aed, #a78bfa) border-box;
+    linear-gradient(135deg, #DE5516, #F17A47) border-box;
 }
 
 .scrollbar-hide {
@@ -100,18 +100,24 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.5;
   }
+
   50% {
     opacity: 1;
   }
@@ -121,9 +127,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }

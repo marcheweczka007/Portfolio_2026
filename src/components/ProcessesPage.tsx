@@ -389,7 +389,8 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
             </Card>
           </div>
 
-          <Card className="border-4 border bg-muted/30">
+          <Card className="border-4 border bg-muted/30">Ctrl/Cmd + Shift + P
+
             <CardContent className="p-8">
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In fast-moving startups, lightweight handoffs result in faster execution. Detailed files are not always the most effective way to move into product design / start early. I've noticed that over-documenting in the previous startup I was at delayed dev work while lightweight specs helped both designers and developers iterate faster and align better.

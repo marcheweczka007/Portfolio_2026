@@ -4,7 +4,7 @@ export const translations = {
   en: {
     nav: {
       home: "Home",
-      projects: "My work",
+      projects: "Projects",
       processes: "Processes",
       about: "About",
     },
@@ -15,8 +15,8 @@ export const translations = {
       name: "Hey, I'm Zuza 👋",
       heroDescription:
         "Bridging design & engineering | Fast iteration | Developer-friendly workflows | SaaS-focused",
-      viewProjects: "See my work",
-      getInTouch: "Get in Touch",
+      viewProjects: "View projects",
+      getInTouch: "Get in touch",
       processesTitle: "Processes",
       processesDescription:
         "I keep my design practical. Sketch first, test early, get feedback, and refine quickly with the team. For me, progress beats perfection, and collaboration beats handoff.",
@@ -41,8 +41,7 @@ export const translations = {
       philosophyDescription:
         "I strive to create interfaces that are not only beautiful but also functional, accessible, and delightful to use. Every pixel serves a purpose, every interaction feels natural, and every decision is backed by research and empathy.",
       ctaTitle: "Interested in working together?",
-      ctaDescription:
-        "Let's chat and see if we're a good fit.",
+      ctaDescription: "Let's chat and see if we're a good fit.",
       copyright: "© 2025 Zuza Marchewka. All rights reserved.",
     },
     about: {
@@ -51,38 +50,30 @@ export const translations = {
       bioP1:
         "I'm a product designer with nearly 3 years of experience working for SaaS companies. I'm comfortable wearing multiple hats—from shaping design systems to putting together an e-book for a marketing campaign.",
       bioP2:
-        " I work closely with developers, and lately I’ve been learning to code myself. With the help of AI tools, I prototype and test ideas quickly, turning concepts into real, usable solutions much faster.", 
+        " I work closely with developers, and lately I’ve been learning to code myself. With the help of AI tools, I prototype and test ideas quickly, turning concepts into real, usable solutions much faster.",
       bioP3:
         "I’ve worked solo and inside cross-functional teams, and I’ve learned that the best work happens when everyone builds together.",
-      bioP4:
-        "Open to new opportunities where I can contribute and grow.",
+      bioP4: "Open to new opportunities where I can contribute and grow.",
       expertiseTitle: "Areas of Expertise",
       leanUx: "Lean UX",
       leanUxContent1:
         "I practice Lean UX to minimize waste and maximize learning through rapid experimentation. This approach focuses on getting ideas in front of users quickly, gathering feedback, and iterating based on real-world insights rather than assumptions.",
       leanUxContent2: "Key principles I apply include:",
-      leanUxPoint1:
-        "Cross-functional collaboration from day one",
+      leanUxPoint1: "Cross-functional collaboration from day one",
       leanUxPoint2: "Building MVPs and testable hypotheses",
-      leanUxPoint3:
-        "Continuous user validation throughout the design process",
+      leanUxPoint3: "Continuous user validation throughout the design process",
       leanUxPoint4: "Prioritizing outcomes over outputs",
-      leanUxPoint5:
-        "Embracing uncertainty and learning from failure",
+      leanUxPoint5: "Embracing uncertainty and learning from failure",
       research: "Research",
       researchContent1:
         "Research is the foundation of all my design decisions. I employ both qualitative and quantitative methods to deeply understand user behaviors, motivations, and pain points.",
       researchContent2: "My research toolkit includes:",
       researchPoint1: "User interviews and contextual inquiry",
-      researchPoint2:
-        "Usability testing (moderated and unmoderated)",
+      researchPoint2: "Usability testing (moderated and unmoderated)",
       researchPoint3: "Survey design and analysis",
-      researchPoint4:
-        "Analytics interpretation and behavioral data analysis",
-      researchPoint5:
-        "Competitive analysis and market research",
-      researchPoint6:
-        "Journey mapping and service design blueprints",
+      researchPoint4: "Analytics interpretation and behavioral data analysis",
+      researchPoint5: "Competitive analysis and market research",
+      researchPoint6: "Journey mapping and service design blueprints",
       researchPoint7:
         "Card sorting and tree testing for information architecture",
       ooux: "OOUX",
@@ -91,23 +82,19 @@ export const translations = {
       oouxContent2: "How I apply OOUX:",
       oouxPoint1:
         "Identifying core objects and their relationships early in the design process",
-      oouxPoint2:
-        "Creating object maps to visualize system architecture",
+      oouxPoint2: "Creating object maps to visualize system architecture",
       oouxPoint3:
         "Defining object attributes and actions to ensure consistency",
       oouxPoint4:
         "Building flexible, modular designs that adapt to different contexts",
-      oouxPoint5:
-        "Collaborating with developers using a shared mental model",
+      oouxPoint5: "Collaborating with developers using a shared mental model",
       oouxPoint6:
         "Reducing technical debt through thoughtful object-based design decisions",
       aiPrototyping: "AI + Rapid Prototyping",
       aiPrototypingContent1:
         "I leverage cutting-edge AI tools to accelerate the design process and explore more possibilities in less time. AI enhances rather than replaces the creative process, allowing me to focus on strategic thinking and user empathy.",
-      aiPrototypingContent2:
-        "My AI-enhanced workflow includes:",
-      aiPrototypingPoint1:
-        "Using AI for rapid ideation and concept generation",
+      aiPrototypingContent2: "My AI-enhanced workflow includes:",
+      aiPrototypingPoint1: "Using AI for rapid ideation and concept generation",
       aiPrototypingPoint2:
         "Generating realistic copy and content for prototypes",
       aiPrototypingPoint3:
@@ -130,8 +117,7 @@ export const translations = {
         "Build component libraries that are flexible yet opinionated",
       designSystemPoint3:
         "Document patterns and usage guidelines for the entire team",
-      designSystemPoint4:
-        "Establish design token architecture for scalability",
+      designSystemPoint4: "Establish design token architecture for scalability",
       designSystemPoint5:
         "Create governance processes that balance consistency with innovation",
       designSystemPoint6:
@@ -144,24 +130,17 @@ export const translations = {
       codingContent2: "Technical capabilities:",
       codingPoint1: "HTML, CSS, and modern JavaScript (ES6+)",
       codingPoint2: "React and component-based architecture",
-      codingPoint3:
-        "CSS frameworks (Tailwind CSS, styled-components)",
-      codingPoint4:
-        "Building functional prototypes with real data",
-      codingPoint5:
-        "Version control with Git and collaborative workflows",
-      codingPoint6:
-        "Understanding of responsive design implementation",
-      codingPoint7:
-        "Basic knowledge of APIs and data structures",
-      codingPoint8:
-        "Performance optimization and accessibility best practices",
+      codingPoint3: "CSS frameworks (Tailwind CSS, styled-components)",
+      codingPoint4: "Building functional prototypes with real data",
+      codingPoint5: "Version control with Git and collaborative workflows",
+      codingPoint6: "Understanding of responsive design implementation",
+      codingPoint7: "Basic knowledge of APIs and data structures",
+      codingPoint8: "Performance optimization and accessibility best practices",
     },
     processes: {
       backToHome: "Back to Home",
       title: "Processes",
-      subtitle:
-        "How I work as a product design (engineer*)",
+      subtitle: "How I work as a product design (engineer*)",
     },
     projects: {
       backToHome: "Back to Home",

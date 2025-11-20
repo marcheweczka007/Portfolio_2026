@@ -32,13 +32,26 @@ export default function App() {
   const [currentView, setCurrentView] = useState<
     "home" | "projects" | "project" | "processes" | "about"
   >("home");
-  const [selectedProjectId, setSelectedProjectId] = useState<
-    string | null
-  >(null);
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
+    null
+  );
   const language: Language = "en";
-  const [previousView, setPreviousView] = useState<
-    "home" | "projects"
-  >("home");
+  const [previousView, setPreviousView] = useState<"home" | "projects">("home");
+
+  // ============================================
+  // ADD YOUR PROJECT IMAGES HERE
+  // ============================================
+  // To add images for your projects:
+  // 1. Place your images in the src/assets/ folder
+  // 2. Import them at the top of this file like:
+  //    import mobileBankingThumbnail from './assets/mobile-banking-thumbnail.jpg';
+  //    import mobileBanking1 from './assets/mobile-banking-1.jpg';
+  // 3. Use the imported variables in the imageUrl and images arrays below
+  //
+  // Example:
+  // imageUrl: mobileBankingThumbnail,
+  // images: [mobileBanking1, mobileBanking2, mobileBanking3],
+  // ============================================
 
   const projects: Project[] = [
     {
@@ -46,56 +59,47 @@ export default function App() {
       title: "Mobile Banking Loan Application",
       description:
         "Designed an alternative application flow for declined credit card applicants to apply for Grand Bank loans with customizable add-ons, e-sign their application, and track status via mobile app.",
-      imageUrl:
-        "",
+      // TODO: Add your project thumbnail image
+      // Example: imageUrl: mobileBankingThumbnail,
+      // Or use a path: imageUrl: '/src/assets/mobile-banking-thumbnail.jpg',
+      imageUrl: "",
       tags: ["Mobile", "Online Banking"],
       year: "2025",
       role: "Product Designer",
       client: "Grand Bank",
       duration: "2 months",
       overview:
-        "The project began with alignment sessions between our client, Grand Bank, and our VP of Design. As designers, we joined the process once the problem was defined and the client’s needs were outlined to us. From there, we created mobile-first wireframes and iterated based on feedback, going through several rounds of refinement over a few weeks until the client was confident in the feature we designed and delivered.",
+        "The project began with alignment sessions between our client, Grand Bank, and our VP of Design. As designers, we joined the process once the problem was defined and the client's needs were outlined to us. From there, we created mobile-first wireframes and iterated based on feedback, going through several rounds of refinement over a few weeks until the client was confident in the feature we designed and delivered.",
       challenge:
         "Due to time constraints, the client requested high-fidelity wireframes early on, wanting to see the product vision in a near-final state. Personally, I prefer to start with low-fidelity sketches to ensure no key elements or actions are missed, which helps reduce rework later. However, in this case we delivered high-fidelity screens quickly, as required by our manager. As we iterated, I noticed that some communication misalignments could have been avoided if we had invested more time in low-fidelity exploration first. In total, the client requested three to four rounds of changes.",
-      solution:
-        "Placeholder",
-      discovery:
-        "Placeholder",
-      exploration:
-        "Placeholder",
-      design:
-        "Placeholder",
+      solution: "Placeholder",
+      discovery: "Placeholder",
+      exploration: "Placeholder",
+      design: "Placeholder",
       shipping:
         "I worked closely with the developers to ship the project. We would check on frequently to make sure the project is on the right track. ",
-      results: [
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-        "Placeholder",
-      ],
-      images: [
-        "https://images.unsplash.com/photo-1576153192396-180ecef2a715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwc2tldGNoZXN8ZW58MXx8fHwxNzYwMDk3NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1622117515670-fcb02499491f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwaW50ZXJmYWNlJTIwd2lyZWZyYW1lfGVufDF8fHx8MTc2MDEyNTc2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1629697776809-f37ceac39e77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXB8ZW58MXx8fHwxNzYwMDg2MjIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1543069190-9d380c458bc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwZGVzaWduJTIwbW9iaWxlJTIwYXBwfGVufDF8fHx8MTc2MDEyNjE5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      ],
+      results: ["Placeholder", "Placeholder", "Placeholder", "Placeholder"],
+      // TODO: Add your project detail images (shown in project detail page)
+      // Example: images: [mobileBanking1, mobileBanking2, mobileBanking3, mobileBanking4],
+      images: [],
     },
     {
       id: "Component Library",
       title: "Evolving the Component Library",
       description:
         "A story about joining a team with an existing design system and discovering the challenges of maintaining alignment between designers and developers. Through this experience, I learned that true consistency comes from collaboration, communication, and shared ownership.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMHV4JTIwaW50ZXJmYWNlfGVufDF8fHx8MTc2MDEyNjE5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // TODO: Add your project thumbnail image
+      // Example: imageUrl: componentLibraryThumbnail,
+      imageUrl: "",
       tags: ["Design Library", "SaaS", "White Labelling"],
       year: "2024-2025",
       role: "Product Designer",
       client: "Internal Project",
       duration: "4 months",
       overview:
-        "When I joined Ascent, I was introduced to our existing component library - which already included a wide range of components. However, many were inconsistent, outdated, or “broken”. I was advised to create new components if I designed improved versions, rather than editing the existing ones. This approach made sense to me, especially after coming from my previous company, where no official design system existed. In that role, I noticed major inconsistencies across projects and took the initiative to create reusable components to bridge that gap. I aimed to bring visual and functional consistency to the product, even without formal guidance or a structured system.",
+        "When I joined Ascent, I was introduced to our existing component library - which already included a wide range of components. However, many were inconsistent, outdated, or 'broken'. I was advised to create new components if I designed improved versions, rather than editing the existing ones. This approach made sense to me, especially after coming from my previous company, where no official design system existed. In that role, I noticed major inconsistencies across projects and took the initiative to create reusable components to bridge that gap. I aimed to bring visual and functional consistency to the product, even without formal guidance or a structured system.",
       challenge:
-        "A few months later, a large bank client requested a custom loan application flow. The project became a turning point — it led to the decision to develop white-labelling capabilities so that the same flow could be adapted for multiple clients.Working closely with a developer, I conducted a page-by-page audit to align design and code. During this process, I discovered a critical issue:Our Figma components and the developers’ code library were based on different versions of Material UI.This mismatch explained the frequent misalignments we had been seeing in design reviews and build outputs. At the same time, our internal design review process was overly rigid and pixel-perfect–focused. Instead of collaborative UI reviews to ensure usability and alignment, the reviews became detailed inspections of spacing, layer naming, and colour application. This slowed down progress and discouraged iteration.",
+        "A few months later, a large bank client requested a custom loan application flow. The project became a turning point — it led to the decision to develop white-labelling capabilities so that the same flow could be adapted for multiple clients.Working closely with a developer, I conducted a page-by-page audit to align design and code. During this process, I discovered a critical issue:Our Figma components and the developers' code library were based on different versions of Material UI.This mismatch explained the frequent misalignments we had been seeing in design reviews and build outputs. At the same time, our internal design review process was overly rigid and pixel-perfect–focused. Instead of collaborative UI reviews to ensure usability and alignment, the reviews became detailed inspections of spacing, layer naming, and colour application. This slowed down progress and discouraged iteration.",
       solution:
         "I designed a modular dashboard system with pre-built templates and drag-and-drop functionality. The new interface features intelligent defaults, contextual help, and a progressive learning curve that reveals advanced features as users become more comfortable. We introduced data storytelling capabilities and collaborative features that transformed how teams work with data.",
       discovery:
@@ -112,20 +116,18 @@ export default function App() {
         "Customer churn rate decreased by 42%",
         "Average session duration increased by 89%",
       ],
-      images: [
-        "https://images.unsplash.com/photo-1622117515670-fcb02499491f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwaW50ZXJmYWNlJTIwd2lyZWZyYW1lfGVufDF8fHx8MTc2MDEyNTc2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1576153192396-180ecef2a715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwc2tldGNoZXN8ZW58MXx8fHwxNzYwMDk3NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMHV4JTIwaW50ZXJmYWNlfGVufDF8fHx8MTc2MDEyNjE5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1629697776809-f37ceac39e77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXB8ZW58MXx8fHwxNzYwMDg2MjIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      ],
+      // TODO: Add your project detail images
+      // Example: images: [componentLibrary1, componentLibrary2, componentLibrary3, componentLibrary4],
+      images: [],
     },
     {
       id: "ecommerce-platform",
       title: "E-commerce Platform",
       description:
         "Building a modern shopping experience with focus on conversion and user delight.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1750306957357-bf6e1f8e7da8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzYwMDM0MDQzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // TODO: Add your project thumbnail image
+      // Example: imageUrl: ecommerceThumbnail,
+      imageUrl: "",
       tags: ["Web", "E-commerce", "Mobile"],
       year: "2023",
       role: "Senior Product Designer",
@@ -151,20 +153,18 @@ export default function App() {
         "Cart abandonment reduced from 78% to 52%",
         "Average order value increased by 34%",
       ],
-      images: [
-        "https://images.unsplash.com/photo-1629697776809-f37ceac39e77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBtb2NrdXB8ZW58MXx8fHwxNzYwMDg2MjIzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1750306957357-bf6e1f8e7da8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNpZ258ZW58MXx8fHwxNzYwMDM0MDQzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1576153192396-180ecef2a715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwc2tldGNoZXN8ZW58MXx8fHwxNzYwMDk3NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1622117515670-fcb02499491f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwaW50ZXJmYWNlJTIwd2lyZWZyYW1lfGVufDF8fHx8MTc2MDEyNTc2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      ],
+      // TODO: Add your project detail images
+      // Example: images: [ecommerce1, ecommerce2, ecommerce3, ecommerce4],
+      images: [],
     },
     {
       id: "grand-bank",
       title: "Grand Bank",
       description:
         "Comprehensive mobile banking solution with seamless user experience and advanced security features.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1642055509518-adafcad1d22e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBiYW5raW5nJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc2MDg3ODk4Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // TODO: Add your project thumbnail image
+      // Example: imageUrl: grandBankThumbnail,
+      imageUrl: "",
       tags: ["Mobile app", "Banking", "SaaS"],
       year: "2024",
       role: "Product Designer",
@@ -190,20 +190,18 @@ export default function App() {
         "Customer support calls reduced by 56%",
         "Active user engagement increased by 178%",
       ],
-      images: [
-        "https://images.unsplash.com/photo-1642055509518-adafcad1d22e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBiYW5raW5nJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc2MDg3ODk4Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1563986768609-322da13575f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzYwODc4OTgyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBmaW5hbmNlJTIwYXBwfGVufDF8fHx8MTc2MDg3ODk4Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1576153192396-180ecef2a715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwc2tldGNoZXN8ZW58MXx8fHwxNzYwMDk3NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      ],
+      // TODO: Add your project detail images
+      // Example: images: [grandBank1, grandBank2, grandBank3, grandBank4],
+      images: [],
     },
     {
       id: "product-card",
       title: "Product Card Redesign",
       description:
         "Streamlining the loan application process with a redesigned product card interface.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1740511399793-de4228aba8a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwY2FyZCUyMGRlc2lnbnxlbnwxfHx8fDE3NjA4Nzg5ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // TODO: Add your project thumbnail image
+      // Example: imageUrl: productCardThumbnail,
+      imageUrl: "",
       tags: ["Re-design", "Loan application", "SaaS"],
       year: "2023",
       role: "Lead UX Designer",
@@ -229,20 +227,18 @@ export default function App() {
         "User confusion incidents decreased by 81%",
         "Conversion rate improved by 67%",
       ],
-      images: [
-        "https://images.unsplash.com/photo-1740511399793-de4228aba8a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9kdWN0JTIwY2FyZCUyMGRlc2lnbnxlbnwxfHx8fDE3NjA4Nzg5ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1622117515670-fcb02499491f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1c2VyJTIwaW50ZXJmYWNlJTIwd2lyZWZyYW1lfGVufDF8fHx8MTc2MDEyNTc2Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzYwODc4OTgyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1576153192396-180ecef2a715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwc2tldGNoZXN8ZW58MXx8fHwxNzYwMDk3NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      ],
+      // TODO: Add your project detail images
+      // Example: images: [productCard1, productCard2, productCard3, productCard4],
+      images: [],
     },
     {
       id: "one-view",
       title: "One View Dashboard",
       description:
         "Unified dashboard solution providing a comprehensive view of all key business metrics and operations.",
-      imageUrl:
-        "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MXx8fHwxNzYwODM4NjI4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      // TODO: Add your project thumbnail image
+      // Example: imageUrl: oneViewThumbnail,
+      imageUrl: "",
       tags: ["Dashboard", "SaaS"],
       year: "2024",
       role: "Senior Product Designer",
@@ -268,12 +264,9 @@ export default function App() {
         "User productivity increased by 62%",
         "Data accuracy issues decreased by 89%",
       ],
-      images: [
-        "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MXx8fHwxNzYwODM4NjI4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbnxlbnwxfHx8fDE3NjA4Nzg5ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1aSUyMHV4JTIwaW50ZXJmYWNlfGVufDF8fHx8MTc2MDEyNjE5N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        "https://images.unsplash.com/photo-1576153192396-180ecef2a715?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBwcm9jZXNzJTIwc2tldGNoZXN8ZW58MXx8fHwxNzYwMDk3NjA5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      ],
+      // TODO: Add your project detail images
+      // Example: images: [oneView1, oneView2, oneView3, oneView4],
+      images: [],
     },
   ];
 
@@ -311,9 +304,7 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const selectedProject = projects.find(
-    (p) => p.id === selectedProjectId,
-  );
+  const selectedProject = projects.find((p) => p.id === selectedProjectId);
 
   return (
     <div className="min-h-screen bg-background">
