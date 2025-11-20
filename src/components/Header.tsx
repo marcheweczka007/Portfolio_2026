@@ -13,6 +13,13 @@ interface HeaderProps {
   currentView?: "home" | "projects" | "project" | "processes" | "about";
 }
 
+const content = {
+  home: "Home",
+  projects: "Projects",
+  processes: "Processes",
+  about: "About",
+};
+
 export function Header({
   onHomeClick,
   onProjectsClick,
@@ -21,8 +28,6 @@ export function Header({
   language,
   currentView = "home",
 }: HeaderProps) {
-  const t = translations[language].nav;
-
   // For project detail pages, consider "projects" as active
   const activeView = currentView === "project" ? "projects" : currentView;
 
@@ -48,7 +53,7 @@ export function Header({
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              {t.home}
+              {content.home}
               <span
                 className={`absolute -bottom-1 left-0 h-px bg-orange-600 transition-all ${
                   activeView === "home" ? "w-full" : "w-0 group-hover:w-full"
@@ -63,7 +68,7 @@ export function Header({
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              {t.projects}
+              {content.projects}
               <span
                 className={`absolute -bottom-1 left-0 h-px bg-orange-600 transition-all ${
                   activeView === "projects"
@@ -80,7 +85,7 @@ export function Header({
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              {t.processes}
+              {content.processes}
               <span
                 className={`absolute -bottom-1 left-0 h-px bg-orange-600 transition-all ${
                   activeView === "processes"
@@ -97,7 +102,7 @@ export function Header({
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
-              {t.about}
+              {content.about}
               <span
                 className={`absolute -bottom-1 left-0 h-px bg-orange-600 transition-all ${
                   activeView === "about" ? "w-full" : "w-0 group-hover:w-full"

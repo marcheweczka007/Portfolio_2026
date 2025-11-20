@@ -2,12 +2,6 @@ export type Language = "en";
 
 export const translations = {
   en: {
-    nav: {
-      home: "Home",
-      projects: "Projects",
-      processes: "Processes",
-      about: "About",
-    },
     home: {
       availability: "Available for freelance projects",
       heroTitle1: "I'm a Product Designer",
