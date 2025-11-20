@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Header } from "./components/Header";
+import { Header } from "./components/ui/Header";
 import { HomePage } from "./components/HomePage";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { ProcessesPage } from "./components/ProcessesPage";
 import { AboutPage } from "./components/AboutPage";
 import { ProjectsPage } from "./components/ProjectsPage";
+import { Footer } from "./components/ui/Footer";
 import { Language } from "./translations";
+import Timeline from "./components/ui/Timeline";
 
 interface Project {
   id: string;
@@ -35,7 +37,6 @@ export default function App() {
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(
     null
   );
-  const language: Language = "en";
   const [previousView, setPreviousView] = useState<"home" | "projects">("home");
 
   // ============================================
@@ -313,7 +314,6 @@ export default function App() {
         onProjectsClick={handleViewProjects}
         onProcessesClick={handleViewProcesses}
         onAboutClick={handleViewAbout}
-        language={language}
         currentView={currentView}
       />
 
@@ -321,7 +321,6 @@ export default function App() {
         <HomePage
           projects={projects}
           onProjectClick={handleProjectClick}
-          language={language}
           onViewProjects={handleViewProjects}
           onViewProcesses={handleViewProcesses}
           onViewAbout={handleViewAbout}
@@ -331,7 +330,6 @@ export default function App() {
       {currentView === "projects" && (
         <ProjectsPage
           onBack={handleBackToHome}
-          language={language}
           onProjectClick={handleProjectClick}
           projects={projects}
           onProjectsClick={handleViewProjects}
@@ -344,7 +342,6 @@ export default function App() {
         <ProjectDetail
           project={selectedProject}
           onBack={handleBackFromProject}
-          language={language}
           fromProjectsPage={previousView === "projects"}
           onNavigateToProjects={handleViewProjects}
         />
@@ -353,7 +350,6 @@ export default function App() {
       {currentView === "processes" && (
         <ProcessesPage
           onBack={handleBackToHome}
-          language={language}
           onProjectsClick={handleViewProjects}
           onProcessesClick={handleViewProcesses}
           onAboutClick={handleViewAbout}
@@ -363,7 +359,6 @@ export default function App() {
       {currentView === "about" && (
         <AboutPage
           onBack={handleBackToHome}
-          language={language}
           onProjectsClick={handleViewProjects}
           onProcessesClick={handleViewProcesses}
           onAboutClick={handleViewAbout}

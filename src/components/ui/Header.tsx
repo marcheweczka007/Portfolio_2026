@@ -1,15 +1,16 @@
 import React from "react";
-import logoImage from "../assets/LogoZuPortfolioV2.svg?url";
-import { Language, translations } from "../translations";
-import { Button } from "./ui/button";
+import logoImage from "../../assets/LogoZuPortfolioV2.svg?url";
+import { Button } from "./button";
 import { SendHorizontal } from "lucide-react";
+const headerContent = {
+  getInTouch: "Get in touch",
+};
 
 interface HeaderProps {
   onHomeClick?: () => void;
   onProjectsClick?: () => void;
   onProcessesClick?: () => void;
   onAboutClick?: () => void;
-  language: Language;
   currentView?: "home" | "projects" | "project" | "processes" | "about";
 }
 
@@ -25,7 +26,7 @@ export function Header({
   onProjectsClick,
   onProcessesClick,
   onAboutClick,
-  language,
+
   currentView = "home",
 }: HeaderProps) {
   // For project detail pages, consider "projects" as active
@@ -34,7 +35,7 @@ export function Header({
   return (
     <header className="fixed left-1/2 -translate-x-1/2 top-4 container max-w-6xl z-50">
       <div className="backdrop-blur-xl border border-orange-200/15 shadow-lg px-4 py-2 rounded-full flex items-center gap-8 w-full">
-        <div className="flex items-center flex-shrink-0">
+        <div className="flex-1 flex items-center">
           <img
             src={logoImage}
             alt="Logo"
@@ -109,13 +110,15 @@ export function Header({
                 }`}
               />
             </a>
-            <Button size="lg" asChild>
-              <a href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together">
-                {translations[language].home.getInTouch}{" "}
-                <SendHorizontal className="w-4 h-4" />
-              </a>
-            </Button>
           </nav>
+        </div>
+        <div className="flex-1 flex justify-end">
+          <Button size="lg" asChild>
+            <a href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together">
+              <Button>{headerContent.getInTouch}</Button>
+              <SendHorizontal className="w-4 h-4" />
+            </a>
+          </Button>
         </div>
       </div>
     </header>

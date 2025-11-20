@@ -1,8 +1,18 @@
-import React from 'react';
-import { Button } from './ui/button';
-import { ArrowLeft, Calendar, User, Target, Search, Lightbulb, Palette, Rocket, Mail, ArrowRight } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { Language, translations } from '../translations';
+import React from "react";
+import { Button } from "./ui/button";
+import {
+  ArrowLeft,
+  Calendar,
+  User,
+  Target,
+  Search,
+  Lightbulb,
+  Palette,
+  Rocket,
+  Mail,
+  ArrowRight,
+} from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 import {
   Breadcrumb,
   BreadcrumbList,
@@ -10,7 +20,8 @@ import {
   BreadcrumbLink,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from './ui/breadcrumb';
+} from "./ui/breadcrumb";
+
 
 interface ProjectDetailProps {
   project: {
@@ -34,38 +45,75 @@ interface ProjectDetailProps {
     images: string[];
   };
   onBack: () => void;
-  language: Language;
   fromProjectsPage?: boolean;
   onNavigateToProjects?: () => void;
 }
 
-export function ProjectDetail({ project, onBack, language, fromProjectsPage, onNavigateToProjects }: ProjectDetailProps) {
-  const t = translations[language].projects;
+const projects = {
+  backToHome: "Back to Home",
+  backToProjects: "Back to Projects",
+  projects: "Projects",
+  pageTitle: "Projects",
+  pageDescription:
+    "A collection of my work across different platforms and industries",
+  grandBank: {
+    title: "Grand Bank",
+    tags: ["Mobile app", "Banking", "SaaS"],
+  },
+  productCard: {
+    title: "Product card",
+    tags: ["Re-design", "Loan application", "SaaS"],
+  },
+  oneView: {
+    title: "One view",
+    tags: ["Dashboard", "SaaS"],
+  },
+  promoEbook: {
+    title: "Promo E-Book",
+    tags: ["FinOps", "Marketing", "Freelance"],
+  },
+  kiosk: {
+    title: "Kiosk",
+    tags: ["SaaS", "Large screen"],
+  },
+  funProjects: {
+    title: "Fun projects",
+    tags: ["UI experimentations", "Personal project"],
+  },
+};
+
+export function ProjectDetail({
+  project,
+  onBack,
+  fromProjectsPage,
+  onNavigateToProjects,
+}: ProjectDetailProps) {
+  const t = projects;
   const phases = [
     {
       icon: Search,
       title: "Discovery",
       description: project.discovery,
-      color: "from-blue-500/10 to-blue-500/5"
+      color: "from-blue-500/10 to-blue-500/5",
     },
     {
       icon: Lightbulb,
       title: "Exploration",
       description: project.exploration,
-      color: "from-amber-500/10 to-amber-500/5"
+      color: "from-amber-500/10 to-amber-500/5",
     },
     {
       icon: Palette,
       title: "Design",
       description: project.design,
-      color: "from-purple-500/10 to-purple-500/5"
+      color: "from-purple-500/10 to-purple-500/5",
     },
     {
       icon: Rocket,
       title: "Shipping",
       description: project.shipping,
-      color: "from-green-500/10 to-green-500/5"
-    }
+      color: "from-green-500/10 to-green-500/5",
+    },
   ];
 
   return (
@@ -76,7 +124,7 @@ export function ProjectDetail({ project, onBack, language, fromProjectsPage, onN
           <Breadcrumb className="mb-4">
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink 
+                <BreadcrumbLink
                   onClick={onNavigateToProjects}
                   className="cursor-pointer"
                 >
@@ -108,9 +156,13 @@ export function ProjectDetail({ project, onBack, language, fromProjectsPage, onN
             </span>
           ))}
         </div>
-        <h1 className="text-6xl mb-6 max-w-3xl leading-tight">{project.title}</h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mb-12">{project.description}</p>
-        
+        <h1 className="text-6xl mb-6 max-w-3xl leading-tight">
+          {project.title}
+        </h1>
+        <p className="text-xl text-muted-foreground max-w-2xl mb-12">
+          {project.description}
+        </p>
+
         {/* Project Meta */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           <div>
@@ -187,10 +239,13 @@ export function ProjectDetail({ project, onBack, language, fromProjectsPage, onN
       {/* Process Phases */}
       <section className="container mx-auto max-w-6xl px-6 mb-20">
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">Process</p>
+          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
+            Process
+          </p>
           <h2 className="text-4xl mb-4">How We Got There</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A structured approach to solving complex design challenges through research, ideation, refinement, and delivery.
+            A structured approach to solving complex design challenges through
+            research, ideation, refinement, and delivery.
           </p>
         </div>
 
@@ -198,12 +253,12 @@ export function ProjectDetail({ project, onBack, language, fromProjectsPage, onN
           {phases.map((phase, index) => {
             const Icon = phase.icon;
             return (
-              <div 
+              <div
                 key={phase.title}
                 className={`group relative p-8 rounded-2xl bg-gradient-to-br ${phase.color} border border-border hover:border-border/60 transition-all duration-300`}
               >
                 <div className="absolute top-6 right-6 text-6xl font-mono opacity-[0.05] select-none">
-                  {String(index + 1).padStart(2, '0')}
+                  {String(index + 1).padStart(2, "0")}
                 </div>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -225,7 +280,10 @@ export function ProjectDetail({ project, onBack, language, fromProjectsPage, onN
         <h2 className="text-3xl mb-8">Visual Showcase</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {project.images.map((image, index) => (
-            <div key={index} className="rounded-xl overflow-hidden bg-muted aspect-[4/3]">
+            <div
+              key={index}
+              className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
+            >
               <ImageWithFallback
                 src={image}
                 alt={`${project.title} - Image ${index + 1}`}
@@ -241,7 +299,10 @@ export function ProjectDetail({ project, onBack, language, fromProjectsPage, onN
         <h2 className="text-3xl mb-8">Results & Impact</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {project.results.map((result, index) => (
-            <div key={index} className="p-6 rounded-xl bg-accent/30 border border-border">
+            <div
+              key={index}
+              className="p-6 rounded-xl bg-accent/30 border border-border"
+            >
               <div className="text-4xl mb-3">{index + 1}</div>
               <p className="text-muted-foreground leading-relaxed">{result}</p>
             </div>
@@ -258,16 +319,23 @@ export function ProjectDetail({ project, onBack, language, fromProjectsPage, onN
             <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
           </div>
           <div className="relative z-10 text-center">
-            <h2 className="text-4xl mb-4 text-primary-foreground">Interested in working together?</h2>
+            <h2 className="text-4xl mb-4 text-primary-foreground">
+              Interested in working together?
+            </h2>
             <p className="text-lg text-primary-foreground/80 mb-8">
-              Let's discuss your project and how I can help bring your vision to life.
+              Let's discuss your project and how I can help bring your vision to
+              life.
             </p>
             <div className="flex gap-4 justify-center">
               <Button size="lg" variant="secondary" className="gap-2">
                 <Mail className="w-5 h-5" />
                 Get in Touch
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 bg-transparent text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10 hover:text-primary-foreground">
+              <Button
+                size="lg"
+                variant="outline"
+                className="gap-2 bg-transparent text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              >
                 View More Projects <ArrowRight className="w-4 h-4" />
               </Button>
             </div>

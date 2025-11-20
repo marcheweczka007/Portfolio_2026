@@ -1,6 +1,6 @@
-import React from 'react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { ArrowUpRight } from 'lucide-react';
+import React from "react";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -11,7 +11,14 @@ interface ProjectCardProps {
   onClick?: () => void;
 }
 
-export function ProjectCard({ title, description, imageUrl, tags, year, onClick }: ProjectCardProps) {
+export function ProjectCard({
+  title,
+  description,
+  imageUrl,
+  tags,
+  year,
+  onClick,
+}: ProjectCardProps) {
   return (
     <div className="group cursor-pointer" onClick={onClick}>
       <div className="relative overflow-hidden rounded-2xl mb-5 aspect-[4/3] bg-muted border border-primary/10 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300">
@@ -37,11 +44,17 @@ export function ProjectCard({ title, description, imageUrl, tags, year, onClick 
           ))}
         </div>
         {year && (
-          <span className="text-xs text-muted-foreground font-mono">{year}</span>
+          <span className="text-xs text-muted-foreground font-mono">
+            {year}
+          </span>
         )}
       </div>
-      <h3 className="mb-2 group-hover:text-primary transition-colors">{title}</h3>
-      <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
+      <h3 className="mb-2 group-hover:text-primary transition-colors">
+        {title}
+      </h3>
+      <p className="text-muted-foreground text-sm leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { Language, translations } from '../translations';
-import { Footer } from './Footer';
-import { ProjectCard } from './ProjectCard';
-import { Button } from './ui/button';
-import { ArrowLeft } from 'lucide-react';
+import React from "react";
+import { Language, translations } from "../translations";
+import { Footer } from "./ui/Footer";
+import { ProjectCard } from "./ui/ProjectCard";
+import { Button } from "./ui/button";
+import { ArrowLeft } from "lucide-react";
 
 interface Project {
   id: string;
@@ -25,7 +25,15 @@ interface ProjectsPageProps {
   onAboutClick?: () => void;
 }
 
-export function ProjectsPage({ onBack, language, onProjectClick, projects, onProjectsClick, onProcessesClick, onAboutClick }: ProjectsPageProps) {
+export function ProjectsPage({
+  onBack,
+  language,
+  onProjectClick,
+  projects,
+  onProjectsClick,
+  onProcessesClick,
+  onAboutClick,
+}: ProjectsPageProps) {
   const t = translations[language];
 
   return (
@@ -42,23 +50,33 @@ export function ProjectsPage({ onBack, language, onProjectClick, projects, onPro
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-end justify-between mb-16">
             <div>
-              <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">{t.home.featuredWorkLabel}</p>
+              <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
+                {t.home.featuredWorkLabel}
+              </p>
               <h2 className="text-5xl">{t.home.featuredWorkTitle}</h2>
-              <p className="text-muted-foreground mt-3">{t.home.featuredWorkDescription}</p>
+              <p className="text-muted-foreground mt-3">
+                {t.home.featuredWorkDescription}
+              </p>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div key={project.id} style={{ animationDelay: `${index * 100}ms` }} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                <ProjectCard {...project} onClick={() => onProjectClick?.(project.id)} />
+              <div
+                key={project.id}
+                style={{ animationDelay: `${index * 100}ms` }}
+                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+              >
+                <ProjectCard
+                  {...project}
+                  onClick={() => onProjectClick?.(project.id)}
+                />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <Footer 
-        language={language}
+      <Footer
         onHomeClick={onBack}
         onProjectsClick={onProjectsClick}
         onProcessesClick={onProcessesClick}

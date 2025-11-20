@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectCard } from "./ui/ProjectCard";
 import { Button } from "./ui/button";
 import {
   ArrowRight,
@@ -9,8 +9,7 @@ import {
   Mail,
   Sparkles,
 } from "lucide-react";
-import { Language, translations } from "../translations";
-import { Footer } from "./Footer";
+import { Footer } from "./ui/Footer";
 import { SendHorizontal } from "lucide-react";
 
 interface Project {
@@ -26,21 +25,56 @@ interface Project {
 interface HomePageProps {
   onProjectClick: (projectId: string) => void;
   projects: Project[];
-  language: Language;
   onViewProjects: () => void;
   onViewProcesses: () => void;
   onViewAbout: () => void;
 }
 
+const homeContent = {
+  availability: "Available for freelance projects",
+  heroTitle1: "I'm a Product Designer",
+  heroTitle2: "(transitioning into Design Engineering)",
+  name: "Hey, I'm Zuza 👋",
+  heroDescription:
+    "Bridging design & engineering | Fast iteration | Developer-friendly workflows | SaaS-focused",
+  viewProjects: "View projects",
+  getInTouch: "Get in touch",
+  processesTitle: "Processes",
+  processesDescription:
+    "I keep my design practical. Sketch first, test early, get feedback, and refine quickly with the team. For me, progress beats perfection, and collaboration beats handoff.",
+  processStep1: "Understand the problem",
+  processStep2: "Ideate",
+  processStep3: "Test",
+  processStep4: "Implement",
+  projectsTitle: "Projects",
+  projectsDescription:
+    "I design digital products for start-ups with a focus on usability, clarity, and creating real business impact.  I’ve collaborated closely with developers and founders to turn ideas into intuitive, experiences that help products grow and evolve.",
+  projectStat1: "Mobile Product Design",
+  projectStat2: "Web Platforms",
+  projectStat3: "Design Systems & UI Libraries",
+  projectStat4: "Data-Heavy Dashboards",
+  featuredWorkLabel: "Portfolio",
+  featuredWorkTitle: "Featured Work",
+  featuredWorkDescription: "A selection of recent projects",
+  viewAll: "View All",
+  philosophyTitle: "Work Philosophy",
+  philosophyQuote:
+    "Great design is invisible. It doesn't draw attention to itself—it enhances the user's experience and helps them achieve their goals effortlessly.",
+  philosophyDescription:
+    "I strive to create interfaces that are not only beautiful but also functional, accessible, and delightful to use. Every pixel serves a purpose, every interaction feels natural, and every decision is backed by research and empathy.",
+  ctaTitle: "Interested in working together?",
+  ctaDescription: "Let's chat and see if we're a good fit.",
+  copyright: "© 2025 Zuza Marchewka. All rights reserved.",
+};
+
 export function HomePage({
   onProjectClick,
   projects,
-  language,
   onViewProjects,
   onViewProcesses,
   onViewAbout,
 }: HomePageProps) {
-  const t = translations[language].home;
+  const t = homeContent;
   return (
     <>
       {/* Hero Section */}
@@ -131,9 +165,7 @@ export function HomePage({
                       {item.num}
                     </span>
                     <div className="flex-1 h-px bg-orange-200/15" />
-                    <span className="text-md text-gray-900">
-                      {item.label}
-                    </span>
+                    <span className="text-md text-gray-900">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -188,9 +220,7 @@ export function HomePage({
                 {t.featuredWorkLabel}
               </p>
               <h2 className="text-5xl">{t.featuredWorkTitle}</h2>
-              <p className="text-gray-500 mt-3">
-                {t.featuredWorkDescription}
-              </p>
+              <p className="text-gray-500 mt-3">{t.featuredWorkDescription}</p>
             </div>
             <Button
               variant="ghost"
@@ -226,12 +256,8 @@ export function HomePage({
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <p className="text-6xl mb-8 font-black text-white">
-            {t.ctaTitle}
-          </p>
-          <p className="text-md text-white/80 mb-10">
-            {t.ctaDescription}
-          </p>
+          <p className="text-6xl mb-8 font-black text-white">{t.ctaTitle}</p>
+          <p className="text-md text-white/80 mb-10">{t.ctaDescription}</p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" variant="secondary" className="gap-2" asChild>
               <a href="mailto:zuzanna.marchewka1@example.com?subject=Let's work together">
@@ -252,7 +278,6 @@ export function HomePage({
       </section>
 
       <Footer
-        language={language}
         onHomeClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         onProjectsClick={onViewProjects}
         onProcessesClick={onViewProcesses}

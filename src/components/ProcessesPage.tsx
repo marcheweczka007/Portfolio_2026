@@ -1,34 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { ArrowLeft, ArrowRight, Check, X } from 'lucide-react';
-import { Language, translations } from '../translations';
-import { Footer } from './Footer';
+import React, { useState, useEffect } from "react";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { ArrowLeft, ArrowRight, Check, X } from "lucide-react";
+import { Footer } from "./ui/Footer";
 
 interface ProcessesPageProps {
   onBack: () => void;
-  language: Language;
   onProjectsClick?: () => void;
   onProcessesClick?: () => void;
   onAboutClick?: () => void;
 }
 
+const processes = {
+  backToHome: "Back to Home",
+  title: "Processes",
+  subtitle: "How I work as a product design (engineer*)",
+};
+
 const sections = [
-  { id: 'prototyping', label: 'Lean prototyping in code' },
-  { id: 'component-first', label: 'Component-first thinking' },
-  { id: 'feedback-loop', label: 'Design → Code feedback loop' },
-  { id: 'small-team', label: 'Making small teams faster' }
+  { id: "prototyping", label: "Lean prototyping in code" },
+  { id: "component-first", label: "Component-first thinking" },
+  { id: "feedback-loop", label: "Design → Code feedback loop" },
+  { id: "small-team", label: "Making small teams faster" },
 ];
 
-export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesClick, onAboutClick }: ProcessesPageProps) {
-  const t = translations[language].processes;
-  const [activeSection, setActiveSection] = useState('prototyping');
+export function ProcessesPage({
+  onBack,
+  onProjectsClick,
+  onProcessesClick,
+  onAboutClick,
+}: ProcessesPageProps) {
+  const t = processes;
+  const [activeSection, setActiveSection] = useState("prototyping");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sectionElements = sections.map(s => ({
+      const sectionElements = sections.map((s) => ({
         id: s.id,
-        element: document.getElementById(s.id)
+        element: document.getElementById(s.id),
       }));
 
       for (const section of sectionElements) {
@@ -42,8 +51,8 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
@@ -55,7 +64,7 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
@@ -89,8 +98,8 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                 onClick={() => scrollToSection(section.id)}
                 className={`px-4 py-2 rounded-full text-sm transition-all whitespace-nowrap ${
                   activeSection === section.id
-                    ? 'bg-primary text-primary-foreground shadow-md shadow-primary/30'
-                    : 'bg-primary/5 text-muted-foreground hover:bg-primary/10 hover:text-foreground'
+                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/30"
+                    : "bg-primary/5 text-muted-foreground hover:bg-primary/10 hover:text-foreground"
                 }`}
               >
                 {section.label}
@@ -106,16 +115,20 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
           <div className="mb-12">
             <h2 className="mb-3">Lean prototyping in code</h2>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              Section about the lean prototyping.
-              Add here why you think lean prototyping is best approach for a start-up and how you use it at work or in your experiments.
+              Section about the lean prototyping. Add here why you think lean
+              prototyping is best approach for a start-up and how you use it at
+              work or in your experiments.
             </p>
           </div>
 
           {/* Lean prototyping - more info */}
           <div className="mb-12">
-            <h3 className="mb-4">More information about the lean prototyping.</h3>
+            <h3 className="mb-4">
+              More information about the lean prototyping.
+            </h3>
             <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-              Tell us how you are applying the lean prototyping in your work or projects.
+              Tell us how you are applying the lean prototyping in your work or
+              projects.
             </p>
 
             <div className="grid lg:grid-cols-2 gap-6">
@@ -134,11 +147,13 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                       "You cut down on endless design cycles",
                       "Engineers love it — it removes ambiguity",
                       "It reveals technical constraints early",
-                      "Users give better feedback on real interactions"
+                      "Users give better feedback on real interactions",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground text-sm">{item}</span>
+                        <span className="text-muted-foreground text-sm">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -152,7 +167,13 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed text-sm">
-                  Lean prototyping works well because it lets teams test ideas quickly without wasting time on perfect designs. You build something simple, real, and interactive so you can learn fast, get clear feedback, and spot technical issues early. This keeps everyone aligned, reduces back-and-forth, and helps a small team move forward with  <span className="italic">confidence and speed</span>.
+                    Lean prototyping works well because it lets teams test ideas
+                    quickly without wasting time on perfect designs. You build
+                    something simple, real, and interactive so you can learn
+                    fast, get clear feedback, and spot technical issues early.
+                    This keeps everyone aligned, reduces back-and-forth, and
+                    helps a small team move forward with{" "}
+                    <span className="italic">confidence and speed</span>.
                   </p>
                 </CardContent>
               </Card>
@@ -163,7 +184,13 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
           <div className="mb-12">
             <h3 className="mb-4">My perspective</h3>
             <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-              I believe that when it comes to building for start-ups, having a foundation system (like shadcn/ui or using pre-built design systems) works wonders and lets you create spaces more faster. <span className="font-medium text-foreground">collaborative faster</span>, at a much lower complexity.
+              I believe that when it comes to building for start-ups, having a
+              foundation system (like shadcn/ui or using pre-built design
+              systems) works wonders and lets you create spaces more faster.{" "}
+              <span className="font-medium text-foreground">
+                collaborative faster
+              </span>
+              , at a much lower complexity.
             </p>
 
             <div className="grid lg:grid-cols-2 gap-6">
@@ -182,11 +209,13 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                       "Start to develop things quicker, so click-thru will take you couple days",
                       "Don't waste time building library, iterate fast on the actual product",
                       "Having the open & docs available and copying over is almost zero-effort",
-                      "Having that set-up & code (as it's made by a dev-ish) will almost feel native after implementation"
+                      "Having that set-up & code (as it's made by a dev-ish) will almost feel native after implementation",
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <Check className="w-4 h-4 text-primary-foreground mt-0.5 flex-shrink-0" />
-                        <span className="text-primary-foreground/90 text-sm">{item}</span>
+                        <span className="text-primary-foreground/90 text-sm">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -204,7 +233,9 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                       You get best time — react on the user & specific
                     </p>
                     <p className="text-muted-foreground leading-relaxed mt-3 text-sm">
-                      Or when you hear, "Imagine if building our own (aka we are going with API component like audit, only users of the product)".
+                      Or when you hear, "Imagine if building our own (aka we are
+                      going with API component like audit, only users of the
+                      product)".
                     </p>
                   </CardContent>
                 </Card>
@@ -233,7 +264,13 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground leading-relaxed">
-                I can not see any case for our use-case they believe what this. Building a system system from the ground up is an investment that drains time and resources from your core product. Your users don't care about your component library; they care about the value your product brings, and maintaining a foundation based system requires less of capability and at the same time is ready for the users.
+                I can not see any case for our use-case they believe what this.
+                Building a system system from the ground up is an investment
+                that drains time and resources from your core product. Your
+                users don't care about your component library; they care about
+                the value your product brings, and maintaining a foundation
+                based system requires less of capability and at the same time is
+                ready for the users.
               </p>
             </CardContent>
           </Card>
@@ -247,7 +284,10 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
           <div className="mb-12">
             <h3 className="mb-4">Build reusable pieces for your UI</h3>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              Tools like story book are amazing for applying this approach, it keeps the components and their interactions all in one place. This way design and developers have a plce witha  single source of truth. 
+              Tools like story book are amazing for applying this approach, it
+              keeps the components and their interactions all in one place. This
+              way design and developers have a plce witha single source of
+              truth.
             </p>
           </div>
 
@@ -258,21 +298,27 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
               <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
                 <CardContent className="p-6 text-center">
                   <p className="text-lg mb-2">Identify</p>
-                  <p className="text-md text-primary-foreground/80">Look for repetition and patterns</p>
+                  <p className="text-md text-primary-foreground/80">
+                    Look for repetition and patterns
+                  </p>
                 </CardContent>
               </Card>
               <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90 md:rotate-0 flex-shrink-0" />
               <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
                 <CardContent className="p-6 text-center">
                   <p className="text-lg mb-2">Build</p>
-                  <p className="text-md text-primary-foreground/80">Create your components and reuse</p>
+                  <p className="text-md text-primary-foreground/80">
+                    Create your components and reuse
+                  </p>
                 </CardContent>
               </Card>
               <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90 md:rotate-0 flex-shrink-0" />
               <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
                 <CardContent className="p-6 text-center">
                   <p className="text-lg mb-2">Assemble</p>
-                  <p className="text-md text-primary-foreground/80">Use the componnts as lego blocks</p>
+                  <p className="text-md text-primary-foreground/80">
+                    Use the componnts as lego blocks
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -284,7 +330,7 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                     "Repeat the 'better UX' loop for each decision point",
                     "Collaboration over - Programs development kit builds require context",
                     "Focus on fast iteration and real user feedback",
-                    "Keep process lean and agile"
+                    "Keep process lean and agile",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
@@ -300,11 +346,10 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
         {/* Feedback loop */}
         <section id="feedback-loop" className="scroll-mt-32 mb-24">
           <div className="mb-8">
-            <h2 className="mb-3">Design and development feedback loop
-
-            </h2>
+            <h2 className="mb-3">Design and development feedback loop</h2>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-             In this section talk about the design and development feedback loop and how important it is, especially in small teams.
+              In this section talk about the design and development feedback
+              loop and how important it is, especially in small teams.
             </p>
           </div>
 
@@ -313,14 +358,23 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
               <ul className="space-y-4">
                 {[
                   { tool: "Miro", purpose: "team alignment & workshops" },
-                  { tool: "Figma", purpose: "design & prototyping (where we come up with the high-fid idea)" },
-                  { tool: "Notion", purpose: "documentation & specs" }
+                  {
+                    tool: "Figma",
+                    purpose:
+                      "design & prototyping (where we come up with the high-fid idea)",
+                  },
+                  { tool: "Notion", purpose: "documentation & specs" },
                 ].map((item) => (
                   <li key={item.tool} className="flex items-start gap-4">
                     <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
-                      <span className="font-medium text-foreground">{item.tool}</span>
-                      <span className="text-muted-foreground"> — {item.purpose}</span>
+                      <span className="font-medium text-foreground">
+                        {item.tool}
+                      </span>
+                      <span className="text-muted-foreground">
+                        {" "}
+                        — {item.purpose}
+                      </span>
                     </div>
                   </li>
                 ))}
@@ -331,11 +385,14 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
 
         {/* Small team */}
         <section id="small-team" className="scroll-mt-32 mb-24">
-          <h2 className="mb-4 mt-8">How you reduce friction between design and engineering</h2>
+          <h2 className="mb-4 mt-8">
+            How you reduce friction between design and engineering
+          </h2>
           <p className="mb-8 text-muted-foreground leading-relaxed max-w-3xl">
-              Section about the lean prototyping.
-              Add here why you think lean prototyping is best approach for a start-up and how you use it at work or in your experiments.
-            </p>
+            Section about the lean prototyping. Add here why you think lean
+            prototyping is best approach for a start-up and how you use it at
+            work or in your experiments.
+          </p>
 
           <div className="grid lg:grid-cols-2 gap-6 mb-8">
             {/* Detailed */}
@@ -352,7 +409,7 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                     "Key points to embark action",
                     "Not heavy at specs → light note",
                     "You can ping easily",
-                    "Agile and fast"
+                    "Agile and fast",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <Check className="w-4 h-4 text-primary-foreground mt-0.5 flex-shrink-0" />
@@ -377,7 +434,7 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
                     "Key points to embark action",
                     "Not heavy at specs → light note",
                     "You can ping easily",
-                    "Agile and fast"
+                    "Agile and fast",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <Check className="w-4 h-4 text-primary-foreground mt-0.5 flex-shrink-0" />
@@ -389,14 +446,24 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
             </Card>
           </div>
 
-          <Card className="border-4 border bg-muted/30">Ctrl/Cmd + Shift + P
-
+          <Card className="border-4 border bg-muted/30">
+            Ctrl/Cmd + Shift + P
             <CardContent className="p-8">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                In fast-moving startups, lightweight handoffs result in faster execution. Detailed files are not always the most effective way to move into product design / start early. I've noticed that over-documenting in the previous startup I was at delayed dev work while lightweight specs helped both designers and developers iterate faster and align better.
+                In fast-moving startups, lightweight handoffs result in faster
+                execution. Detailed files are not always the most effective way
+                to move into product design / start early. I've noticed that
+                over-documenting in the previous startup I was at delayed dev
+                work while lightweight specs helped both designers and
+                developers iterate faster and align better.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                This approach enables collaboration to happen more through conversations than formal documentation. It's both more flexible and cost-efficient in a startup environment with agile requirements, and allows for the right balance of structure without bureaucracy. I don't think we have a need or should be using a handoff approach at a smaller early stage team.
+                This approach enables collaboration to happen more through
+                conversations than formal documentation. It's both more flexible
+                and cost-efficient in a startup environment with agile
+                requirements, and allows for the right balance of structure
+                without bureaucracy. I don't think we have a need or should be
+                using a handoff approach at a smaller early stage team.
               </p>
             </CardContent>
           </Card>
@@ -411,9 +478,12 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
               <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
             </div>
             <CardContent className="relative z-10 text-center p-12">
-              <h2 className="mb-4 text-lg text-primary-foreground">Ready to collaborate?</h2>
+              <h2 className="mb-4 text-lg text-primary-foreground">
+                Ready to collaborate?
+              </h2>
               <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                Let's discuss how these processes can help bring your product vision to life.
+                Let's discuss how these processes can help bring your product
+                vision to life.
               </p>
               <Button size="lg" variant="secondary" onClick={onBack}>
                 Back to Portfolio
@@ -423,8 +493,7 @@ export function ProcessesPage({ onBack, language, onProjectsClick, onProcessesCl
         </section>
       </div>
 
-      <Footer 
-        language={language} 
+      <Footer
         onHomeClick={onBack}
         onProjectsClick={onProjectsClick}
         onProcessesClick={onProcessesClick}
