@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectCard } from "./ui/ProjectCard";
 import { Button } from "./ui/button";
+import { Card, CardContent } from "./ui/card";
 import {
   ArrowRight,
   Lightbulb,
@@ -41,7 +42,7 @@ const homeContent = {
   getInTouch: "Get in touch",
   processesTitle: "Processes",
   processesDescription:
-    "I keep my design practical. Sketch first, test early, get feedback, and refine quickly with the team. For me, progress beats perfection, and collaboration beats handoff.",
+    "I keep my design practical. Sketch first, test early, get feedback, and refine quickly with the team. For me, progress beats perfection, and collaboration beats handoff. For example, I understand the problem, ideate, test, and implement.",
   processStep1: "Understand the problem",
   processStep2: "Ideate",
   processStep3: "Test",
@@ -54,7 +55,7 @@ const homeContent = {
   projectStat3: "Design Systems & UI Libraries",
   projectStat4: "Data-Heavy Dashboards",
   featuredWorkLabel: "Portfolio",
-  featuredWorkTitle: "Featured Work",
+  featuredWorkTitle: "Featured Work xxx",
   featuredWorkDescription: "A selection of recent projects",
   viewAll: "View All",
   philosophyTitle: "Work Philosophy",
@@ -87,7 +88,7 @@ export function HomePage({
         />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full gradient-mesh -z-20" />
 
-        <div className="container mx-auto max-w-12xl">
+        <div className="pt-12 container mx-auto max-w-12xl">
           <div className="flex flex-col items-center text-center relative">
             <h1 className="text-5xl md:text-6xl leading-tight mb-8 tracking-tight font-medium max-w-4xl">
               Hey, I'm Zuza 👋 <br /> A SaaS{" "}
@@ -132,81 +133,81 @@ export function HomePage({
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Processes */}
-            <div
+            <Card
               id="processes"
-              className="group relative bg-gradient-to-br from-orange-50/50 to-orange-100/50 rounded-3xl p-12 border border-orange-200/20 hover:border-orange-300/40 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer overflow-hidden"
+              className="group relative bg-gradient-to-br from-orange-50/50 to-orange-100/50 rounded-3xl border-orange-200/20 hover:border-orange-300/40 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer overflow-hidden p-0"
               onClick={onViewProcesses}
             >
               <div className="absolute top-0 right-0 w-32 h-32 blob-purple opacity-50 -z-10" />
               <div className="absolute top-8 right-8 text-[120px] leading-none opacity-[0.03] select-none">
                 01
               </div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Lightbulb className="w-6 h-6 text-white" />
-                </div>
-                <h2>{t.processesTitle}</h2>
-              </div>
-              <p className="text-gray-500 mb-8 leading-relaxed">
-                {t.processesDescription}
-              </p>
-              <div className="space-y-1">
-                {[
-                  { num: "01", label: t.processStep1 },
-                  { num: "02", label: t.processStep2 },
-                  { num: "03", label: t.processStep3 },
-                  { num: "04", label: t.processStep4 },
-                ].map((item) => (
-                  <div
-                    key={item.num}
-                    className="flex items-center py-4 gap-4 group/item"
-                  >
-                    <span className="text-xs text-gray-400 font-mono">
-                      {item.num}
-                    </span>
-                    <div className="flex-1 h-px bg-orange-200/15" />
-                    <span className="text-md text-gray-900">{item.label}</span>
+              <CardContent className="p-12">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Lightbulb className="w-6 h-6 text-white" />
                   </div>
-                ))}
-              </div>
-            </div>
+                  <h2>{t.processesTitle}</h2>
+                </div>
+                <p className="text-gray-500 mb-8 leading-relaxed">
+                  {t.processesDescription}
+                </p>
+                <div className="space-y-1">
+                  {[
+                    { label: t.processStep1 },
+                    { label: t.processStep2 },
+                    { label: t.processStep3 },
+                    { label: t.processStep4 },
+                  ].map((item) => (
+                    <div className="flex items-center py-4 gap-4 group/item">
+                      <div className="flex-1 h-px bg-orange-200/15" />
+                      <span className="text-md text-gray-900">
+                        {item.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Projects Overview */}
-            <div
-              className="group relative gradient-purple text-white rounded-3xl p-12 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient"
+            <Card
+              className="group relative gradient-purple text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient p-0"
               onClick={onViewProjects}
             >
               <div className="absolute top-8 right-8 text-[120px] leading-none opacity-[0.08] select-none">
                 02
               </div>
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Target className="w-6 h-6 text-orange-600" />
-                </div>
-                <h2>{t.projectsTitle}</h2>
-              </div>
-              <p className="text-white/80 mb-8 leading-relaxed">
-                {t.projectsDescription}
-              </p>
-              <div className="space-y-1">
-                {[
-                  { label: t.projectStat1 },
-                  { label: t.projectStat2 },
-                  { label: t.projectStat3 },
-                  { label: t.projectStat4 },
-                ].map((item, index) => (
-                  <div
-                    key={`stat-${index}`}
-                    className="flex items-center justify-between py-4 border-b border-white/10 last:border-0 group/item"
-                  >
-                    <span className="group-hover/item:translate-x-1 transition-transform">
-                      {item.label}
-                    </span>
+              <CardContent className="p-12">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Target className="w-6 h-6 text-orange-600" />
                   </div>
-                ))}
-              </div>
-            </div>
+                  <h2>{t.projectsTitle}</h2>
+                </div>
+                <p className="text-white/80 mb-8 leading-relaxed">
+                  {t.projectsDescription}
+                </p>
+                <div className="space-y-1">
+                  {[
+                    { label: t.projectStat1 },
+                    { label: t.projectStat2 },
+                    { label: t.projectStat3 },
+                    { label: t.projectStat4 },
+                  ].map((item, index) => (
+                    <div
+                      key={`stat-${index}`}
+                      className="flex items-center justify-between py-4 border-b border-white/10 last:border-0 group/item"
+                    >
+                      <span className="group-hover/item:translate-x-1 transition-transform">
+                        {item.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -232,18 +233,24 @@ export function HomePage({
             </Button>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                style={{ animationDelay: `${index * 100}ms` }}
-                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-              >
-                <ProjectCard
-                  {...project}
-                  onClick={() => onProjectClick(project.id)}
-                />
-              </div>
-            ))}
+            {projects.map((project, index) => {
+              const isDisabled =
+                project.id === "Coding Poject 1" ||
+                project.id === "Coding Poject 2";
+              return (
+                <div
+                  key={project.id}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                >
+                  <ProjectCard
+                    {...project}
+                    onClick={() => onProjectClick(project.id)}
+                    disabled={isDisabled}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

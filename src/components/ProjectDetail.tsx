@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
+import { Footer } from "./ui/Footer";
 import {
   ArrowLeft,
   Calendar,
@@ -21,32 +22,15 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "./ui/breadcrumb";
-
+import { Project } from "../PortfolioApp";
 
 interface ProjectDetailProps {
-  project: {
-    id: string;
-    title: string;
-    description: string;
-    imageUrl: string;
-    tags: string[];
-    year: string;
-    role: string;
-    client?: string;
-    duration?: string;
-    overview: string;
-    challenge: string;
-    solution: string;
-    discovery: string;
-    exploration: string;
-    design: string;
-    shipping: string;
-    results: string[];
-    images: string[];
-  };
+  project: Project;
   onBack: () => void;
   fromProjectsPage?: boolean;
   onNavigateToProjects?: () => void;
+  onNavigateToProcesses?: () => void;
+  onNavigateToAbout?: () => void;
 }
 
 const projects = {
@@ -87,6 +71,8 @@ export function ProjectDetail({
   onBack,
   fromProjectsPage,
   onNavigateToProjects,
+  onNavigateToProcesses,
+  onNavigateToAbout,
 }: ProjectDetailProps) {
   const t = projects;
   const phases = [
@@ -210,7 +196,7 @@ export function ProjectDetail({
       </section>
 
       {/* Project Content */}
-      <section className="container mx-auto max-w-4xl px-6 mb-20">
+      <section className="container mx-auto max-w-6xl px-6 mb-20">
         {/* Overview */}
         <div className="mb-20">
           <h2 className="text-3xl mb-6">Overview</h2>
@@ -234,6 +220,25 @@ export function ProjectDetail({
             {project.solution}
           </p>
         </div>
+
+        {/* Extra Text Section - Conditionally rendered */}
+        {project.extraText && (
+          <div className="mb-20">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {project.extraText}
+            </p>
+          </div>
+        )}
+
+        {/* Extra Section - Conditionally rendered */}
+        {project.extraSection && (
+          <div className="mb-20">
+            <h2 className="text-3xl mb-6">{project.extraSection.title}</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {project.extraSection.content}
+            </p>
+          </div>
+        )}
       </section>
 
       {/* Process Phases */}
@@ -276,26 +281,85 @@ export function ProjectDetail({
       </section>
 
       {/* Project Images */}
-      <section className="container mx-auto max-w-6xl px-6 mb-20">
-        <h2 className="text-3xl mb-8">Visual Showcase</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {project.images.map((image, index) => (
-            <div
-              key={index}
-              className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
-            >
-              <ImageWithFallback
-                src={image}
-                alt={`${project.title} - Image ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
+      {project.images.length > 0 && (
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
+          <h2 className="text-3xl mb-8">Visual Showcase</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {project.images.map((image, index) => (
+              <div
+                key={index}
+                className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
+              >
+                <ImageWithFallback
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Extra Single Image - Conditionally rendered */}
+      {project.extraImage && (
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
+          <div className="rounded-xl overflow-hidden bg-muted aspect-video">
+            <ImageWithFallback
+              src={project.extraImage}
+              alt={`${project.title} - Extra image`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+      )}
+
+      {/* Extra Images - Conditionally rendered */}
+      {project.extraImages && project.extraImages.length > 0 && (
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
+          <h2 className="text-3xl mb-8">Additional Images</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {project.extraImages.map((image, index) => (
+              <div
+                key={index}
+                className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
+              >
+                <ImageWithFallback
+                  src={image}
+                  alt={`${project.title} - Extra image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Custom Sections - Conditionally rendered */}
+      {project.customSections && project.customSections.length > 0 && (
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
+          {project.customSections.map((section, index) => (
+            <div key={index} className="mb-20">
+              <h2 className="text-3xl mb-6">{section.title}</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                {section.content}
+              </p>
+              {section.image && (
+                <div className="rounded-xl overflow-hidden bg-muted aspect-video">
+                  <ImageWithFallback
+                    src={section.image}
+                    alt={`${project.title} - ${section.title}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
             </div>
           ))}
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Results */}
-      <section className="container mx-auto max-w-4xl px-6 mb-20">
+      <section className="container mx-auto max-w-6xl px-6 mb-20">
         <h2 className="text-3xl mb-8">Results & Impact</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {project.results.map((result, index) => (
@@ -311,7 +375,7 @@ export function ProjectDetail({
       </section>
 
       {/* CTA */}
-      <section className="container mx-auto max-w-4xl px-6 py-20 mb-20">
+      <section className="container mx-auto max-w-6xl px-6 py-20 mb-20">
         <div className="relative p-12 rounded-2xl overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80" />
           <div className="absolute inset-0 opacity-10">
@@ -341,6 +405,12 @@ export function ProjectDetail({
             </div>
           </div>
         </div>
+        <Footer
+          onHomeClick={onBack}
+          onProjectsClick={onNavigateToProjects}
+          onProcessesClick={onNavigateToProcesses}
+          onAboutClick={onNavigateToAbout}
+        />
       </section>
     </div>
   );

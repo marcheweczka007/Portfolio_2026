@@ -1,5 +1,4 @@
 import React from "react";
-import { Language, translations } from "../translations";
 import { Footer } from "./ui/Footer";
 import { ProjectCard } from "./ui/ProjectCard";
 import { Button } from "./ui/button";
@@ -17,7 +16,6 @@ interface Project {
 
 interface ProjectsPageProps {
   onBack: () => void;
-  language: Language;
   onProjectClick?: (projectId: string) => void;
   projects: Project[];
   onProjectsClick?: () => void;
@@ -25,16 +23,22 @@ interface ProjectsPageProps {
   onAboutClick?: () => void;
 }
 
+const projectsContent = {
+  backToHome: "Back to Home",
+  featuredWorkLabel: "Portfolio",
+  featuredWorkTitle: "Featured Work",
+  featuredWorkDescription: "A selection of recent projects",
+};
+
 export function ProjectsPage({
   onBack,
-  language,
   onProjectClick,
   projects,
   onProjectsClick,
   onProcessesClick,
   onAboutClick,
 }: ProjectsPageProps) {
-  const t = translations[language];
+  const t = projectsContent;
 
   return (
     <div className="min-h-screen bg-background pt-24">
@@ -42,7 +46,7 @@ export function ProjectsPage({
       <div className="container mx-auto max-w-6xl px-6 mb-8">
         <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
           <ArrowLeft className="w-4 h-4" />
-          {t.projects.backToHome}
+          {t.backToHome}
         </Button>
       </div>
 
@@ -51,27 +55,33 @@ export function ProjectsPage({
           <div className="flex items-end justify-between mb-16">
             <div>
               <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
-                {t.home.featuredWorkLabel}
+                {t.featuredWorkLabel}
               </p>
-              <h2 className="text-5xl">{t.home.featuredWorkTitle}</h2>
+              <h2 className="text-5xl">{t.featuredWorkTitle}</h2>
               <p className="text-muted-foreground mt-3">
-                {t.home.featuredWorkDescription}
+                {t.featuredWorkDescription}
               </p>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={project.id}
-                style={{ animationDelay: `${index * 100}ms` }}
-                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-              >
-                <ProjectCard
-                  {...project}
-                  onClick={() => onProjectClick?.(project.id)}
-                />
-              </div>
-            ))}
+            {projects.map((project, index) => {
+              const isDisabled =
+                project.id === "Coding Poject 1" ||
+                project.id === "Coding Poject 2";
+              return (
+                <div
+                  key={project.id}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                >
+                  <ProjectCard
+                    {...project}
+                    onClick={() => onProjectClick?.(project.id)}
+                    disabled={isDisabled}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

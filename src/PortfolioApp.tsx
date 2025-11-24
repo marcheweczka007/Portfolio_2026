@@ -6,10 +6,8 @@ import { ProcessesPage } from "./components/ProcessesPage";
 import { AboutPage } from "./components/AboutPage";
 import { ProjectsPage } from "./components/ProjectsPage";
 import { Footer } from "./components/ui/Footer";
-import { Language } from "./translations";
-import Timeline from "./components/ui/Timeline";
 
-interface Project {
+export interface Project {
   id: string;
   title: string;
   description: string;
@@ -28,9 +26,23 @@ interface Project {
   shipping: string;
   results: string[];
   images: string[];
+  // Optional fields for custom content
+  extraImage?: string; // Single extra image
+  extraImages?: string[]; // Multiple extra images
+  extraText?: string; // Extra text section
+  extraSection?: {
+    title: string;
+    content: string;
+  }; // Custom section with title and content
+  customSections?: Array<{
+    title: string;
+    content: string;
+    image?: string;
+  }>; // Multiple custom sections
+  comingSoon?: boolean;
 }
 
-export default function App() {
+export default function PortfolioApp() {
   const [currentView, setCurrentView] = useState<
     "home" | "projects" | "project" | "processes" | "about"
   >("home");
@@ -39,32 +51,14 @@ export default function App() {
   );
   const [previousView, setPreviousView] = useState<"home" | "projects">("home");
 
-  // ============================================
-  // ADD YOUR PROJECT IMAGES HERE
-  // ============================================
-  // To add images for your projects:
-  // 1. Place your images in the src/assets/ folder
-  // 2. Import them at the top of this file like:
-  //    import mobileBankingThumbnail from './assets/mobile-banking-thumbnail.jpg';
-  //    import mobileBanking1 from './assets/mobile-banking-1.jpg';
-  // 3. Use the imported variables in the imageUrl and images arrays below
-  //
-  // Example:
-  // imageUrl: mobileBankingThumbnail,
-  // images: [mobileBanking1, mobileBanking2, mobileBanking3],
-  // ============================================
-
   const projects: Project[] = [
     {
       id: "mobile-banking",
-      title: "Mobile Banking Loan Application",
+      title: "Grand Bank - Mobile Banking",
       description:
         "Designed an alternative application flow for declined credit card applicants to apply for Grand Bank loans with customizable add-ons, e-sign their application, and track status via mobile app.",
-      // TODO: Add your project thumbnail image
-      // Example: imageUrl: mobileBankingThumbnail,
-      // Or use a path: imageUrl: '/src/assets/mobile-banking-thumbnail.jpg',
-      imageUrl: "",
-      tags: ["Mobile", "Online Banking"],
+      imageUrl: "/src/assets/GrandBank/GrandBankHero.png",
+      tags: ["Mobile", "Online Banking", "Loan Application"],
       year: "2025",
       role: "Product Designer",
       client: "Grand Bank",
@@ -85,14 +79,14 @@ export default function App() {
       images: [],
     },
     {
-      id: "Component Library",
-      title: "Evolving the Component Library",
+      id: "One view dashboard",
+      title: "One view dashboard",
       description:
         "A story about joining a team with an existing design system and discovering the challenges of maintaining alignment between designers and developers. Through this experience, I learned that true consistency comes from collaboration, communication, and shared ownership.",
       // TODO: Add your project thumbnail image
       // Example: imageUrl: componentLibraryThumbnail,
-      imageUrl: "",
-      tags: ["Design Library", "SaaS", "White Labelling"],
+      imageUrl: "/src/assets/OneView/OneView.png",
+      tags: ["SaaS", "Dashboard", "UI/UX"],
       year: "2024-2025",
       role: "Product Designer",
       client: "Internal Project",
@@ -122,18 +116,18 @@ export default function App() {
       images: [],
     },
     {
-      id: "ecommerce-platform",
-      title: "E-commerce Platform",
+      id: "Product Card Redesign",
+      title: "Product Card Redesign",
       description:
-        "Building a modern shopping experience with focus on conversion and user delight.",
+        "Improve the UX and design of the product card interface for loan applications.",
       // TODO: Add your project thumbnail image
       // Example: imageUrl: ecommerceThumbnail,
-      imageUrl: "",
-      tags: ["Web", "E-commerce", "Mobile"],
-      year: "2023",
-      role: "Senior Product Designer",
-      client: "StyleHub",
-      duration: "5 months",
+      imageUrl: "/src/assets/ApplicationCards/ApplicationCards.png",
+      tags: ["SaaS", "Loan Application", "Re-design"],
+      year: "2025",
+      role: "Product Designer",
+      client: "Ascent Platform",
+      duration: "2 months",
       overview:
         "StyleHub, a fashion e-commerce startup, needed to differentiate themselves in a crowded market. They wanted to create a shopping experience that felt personal, engaging, and trustworthy while optimizing for conversions across all devices.",
       challenge:
@@ -159,18 +153,18 @@ export default function App() {
       images: [],
     },
     {
-      id: "grand-bank",
-      title: "Grand Bank",
+      id: "E-book and business card design",
+      title: "E-book and business card design",
       description:
         "Comprehensive mobile banking solution with seamless user experience and advanced security features.",
       // TODO: Add your project thumbnail image
       // Example: imageUrl: grandBankThumbnail,
-      imageUrl: "",
-      tags: ["Mobile app", "Banking", "SaaS"],
+      imageUrl: "/src/assets/E-BookProject/EBookHero.png",
+      tags: ["E-book", "Branding", "Graphic Design"],
       year: "2024",
-      role: "Product Designer",
-      client: "Grand Bank",
-      duration: "8 months",
+      role: "Graphic Designer (Freelance)",
+      client: "Infracost",
+      duration: "1 month",
       overview:
         "Grand Bank approached us to create a next-generation mobile banking app that would set new standards for user experience in the financial sector. The goal was to make complex banking operations feel simple and accessible while maintaining the highest security standards.",
       challenge:
@@ -196,18 +190,18 @@ export default function App() {
       images: [],
     },
     {
-      id: "product-card",
-      title: "Product Card Redesign",
-      description:
-        "Streamlining the loan application process with a redesigned product card interface.",
+      id: "Coding Poject 1",
+      title: "Coding Project 01 (Coming soon)",
+      description: "Design engineering project.",
+      comingSoon: true,
       // TODO: Add your project thumbnail image
       // Example: imageUrl: productCardThumbnail,
-      imageUrl: "",
-      tags: ["Re-design", "Loan application", "SaaS"],
-      year: "2023",
-      role: "Lead UX Designer",
-      client: "LendingTree",
-      duration: "3 months",
+      imageUrl: "/src/assets/Other/ComingSoon.png",
+      tags: [],
+      year: "",
+      role: "Design Engineer",
+      client: "Personal Projects",
+      duration: "1 months",
       overview:
         "LendingTree needed to redesign their product card interface for loan applications. The existing design had high drop-off rates and users found the information overwhelming and difficult to compare between different loan products.",
       challenge:
@@ -233,20 +227,19 @@ export default function App() {
       images: [],
     },
     {
-      id: "one-view",
-      title: "One View Dashboard",
-      description:
-        "Unified dashboard solution providing a comprehensive view of all key business metrics and operations.",
+      id: "Coding Poject 2",
+      title: "Coding Project 02 (Coming soon)",
+      description: "Design engineering project.",
       // TODO: Add your project thumbnail image
       // Example: imageUrl: oneViewThumbnail,
-      imageUrl: "",
-      tags: ["Dashboard", "SaaS"],
-      year: "2024",
-      role: "Senior Product Designer",
-      client: "MetricsHub",
-      duration: "5 months",
+      imageUrl: "src/assets/Other/ComingSoon.png",
+      tags: [],
+      year: "",
+      role: "Design Engineer",
+      client: "Personal Projects",
+      duration: "3 months",
       overview:
-        "MetricsHub, a B2B SaaS company, needed to consolidate multiple dashboards into one unified view. Their users were switching between 5 different tools to get a complete picture of their business, leading to inefficiency and data silos.",
+        "Coding projects that improved my coding skills and knowledge. I have been taking this opportunity to learn new technologies and improve my coding skills.",
       challenge:
         "The challenge was to create a single dashboard that could surface the most important information from multiple data sources without overwhelming users. Different user roles needed different views, and the system had to be flexible enough to accommodate varying business needs while maintaining consistency.",
       solution:
@@ -272,6 +265,10 @@ export default function App() {
   ];
 
   const handleProjectClick = (projectId: string) => {
+    // Disable navigation for projects that are not ready
+    if (projectId === "Coding Poject 1" || projectId === "Coding Poject 2") {
+      return;
+    }
     setPreviousView(currentView as "home" | "projects");
     setSelectedProjectId(projectId);
     setCurrentView("project");
@@ -344,6 +341,8 @@ export default function App() {
           onBack={handleBackFromProject}
           fromProjectsPage={previousView === "projects"}
           onNavigateToProjects={handleViewProjects}
+          onNavigateToProcesses={handleViewProcesses}
+          onNavigateToAbout={handleViewAbout}
         />
       )}
 

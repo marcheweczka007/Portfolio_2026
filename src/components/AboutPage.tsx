@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Timeline from "./ui/timeline";
-import { Building2, Briefcase } from "lucide-react";
 import ascentLogo from "../assets/expereince/ascentplatformLogo.jpg";
 import grafterrLogo from "../assets/expereince/grafterrLogo.png";
 import infracostLogo from "../assets/expereince/infracostLogo.png";

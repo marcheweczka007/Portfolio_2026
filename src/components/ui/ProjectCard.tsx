@@ -9,6 +9,7 @@ interface ProjectCardProps {
   tags: string[];
   year?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 export function ProjectCard({
@@ -18,22 +19,40 @@ export function ProjectCard({
   tags,
   year,
   onClick,
+  disabled = false,
 }: ProjectCardProps) {
   return (
-    <div className="group cursor-pointer" onClick={onClick}>
-      <div className="relative overflow-hidden rounded-2xl mb-5 aspect-[4/3] bg-muted border border-primary/10 group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10 transition-all duration-300">
+    <div
+      className={`group ${
+        disabled ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+      }`}
+      onClick={disabled ? undefined : onClick}
+    >
+      <div
+        className={`relative overflow-hidden rounded-2xl mb-5 aspect-[4/3] bg-muted border border-primary/10 transition-all duration-300 ${
+          disabled
+            ? ""
+            : "group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10"
+        }`}
+      >
         <ImageWithFallback
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+          className={`w-full h-full object-cover transition-all duration-700 ${
+            disabled ? "" : "group-hover:scale-105"
+          }`}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
-          <ArrowUpRight className="w-5 h-5" />
-        </div>
+        {!disabled && (
+          <>
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+              <ArrowUpRight className="w-5 h-5" />
+            </div>
+          </>
+        )}
       </div>
-      <div className="flex items-center justify-between mb-3">
-        <div className="flex gap-2">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
               key={tag}
@@ -49,7 +68,11 @@ export function ProjectCard({
           </span>
         )}
       </div>
-      <h3 className="mb-2 group-hover:text-primary transition-colors">
+      <h3
+        className={`mb-2 transition-colors ${
+          disabled ? "" : "group-hover:text-primary"
+        }`}
+      >
         {title}
       </h3>
       <p className="text-muted-foreground text-sm leading-relaxed">
