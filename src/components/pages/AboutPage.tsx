@@ -2,19 +2,8 @@ import React from "react";
 import { Button } from "../ui/button";
 import Timeline from "../ui/timeline";
 import ascentLogo from "../../assets/experience/ascentplatformLogo.jpg";
-
 import grafterrLogo from "../../assets/experience/grafterrLogo.png";
 import infracostLogo from "../../assets/experience/infracostLogo.png";
-
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "../../App.tsx";
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
 
 import {
   ArrowLeft,
@@ -169,7 +158,7 @@ const projectsContent = {
   },
 };
 
-export function AboutPage({
+export default function AboutPage({
   onBack,
   onProjectsClick,
   onProcessesClick,

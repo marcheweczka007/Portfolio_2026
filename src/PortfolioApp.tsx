@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { NavigationBar } from "./components/ui/navigationBar";
-import { HomePage } from "./components/pages/HomePage";
 import { ProjectDetail } from "./components/ProjectDetail";
-import { ProcessesPage } from "./components/pages/ProcessesPage";
-import { AboutPage } from "./components/pages/AboutPage";
-import { ProjectsPage } from "./components/pages/ProjectsPage";
 import { projects, Project } from "./projectsData";
+import HomePage from "./components/pages/HomePage";
+import ProcessesPage from "./components/pages/ProcessesPage";
+import AboutPage from "./components/pages/AboutPage";
+import ProjectsPage from "./components/pages/ProjectsPage";
 
 export type { Project };
 

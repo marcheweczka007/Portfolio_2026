@@ -34,7 +34,7 @@ const sections = [
   { id: "small-team", label: "Making small teams faster" },
 ];
 
-export function ProcessesPage({
+export default function ProcessesPage({
   onBack,
   onProjectsClick,
   onProcessesClick,

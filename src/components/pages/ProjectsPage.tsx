@@ -40,7 +40,7 @@ const projectsContent = {
   featuredWorkDescription: "A selection of recent projects",
 };
 
-export function ProjectsPage({
+export default function ProjectsPage({
   onBack,
   onProjectClick,
   projects,
