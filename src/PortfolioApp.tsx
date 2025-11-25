@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Header } from "./components/ui/Header";
 import { HomePage } from "./components/HomePage";
-import { ProjectDetail, projects, Project } from "./components/ProjectDetail";
+import { ProjectDetail } from "./components/ProjectDetail";
 import { ProcessesPage } from "./components/ProcessesPage";
 import { AboutPage } from "./components/AboutPage";
 import { ProjectsPage } from "./components/ProjectsPage";
+import { projects, Project } from "./projectsData";
 
 export type { Project };
 
