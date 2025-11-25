@@ -1,46 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "../ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { Footer } from "../ui/Footer";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../ui/button.tsx";
+import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card.tsx";
+import { ArrowRight, Check } from "lucide-react";
+import processes, { sections } from "./aboutProcesses.ts";
+import BackButton from "../../pageUtilities/BackButton.tsx";
+import PageLayout from "../../pageUtilities/PageLayout.tsx";
 
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom/client";
-import App from "../../App.tsx";
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
-
-interface ProcessesPageProps {
-  onBack: () => void;
-  onProjectsClick?: () => void;
-  onProcessesClick?: () => void;
-  onAboutClick?: () => void;
-}
-
-const processes = {
-  backToHome: "Back to Home",
-  title: "Processes",
-  subtitle: "How I work as a product design (engineer*)",
-};
-
-const sections = [
-  { id: "prototyping", label: "Lean prototyping in code" },
-  { id: "component-first", label: "Component-first thinking" },
-  { id: "feedback-loop", label: "Design → Code feedback loop" },
-  { id: "small-team", label: "Making small teams faster" },
-];
-
-export default function ProcessesPage({
-  onBack,
-  onProjectsClick,
-  onProcessesClick,
-  onAboutClick,
-}: ProcessesPageProps) {
-  const t = processes;
+export default function ProcessesPage() {
+  const navigate = useNavigate();
+  const processesContent = processes;
   const [activeSection, setActiveSection] = useState("prototyping");
 
   useEffect(() => {
@@ -80,21 +49,15 @@ export default function ProcessesPage({
   };
 
   return (
-    <div className="min-h-screen bg-background pt-24">
-      {/* Back Button */}
-      <div className="container mx-auto max-w-6xl px-6 mb-8">
-        <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
-          <ArrowLeft className="w-4 h-4" />
-          {t.backToHome}
-        </Button>
-      </div>
+    <PageLayout>
+      <BackButton text={processesContent.backToHome} />
 
       {/* Header */}
       <section className="container mx-auto max-w-6xl px-6 mb-12 relative">
         <div className="absolute -top-20 right-0 w-64 h-64 blob-purple opacity-30 -z-10 animate-pulse-glow" />
-        <h1 className="mb-6">{t.title}</h1>
+        <h1 className="mb-6">{processesContent.title}</h1>
         <p className="text-muted-foreground max-w-3xl leading-relaxed">
-          {t.subtitle}
+          {processesContent.subtitle}
         </p>
       </section>
 
@@ -495,20 +458,17 @@ export default function ProcessesPage({
                 Let's discuss how these processes can help bring your product
                 vision to life.
               </p>
-              <Button size="lg" variant="secondary" onClick={onBack}>
+              <Button
+                size="lg"
+                variant="secondary"
+                onClick={() => navigate("/")}
+              >
                 Back to Portfolio
               </Button>
             </CardContent>
           </Card>
         </section>
       </div>
-
-      <Footer
-        onHomeClick={onBack}
-        onProjectsClick={onProjectsClick}
-        onProcessesClick={onProcessesClick}
-        onAboutClick={onAboutClick}
-      />
-    </div>
+    </PageLayout>
   );
 }
