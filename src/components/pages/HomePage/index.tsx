@@ -7,11 +7,12 @@ import { SendHorizontal } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../../../projectsData";
 import homeContent from "./homeData.ts";
+import PageLayout from "../../pageUtilities/PageLayout.tsx";
 
 export default function HomePage() {
   const navigate = useNavigate();
   return (
-    <>
+    <PageLayout>
       {/* Hero Section */}
       <section id="home" className="relative pt-32 pb-20 px-6 overflow-hidden">
         {/* Decorative gradient blobs */}
@@ -231,6 +232,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </PageLayout>
   );
 }

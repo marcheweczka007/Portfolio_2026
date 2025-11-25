@@ -1,18 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import logoImage from "../../assets/LogoZuPortfolioV2.svg?url";
 import { Button } from "./button";
 import { SendHorizontal, Menu, X } from "lucide-react";
 const headerContent = {
   getInTouch: "Get in touch",
 };
-
-interface NavigationBarProps {
-  onHomeClick?: () => void;
-  onProjectsClick?: () => void;
-  onProcessesClick?: () => void;
-  onAboutClick?: () => void;
-  currentView?: "home" | "projects" | "project" | "processes" | "about";
-}
 
 const content = {
   home: "Home",
@@ -21,17 +14,22 @@ const content = {
   about: "About",
 };
 
-export function NavigationBar({
-  onHomeClick,
-  onProjectsClick,
-  onProcessesClick,
-  onAboutClick,
-
-  currentView = "home",
-}: NavigationBarProps) {
+export function NavigationBar() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // For project detail pages, consider "projects" as active
-  const activeView = currentView === "project" ? "projects" : currentView;
+
+  // Determine active view based on current pathname
+  const getActiveView = () => {
+    const path = location.pathname;
+    if (path === "/") return "home";
+    if (path.startsWith("/projects")) return "projects";
+    if (path === "/processes") return "processes";
+    if (path === "/about") return "about";
+    return "home";
+  };
+
+  const activeView = getActiveView();
 
   return (
     <header className="fixed left-1/2 -translate-x-1/2 top-4 w-full z-50 px-4">
@@ -43,7 +41,7 @@ export function NavigationBar({
               src={logoImage}
               alt="Logo"
               className="h-8 cursor-pointer hover:opacity-80 transition-opacity"
-              onClick={onHomeClick}
+              onClick={() => navigate("/")}
             />
           </div>
 
@@ -51,9 +49,9 @@ export function NavigationBar({
           <div className="flex-1 items-center ">
             <nav className="hidden md:flex justify-center gap-8 lg:gap-10">
               {/* HOME */}
-              <a
-                href="#home"
-                onClick={onHomeClick}
+              <button
+                type="button"
+                onClick={() => navigate("/")}
                 className={`text-sm transition-colors relative group cursor-pointer ${
                   activeView === "home"
                     ? "text-gray-900"
@@ -66,11 +64,12 @@ export function NavigationBar({
                     activeView === "home" ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
-              </a>
+              </button>
 
               {/* PROJECTS */}
-              <a
-                onClick={onProjectsClick}
+              <button
+                type="button"
+                onClick={() => navigate("/projects")}
                 className={`text-sm transition-colors relative group cursor-pointer ${
                   activeView === "projects"
                     ? "text-gray-900"
@@ -85,11 +84,12 @@ export function NavigationBar({
                       : "w-0 group-hover:w-full"
                   }`}
                 />
-              </a>
+              </button>
 
               {/* PROCESSES */}
-              <a
-                onClick={onProcessesClick}
+              <button
+                type="button"
+                onClick={() => navigate("/processes")}
                 className={`text-sm transition-colors relative group cursor-pointer ${
                   activeView === "processes"
                     ? "text-gray-900"
@@ -104,11 +104,12 @@ export function NavigationBar({
                       : "w-0 group-hover:w-full"
                   }`}
                 />
-              </a>
+              </button>
 
               {/* ABOUT */}
-              <a
-                onClick={onAboutClick}
+              <button
+                type="button"
+                onClick={() => navigate("/about")}
                 className={`text-sm transition-colors relative group cursor-pointer ${
                   activeView === "about"
                     ? "text-gray-900"
@@ -121,7 +122,7 @@ export function NavigationBar({
                     activeView === "about" ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 />
-              </a>
+              </button>
             </nav>
           </div>
 
@@ -159,7 +160,7 @@ export function NavigationBar({
               <button
                 type="button"
                 onClick={() => {
-                  onHomeClick?.();
+                  navigate("/");
                   setIsMobileMenuOpen(false);
                 }}
                 className={`text-sm text-left ${
@@ -174,7 +175,7 @@ export function NavigationBar({
               <button
                 type="button"
                 onClick={() => {
-                  onProjectsClick?.();
+                  navigate("/projects");
                   setIsMobileMenuOpen(false);
                 }}
                 className={`text-sm text-left ${
@@ -189,7 +190,7 @@ export function NavigationBar({
               <button
                 type="button"
                 onClick={() => {
-                  onProcessesClick?.();
+                  navigate("/processes");
                   setIsMobileMenuOpen(false);
                 }}
                 className={`text-sm text-left ${
@@ -204,7 +205,7 @@ export function NavigationBar({
               <button
                 type="button"
                 onClick={() => {
-                  onAboutClick?.();
+                  navigate("/about");
                   setIsMobileMenuOpen(false);
                 }}
                 className={`text-sm text-left ${
