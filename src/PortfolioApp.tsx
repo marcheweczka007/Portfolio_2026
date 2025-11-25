@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header } from "./components/ui/Header";
+import { NavigationBar } from "./components/ui/navigationBar";
 import { HomePage } from "./components/HomePage";
 import { ProjectDetail } from "./components/ProjectDetail";
 import { ProcessesPage } from "./components/ProcessesPage";
@@ -60,7 +60,7 @@ export default function PortfolioApp() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header
+      <NavigationBar
         onHomeClick={handleBackToHome}
         onProjectsClick={handleViewProjects}
         onProcessesClick={handleViewProcesses}
