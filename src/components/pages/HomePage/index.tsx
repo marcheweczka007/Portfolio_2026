@@ -3,18 +3,15 @@ import { ProjectCard } from "../../ui/ProjectCard";
 import { Button } from "../../ui/button";
 import { Card, CardContent } from "../../ui/card";
 import { ArrowRight, Lightbulb, Target, Mail } from "lucide-react";
-import { Footer } from "../../ui/Footer";
 import { SendHorizontal } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { projects } from "../../../projectsData";
 import homeContent from "./homeData.ts";
-import { NavigationBar } from "../../ui/navigationBar.tsx";
 
 export default function HomePage() {
   const navigate = useNavigate();
   return (
     <>
-      <NavigationBar />
       {/* Hero Section */}
       <section id="home" className="relative pt-32 pb-20 px-6 overflow-hidden">
         {/* Decorative gradient blobs */}
@@ -234,13 +231,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <Footer
-        onHomeClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        onProjectsClick={() => navigate("/projects")}
-        onProcessesClick={() => navigate("/processes")}
-        onAboutClick={() => navigate("/about")}
-      />
     </>
   );
 }
