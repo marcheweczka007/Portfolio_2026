@@ -1,9 +1,20 @@
 import React from "react";
-import { Button } from "./ui/button";
-import Timeline from "./ui/timeline";
-import ascentLogo from "../assets/expereince/ascentplatformLogo.jpg";
-import grafterrLogo from "../assets/expereince/grafterrLogo.png";
-import infracostLogo from "../assets/expereince/infracostLogo.png";
+import { Button } from "../ui/button";
+import Timeline from "../ui/timeline";
+import ascentLogo from "../../assets/experience/ascentplatformLogo.jpg";
+
+import grafterrLogo from "../../assets/experience/grafterrLogo.png";
+import infracostLogo from "../../assets/experience/infracostLogo.png";
+
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "../../App.tsx";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
 import {
   ArrowLeft,
@@ -14,15 +25,15 @@ import {
   Layers,
   Code2,
 } from "lucide-react";
-import portraitImage from "../assets/zuza_portfolio.png";
+import portraitImage from "../../assets/zuza_portfolio.png";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./ui/accordion";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Footer } from "./ui/Footer";
+} from "../ui/accordion";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
+import { Footer } from "../ui/Footer";
 
 interface AboutPageProps {
   onBack: () => void;

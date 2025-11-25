@@ -1,8 +1,18 @@
 import React from "react";
-import { Footer } from "./ui/Footer";
-import { ProjectCard } from "./ui/ProjectCard";
-import { Button } from "./ui/button";
+import { Footer } from "../ui/Footer";
+import { ProjectCard } from "../ui/ProjectCard";
+import { Button } from "../ui/button";
 import { ArrowLeft } from "lucide-react";
+
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import App from "../../App.tsx";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
 interface Project {
   id: string;

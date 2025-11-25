@@ -1,7 +1,7 @@
 import React from "react";
-import { ProjectCard } from "./ui/ProjectCard";
-import { Button } from "./ui/button";
-import { Card, CardContent } from "./ui/card";
+import { ProjectCard } from "../ui/ProjectCard";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 import {
   ArrowRight,
   Lightbulb,
@@ -10,8 +10,18 @@ import {
   Mail,
   Sparkles,
 } from "lucide-react";
-import { Footer } from "./ui/Footer";
+import { Footer } from "../ui/Footer";
 import { SendHorizontal } from "lucide-react";
+
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import App from "../../App.tsx";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
 interface Project {
   id: string;

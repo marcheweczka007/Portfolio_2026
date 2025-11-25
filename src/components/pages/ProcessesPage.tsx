@@ -1,8 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "./ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "../ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
-import { Footer } from "./ui/Footer";
+import { Footer } from "../ui/Footer";
+
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom/client";
+import App from "../../App.tsx";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
 
 interface ProcessesPageProps {
   onBack: () => void;
