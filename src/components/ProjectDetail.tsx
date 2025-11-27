@@ -96,7 +96,7 @@ export function ProjectDetail({
 
   return (
     <div>
-      {/* Breadcrumb and Back Button */}
+      {/* Back Button */}
       <div className="container mx-auto max-w-6xl px-6 mb-8">
         <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
           <ArrowLeft className="w-4 h-4" />

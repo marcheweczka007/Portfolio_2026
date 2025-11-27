@@ -1,4 +1,4 @@
-import { Project } from "./types";
+import { Project, ProjectCardData } from "./types";
 import { mobileBanking } from "./mobile-banking";
 import { oneView } from "./one-view";
 import { productCardRedesign } from "./product-card-redesign";
@@ -6,6 +6,18 @@ import { ebookAndBusinessCard } from "./e-book-and-business-card-design";
 import { codingProject1 } from "./coding-project-1";
 import { codingProject2 } from "./coding-project-2";
 
+// Helper function to extract only ProjectCard required fields
+const toProjectCardData = (project: Project): ProjectCardData => ({
+  id: project.id,
+  title: project.title,
+  description: project.description,
+  imageUrl: project.imageUrl,
+  tags: project.tags,
+  year: project.year,
+  comingSoon: project.comingSoon,
+});
+
+// Full projects array for detail pages
 export const projects: Project[] = [
   mobileBanking,
   oneView,
@@ -15,5 +27,7 @@ export const projects: Project[] = [
   codingProject2,
 ];
 
-export type { Project };
+// Projects array with only ProjectCard fields
+export const projectCards: ProjectCardData[] = projects.map(toProjectCardData);
 
+export type { Project };

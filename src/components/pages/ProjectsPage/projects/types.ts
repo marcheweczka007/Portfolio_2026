@@ -1,10 +1,16 @@
-export interface Project {
+// Minimal type for ProjectCard display
+export interface ProjectCardData {
   id: string;
   title: string;
   description: string;
   imageUrl: string;
   tags: string[];
-  year: string;
+  year?: string;
+  comingSoon?: boolean;
+}
+
+// Full Project type for detail pages
+export interface Project extends ProjectCardData {
   role: string;
   client?: string;
   duration?: string;
@@ -30,5 +36,4 @@ export interface Project {
     content: string;
     image?: string;
   }>;
-  comingSoon?: boolean;
 }
