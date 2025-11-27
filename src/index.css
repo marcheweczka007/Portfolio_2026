@@ -3123,3 +3123,34 @@ html {
     height: 0;
   }
 }
+
+/* Workaround for responsive text sizing - Tailwind v4 JIT not generating responsive text classes */
+@media (width >=48rem) {
+  .md\:text-4xl {
+    font-size: var(--text-4xl);
+  }
+
+  .md\:text-3xl {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (width >=64rem) {
+  .lg\:text-5xl {
+    font-size: var(--text-5xl);
+  }
+
+  .lg\:text-4xl {
+    font-size: var(--text-4xl);
+  }
+}
+
+@media (width >=80rem) {
+  .xl\:text-6xl {
+    font-size: var(--text-6xl);
+  }
+
+  .xl\:text-5xl {
+    font-size: var(--text-5xl);
+  }
+}
