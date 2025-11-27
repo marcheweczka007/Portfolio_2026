@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ProjectDetail } from "../../ProjectDetail";
-import { projects } from "../ProjectsPage/projectsData";
+import { projects } from "../ProjectsPage/projects";
 
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
