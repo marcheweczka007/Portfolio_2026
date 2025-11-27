@@ -16,3 +16,4 @@ export const projects: Project[] = [
 ];
 
 export type { Project };
+

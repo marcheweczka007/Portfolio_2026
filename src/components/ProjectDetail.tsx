@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "./ui/button";
-import { Footer } from "./ui/Footer";
 import {
   ArrowLeft,
   Calendar,
@@ -103,7 +102,7 @@ export function ProjectDetail({
   ];
 
   return (
-    <div className="min-h-screen bg-background pt-24">
+    <div>
       {/* Breadcrumb and Back Button */}
       <div className="container mx-auto max-w-6xl px-6 mb-8">
         {fromProjectsPage && onNavigateToProjects && (
@@ -405,12 +404,6 @@ export function ProjectDetail({
             </div>
           </div>
         </div>
-        <Footer
-          onHomeClick={onBack}
-          onProjectsClick={onNavigateToProjects}
-          onProcessesClick={onNavigateToProcesses}
-          onAboutClick={onNavigateToAbout}
-        />
       </section>
     </div>
   );
