@@ -3154,3 +3154,10 @@ html {
     font-size: var(--text-5xl);
   }
 }
+
+/* Workaround for NavigationBar hamburger - hide on desktop */
+@media (width >=48rem) {
+  .mobile-hamburger {
+    display: none !important;
+  }
+}

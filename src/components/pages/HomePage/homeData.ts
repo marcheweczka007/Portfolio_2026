@@ -17,7 +17,7 @@ const homeContent = {
   projectStat3: "Design Systems & UI Libraries",
   projectStat4: "Data-Heavy Dashboards",
   featuredWorkLabel: "Portfolio",
-  featuredWorkTitle: "Featured Work xxx",
+  featuredWorkTitle: "Featured Work",
   featuredWorkDescription: "A selection of recent projects",
   viewAll: "View All",
 };

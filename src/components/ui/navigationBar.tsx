@@ -46,8 +46,8 @@ export function NavigationBar() {
           </div>
 
           {/* Desktop nav */}
-          <div className="flex-1 items-center hidden md:block">
-            <nav className="flex justify-center gap-8 lg:gap-10">
+          <div className="hidden md:flex flex-1 items-center justify-center">
+            <nav className="flex gap-8 lg:gap-10">
               {/* HOME */}
               <button
                 type="button"
@@ -139,10 +139,10 @@ export function NavigationBar() {
             </Button>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile hamburger - only visible on mobile */}
           <button
             type="button"
-            className="inline-flex md:hidden items-center justify-center p-2 rounded-full text-gray-800 hover:bg-orange-50 transition-colors"
+            className="mobile-hamburger inline-flex items-center justify-center p-2 rounded-full text-gray-800 hover:bg-orange-50 transition-colors"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             {isMobileMenuOpen ? (
