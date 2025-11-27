@@ -28,7 +28,7 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center relative">
             <h1 className="text-5xl md:text-6xl leading-tight mb-8 tracking-tight font-medium max-w-4xl">
               Hey, I'm Zuza 👋 <br /> A SaaS{" "}
-              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/20 text-orange-600 text-3xl md:text-5xl font-medium mx-1">
+              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-100 border border-orange-200/60 text-orange-600 text-3xl md:text-5xl font-medium mx-1">
                 Product designer
               </span>{" "}
               learning to build in code and{" "}
@@ -36,8 +36,8 @@ export default function HomePage() {
                 className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
                 style={{
                   textDecorationLine: "underline",
-                  textDecorationColor: "#DE5516",
-                  textDecorationThickness: "2px",
+                  textDecorationColor: "#047857",
+                  textDecorationThickness: "3px",
                   textDecorationStyle: "wavy",
                 }}
               >
