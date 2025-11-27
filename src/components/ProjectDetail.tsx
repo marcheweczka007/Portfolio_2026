@@ -22,7 +22,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "./ui/breadcrumb";
-import { Project } from "../projectsData";
+import { Project } from "./pages/ProjectsPage/projectsData";
 
 interface ProjectDetailProps {
   project: Project;
