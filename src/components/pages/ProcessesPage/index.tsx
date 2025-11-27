@@ -6,7 +6,7 @@ import { ArrowRight, Check } from "lucide-react";
 import processes, { sections } from "./aboutProcesses.ts";
 import BackButton from "../../pageUtilities/BackButton.tsx";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
-
+import { CTASection } from "../../ui/CTASection.tsx";
 export default function ProcessesPage() {
   const navigate = useNavigate();
   const processesContent = processes;
@@ -443,31 +443,7 @@ export default function ProcessesPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="mb-24">
-          <Card className="relative overflow-hidden border-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80" />
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
-              <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
-            </div>
-            <CardContent className="relative z-10 text-center p-12">
-              <h2 className="mb-4 text-lg text-primary-foreground">
-                Ready to collaborate?
-              </h2>
-              <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-                Let's discuss how these processes can help bring your product
-                vision to life.
-              </p>
-              <Button
-                size="lg"
-                variant="secondary"
-                onClick={() => navigate("/")}
-              >
-                Back to Portfolio
-              </Button>
-            </CardContent>
-          </Card>
-        </section>
+         <CTASection />
       </div>
     </PageLayout>
   );

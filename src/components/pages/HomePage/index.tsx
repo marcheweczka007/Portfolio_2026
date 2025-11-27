@@ -8,62 +8,12 @@ import { useNavigate } from "react-router-dom";
 import { projects } from "../ProjectsPage/projects/projects.ts";
 import homeContent from "./homeData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
+import { CTASection } from "../../ui/CTASection.tsx";
 
 export default function HomePage() {
   const navigate = useNavigate();
   return (
     <PageLayout>
-      {/* Hero Section */}
-      <section id="home" className="relative pt-32 pb-20 px-6 overflow-hidden">
-        {/* Decorative gradient blobs */}
-        <div className="absolute top-32 right-0 w-[800px] h-[600px] blob-purple animate-pulse-glow -z-10" />
-        <div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] blob-purple animate-pulse-glow -z-10"
-          style={{ animationDelay: "2s" }}
-        />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full gradient-mesh -z-20" />
-
-        <div className="pt-12 container mx-auto max-w-12xl">
-          <div className="flex flex-col items-center text-center relative">
-            <h1 className="text-5xl md:text-6xl leading-tight mb-8 tracking-tight font-medium max-w-4xl">
-              Hey, I'm Zuza 👋 <br /> A SaaS{" "}
-              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/20 text-orange-600 text-3xl md:text-5xl font-medium mx-1">
-                Product designer
-              </span>
-              learning to build in code and{" "}
-              <span
-                className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
-                style={{
-                  textDecorationLine: "underline",
-                  textDecorationColor: "#DE5516",
-                  textDecorationThickness: "2px",
-                  textDecorationStyle: "wavy",
-                }}
-              >
-                collaborate
-              </span>{" "}
-              more closely with engineering.
-            </h1>
-            <div className="flex gap-4">
-              <Button size="lg" asChild>
-                <a href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together">
-                  {homeContent.getInTouch}{" "}
-                  <SendHorizontal className="w-4 h-4" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="gap-2"
-                onClick={() => navigate("/projects")}
-              >
-                {homeContent.viewProjects} <ArrowRight className="w-4 h-4" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Processes & Projects Grid */}
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
@@ -201,37 +151,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-orange-600 to-orange-600/80" />
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white rounded-full blur-3xl" />
-        </div>
-        <div className="container mx-auto max-w-4xl text-center relative z-10">
-          <p className="text-6xl mb-8 font-black text-white">
-            {homeContent.ctaTitle}
-          </p>
-          <p className="text-md text-white/80 mb-10">
-            {homeContent.ctaDescription}
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="gap-2" asChild>
-              <a href="mailto:zuzanna.marchewka1@example.com?subject=Let's work together">
-                <Mail className="w-5 h-5" />
-                {homeContent.getInTouch}
-              </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="gap-2 bg-transparent text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/10 hover:text-primary-foreground"
-              onClick={() => navigate("/projects")}
-            >
-              {homeContent.viewProjects} <ArrowRight className="w-4 h-4" />
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection />
     </PageLayout>
   );
 }

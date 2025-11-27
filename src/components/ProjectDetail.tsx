@@ -348,24 +348,29 @@ export function ProjectDetail({
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="container mx-auto max-w-6xl px-6 py-20 mb-20">
-        <div className="relative p-12 rounded-2xl overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/80" />
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-foreground rounded-full blur-3xl" />
-          </div>
-          <div className="relative z-10 text-center">
-            <h2 className="text-4xl mb-4 text-primary-foreground">
-              Interested in working together?
-            </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8">
-              Let's discuss your project and how I can help bring your vision to
-              life.
-            </p>
+      {/* Interested in working together? */}
+<section className="container mx-auto px-6 py-20 mb-20">
+  <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-500 via-orange-500 to-rose-500 text-white">
+    {/* Soft glow blobs */}
+    <div className="pointer-events-none absolute inset-0 opacity-20">
+      <div className="absolute -top-10 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl" />
+      <div className="absolute -bottom-10 right-1/4 w-72 h-72 bg-white rounded-full blur-3xl" />
+    </div>
+
+    {/* Content */}
+    <div className="relative z-10 max-w-2xl mx-auto px-6 py-12 md:px-10 md:py-16 text-center space-y-6">
+      <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+        Let’s collaborate
+      </p>
+      <h2 className="text-3xl md:text-4xl font-semibold">
+        Interested in working together?
+      </h2>
+      <p className="text-base md:text-lg text-white/85">
+        Tell me about your product, team, or idea and we’ll explore how design
+        and thoughtful UX can move it forward.
+      </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="gap-2">
+              <Button size="lg" variant="default" className="gap-2">
                 <Mail className="w-5 h-5" />
                 Get in Touch
               </Button>
