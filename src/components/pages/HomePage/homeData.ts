@@ -1,8 +1,8 @@
 const homeContent = {
   availability: "Available for freelance projects",
-  heroTitle1: "I'm a Product Designer",
+  heroTitle1: "a Product Designer",
   heroTitle2: "(transitioning into Design Engineering)",
-  name: "Hey, I'm Zuza 👋",
+  name: "Hey, I'm Zuza 👋 ",
   heroDescription:
     "Bridging design & engineering | Fast iteration | Developer-friendly workflows | SaaS-focused",
   viewProjects: "View projects",
