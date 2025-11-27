@@ -34,7 +34,7 @@ export function NavigationBar() {
   return (
     <header className="fixed left-1/2 -translate-x-1/2 top-4 w-full z-50 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="backdrop-blur-xl border border-orange-200/15 shadow-lg px-4 py-2 rounded-full flex md:grid md:grid-cols-[auto,1fr,auto] items-center gap-4 md:gap-8 w-full">
+        <div className="backdrop-blur-xl border border-orange-200/15 shadow-lg px-4 py-2 rounded-full flex items-center justify-between gap-4 md:grid md:grid-cols-[auto,1fr,auto] md:gap-8 w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
@@ -46,8 +46,8 @@ export function NavigationBar() {
           </div>
 
           {/* Desktop nav */}
-          <div className="flex-1 items-center ">
-            <nav className="hidden md:flex justify-center gap-8 lg:gap-10">
+          <div className="flex-1 items-center hidden md:block">
+            <nav className="flex justify-center gap-8 lg:gap-10">
               {/* HOME */}
               <button
                 type="button"
@@ -140,9 +140,9 @@ export function NavigationBar() {
           </div>
 
           {/* Mobile hamburger */}
-          {/* <button
+          <button
             type="button"
-            className="inline-flex md:hidden items-center justify-center ml-auto p-2 rounded-full text-gray-800 hover:bg-orange-50 transition-colors"
+            className="inline-flex md:hidden items-center justify-center p-2 rounded-full text-gray-800 hover:bg-orange-50 transition-colors"
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             {isMobileMenuOpen ? (
@@ -150,12 +150,12 @@ export function NavigationBar() {
             ) : (
               <Menu className="w-5 h-5" />
             )}
-          </button> */}
+          </button>
         </div>
 
         {/* Mobile menu panel */}
         {isMobileMenuOpen && (
-          <div className="md:hidden lg mt-2 bg-white border border-orange-200/40 rounded-2xl shadow-lg px-4 py-3">
+          <div className="md:hidden mt-2 bg-white border border-orange-200/40 rounded-2xl shadow-lg px-4 py-3 backdrop-blur-xl">
             <nav className="flex flex-col gap-3">
               <button
                 type="button"

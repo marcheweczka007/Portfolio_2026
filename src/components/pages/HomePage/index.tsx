@@ -36,8 +36,8 @@ export default function HomePage() {
                 className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
                 style={{
                   textDecorationLine: "underline",
-                  textDecorationColor: "#047857",
-                  textDecorationThickness: "3px",
+                  textDecorationColor: "#93C5FD",
+                  textDecorationThickness: "5px",
                   textDecorationStyle: "wavy",
                 }}
               >
@@ -86,7 +86,7 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.processesTitle}</h2>
                 </div>
-                <p className="text-sm text-gray-600 mb-8 leading-relaxed">
+                <p className="text-md text-gray-600 mb-8 leading-relaxed">
                   {homeContent.processesDescription}
                 </p>
                 <div className="space-y-1">
@@ -125,7 +125,7 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.projectsTitle}</h2>
                 </div>
-                <p className="text-sm text-white/90 mb-8 leading-relaxed">
+                <p className="text-md text-white/90 mb-8 leading-relaxed">
                   {homeContent.projectsDescription}
                 </p>
                 <div className="space-y-1">
