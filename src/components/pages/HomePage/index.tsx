@@ -14,6 +14,57 @@ export default function HomePage() {
   const navigate = useNavigate();
   return (
     <PageLayout>
+      {/* Hero Section */}
+      <section id="home" className="relative pt-14 pb-20 px-6 overflow-hidden">
+        {/* Decorative gradient blobs */}
+        <div className="absolute top-32 right-0 w-[800px] h-[600px] blob-purple animate-pulse-glow -z-10" />
+        <div
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] blob-purple animate-pulse-glow -z-10"
+          style={{ animationDelay: "2s" }}
+        />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full gradient-mesh -z-20" />
+
+        <div className="pt-12 container mx-auto max-w-12xl">
+          <div className="flex flex-col items-center text-center relative">
+            <h1 className="text-5xl md:text-6xl leading-tight mb-8 tracking-tight font-medium max-w-4xl">
+              Hey, I'm Zuza 👋 <br /> A SaaS{" "}
+              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200/20 text-orange-600 text-3xl md:text-5xl font-medium mx-1">
+                Product designer
+              </span>{" "}
+              learning to build in code and{" "}
+              <span
+                className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
+                style={{
+                  textDecorationLine: "underline",
+                  textDecorationColor: "#DE5516",
+                  textDecorationThickness: "2px",
+                  textDecorationStyle: "wavy",
+                }}
+              >
+                collaborate
+              </span>{" "}
+              more closely with engineering.
+            </h1>
+            <div className="flex gap-4">
+              <Button size="lg" asChild>
+                <a href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together">
+                  {homeContent.getInTouch}{" "}
+                  <SendHorizontal className="w-4 h-4" />
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="gap-2"
+                onClick={() => navigate("/projects")}
+              >
+                {homeContent.viewProjects} <ArrowRight className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Processes & Projects Grid */}
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
@@ -21,7 +72,7 @@ export default function HomePage() {
             {/* Processes */}
             <Card
               id="processes"
-              className="group relative bg-gradient-to-br from-orange-50/50 to-orange-100/50 rounded-3xl border-orange-200/20 hover:border-orange-300/40 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer overflow-hidden p-0"
+              className="group relative bg-gradient-to-br from-orange-100/50 to-orange-300/50 rounded-3xl border-orange-200/20 hover:border-orange-300/40 hover:shadow-lg hover:shadow-orange-400/10 transition-all duration-300 cursor-pointer overflow-hidden p-0"
               onClick={() => navigate("/processes")}
             >
               <div className="absolute top-0 right-0 w-32 h-32 blob-purple opacity-50 -z-10" />
@@ -35,7 +86,7 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.processesTitle}</h2>
                 </div>
-                <p className="text-gray-500 mb-8 leading-relaxed">
+                <p className="text-sm text-gray-600 mb-8 leading-relaxed">
                   {homeContent.processesDescription}
                 </p>
                 <div className="space-y-1">
@@ -46,10 +97,9 @@ export default function HomePage() {
                     { label: homeContent.processStep4 },
                   ].map((item) => (
                     <div
-                      className="flex items-center py-4 gap-4 group/item"
+                      className="flex items-center justify-between py-4 border-b border-orange/30 last:border-0 group/item"
                       key={item.label}
                     >
-                      <div className="flex-1 h-px bg-orange-200/15" />
                       <span className="text-md text-gray-900">
                         {item.label}
                       </span>
@@ -61,7 +111,7 @@ export default function HomePage() {
 
             {/* Projects Overview */}
             <Card
-              className="group relative gradient-purple text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient p-0"
+              className="group relative bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient p-0"
               onClick={() => navigate("/projects")}
             >
               <div className="absolute top-8 right-8 text-[120px] leading-none opacity-[0.08] select-none">
@@ -75,7 +125,7 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.projectsTitle}</h2>
                 </div>
-                <p className="text-white/80 mb-8 leading-relaxed">
+                <p className="text-sm text-white/90 mb-8 leading-relaxed">
                   {homeContent.projectsDescription}
                 </p>
                 <div className="space-y-1">
@@ -87,11 +137,9 @@ export default function HomePage() {
                   ].map((item, index) => (
                     <div
                       key={`stat-${index}`}
-                      className="flex items-center justify-between py-4 border-b border-white/10 last:border-0 group/item"
+                      className="flex items-center justify-between py-4 border-b border-white/20 last:border-0 group/item"
                     >
-                      <span className="group-hover/item:translate-x-1 transition-transform">
-                        {item.label}
-                      </span>
+                      <span>{item.label}</span>
                     </div>
                   ))}
                 </div>
