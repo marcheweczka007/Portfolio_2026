@@ -7,4 +7,4 @@ const projectsContent = {
 export default projectsContent;
 
 // Re-export projects and Project type from the projects folder
-export { projects, type Project } from "./projects";
+export { projects, type Project } from "./projects/projects";

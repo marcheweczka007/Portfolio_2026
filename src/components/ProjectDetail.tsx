@@ -13,15 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "./ui/breadcrumb";
-import { Project } from "./pages/ProjectsPage/projects";
+import { Project } from "./pages/ProjectsPage/projects/projects";
 
 interface ProjectDetailProps {
   project: Project;
@@ -74,30 +66,31 @@ export function ProjectDetail({
   onNavigateToAbout,
 }: ProjectDetailProps) {
   const t = projectTranslations;
+
   const phases = [
     {
       icon: Search,
       title: "Discovery",
       description: project.discovery,
-      color: "from-blue-500/10 to-blue-500/5",
+      color: "bg-gray-100",
     },
     {
       icon: Lightbulb,
       title: "Exploration",
       description: project.exploration,
-      color: "from-amber-500/10 to-amber-500/5",
+      color: "bg-gray-100",
     },
     {
       icon: Palette,
       title: "Design",
       description: project.design,
-      color: "from-purple-500/10 to-purple-500/5",
+      color: "bg-gray-100",
     },
     {
       icon: Rocket,
       title: "Shipping",
       description: project.shipping,
-      color: "from-green-500/10 to-green-500/5",
+      color: "bg-gray-100",
     },
   ];
 
@@ -105,24 +98,6 @@ export function ProjectDetail({
     <div>
       {/* Breadcrumb and Back Button */}
       <div className="container mx-auto max-w-6xl px-6 mb-8">
-        {fromProjectsPage && onNavigateToProjects && (
-          <Breadcrumb className="mb-4">
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink
-                  onClick={onNavigateToProjects}
-                  className="cursor-pointer"
-                >
-                  {t.projects}
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{project.title}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-        )}
         <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
           <ArrowLeft className="w-4 h-4" />
           {fromProjectsPage ? t.backToProjects : t.backToHome}
@@ -141,10 +116,10 @@ export function ProjectDetail({
             </span>
           ))}
         </div>
-        <h1 className="text-6xl mb-6 max-w-3xl leading-tight">
+        <h1 className="text-6xl mb-6 max-w-6xl leading-tight">
           {project.title}
         </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mb-12">
+        <p className="text-xl text-muted-foreground max-w-6xl mb-12">
           {project.description}
         </p>
 
@@ -205,7 +180,7 @@ export function ProjectDetail({
         </div>
 
         {/* Challenge */}
-        <div className="mb-20 p-8 rounded-2xl bg-accent/30 border-l-4 border-primary">
+        <div className="mb-20 p-8 rounded-2xl bg-orange-50 border-1 border-orange-200">
           <h2 className="text-3xl mb-6">The Challenge</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {project.challenge}
@@ -247,25 +222,25 @@ export function ProjectDetail({
             Process
           </p>
           <h2 className="text-4xl mb-4">How We Got There</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-6xl mx-auto">
             A structured approach to solving complex design challenges through
             research, ideation, refinement, and delivery.
           </p>
         </div>
-
+        {/* Process Boxes */}
         <div className="grid md:grid-cols-2 gap-6">
           {phases.map((phase, index) => {
             const Icon = phase.icon;
             return (
               <div
                 key={phase.title}
-                className={`group relative p-8 rounded-2xl bg-gradient-to-br ${phase.color} border border-border hover:border-border/60 transition-all duration-300`}
+                className={`group relative p-8 rounded-2xl bg-gradient-to-br ${phase.color} border-0 hover:border-gray-300 transition-all duration-300`}
               >
                 <div className="absolute top-6 right-6 text-6xl font-mono opacity-[0.05] select-none">
                   {String(index + 1).padStart(2, "0")}
                 </div>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-2xl">{phase.title}</h3>

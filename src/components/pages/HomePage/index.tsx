@@ -5,7 +5,7 @@ import { Card, CardContent } from "../../ui/card";
 import { ArrowRight, Lightbulb, Target, Mail } from "lucide-react";
 import { SendHorizontal } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { projects } from "../ProjectsPage/projects";
+import { projects } from "../ProjectsPage/projects/projects.ts";
 import homeContent from "./homeData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 

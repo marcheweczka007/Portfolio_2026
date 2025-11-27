@@ -1,7 +1,7 @@
 import React from "react";
 import { ProjectCard } from "../../ui/ProjectCard.tsx";
 import { useNavigate } from "react-router-dom";
-import { projects } from "./projects";
+import { projects } from "./projects/projects.ts";
 import projectsData from "./projectsData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import BackButton from "../../pageUtilities/BackButton.tsx";

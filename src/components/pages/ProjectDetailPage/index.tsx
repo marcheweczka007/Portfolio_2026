@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ProjectDetail } from "../../ProjectDetail";
-import { projects } from "../ProjectsPage/projects";
+import { projects } from "../ProjectsPage/projects/projects";
 import PageLayout from "../../pageUtilities/PageLayout";
 
 export default function ProjectDetailPage() {
