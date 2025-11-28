@@ -68,32 +68,42 @@ export function ProjectDetail({
 }: ProjectDetailProps) {
   const t = projectTranslations;
 
-  const phases = [
-    {
-      icon: Search,
-      title: "Discovery",
-      description: project.discovery,
-      color: "bg-gray-100",
-    },
-    {
-      icon: Lightbulb,
-      title: "Exploration",
-      description: project.exploration,
-      color: "bg-gray-100",
-    },
-    {
-      icon: Palette,
-      title: "Design",
-      description: project.design,
-      color: "bg-gray-100",
-    },
-    {
-      icon: Rocket,
-      title: "Shipping",
-      description: project.shipping,
-      color: "bg-gray-100",
-    },
-  ];
+  // Use custom process phases if provided, otherwise use default structure
+  const defaultIcons = [Search, Lightbulb, Palette, Rocket];
+  const phases = project.processPhases
+    ? project.processPhases.map((phase, index) => ({
+        icon: defaultIcons[index] || Search,
+        title: phase.title,
+        description: phase.description,
+        image: phase.image,
+        color: "bg-gray-100",
+      }))
+    : [
+        {
+          icon: Search,
+          title: "Discovery",
+          description: project.discovery,
+          color: "bg-gray-100",
+        },
+        {
+          icon: Lightbulb,
+          title: "Exploration",
+          description: project.exploration,
+          color: "bg-gray-100",
+        },
+        {
+          icon: Palette,
+          title: "Design",
+          description: project.design,
+          color: "bg-gray-100",
+        },
+        {
+          icon: Rocket,
+          title: "Shipping",
+          description: project.shipping,
+          color: "bg-gray-100",
+        },
+      ];
 
   return (
     <div>
@@ -111,7 +121,7 @@ export function ProjectDetail({
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-4 py-1.5 bg-accent border border-border rounded-full text-sm"
+              className="px-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm"
             >
               {tag}
             </span>
@@ -219,13 +229,12 @@ export function ProjectDetail({
       {/* Process Phases */}
       <section className="container mx-auto max-w-6xl px-6 mb-20">
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
-            Process
-          </p>
-          <h2 className="text-4xl mb-4">How We Got There</h2>
+          <h2 className="text-4xl mb-4">
+            {project.processTitle || "The Process"}
+          </h2>
           <p className="text-muted-foreground max-w-6xl mx-auto">
-            A structured approach to solving complex design challenges through
-            research, ideation, refinement, and delivery.
+            {project.processDescription ||
+              "The project was flexible but followed somehow structured process to allow me to explore and deliver the best solution for the users."}
           </p>
         </div>
         {/* Process Boxes */}
@@ -246,6 +255,15 @@ export function ProjectDetail({
                   </div>
                   <h3 className="text-2xl">{phase.title}</h3>
                 </div>
+                {phase.image && (
+                  <div className="mb-6 rounded-xl overflow-hidden bg-muted">
+                    <ImageWithFallback
+                      src={phase.image}
+                      alt={`${phase.title} - Process image`}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                )}
                 <p className="text-muted-foreground leading-relaxed">
                   {phase.description}
                 </p>
@@ -276,21 +294,40 @@ export function ProjectDetail({
         </section>
       )}
 
-      {/* Extra Single Image - Conditionally rendered */}
-      {project.extraImage && (
+      {/* Extra Image 01- Conditionally rendered */}
+      {project.extraImage01 && (
         <section className="container mx-auto max-w-6xl px-6 mb-10">
           <div className="flex flex-col gap-2 mb-4">
-            <h2 className="text-2xl">Original Product Card</h2>
+            <h2 className="text-2xl">{project.extraImage01.title}</h2>
             <p className="text-muted-foreground leading-relaxed mb-0">
-              This is the original product card that was used before the
-              redesign.
+              {project.extraImage01.description}
             </p>
           </div>
 
           <div className="w-full rounded-xl overflow-hidden bg-orange-100 py-4">
             <ImageWithFallback
-              src={project.extraImage}
-              alt={`${project.title} - Extra image`}
+              src={project.extraImage01.imageUrl}
+              alt={`${project.title} - ${project.extraImage01.title}`}
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </section>
+      )}
+
+      {/* Extra Image 02- Conditionally rendered */}
+      {project.extraImage02 && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <div className="flex flex-col gap-2 mb-4">
+            <h2 className="text-2xl">{project.extraImage02.title}</h2>
+            <p className="text-muted-foreground leading-relaxed mb-0">
+              {project.extraImage02.description}
+            </p>
+          </div>
+
+          <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
+            <ImageWithFallback
+              src={project.extraImage02.imageUrl}
+              alt={`${project.title} - ${project.extraImage02.title}`}
               className="w-full h-auto object-contain"
             />
           </div>

@@ -23,8 +23,33 @@ export interface Project extends ProjectCardData {
   shipping: string;
   results: string[];
   images: string[];
+
   // Optional fields for custom content
-  extraImage?: string;
+  extraImage01?: {
+    title: string;
+    description: string;
+    imageUrl: string;
+  };
+  extraImage02?: {
+    title: string;
+    description: string;
+    imageUrl: string;
+  };
+  extraImage03?: {
+    title: string;
+    description: string;
+    imageUrl: string;
+  };
+  extraImage04?: {
+    title: string;
+    description: string;
+    imageUrl: string;
+  };
+  extraImage05?: {
+    title: string;
+    description: string;
+    imageUrl: string;
+  };
   extraImages?: string[];
   extraText?: string;
   extraSection?: {
@@ -34,6 +59,14 @@ export interface Project extends ProjectCardData {
   customSections?: Array<{
     title: string;
     content: string;
+    image?: string;
+  }>;
+  // Process section configuration
+  processTitle?: string;
+  processDescription?: string;
+  processPhases?: Array<{
+    title: string;
+    description: string;
     image?: string;
   }>;
 }
