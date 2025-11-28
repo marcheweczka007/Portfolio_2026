@@ -116,26 +116,29 @@ export function ProjectDetail({
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto max-w-4xl px-6 mb-20">
-        <div className="flex flex-wrap gap-2 mb-6">
+      <section className="container mx-auto max-w-4xl  mb-10">
+
+        <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
+               Project
+              </p>
+        <h1 className="text-4xl font-bold mb-2 max-w-4xl leading-tight">
+          {project.title}
+        </h1>
+        <p className="text-muted-foreground mt-3 pb-4">
+          {project.description}
+        </p>
+        <div className="flex flex-wrap gap-2 mb-8">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-4 py-1.5 bg-gray-50 border border-gray-200 rounded-full text-sm"
+              className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs"
             >
               {tag}
             </span>
           ))}
         </div>
-        <h1 className="text-4xl font-bold mb-2 max-w-4xl leading-tight">
-          {project.title}
-        </h1>
-        <p className="text-2xl text-muted-foreground max-w-4xl mb-8">
-          {project.description}
-        </p>
-
         {/* Project Meta */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 text-muted-foreground mb-2">
               <Calendar className="w-4 h-4" />
@@ -168,7 +171,7 @@ export function ProjectDetail({
               <p>{project.duration}</p>
             </div>
           )}
-        </div>
+        </div> */}
 
         {/* Hero Image */}
         <div className="rounded-2xl overflow-hidden bg-muted aspect-video">

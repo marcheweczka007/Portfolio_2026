@@ -13,20 +13,20 @@ export default function ProjectsPage() {
     <PageLayout>
       <BackButton />
 
-      <section className="px-6 pb-20">
-        <div className="container mx-auto max-w-4xl">
-          <div className="flex items-end justify-between mb-16">
+      <section className="px-6 pb-10">
+        <div className=" Grid gap-10 container mx-auto max-w-4xl">
+          <div className=" mb-4">
             <div>
               <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
                 {projectsData.featuredWorkLabel}
               </p>
-              <h2 className="text-5xl">{projectsData.featuredWorkTitle}</h2>
+              <h2 className="text-4xl font-bold">{projectsData.featuredWorkTitle}</h2>
               <p className="text-muted-foreground mt-3">
                 {projectsData.featuredWorkDescription}
               </p>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             {projectCards.map((project, index) => {
               const isDisabled =
                 project.id === "Coding Poject 1" ||

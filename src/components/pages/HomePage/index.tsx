@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
 
       {/* Processes & Projects Grid */}
-      <section className="py-24 px-6">
+      <section className="py-10 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Processes */}
@@ -79,7 +79,7 @@ export default function HomePage() {
               <div className="absolute top-8 right-8 text-[120px] leading-none opacity-[0.03] select-none">
                 01
               </div>
-              <CardContent className="p-12">
+              <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Lightbulb className="w-6 h-6 text-white" />
@@ -118,7 +118,7 @@ export default function HomePage() {
                 02
               </div>
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
-              <CardContent className="p-12">
+              <CardContent className="p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Target className="w-6 h-6 text-orange-600" />
@@ -171,7 +171,7 @@ export default function HomePage() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => {
               const isDisabled =
                 project.id === "Coding Poject 1" ||

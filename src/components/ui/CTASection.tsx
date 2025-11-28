@@ -8,7 +8,7 @@ export function CTASection() {
   const navigate = useNavigate();
 
   return (
-<section className="container mx-auto px-6 py-20 mb-20">
+<section className="container mx-w-5xl px-6 py-20 mb-20">
   <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-500 via-orange-500 to-rose-500 text-white">
     {/* Soft glow blobs */}
     {/* <div className="pointer-events-none absolute inset-0 opacity-20">

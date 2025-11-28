@@ -27,27 +27,7 @@
   --radius: 0.75rem;
 }
 
-.dark {
-  --background: #0a0118;
-  --foreground: #fafafa;
-  --card: #1a1027;
-  --card-foreground: #fafafa;
-  --popover: #1a1027;
-  --popover-foreground: #fafafa;
-  --primary: #F17A47;
-  --primary-foreground: #0a0118;
-  --secondary: #4a1f0f;
-  --secondary-foreground: #ffe8dc;
-  --muted: #4a1f0f;
-  --muted-foreground: #a1a1aa;
-  --accent: #5a2512;
-  --accent-foreground: #ffe8dc;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: rgba(241, 122, 71, 0.2);
-  --input: rgba(241, 122, 71, 0.1);
-  --ring: #F17A47;
-}
+
 
 .globals-reset * {
   border-color: var(--border);
