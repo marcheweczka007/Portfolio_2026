@@ -53,7 +53,7 @@ export default function ProcessesPage() {
       <BackButton text={processesContent.backToHome} />
 
       {/* Header */}
-      <section className="container mx-auto max-w-6xl px-6 mb-12 relative">
+      <section className="container mx-auto max-w-4xl px-6 mb-12 relative">
         <div className="absolute -top-20 right-0 w-64 h-64 blob-purple opacity-30 -z-10 animate-pulse-glow" />
         <h1 className="mb-6">{processesContent.title}</h1>
         <p className="text-muted-foreground max-w-3xl leading-relaxed">
@@ -63,7 +63,7 @@ export default function ProcessesPage() {
 
       {/* Navigation Pills */}
       <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-primary/10 mb-12">
-        <div className="container mx-auto max-w-6xl px-6 py-4">
+        <div className="container mx-auto max-w-4xl px-6 py-4">
           <nav className="flex gap-2 overflow-x-auto scrollbar-hide">
             {sections.map((section) => (
               <button
@@ -82,7 +82,7 @@ export default function ProcessesPage() {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-6xl px-6">
+      <div className="container mx-auto max-w-4xl px-6">
         {/* Lean Prototyping in code */}
         <section id="prototyping" className="scroll-mt-32 mb-24">
           <div className="mb-12">
@@ -443,7 +443,7 @@ export default function ProcessesPage() {
         </section>
 
         {/* Final CTA */}
-         <CTASection />
+        <CTASection />
       </div>
     </PageLayout>
   );

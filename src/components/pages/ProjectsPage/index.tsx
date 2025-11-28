@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       <BackButton />
 
       <section className="px-6 pb-20">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-4xl">
           <div className="flex items-end justify-between mb-16">
             <div>
               <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
