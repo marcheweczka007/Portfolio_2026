@@ -36,7 +36,7 @@ export default function HomePage() {
                 className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
                 style={{
                   textDecorationLine: "underline",
-                  textDecorationColor: "#93C5FD",
+                  textDecorationColor: "#059669",
                   textDecorationThickness: "2px",
                   textDecorationStyle: "wavy",
                 }}
@@ -111,7 +111,7 @@ export default function HomePage() {
 
             {/* Projects Overview */}
             <Card
-              className="group relative bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient p-0"
+              className="group relative bg-gradient-to-br from-orange-500 to-orange-300 text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient p-0"
               onClick={() => navigate("/projects")}
             >
               <div className="absolute top-8 right-8 text-[120px] leading-none opacity-[0.08] select-none">

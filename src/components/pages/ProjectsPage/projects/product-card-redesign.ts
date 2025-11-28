@@ -12,11 +12,12 @@ export const productCardRedesign: Project = {
   client: "Ascent Platform",
   duration: "2 months",
   overview:
-    "StyleHub, a fashion e-commerce startup, needed to differentiate themselves in a crowded market. They wanted to create a shopping experience that felt personal, engaging, and trustworthy while optimizing for conversions across all devices.",
+    "Re-design and imporve the overall experience for the borrower when they are applying for a loan. By improving the product card interface, and help borrower understand their loan stageg and progress.",
   challenge:
-    "The fashion e-commerce space is highly competitive, with users having high expectations for visual quality and seamless checkout experiences. StyleHub's conversion rate was below industry average at 1.2%, and cart abandonment was at 78%. Mobile shopping experience was particularly problematic, with most users switching to desktop to complete purchases.",
+    "Unlike most projects, I wasn’t restricted by a design system. As it was one of my first projects at the company , my manager encouraged me to be creative and explore new approaches. The key challenge for me was understanding what information borrowers actually need from the product cards. Since I was working mostly independently, I asked many questions and collaborated closely with the developer and product manager to build a strong understanding of waht the card's role was in the application flow.",
   solution:
     "I designed a mobile-first experience with rich product imagery, AR try-on features, and a streamlined checkout process. The new design includes personalized recommendations, social proof elements, and a persistent mini-cart that keeps users informed without interrupting their browsing. We also implemented a one-click checkout option and guest checkout to reduce friction.",
+  extraImage: "/src/assets/ApplicationCards/01_OriginalProductCard.png",
   discovery:
     "I conducted extensive user research including shopping behavior analysis, cart abandonment surveys, and heatmap studies. We interviewed 30 target customers to understand their fashion shopping habits and pain points. The research revealed that trust, visual presentation, and mobile experience were the three critical factors affecting conversion.",
   exploration:

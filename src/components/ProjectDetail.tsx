@@ -181,9 +181,9 @@ export function ProjectDetail({
         </div>
 
         {/* Challenge */}
-        <div className="mb-20 p-8 rounded-2xl bg-orange-50 border-1 border-orange-200">
-          <h2 className="text-3xl mb-6">The Challenge</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+        <div className="mb-20 p-8 bg-gray-100 border-dotted border-gray-200 border-t-3 border-b-3">
+          <h2 className="text-lg mb-2">The Challenge</h2>
+          <p className="text-md text-muted-foreground leading-relaxed">
             {project.challenge}
           </p>
         </div>
@@ -278,12 +278,20 @@ export function ProjectDetail({
 
       {/* Extra Single Image - Conditionally rendered */}
       {project.extraImage && (
-        <section className="container mx-auto max-w-6xl px-6 mb-20">
-          <div className="rounded-xl overflow-hidden bg-muted aspect-video">
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <div className="flex flex-col gap-2 mb-4">
+            <h2 className="text-2xl">Original Product Card</h2>
+            <p className="text-muted-foreground leading-relaxed mb-0">
+              This is the original product card that was used before the
+              redesign.
+            </p>
+          </div>
+
+          <div className="w-full rounded-xl overflow-hidden bg-orange-100 py-4">
             <ImageWithFallback
               src={project.extraImage}
               alt={`${project.title} - Extra image`}
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain"
             />
           </div>
         </section>
