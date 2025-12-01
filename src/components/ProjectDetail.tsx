@@ -108,7 +108,7 @@ export function ProjectDetail({
   return (
     <div>
       {/* Back Button */}
-      <div className="container mx-auto max-w-4xl px-6 mb-8">
+      <div className="container mx-auto max-w-6xl px-6 mb-8">
         <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
           <ArrowLeft className="w-4 h-4" />
           {fromProjectsPage ? t.backToProjects : t.backToHome}
@@ -116,17 +116,14 @@ export function ProjectDetail({
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto max-w-4xl  mb-10">
-
+      <section className="container mx-auto max-w-6xl  mb-10">
         <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
-               Project
-              </p>
-        <h1 className="text-4xl font-bold mb-2 max-w-4xl leading-tight">
+          Project
+        </p>
+        <h1 className="text-4xl font-bold mb-2 max-w-6xl leading-tight">
           {project.title}
         </h1>
-        <p className="text-muted-foreground mt-3 pb-4">
-          {project.description}
-        </p>
+        <p className="text-muted-foreground mt-3 pb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-8">
           {project.tags.map((tag) => (
             <span
@@ -184,7 +181,7 @@ export function ProjectDetail({
       </section>
 
       {/* Project Content */}
-      <section className="container mx-auto max-w-4xl px-6 mb-6">
+      <section className="container mx-auto max-w-6xl px-6 mb-6">
         {/* Overview */}
         <div className="mb-10">
           <h2 className="text-3xl mb-2">Overview</h2>
@@ -230,12 +227,12 @@ export function ProjectDetail({
       </section>
 
       {/* Process Phases */}
-      <section className="container mx-auto max-w-4xl px-6 mb-10 bg-gray-200 py-10 rounded-md">
+      <section className="container mx-auto max-w-6xl px-6 mb-10 bg-gray-200 py-10 rounded-md">
         <div className="text-left mb-10">
           <h2 className="text-4xl mb-4">
             {project.processTitle || "The Process"}
           </h2>
-          <p className="text-muted-foreground max-w-4xl mx-auto">
+          <p className="text-muted-foreground max-w-6xl mx-auto">
             {project.processDescription ||
               "The project was flexible but followed somehow structured process to allow me to explore and deliver the best solution for the users."}
           </p>
@@ -278,7 +275,7 @@ export function ProjectDetail({
 
       {/* Project Images */}
       {project.images.length > 0 && (
-        <section className="container mx-auto max-w-4xl px-6 mb-20">
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
           <h2 className="text-3xl mb-8">Visual Showcase</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {project.images.map((image, index) => (
@@ -299,7 +296,7 @@ export function ProjectDetail({
 
       {/* Extra Image 01- Conditionally rendered */}
       {project.extraImage01 && (
-        <section className="container mx-auto max-w-4xl px-6 mb-10">
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
           <div className="flex flex-col gap-2 mb-4">
             <h2 className="text-2xl">{project.extraImage01.title}</h2>
             <p className="text-muted-foreground leading-relaxed mb-0">
@@ -319,7 +316,7 @@ export function ProjectDetail({
 
       {/* Extra Image 02- Conditionally rendered */}
       {project.extraImage02 && (
-        <section className="container mx-auto max-w-4xl px-6 mb-10">
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
           <div className="flex flex-col gap-2 mb-4">
             <h2 className="text-2xl">{project.extraImage02.title}</h2>
             <p className="text-muted-foreground leading-relaxed mb-0">
@@ -339,7 +336,7 @@ export function ProjectDetail({
 
       {/* Extra Images - Conditionally rendered */}
       {project.extraImages && project.extraImages.length > 0 && (
-        <section className="container mx-auto max-w-4xl px-6 mb-20">
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
           <h2 className="text-3xl mb-8">Additional Images</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {project.extraImages.map((image, index) => (
@@ -360,7 +357,7 @@ export function ProjectDetail({
 
       {/* Custom Sections - Conditionally rendered */}
       {project.customSections && project.customSections.length > 0 && (
-        <section className="container mx-auto max-w-4xl px-6 mb-20">
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
           {project.customSections.map((section, index) => (
             <div key={index} className="mb-20">
               <h2 className="text-3xl mb-6">{section.title}</h2>
@@ -382,7 +379,7 @@ export function ProjectDetail({
       )}
 
       {/* Results */}
-      <section className="container mx-auto max-w-4xl px-6 mb-20">
+      <section className="container mx-auto max-w-6xl px-6 mb-20">
         <h2 className="text-3xl mb-8">Results & Impact</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {project.results.map((result, index) => (

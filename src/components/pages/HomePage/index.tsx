@@ -31,7 +31,7 @@ export default function HomePage() {
               <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-100 border border-orange-200/60 text-orange-600 text-2xl md:text-3xl lg:text-4xl  font-medium mx-1">
                 Product designer
               </span>{" "}
-              learning to build in code and{" "}
+              learning to{" "}
               <span
                 className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
                 style={{
@@ -41,9 +41,9 @@ export default function HomePage() {
                   textDecorationStyle: "wavy",
                 }}
               >
-                collaborate
+                build in code
               </span>{" "}
-              more closely with engineering.
+              and collaborate more closely with engineering.
             </h1>
             <div className="flex gap-4">
               <Button size="lg" asChild>
