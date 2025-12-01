@@ -53,17 +53,17 @@ export default function ProcessesPage() {
       <BackButton text={processesContent.backToHome} />
 
       {/* Header */}
-      <section className="container mx-auto max-w-4xl px-6 mb-12 relative">
+      <section className="container mx-auto max-w-6xl px-6 mb-12 relative">
         <div className="absolute -top-20 right-0 w-64 h-64 blob-purple opacity-30 -z-10 animate-pulse-glow" />
         <h1 className="mb-6">{processesContent.title}</h1>
-        <p className="text-muted-foreground max-w-3xl leading-relaxed">
+        <p className="text-muted-foreground max-w-6xl leading-relaxed">
           {processesContent.subtitle}
         </p>
       </section>
 
       {/* Navigation Pills */}
       <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-primary/10 mb-12">
-        <div className="container mx-auto max-w-4xl px-6 py-4">
+        <div className="container mx-auto max-w-6xl px-6 py-4">
           <nav className="flex gap-2 overflow-x-auto scrollbar-hide">
             {sections.map((section) => (
               <button
@@ -82,7 +82,7 @@ export default function ProcessesPage() {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-4xl px-6">
+      <div className="container mx-auto max-w-6xl px-6">
         {/* Lean Prototyping in code */}
         <section id="prototyping" className="scroll-mt-32 mb-24">
           <div className="mb-12">
@@ -156,7 +156,7 @@ export default function ProcessesPage() {
           {/* My Perspective */}
           <div className="mb-12">
             <h3 className="mb-4">My perspective</h3>
-            <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
+            <p className="text-muted-foreground mb-8 leading-relaxed max-w-6xl">
               I believe that when it comes to building for start-ups, having a
               foundation system (like shadcn/ui or using pre-built design
               systems) works wonders and lets you create spaces more faster.{" "}

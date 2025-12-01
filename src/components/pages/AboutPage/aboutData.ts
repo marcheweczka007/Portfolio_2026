@@ -8,6 +8,7 @@ const aboutContent = {
   bioP3:
     "I’ve worked solo and inside cross-functional teams, and I’ve learned that the best work happens when everyone builds together.",
   bioP4: "Open to new opportunities where I can contribute and grow.",
+  resumeButton: "Resume",
   expertiseTitle: "Areas of Expertise",
   leanUx: "Lean UX",
   leanUxContent1:

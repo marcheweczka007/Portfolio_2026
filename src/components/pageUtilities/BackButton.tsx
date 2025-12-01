@@ -15,7 +15,7 @@ const BackButton = ({
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto max-w-4xl px-6 mb-8">
+    <div className="container mx-auto max-w-6xl px-6 mb-8">
       <Button
         type="button"
         variant="ghost"

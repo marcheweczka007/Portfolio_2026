@@ -4,8 +4,17 @@ import ascentLogo from "../../../assets/experience/ascentplatformLogo.jpg";
 import grafterrLogo from "../../../assets/experience/grafterrLogo.png";
 import infracostLogo from "../../../assets/experience/infracostLogo.png";
 import aboutContent from "./aboutData.ts";
+import { Button } from "../../ui/button.tsx";
 
-import { Zap, Search, Box, Sparkles, Layers, Code2 } from "lucide-react";
+import {
+  Zap,
+  Search,
+  Box,
+  Sparkles,
+  Layers,
+  Code2,
+  Download,
+} from "lucide-react";
 import portraitImage from "../../../assets/zuza_portfolio.png";
 import {
   Accordion,
@@ -24,7 +33,7 @@ export default function AboutPage() {
         <BackButton text={aboutContent.backToHome} />
 
         {/* Profile Section */}
-        <section className="container mx-auto max-w-4xl px-6 mb-20">
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-2/5">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
@@ -60,7 +69,7 @@ export default function AboutPage() {
         </section>
 
         {/* Expertise Sections */}
-        <section className="container mx-auto max-w-4xl px-6 mb-20">
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
           <h2 className="mb-8">{aboutContent.expertiseTitle}</h2>
 
           <Accordion type="multiple" className="space-y-4">
@@ -225,11 +234,11 @@ export default function AboutPage() {
             </AccordionItem>
           </Accordion>
         </section>
-        <section className="container mx-auto max-w-4xl px-6 mb-10">
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
           Work Experience
         </section>
         {/* Experience Timeline */}
-        <section className="container mx-auto max-w-4xl px-6 mb-20">
+        <section className="container mx-auto max-w-6xl px-6 mb-20">
           <Timeline
             items={[
               {

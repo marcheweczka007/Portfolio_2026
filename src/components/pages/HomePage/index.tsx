@@ -67,7 +67,7 @@ export default function HomePage() {
 
       {/* Processes & Projects Grid */}
       <section className="py-10 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-6">
             {/* Processes */}
             <Card
@@ -151,7 +151,7 @@ export default function HomePage() {
 
       {/* Featured Projects */}
       <section id="projects" className="py-24 px-6 bg-orange-50/20">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="flex items-end justify-between mb-16">
             <div>
               <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">

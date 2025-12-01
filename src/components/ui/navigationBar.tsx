@@ -4,7 +4,7 @@ import logoImage from "../../assets/LogoZuPortfolioV2.svg?url";
 import { Button } from "./button";
 import { SendHorizontal, Menu, X, Download } from "lucide-react";
 const headerContent = {
-  getInTouch: "Let's chat",
+  getInTouch: "Contact",
   downloadResume: "Resume",
 };
 
@@ -34,7 +34,7 @@ export function NavigationBar() {
 
   return (
     <header className="fixed left-1/2 -translate-x-1/2 top-4 w-full z-50 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="backdrop-blur-xl border border-orange-200/15 shadow-lg px-4 py-2 rounded-full flex items-center justify-between gap-4 md:grid md:grid-cols-[auto,1fr,auto] md:gap-8 w-full">
           {/* Logo */}
           <div className="flex-shrink-0">

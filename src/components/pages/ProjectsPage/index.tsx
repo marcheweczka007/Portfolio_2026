@@ -14,13 +14,15 @@ export default function ProjectsPage() {
       <BackButton />
 
       <section className="px-6 pb-10">
-        <div className=" Grid gap-10 container mx-auto max-w-4xl">
+        <div className=" Grid gap-10 container mx-auto max-w-6xl">
           <div className=" mb-4">
             <div>
               <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
                 {projectsData.featuredWorkLabel}
               </p>
-              <h2 className="text-4xl font-bold">{projectsData.featuredWorkTitle}</h2>
+              <h2 className="text-4xl font-bold">
+                {projectsData.featuredWorkTitle}
+              </h2>
               <p className="text-muted-foreground mt-3">
                 {projectsData.featuredWorkDescription}
               </p>
