@@ -1,6 +1,6 @@
 const homeContent = {
   viewProjects: "View projects",
-  getInTouch: "Get in touch",
+  getInTouch: "Let's chat",
   processesTitle: "Processes as a product engineer",
   processesDescription:
     "I see a lot of value in building my own designs. It gives me more control, lets me support the front-end team, and helps me show my vision through prototypes. I’m still early in my coding journey, but I believe this way of working is the right direction in a fast-moving SaaS world.",

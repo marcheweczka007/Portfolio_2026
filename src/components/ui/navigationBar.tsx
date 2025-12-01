@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logoImage from "../../assets/LogoZuPortfolioV2.svg?url";
 import { Button } from "./button";
-import { SendHorizontal, Menu, X } from "lucide-react";
+import { SendHorizontal, Menu, X, Download } from "lucide-react";
 const headerContent = {
-  getInTouch: "Get in touch",
+  getInTouch: "Let's chat",
+  downloadResume: "Resume",
 };
 
 const content = {
@@ -47,7 +48,7 @@ export function NavigationBar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex flex-1 items-center justify-center">
-            <nav className="flex gap-8 lg:gap-10">
+            <nav className="flex gap-8 lg:gap-10 w-16">
               {/* HOME */}
               <button
                 type="button"
@@ -128,13 +129,27 @@ export function NavigationBar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex justify-end">
-            <Button size="lg" asChild>
+            <Button size="sm" asChild>
               <a
                 href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together"
                 className="flex items-center gap-2"
               >
                 {headerContent.getInTouch}
                 <SendHorizontal className="w-4 h-4" />
+              </a>
+            </Button>
+          </div>
+
+          {/* Desktop CTA - Download Resume */}
+          <div className="hidden md:flex justify-end">
+            <Button size="sm" variant="outline" asChild>
+              <a
+                href="/src/assets/Other/CV_Zuza-ProdDes.pdf"
+                className="flex items-center gap-2"
+                download="Zuza-CV.pdf"
+              >
+                {headerContent.downloadResume}
+                <Download className="w-4 h-4" />
               </a>
             </Button>
           </div>
