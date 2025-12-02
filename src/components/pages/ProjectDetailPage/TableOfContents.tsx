@@ -22,7 +22,17 @@ export function TableOfContents({
     if (typeof document === "undefined") return;
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      // Calculate offset for fixed navigation bar
+      // Navigation bar is at top-4 (1rem = 16px) + nav height (~60-80px) + spacing
+      const offset = 120; // Adjust this value if needed (nav bar height + top spacing + extra padding)
+      const elementPosition =
+        el.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
 
