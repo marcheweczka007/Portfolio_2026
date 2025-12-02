@@ -1,6 +1,7 @@
 import { Project } from "./types";
 
 export const ebookAndBusinessCard: Project = {
+//Add a button when the user can view or download the e-book
   id: "E-book-and-business-card-design",
   title: "E-book and business card design",
   description:
@@ -12,24 +13,32 @@ export const ebookAndBusinessCard: Project = {
   client: "Infracost",
   duration: "1 month",
   overview:
-    "Grand Bank approached us to create a next-generation mobile banking app that would set new standards for user experience in the financial sector. The goal was to make complex banking operations feel simple and accessible while maintaining the highest security standards.",
-  challenge:
-    "Traditional banking apps are often cluttered and intimidating. Our research showed that 72% of users felt overwhelmed by too many features and struggled to complete basic transactions. The challenge was to simplify without sacrificing functionality, and to build trust in a digital-first banking experience.",
+    "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
   solution:
-    "I designed a clean, intuitive interface that prioritizes the most common user tasks while keeping advanced features easily accessible. The app features biometric authentication, real-time transaction notifications, and a smart assistant that helps users manage their finances. We implemented a card-first design that makes account management visual and engaging.",
-  discovery:
-    "I conducted 25 user interviews with existing bank customers and analyzed app usage data from their legacy system. We identified key pain points around navigation complexity, lack of spending insights, and concerns about security. I created detailed user personas and journey maps to guide the design process.",
-  exploration:
-    "Through design sprints with stakeholders, we explored multiple interface concepts ranging from minimalist to feature-rich. I tested various navigation patterns including bottom tabs, hamburger menus, and gesture-based controls. User testing revealed that a hybrid approach worked best, combining persistent navigation with contextual actions.",
-  design:
-    "The final design features a dashboard that adapts to user behavior, showing personalized insights and quick actions. I created a comprehensive design system with reusable components and clear interaction patterns. The visual design emphasizes clarity and trust through careful use of white space, consistent iconography, and subtle animations.",
-  shipping:
-    "We launched the app through a phased rollout, starting with a beta program of 1,000 users. I worked closely with the engineering team to ensure smooth implementation and conducted weekly design reviews. Post-launch, we iterated based on user feedback and analytics, making continuous improvements to the experience.",
-  results: [
-    "User satisfaction score increased from 3.2 to 4.8 stars",
-    "Transaction completion rate improved by 94%",
-    "Customer support calls reduced by 56%",
-    "Active user engagement increased by 178%",
-  ],
+    "I created a consistent look and feel for the 3 items. The client was happy with the results and the e-book was well received by the community.",
+  extraImage01: {
+    title: "Requirements for the e-book and business card design",
+    description:
+      "When I got the requirements, I decided to devide the e-book into presentation slides, to help me structure the content. This helped me recognise how many illustrations I need to create for the e-book.",
+    imageUrl: "/src/assets/E-bookProject/Requirements.png",
+  },
+  extraImage02: {
+    title: "Sketches, wireframes, flows.",
+    description:
+      "Once I understood the problems and requirements, I explored different ways of structuring the product card to improve clarity and reduce text overload. I started with quick sketches and low-fidelity wireframes to test different information hierarchies. The focus was on making the application status clear at a glance while keeping the design engaging and easy to scan.",
+    imageUrl: "/src/assets/E-bookProject/Moodboard.png",
+  },
+  extraImage03: {
+    title: "Cover examples (Version 1)",
+    description:
+      "I usually create 3–5 cover concepts so the client has options to react to. It gives them space to share feedback and helps us decide which direction to develop further.",
+    imageUrl: "/src/assets/E-bookProject/Covers.png",
+  },
+  extraImage04: {
+    title: "First and last page (Version 1)",
+    description:
+      "Examples of first and last page of the e-book, to show the client how the e-book will look like.",
+    imageUrl: "/src/assets/E-bookProject/Front_End_Pages.png",
+  },
   images: [],
 };

@@ -15,13 +15,14 @@ export interface Project extends ProjectCardData {
   client?: string;
   duration?: string;
   overview: string;
-  challenge: string;
+  challenge?: string;
   solution: string;
-  discovery: string;
-  exploration: string;
-  design: string;
-  shipping: string;
-  results: string[];
+  // Process fields - optional, only needed if using default process structure
+  discovery?: string;
+  exploration?: string;
+  design?: string;
+  shipping?: string;
+  results?: string[];
   images: string[];
 
   // Optional fields for custom content

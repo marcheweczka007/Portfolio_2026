@@ -4,8 +4,8 @@ import logoImage from "../../assets/LogoZuPortfolioV2.svg?url";
 import { Button } from "./button";
 import { SendHorizontal, Menu, X, Download } from "lucide-react";
 const headerContent = {
-  getInTouch: "Contact",
-  downloadResume: "Resume",
+  getInTouch: "Let's chat",
+  downloadResume: "Download resume",
 };
 
 const content = {
@@ -129,7 +129,7 @@ export function NavigationBar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex justify-end">
-            <Button size="sm" asChild>
+            <Button size="lg" asChild>
               <a
                 href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together"
                 className="flex items-center gap-2"
@@ -142,7 +142,7 @@ export function NavigationBar() {
 
           {/* Desktop CTA - Download Resume */}
           <div className="hidden md:flex justify-end">
-            <Button size="sm" variant="outline" asChild>
+            <Button size="lg" variant="outline" asChild>
               <a
                 href="/src/assets/Other/CV_Zuza-ProdDes.pdf"
                 className="flex items-center gap-2"

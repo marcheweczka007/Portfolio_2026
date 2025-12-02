@@ -19,10 +19,10 @@ const toProjectCardData = (project: Project): ProjectCardData => ({
 
 // Full projects array for detail pages
 export const projects: Project[] = [
-  mobileBanking,
   oneView,
-  productCardRedesign,
   ebookAndBusinessCard,
+  productCardRedesign,
+  mobileBanking,
   codingProject1,
   codingProject2,
 ];

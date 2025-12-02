@@ -1,7 +1,8 @@
 const processes = {
   backToHome: "Back to Home",
-  title: "Processes",
-  subtitle: "How I work as a product design (engineer*)",
+  title: "Design Engineering Processes that I use",
+  subtitle:
+    "How I work as a product design (engineer*) and how I can help you.",
 };
 
 export const sections = [

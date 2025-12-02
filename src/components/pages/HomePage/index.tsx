@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <PageLayout>
       {/* Hero Section */}
-      <section id="home" className="relative pt-14 pb-20 px-6 overflow-hidden">
+      <section id="home" className="relative pt-14 pb-10 px-6 overflow-hidden">
         {/* Decorative gradient blobs */}
         <div className="absolute top-32 right-0 w-[800px] h-[600px] blob-purple animate-pulse-glow -z-10" />
         <div
@@ -24,26 +24,26 @@ export default function HomePage() {
         />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full gradient-mesh -z-20" />
 
-        <div className="pt-12 container mx-auto max-w-12xl">
+        <div className="pt-12 container mx-auto max-w-6xl">
           <div className="flex flex-col items-center text-center relative">
             <h1 className="text-3xl md:text-4xl lg:text-5xl  leading-tight mb-8 tracking-tight font-medium max-w-4xl">
               Hey, I'm Zuza 👋 <br /> A SaaS{" "}
               <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-100 border border-orange-200/60 text-orange-600 text-2xl md:text-3xl lg:text-4xl  font-medium mx-1">
                 Product designer
               </span>{" "}
-              learning to{" "}
+              with a growing focus on{" "}
               <span
                 className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
                 style={{
                   textDecorationLine: "underline",
-                  textDecorationColor: "#059669",
+                  textDecorationColor: "#1E3A8A",
                   textDecorationThickness: "2px",
                   textDecorationStyle: "wavy",
                 }}
               >
-                build in code
+                building in code
               </span>{" "}
-              and collaborate more closely with engineering.
+              and collaborating hands-on with engineering.
             </h1>
             <div className="flex gap-4">
               <Button size="lg" asChild>

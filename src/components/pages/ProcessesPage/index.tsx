@@ -53,14 +53,24 @@ export default function ProcessesPage() {
       <BackButton text={processesContent.backToHome} />
 
       {/* Header */}
-      <section className="container mx-auto max-w-6xl px-6 mb-12 relative">
+      {/* <section className="container mx-auto max-w-6xl px-6 mb-12 relative">
         <div className="absolute -top-20 right-0 w-64 h-64 blob-purple opacity-30 -z-10 animate-pulse-glow" />
         <h1 className="mb-6">{processesContent.title}</h1>
         <p className="text-muted-foreground max-w-6xl leading-relaxed">
           {processesContent.subtitle}
         </p>
-      </section>
-
+      </section> */}
+      <div className=" Grid gap-10 container mx-auto max-w-6xl">
+        <div>
+          <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
+            Processes
+          </p>
+          <h2 className="text-4xl font-bold">{processesContent.title}</h2>
+          <p className="text-muted-foreground mt-3 mb-4">
+            {processesContent.subtitle}
+          </p>
+        </div>
+      </div>
       {/* Navigation Pills */}
       <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-primary/10 mb-12">
         <div className="container mx-auto max-w-6xl px-6 py-4">

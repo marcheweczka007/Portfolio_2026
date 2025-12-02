@@ -1,5 +1,5 @@
 const homeContent = {
-  viewProjects: "View projects",
+  viewProjects: "Projects",
   getInTouch: "Let's chat",
   processesTitle: "Processes as a product engineer",
   processesDescription:
