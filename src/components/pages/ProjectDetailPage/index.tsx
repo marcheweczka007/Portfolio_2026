@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ProjectDetail } from "../../ProjectDetail";
+import { ProjectDetail } from "./ProjectDetail";
 import { projects } from "../ProjectsPage/projects/projects";
 import PageLayout from "../../pageUtilities/PageLayout";
 
@@ -34,9 +34,6 @@ export default function ProjectDetailPage() {
         project={project}
         onBack={() => navigate("/projects")}
         fromProjectsPage={true}
-        onNavigateToProjects={() => navigate("/projects")}
-        onNavigateToProcesses={() => navigate("/processes")}
-        onNavigateToAbout={() => navigate("/about")}
       />
     </PageLayout>
   );

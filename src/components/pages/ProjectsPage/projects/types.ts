@@ -16,7 +16,7 @@ export interface Project extends ProjectCardData {
   duration?: string;
   overview: string;
   challenge?: string;
-  solution: string;
+  solution?: string;
   // Process fields - optional, only needed if using default process structure
   discovery?: string;
   exploration?: string;
@@ -24,34 +24,54 @@ export interface Project extends ProjectCardData {
   shipping?: string;
   results?: string[];
   images: string[];
+  descriptionExtra01?: string[];
+  descriptionExtra02?: string;
+  descriptionExtra03?: string;
+  descriptionExtra04?: string;
+  descriptionExtra05?: string;
+  newSection?: {
+    title: string;
+    description: string;
+    imageUrl?: string; // Single image
+    images?: string[]; // Multiple images
+  };
 
   // Optional fields for custom content
   extraImage01?: {
     title: string;
     description: string;
-    imageUrl: string;
+    imageUrl?: string; // Single image
+    images?: string[]; // Multiple images
   };
   extraImage02?: {
     title: string;
     description: string;
-    imageUrl: string;
+    imageUrl?: string; // Single image
+    images?: string[]; // Multiple images
   };
   extraImage03?: {
     title: string;
     description: string;
-    imageUrl: string;
+    imageUrl?: string; // Single image
+    images?: string[]; // Multiple images
   };
   extraImage04?: {
     title: string;
     description: string;
-    imageUrl: string;
+    imageUrl?: string; // Single image
+    images?: string[]; // Multiple images
   };
   extraImage05?: {
     title: string;
     description: string;
-    imageUrl: string;
+    imageUrl?: string; // Single image
+    images?: string[]; // Multiple images
   };
-  extraImages?: string[];
+  extraImages?: {
+    title: string;
+    description: string;
+    images: string[];
+  };
   extraText?: string;
   extraSection?: {
     title: string;
@@ -96,6 +116,7 @@ export interface Project extends ProjectCardData {
     extraImage04?: string;
     extraImage05?: string;
     extraImages?: string;
+    newSection?: string;
     customSectionIds?: string[]; // Array of IDs for custom sections (index-based)
     results?: string;
   };

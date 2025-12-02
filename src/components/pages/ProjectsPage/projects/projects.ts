@@ -2,7 +2,7 @@ import { Project, ProjectCardData } from "./types";
 import { mobileBanking } from "./mobile-banking";
 import { oneView } from "./one-view";
 import { productCardRedesign } from "./product-card-redesign";
-import { ebookAndBusinessCard } from "./e-book-and-business-card-design";
+import { infracostProjects } from "./infracostProjects";
 import { codingProject1 } from "./coding-project-1";
 import { codingProject2 } from "./coding-project-2";
 
@@ -20,7 +20,7 @@ const toProjectCardData = (project: Project): ProjectCardData => ({
 // Full projects array for detail pages
 export const projects: Project[] = [
   oneView,
-  ebookAndBusinessCard,
+  infracostProjects,
   productCardRedesign,
   mobileBanking,
   codingProject1,
@@ -28,6 +28,7 @@ export const projects: Project[] = [
 ];
 
 // Projects array with only ProjectCard fields
-export const projectCards: ProjectCardData[] = projects.map(toProjectCardData);
+export const projectCardsData: ProjectCardData[] =
+  projects.map(toProjectCardData);
 
 export type { Project };

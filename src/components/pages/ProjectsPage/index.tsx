@@ -1,7 +1,7 @@
 import React from "react";
 import { ProjectCard } from "../../ui/ProjectCard.tsx";
 import { useNavigate } from "react-router-dom";
-import { projects, projectCards } from "./projects/projects.ts";
+import { projectCardsData } from "./projects/projects.ts";
 import projectsData from "./projectsData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import BackButton from "../../pageUtilities/BackButton.tsx";
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {projectCards.map((project, index) => {
+            {projectCardsData.map((project, index) => {
               const isDisabled =
                 project.id === "Coding Poject 1" ||
                 project.id === "Coding Poject 2";
