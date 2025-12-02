@@ -1,7 +1,7 @@
 import { Project } from "./types";
 
 export const ebookAndBusinessCard: Project = {
-//Add a button when the user can view or download the e-book
+  //Add a button when the user can view or download the e-book
   id: "E-book-and-business-card-design",
   title: "E-book and business card design",
   description:
@@ -41,4 +41,50 @@ export const ebookAndBusinessCard: Project = {
     imageUrl: "/src/assets/E-bookProject/Front_End_Pages.png",
   },
   images: [],
+  // Section ID mapping - maps standard sections to their IDs for TOC navigation
+  sectionIds: {
+    hero: "ebook-design",
+    overview: "ebook-section-1",
+    solution: "ebook-section-2",
+    images: "ebook-section-3",
+    extraImage01: "ebook-section-4",
+    extraImage02: "business-card",
+    extraImages: "leaflet",
+    results: "final-outcome",
+  },
+  tableOfContents: {
+    title: "Table of Contents",
+    items: [
+      {
+        id: "ebook-design",
+        label: "E-book design",
+        subsections: [
+          { id: "ebook-section-1", label: "Overview" },
+          { id: "ebook-section-2", label: "The Solution" },
+          { id: "ebook-section-3", label: "Visual Showcase" },
+          { id: "ebook-section-4", label: "Requirements" },
+        ],
+      },
+      {
+        id: "business-card",
+        label: "Business Card",
+        subsections: [
+          { id: "business-card-section-1", label: "Sketches" },
+          { id: "business-card-section-2", label: "Design Process" },
+        ],
+      },
+      {
+        id: "leaflet",
+        label: "Leaflet",
+        subsections: [
+          { id: "leaflet-section-1", label: "Design Exploration" },
+          { id: "leaflet-section-2", label: "Final Design" },
+        ],
+      },
+      {
+        id: "final-outcome",
+        label: "Final outcome",
+      },
+    ],
+  },
 };

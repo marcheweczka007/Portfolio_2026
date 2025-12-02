@@ -70,4 +70,33 @@ export interface Project extends ProjectCardData {
     description: string;
     image?: string;
   }>;
+  // Table of contents configuration
+  tableOfContents?: {
+    title?: string;
+    items: Array<{
+      id: string;
+      label: string;
+      subsections?: Array<{
+        id: string;
+        label: string;
+      }>;
+    }>;
+  };
+  // Section ID mapping - maps standard section names to their IDs for TOC
+  sectionIds?: {
+    hero?: string;
+    overview?: string;
+    solution?: string;
+    challenge?: string;
+    process?: string;
+    images?: string;
+    extraImage01?: string;
+    extraImage02?: string;
+    extraImage03?: string;
+    extraImage04?: string;
+    extraImage05?: string;
+    extraImages?: string;
+    customSectionIds?: string[]; // Array of IDs for custom sections (index-based)
+    results?: string;
+  };
 }

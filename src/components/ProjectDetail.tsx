@@ -15,6 +15,7 @@ import {
 import { CTASection } from "./ui/CTASection";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Project } from "./pages/ProjectsPage/projects/projects";
+import { TableOfContents } from "./ui/TableOfContents";
 
 interface ProjectDetailProps {
   project: Project;
@@ -115,14 +116,16 @@ export function ProjectDetail({
     : [];
 
   const hasProcessSection = phases.length > 0;
-  const isEbookProject = project.id === "E-book-and-business-card-design";
+  const hasTableOfContents = !!project.tableOfContents;
 
-  const handleScrollTo = (id: string) => {
-    if (typeof document === "undefined") return;
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+  // Helper function to get section ID from project's sectionIds mapping
+  const getSectionId = (
+    sectionKey: keyof NonNullable<Project["sectionIds"]>
+  ): string | undefined => {
+    const id = project.sectionIds?.[sectionKey];
+    // Handle array case (for customSections)
+    if (Array.isArray(id)) return undefined;
+    return id;
   };
 
   return (
@@ -135,140 +138,18 @@ export function ProjectDetail({
         </Button>
       </div>
 
-      {/* Table of contents - fixed on left for e-book project (desktop only) */}
-      {isEbookProject && (
-        <div className="hidden md:block fixed left-6 top-40 z-30 w-46">
-          <div className="rounded-2xl bg-white/30 backdrop-blur shadow-md border border-gray-100 px-5 py-4">
-            <div className="flex items-center justify-between mb-4">
-              <p className="text-sm font-semibold text-gray-900">
-                Table of Contents
-              </p>
-            </div>
-
-            <div className="space-y-7 text-xs text-gray-900 pl-1">
-              {/* E-book design group */}
-              <div>
-                <button
-                  type="button"
-                  onClick={() => handleScrollTo("ebook-design")}
-                  className="w-full text-left text-xs font-medium text-gray-800 hover:text-orange-600 cursor-pointer"
-                >
-                  E-book design
-                </button>
-                <div className="mt-2 flex">
-                  <div className="ml-0.5 mr-3 w-px bg-gray-200" />
-                  <div className="space-y-1.5 text-gray-600">
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("ebook-section-1")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("ebook-section-2")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("ebook-section-3")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("ebook-section-4")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Business card group */}
-              <div className="border-t border-gray-100 pt-4">
-                <button
-                  type="button"
-                  onClick={() => handleScrollTo("business-card")}
-                  className="w-full text-left text-xs font-medium text-gray-800 hover:text-orange-600 cursor-pointer"
-                >
-                  Business Card
-                </button>
-                <div className="mt-2 flex">
-                  <div className="ml-0.5 mr-3 w-px bg-gray-200" />
-                  <div className="space-y-1.5 text-gray-600">
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("business-card-section-1")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("business-card-section-2")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Leaflet group */}
-              <div className="border-t border-gray-100 pt-4">
-                <button
-                  type="button"
-                  onClick={() => handleScrollTo("leaflet")}
-                  className="w-full text-left text-xs font-medium text-gray-800 hover:text-orange-600 cursor-pointer"
-                >
-                  Leaflet
-                </button>
-                <div className="mt-2 flex">
-                  <div className="ml-0.5 mr-3 w-px bg-gray-200" />
-                  <div className="space-y-1.5 text-gray-600">
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("leaflet-section-1")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => handleScrollTo("leaflet-section-2")}
-                      className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
-                    >
-                      Section name
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Final outcome */}
-              <div className="border-t border-gray-100 pt-4">
-                <button
-                  type="button"
-                  onClick={() => handleScrollTo("final-outcome")}
-                  className="w-full text-left text-xs font-medium text-gray-800 hover:text-orange-600 cursor-pointer"
-                >
-                  Final outcome
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Table of contents - reusable component for all projects */}
+      {project.tableOfContents && (
+        <TableOfContents
+          title={project.tableOfContents.title}
+          items={project.tableOfContents.items}
+        />
       )}
 
       {/* Hero Section */}
       <section
         className="container mx-auto max-w-6xl  mb-10"
-        id={isEbookProject ? "ebook-design" : undefined}
+        id={getSectionId("hero")}
       >
         <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
           Project
@@ -336,10 +217,7 @@ export function ProjectDetail({
       {/* Project Content */}
       <section className="container mx-auto max-w-6xl px-6 mb-6">
         {/* Overview */}
-        <div
-          className="mb-10"
-          id={isEbookProject ? "ebook-section-1" : undefined}
-        >
+        <div className="mb-10" id={getSectionId("overview")}>
           <h2 className="text-3xl mb-2">Overview</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {project.overview}
@@ -357,10 +235,7 @@ export function ProjectDetail({
         )}
 
         {/* Solution */}
-        <div
-          className="mb-20"
-          id={isEbookProject ? "ebook-section-2" : undefined}
-        >
+        <div className="mb-20" id={getSectionId("solution")}>
           <h2 className="text-3xl mb-6">The Solution</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {project.solution}
@@ -440,7 +315,7 @@ export function ProjectDetail({
       {project.images.length > 0 && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-20"
-          id={isEbookProject ? "ebook-section-3" : undefined}
+          id={getSectionId("images")}
         >
           <h2 className="text-3xl mb-8">Visual Showcase</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -464,7 +339,7 @@ export function ProjectDetail({
       {project.extraImage01 && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-10"
-          id={isEbookProject ? "ebook-section-4" : undefined}
+          id={getSectionId("extraImage01")}
         >
           <div className="flex flex-col gap-2 mb-4">
             <h2 className="text-2xl">{project.extraImage01.title}</h2>
@@ -487,7 +362,7 @@ export function ProjectDetail({
       {project.extraImage02 && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-10"
-          id={isEbookProject ? "business-card" : undefined}
+          id={getSectionId("extraImage02")}
         >
           <div className="flex flex-col gap-2 mb-4">
             <h2 className="text-2xl">{project.extraImage02.title}</h2>
@@ -569,7 +444,7 @@ export function ProjectDetail({
       {project.extraImages && project.extraImages.length > 0 && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-20"
-          id={isEbookProject ? "leaflet" : undefined}
+          id={getSectionId("extraImages")}
         >
           <h2 className="text-3xl mb-8">Additional Images</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -616,7 +491,7 @@ export function ProjectDetail({
       {project.results && project.results.length > 0 && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-20"
-          id={isEbookProject ? "final-outcome" : undefined}
+          id={getSectionId("results")}
         >
           <h2 className="text-3xl mb-8">Results & Impact</h2>
           <div className="grid md:grid-cols-2 gap-6">

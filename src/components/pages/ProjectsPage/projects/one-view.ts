@@ -32,4 +32,40 @@ export const oneView: Project = {
     "Average session duration increased by 89%",
   ],
   images: [],
+  
+    tableOfContents: {
+    title: "Table of Contents",
+    items: [
+      {
+        id: "One-view",
+        label: "One view dashboard",
+        subsections: [
+          { id: "ebook-section-1", label: "Overview" },
+          { id: "ebook-section-2", label: "The Process" },
+          { id: "discovery", label: "Discovery" },
+          { id: "ebook-section-4", label: "Requirements" },
+        ],
+      },
+      {
+        id: "business-card",
+        label: "Business Card",
+        subsections: [
+          { id: "business-card-section-1", label: "Sketches" },
+          { id: "business-card-section-2", label: "Design Process" },
+        ],
+      },
+      {
+        id: "leaflet",
+        label: "Leaflet",
+        subsections: [
+          { id: "leaflet-section-1", label: "Design Exploration" },
+          { id: "leaflet-section-2", label: "Final Design" },
+        ],
+      },
+      {
+        id: "final-outcome",
+        label: "Final outcome",
+      },
+    ],
+  },
 };
