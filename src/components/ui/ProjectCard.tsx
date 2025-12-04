@@ -12,6 +12,20 @@ interface ProjectCardProps {
   disabled?: boolean;
 }
 
+export function PlaceholderComingSoon() {
+  return (
+    <div
+      className="w-full h-full flex flex-col items-center justify-center text-center
+         bg-gradient-to-b from-zinc-200 to-zinc-300 dark:from-zinc-800 dark:to-zinc-700
+         rounded-2xl"
+    >
+      <h2 className="text-2xl font-semibold text-zinc-700 dark:text-zinc-200 flex items-center gap-2">
+        Coming Soon <span>⏳</span>
+      </h2>
+    </div>
+  );
+}
+
 export function ProjectCard({
   title,
   description,
@@ -35,13 +49,18 @@ export function ProjectCard({
             : "group-hover:border-primary/30 group-hover:shadow-lg group-hover:shadow-primary/10"
         }`}
       >
-        <ImageWithFallback
-          src={imageUrl}
-          alt={title}
-          className={`w-full h-full object-cover transition-all duration-700 ${
-            disabled ? "" : "group-hover:scale-105"
-          }`}
-        />
+        {imageUrl ? (
+          <ImageWithFallback
+            src={imageUrl}
+            alt={title}
+            className={`w-full h-full object-cover transition-all duration-700 ${
+              disabled ? "" : "group-hover:scale-105"
+            }`}
+          />
+        ) : (
+          <PlaceholderComingSoon />
+        )}
+
         {!disabled && (
           <>
             <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/0 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

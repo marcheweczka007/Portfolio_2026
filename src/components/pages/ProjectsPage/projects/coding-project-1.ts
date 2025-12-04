@@ -5,7 +5,7 @@ export const codingProject1: Project = {
   title: "Coding Project 01 (Coming soon)",
   description: "Design engineering project.",
   comingSoon: true,
-  imageUrl: "/src/assets/Other/ComingSoon.png",
+  imageUrl: "",
   tags: [],
   year: "",
   role: "Design Engineer",

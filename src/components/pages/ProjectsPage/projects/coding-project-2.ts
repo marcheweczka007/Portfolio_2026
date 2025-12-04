@@ -4,7 +4,7 @@ export const codingProject2: Project = {
   id: "Coding-Poject2",
   title: "Coding Project 02 (Coming soon)",
   description: "Design engineering project.",
-  imageUrl: "src/assets/Other/ComingSoon.png",
+  imageUrl: "",
   tags: [],
   year: "",
   role: "Design Engineer",
