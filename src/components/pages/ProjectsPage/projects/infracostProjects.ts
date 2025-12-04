@@ -54,10 +54,10 @@ export const infracostProjects: Project = {
   newSection: {
     title: "Business card",
     description:
-      "The business card was designed to match the overall look and feel of the company. I created a few different versions to show the client the options.",
+      "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
     images: [
-      "/src/assets/E-bookProject/BusinessCardsSection01.png",
       "/src/assets/E-bookProject/BusinessCards02.png",
+      "/src/assets/E-bookProject/BusinessCardsSection01.png",
     ],
   },
   extraImages: {

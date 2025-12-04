@@ -142,7 +142,7 @@ export function ProjectDetail({
         <h1 className="text-4xl font-bold mb-2 max-w-6xl leading-tight">
           {project.title}
         </h1>
-        <p className="text-muted-foreground mt-3 pb-4">{project.description}</p>
+        <p className="tracking-wide text-muted-foreground mt-3 pb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-8">
           {project.tags.map((tag) => (
             <span
@@ -172,7 +172,7 @@ export function ProjectDetail({
           id={getSectionId("overview")}
         >
           <h2 className="text-3xl font-bold mb-2">Project overview</h2>
-          <p className="text-2xl text-muted-foreground leading-relaxed">
+          <p className=" text-2xl text-muted-foreground leading-relaxed">
             {project.overview}
           </p>
         </div>
@@ -181,7 +181,7 @@ export function ProjectDetail({
         {project.challenge && (
           <div className="mb-10 p-8 bg-gray-100 border-dotted border-gray-200 border-t-3 border-b-3">
             <h2 className="text-lg mb-2">The Challenge</h2>
-            <p className="text-md text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-md text-muted-foreground leading-relaxed">
               {project.challenge}
             </p>
           </div>
@@ -191,7 +191,7 @@ export function ProjectDetail({
         {project.solution && (
           <div className="mb-20" id={getSectionId("solution")}>
             <h2 className="text-3xl mb-6">The Solution</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-lg text-muted-foreground leading-relaxed">
               {project.solution}
             </p>
           </div>
@@ -200,7 +200,7 @@ export function ProjectDetail({
         {/* Extra Text Section - Conditionally rendered */}
         {project.extraText && (
           <div className="mb-20">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-lg text-muted-foreground leading-relaxed">
               {project.extraText}
             </p>
           </div>
@@ -210,7 +210,7 @@ export function ProjectDetail({
         {project.extraSection && (
           <div className="mb-20">
             <h2 className="text-3xl mb-6">{project.extraSection.title}</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-lg text-muted-foreground leading-relaxed">
               {project.extraSection.content}
             </p>
           </div>
@@ -224,7 +224,7 @@ export function ProjectDetail({
             <h2 className="text-4xl mb-4">
               {project.processTitle || "The Process"}
             </h2>
-            <p className="text-muted-foreground max-w-6xl mx-auto">
+            <p className="tracking-wide text-muted-foreground max-w-6xl mx-auto">
               {project.processDescription ||
                 "The project was flexible but followed somehow structured process to allow me to explore and deliver the best solution for the users."}
             </p>
@@ -256,7 +256,7 @@ export function ProjectDetail({
                       />
                     </div>
                   )}
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="tracking-wide text-muted-foreground leading-relaxed">
                     {phase.description}
                   </p>
                 </div>
@@ -301,7 +301,7 @@ export function ProjectDetail({
             >
               <div className="flex flex-col gap-2 mb-4">
                 <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="text-muted-foreground leading-relaxed mb-0">
+                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
                   {extraImage.description}
                 </p>
               </div>
@@ -347,7 +347,7 @@ export function ProjectDetail({
             >
               <div className="flex flex-col gap-2 mb-4">
                 <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="text-muted-foreground leading-relaxed mb-0">
+                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
                   {extraImage.description}
                 </p>
               </div>
@@ -392,7 +392,7 @@ export function ProjectDetail({
             >
               <div className="flex flex-col gap-2 mb-4">
                 <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="text-muted-foreground leading-relaxed mb-0">
+                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
                   {extraImage.description}
                 </p>
               </div>
@@ -438,7 +438,7 @@ export function ProjectDetail({
             >
               <div className="flex flex-col gap-2 mb-4">
                 <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="text-muted-foreground leading-relaxed mb-0">
+                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
                   {extraImage.description}
                 </p>
               </div>
@@ -484,7 +484,7 @@ export function ProjectDetail({
             >
               <div className="flex flex-col gap-2 mb-4">
                 <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="text-muted-foreground leading-relaxed mb-0">
+                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
                   {extraImage.description}
                 </p>
               </div>
@@ -524,7 +524,7 @@ export function ProjectDetail({
           {project.descriptionExtra01.map((description, index) => (
             <p
               key={index}
-              className="text-lg text-muted-foreground leading-relaxed mb-2"
+              className="tracking-wide text-lg text-muted-foreground leading-relaxed mb-2"
             >
               {description}
             </p>
@@ -534,7 +534,7 @@ export function ProjectDetail({
       {/* Extra Description 02- Conditionally rendered */}
       {project.descriptionExtra02 && (
         <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="text-muted-foreground leading-relaxed mb-0">
+          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
             {project.descriptionExtra02}
           </p>
         </section>
@@ -542,7 +542,7 @@ export function ProjectDetail({
       {/* Extra Description 03- Conditionally rendered */}
       {project.descriptionExtra03 && (
         <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="text-muted-foreground leading-relaxed mb-0">
+          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
             {project.descriptionExtra03}
           </p>
         </section>
@@ -550,7 +550,7 @@ export function ProjectDetail({
       {/* Extra Description 04- Conditionally rendered */}
       {project.descriptionExtra04 && (
         <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="text-muted-foreground leading-relaxed mb-0">
+          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
             {project.descriptionExtra04}
           </p>
         </section>
@@ -558,7 +558,7 @@ export function ProjectDetail({
       {/* Extra Description 05- Conditionally rendered */}
       {project.descriptionExtra05 && (
         <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="text-muted-foreground leading-relaxed mb-0">
+          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
             {project.descriptionExtra05}
           </p>
         </section>
@@ -573,7 +573,7 @@ export function ProjectDetail({
               id={getSectionId("newSection")}
             >
               <h2 className="text-3xl mb-2">{newSection.title}</h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="tracking-wide text-muted-foreground leading-relaxed mb-8">
                 {newSection.description}
               </p>
 
@@ -614,7 +614,7 @@ export function ProjectDetail({
           id={getSectionId("extraImages")}
         >
           <h2 className="text-3xl mb-2">{project.extraImages.title}</h2>
-          <p className="text-muted-foreground leading-relaxed mb-8">
+          <p className="tracking-wide text-muted-foreground leading-relaxed mb-8">
             {project.extraImages.description}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
@@ -640,7 +640,7 @@ export function ProjectDetail({
           {project.customSections.map((section, index) => (
             <div key={index} className="mb-20">
               <h2 className="text-3xl mb-6">{section.title}</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="tracking-wide text-lg text-muted-foreground leading-relaxed mb-6">
                 {section.content}
               </p>
               {section.image && (
@@ -671,7 +671,7 @@ export function ProjectDetail({
                 className="p-6 rounded-xl bg-accent/30 border border-border"
               >
                 <div className="text-4xl mb-3">{index + 1}</div>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="tracking-wide text-muted-foreground leading-relaxed">
                   {result}
                 </p>
               </div>
