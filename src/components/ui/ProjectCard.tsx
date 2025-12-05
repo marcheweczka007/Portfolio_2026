@@ -1,5 +1,4 @@
 import React from "react";
-import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
@@ -37,8 +36,9 @@ export function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div
+      aria-disabled={disabled}
       className={`group ${
-        disabled ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+        disabled ? "cursor-not-allowed opacity-60 pointer-events-none" : "cursor-pointer"
       }`}
       onClick={disabled ? undefined : onClick}
     >
@@ -50,7 +50,7 @@ export function ProjectCard({
         }`}
       >
         {imageUrl ? (
-          <ImageWithFallback
+          <img
             src={imageUrl}
             alt={title}
             className={`w-full h-full object-cover transition-all duration-700 ${

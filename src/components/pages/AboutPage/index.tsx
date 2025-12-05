@@ -6,15 +6,7 @@ import infracostLogo from "../../../assets/experience/infracostLogo.png";
 import aboutContent from "./aboutData.ts";
 import { Button } from "../../ui/button.tsx";
 
-import {
-  Zap,
-  Search,
-  Box,
-  Sparkles,
-  Layers,
-  Code2,
-  Download,
-} from "lucide-react";
+import { Zap, Search, Box, Sparkles, Layers, Code2 } from "lucide-react";
 import portraitImage from "../../../assets/zuza_portfolio.png";
 import {
   Accordion,
@@ -22,7 +14,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../../ui/accordion";
-import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import BackButton from "../../pageUtilities/BackButton.tsx";
 
@@ -37,7 +28,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="md:w-2/5">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
-                <ImageWithFallback
+                <img
                   src={portraitImage}
                   alt="Zuza Marchewka"
                   className="w-full h-full object-cover rounded-8xl"
@@ -48,18 +39,18 @@ export default function AboutPage() {
             <div className="md:w-3/5">
               <h1 className="mb-6">{aboutContent.pageTitle}</h1>
               <div className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-gray-500 leading-relaxed">
                   {aboutContent.bioP1}
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-gray-500 leading-relaxed">
                   {aboutContent.bioP2}
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-gray-500 leading-relaxed">
                   {aboutContent.bioP3}
                 </p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mt-2">
-                  <Sparkles className="w-4 h-4 text-primary" />
-                  <span className="text-xs text-primary">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-200/20 mt-2">
+                  <Sparkles className="w-4 h-4 text-orange-600" />
+                  <span className="text-xs text-orange-600">
                     {aboutContent.bioP4}
                   </span>
                 </div>
@@ -75,17 +66,17 @@ export default function AboutPage() {
           <Accordion type="multiple" className="space-y-4">
             <AccordionItem
               value="lean-ux"
-              className="border border-primary/20 rounded-2xl px-6 bg-primary/5 hover:bg-primary/10 transition-colors"
+              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
             >
               <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Zap className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                    <Zap className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.leanUx}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
                 <p className="mb-4">{aboutContent.leanUxContent1}</p>
                 <p className="mb-4">{aboutContent.leanUxContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -100,17 +91,17 @@ export default function AboutPage() {
 
             <AccordionItem
               value="research"
-              className="border border-primary/20 rounded-2xl px-6 bg-primary/5 hover:bg-primary/10 transition-colors"
+              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
             >
               <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Search className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                    <Search className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.research}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
                 <p className="mb-4">{aboutContent.researchContent1}</p>
                 <p className="mb-4">{aboutContent.researchContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -127,17 +118,17 @@ export default function AboutPage() {
 
             <AccordionItem
               value="ooux"
-              className="border border-primary/20 rounded-2xl px-6 bg-primary/5 hover:bg-primary/10 transition-colors"
+              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
             >
               <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Box className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                    <Box className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.ooux}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
                 <p className="mb-4">{aboutContent.oouxContent1}</p>
                 <p className="mb-4">{aboutContent.oouxContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -153,17 +144,17 @@ export default function AboutPage() {
 
             <AccordionItem
               value="ai-prototyping"
-              className="border border-primary/20 rounded-2xl px-6 bg-primary/5 hover:bg-primary/10 transition-colors"
+              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
             >
               <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                    <Sparkles className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.aiPrototyping}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
                 <p className="mb-4">{aboutContent.aiPrototypingContent1}</p>
                 <p className="mb-4">{aboutContent.aiPrototypingContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -180,17 +171,17 @@ export default function AboutPage() {
 
             <AccordionItem
               value="design-system"
-              className="border border-primary/20 rounded-2xl px-6 bg-primary/5 hover:bg-primary/10 transition-colors"
+              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
             >
               <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Layers className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                    <Layers className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.designSystem}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
                 <p className="mb-4">{aboutContent.designSystemContent1}</p>
                 <p className="mb-4">{aboutContent.designSystemContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -207,17 +198,17 @@ export default function AboutPage() {
 
             <AccordionItem
               value="coding"
-              className="border border-primary/20 rounded-2xl px-6 bg-primary/5 hover:bg-primary/10 transition-colors"
+              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
             >
               <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-                    <Code2 className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                    <Code2 className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.coding}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
                 <p className="mb-4">{aboutContent.codingContent1}</p>
                 <p className="mb-4">{aboutContent.codingContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">

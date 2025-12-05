@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "../../ui/button";
 import { ArrowLeft, Search, Lightbulb, Palette, Rocket } from "lucide-react";
 import { CTASection } from "../../ui/CTASection";
-import { ImageWithFallback } from "../../figma/ImageWithFallback";
 import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
 
@@ -15,7 +14,7 @@ interface ProjectDetailProps {
   onNavigateToAbout?: () => void;
 }
 
-const projectTranslations = {
+const projectDetails = {
   backToHome: "Back to Home",
   backToProjects: "Back to Projects",
   projects: "Projects",
@@ -53,7 +52,7 @@ export function ProjectDetail({
   onBack,
   fromProjectsPage,
 }: ProjectDetailProps) {
-  const t = projectTranslations;
+  const t = projectDetails;
 
   // Use custom process phases if provided, otherwise use default structure
   // Only create phases if there's process data available
@@ -142,7 +141,9 @@ export function ProjectDetail({
         <h1 className="text-4xl font-bold mb-2 max-w-6xl leading-tight">
           {project.title}
         </h1>
-        <p className="tracking-wide text-muted-foreground mt-3 pb-4">{project.description}</p>
+        <p className="tracking-wide text-muted-foreground mt-3 pb-4">
+          {project.description}
+        </p>
         <div className="flex flex-wrap gap-2 mb-8">
           {project.tags.map((tag) => (
             <span
@@ -156,7 +157,7 @@ export function ProjectDetail({
 
         {/* Hero Image */}
         <div className="rounded-2xl overflow-hidden bg-muted aspect-video">
-          <ImageWithFallback
+          <img
             src={project.imageUrl}
             alt={project.title}
             className="w-full h-full object-cover"
@@ -249,7 +250,7 @@ export function ProjectDetail({
                   </div>
                   {phase.image && (
                     <div className="mb-6 rounded-xl overflow-hidden bg-muted">
-                      <ImageWithFallback
+                      <img
                         src={phase.image}
                         alt={`${phase.title} - Process image`}
                         className="w-full h-auto object-contain"
@@ -279,7 +280,7 @@ export function ProjectDetail({
                 key={index}
                 className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
               >
-                <ImageWithFallback
+                <img
                   src={image}
                   alt={`${project.title} - Image ${index + 1}`}
                   className="w-full h-full object-cover"
@@ -313,7 +314,7 @@ export function ProjectDetail({
                       key={index}
                       className="w-full rounded-xl overflow-hidden"
                     >
-                      <ImageWithFallback
+                      <img
                         src={image}
                         alt={`${project.title} - ${extraImage.title} - Image ${
                           index + 1
@@ -325,7 +326,7 @@ export function ProjectDetail({
                 </div>
               ) : extraImage.imageUrl ? (
                 <div className="w-full rounded-xl overflow-hidden py-4">
-                  <ImageWithFallback
+                  <img
                     src={extraImage.imageUrl}
                     alt={`${project.title} - ${extraImage.title}`}
                     className="w-full h-auto object-contain"
@@ -359,7 +360,7 @@ export function ProjectDetail({
                       key={index}
                       className="w-full rounded-xl overflow-hidden"
                     >
-                      <ImageWithFallback
+                      <img
                         src={image}
                         alt={`${project.title} - ${extraImage.title} - Image ${
                           index + 1
@@ -371,7 +372,7 @@ export function ProjectDetail({
                 </div>
               ) : extraImage.imageUrl ? (
                 <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <ImageWithFallback
+                  <img
                     src={extraImage.imageUrl}
                     alt={`${project.title} - ${extraImage.title}`}
                     className="w-full h-auto object-contain"
@@ -404,7 +405,7 @@ export function ProjectDetail({
                       key={index}
                       className="w-full rounded-xl overflow-hidden"
                     >
-                      <ImageWithFallback
+                      <img
                         src={image}
                         alt={`${project.title} - ${extraImage.title} - Image ${
                           index + 1
@@ -416,7 +417,7 @@ export function ProjectDetail({
                 </div>
               ) : extraImage.imageUrl ? (
                 <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <ImageWithFallback
+                  <img
                     src={extraImage.imageUrl}
                     alt={`${project.title} - ${extraImage.title}`}
                     className="w-full h-auto object-contain"
@@ -450,7 +451,7 @@ export function ProjectDetail({
                       key={index}
                       className="w-full rounded-xl overflow-hidden"
                     >
-                      <ImageWithFallback
+                      <img
                         src={image}
                         alt={`${project.title} - ${extraImage.title} - Image ${
                           index + 1
@@ -462,7 +463,7 @@ export function ProjectDetail({
                 </div>
               ) : extraImage.imageUrl ? (
                 <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <ImageWithFallback
+                  <img
                     src={extraImage.imageUrl}
                     alt={`${project.title} - ${extraImage.title}`}
                     className="w-full h-auto object-contain"
@@ -496,7 +497,7 @@ export function ProjectDetail({
                       key={index}
                       className="w-full rounded-xl overflow-hidden"
                     >
-                      <ImageWithFallback
+                      <img
                         src={image}
                         alt={`${project.title} - ${extraImage.title} - Image ${
                           index + 1
@@ -508,7 +509,7 @@ export function ProjectDetail({
                 </div>
               ) : extraImage.imageUrl ? (
                 <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <ImageWithFallback
+                  <img
                     src={extraImage.imageUrl}
                     alt={`${project.title} - ${extraImage.title}`}
                     className="w-full h-auto object-contain"
@@ -585,7 +586,7 @@ export function ProjectDetail({
                       key={index}
                       className="w-full rounded-xl overflow-hidden"
                     >
-                      <ImageWithFallback
+                      <img
                         src={image}
                         alt={`${project.title} - ${newSection.title} - Image ${
                           index + 1
@@ -597,13 +598,64 @@ export function ProjectDetail({
                 </div>
               ) : newSection.imageUrl ? (
                 <div className="w-full rounded-xl overflow-hidden py-4">
-                  <ImageWithFallback
+                  <img
                     src={newSection.imageUrl}
                     alt={`${project.title} - ${newSection.title}`}
                     className="w-full h-auto object-contain"
                   />
                 </div>
               ) : null}
+            </section>
+          );
+        })()}
+      {/* New Section 01 - Conditionally rendered */}
+      {project.newSection01 &&
+        (() => {
+          const newSection01 = project.newSection01;
+          return (
+            <section
+              className="container mx-auto max-w-6xl px-6 mb-10"
+              id={getSectionId("newSection01")}
+            >
+              <h2 className="text-3xl mb-2">{newSection01.title}</h2>
+              <p className="tracking-wide text-muted-foreground leading-relaxed mb-8">
+                {newSection01.description}
+              </p>
+
+              {/* Subsection 1 - Experimentation phase */}
+              {newSection01.images && newSection01.images.length > 0 && (
+                <div id="leaflet-section-1" className="mb-8">
+                  <h3 className="text-xl mb-4">Experimentation phase</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {newSection01.images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="w-full rounded-xl overflow-hidden"
+                      >
+                        <img
+                          src={image}
+                          alt={`${newSection01.title} - Image ${index + 1}`}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Subsection 2 - Examples for client */}
+              {newSection01.imageUrl && (
+                <div id="leaflet-section-2" className="mb-8">
+                  <h3 className="text-xl mb-4">Examples for client</h3>
+                  <div className="w-full rounded-xl overflow-hidden">
+                    <img
+                      src={newSection01.imageUrl}
+                      alt={`${newSection01.title} - Final`}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                </div>
+              )}
             </section>
           );
         })()}
@@ -623,7 +675,7 @@ export function ProjectDetail({
                 key={index}
                 className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
               >
-                <ImageWithFallback
+                <img
                   src={image}
                   alt={`${project.title} - Extra image ${index + 1}`}
                   className="w-full h-full object-cover"
@@ -645,7 +697,7 @@ export function ProjectDetail({
               </p>
               {section.image && (
                 <div className="rounded-xl overflow-hidden bg-muted aspect-video">
-                  <ImageWithFallback
+                  <img
                     src={section.image}
                     alt={`${project.title} - ${section.title}`}
                     className="w-full h-full object-cover"

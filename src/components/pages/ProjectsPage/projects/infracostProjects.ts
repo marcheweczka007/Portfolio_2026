@@ -59,7 +59,17 @@ export const infracostProjects: Project = {
       "/src/assets/E-bookProject/BusinessCards02.png",
       "/src/assets/E-bookProject/BusinessCardsSection01.png",
     ],
+    descriptionExtra02: ["Test", "Test 02"],
   },
+
+  newSection01: {
+    title: "Feaflet",
+    description:
+      "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
+    images: ["", ""],
+    descriptionExtra03: ["Test 03", "Test 03"],
+  },
+
   extraImages: {
     title: "Final outcome",
     description: "Final outcome of the e-book, business card and leaflet.",
@@ -79,6 +89,7 @@ export const infracostProjects: Project = {
     extraImage03: "Image03",
     extraImage04: "Image04",
     newSection: "business-card",
+    newSection01: "leaflet",
     extraImages: "final-outcome",
   },
   tableOfContents: {
