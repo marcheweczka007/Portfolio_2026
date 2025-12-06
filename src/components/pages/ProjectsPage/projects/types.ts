@@ -1,3 +1,48 @@
+export interface ProjectSection {
+  id?: string; // for navigation
+  title?: string;
+  description?: string;
+  image?: string; // single image
+  images?: string[]; // multiple images
+  extraText?: string;
+  bullets?: string[];
+}
+
+// Type aliases for repeated structures
+export type ExtraImageData = {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  images?: string[];
+};
+
+export type NewSectionData = {
+  title: string;
+  description: string;
+  imageUrl?: string;
+  images?: string[];
+};
+
+// Section ID keys for TOC navigation
+export type SectionIdKey =
+  | "hero"
+  | "overview"
+  | "solution"
+  | "challenge"
+  | "process"
+  | "images"
+  | "extraImage01"
+  | "extraImage02"
+  | "extraImage03"
+  | "extraImage04"
+  | "extraImage05"
+  | "extraImages"
+  | "newSection"
+  | "newSection01"
+  | "newSection02"
+  | "newSection03"
+  | "results";
+
 // Minimal type for ProjectCard display
 export interface ProjectCardData {
   id: string;
@@ -9,80 +54,65 @@ export interface ProjectCardData {
   comingSoon?: boolean;
 }
 
-// Full Project type for detail pages
 export interface Project extends ProjectCardData {
   role: string;
   client?: string;
   duration?: string;
   overview: string;
+  // Allow additional properties for flexibility
+  [key: string]: any;
   challenge?: string;
   solution?: string;
-  // Process fields - optional, only needed if using default process structure
+  extraText?: string;
+  images?: string[];
+
+  // Legacy fields for backward compatibility
   discovery?: string;
   exploration?: string;
   design?: string;
   shipping?: string;
   results?: string[];
-  images: string[];
+
+  // Extra image sections
+  extraImage01?: ExtraImageData;
+  extraImage02?: ExtraImageData;
+  extraImage03?: ExtraImageData;
+  extraImage04?: ExtraImageData;
+  extraImage05?: ExtraImageData;
+
+  // Extra description fields
   descriptionExtra01?: string[];
   descriptionExtra02?: string;
   descriptionExtra03?: string;
   descriptionExtra04?: string;
   descriptionExtra05?: string;
-  newSection?: {
+
+  // New section fields
+  newSection01?: NewSectionData;
+  newSection02?: NewSectionData;
+  newSection03?: NewSectionData;
+
+  // Extra section
+  extraSection?: {
     title: string;
-    description: string;
-    imageUrl?: string; // Single image
-    images?: string[]; // Multiple images
+    content: string;
   };
 
-  // Optional fields for custom content
-  extraImage01?: {
-    title: string;
-    description: string;
-    imageUrl?: string; // Single image
-    images?: string[]; // Multiple images
-  };
-  extraImage02?: {
-    title: string;
-    description: string;
-    imageUrl?: string; // Single image
-    images?: string[]; // Multiple images
-  };
-  extraImage03?: {
-    title: string;
-    description: string;
-    imageUrl?: string; // Single image
-    images?: string[]; // Multiple images
-  };
-  extraImage04?: {
-    title: string;
-    description: string;
-    imageUrl?: string; // Single image
-    images?: string[]; // Multiple images
-  };
-  extraImage05?: {
-    title: string;
-    description: string;
-    imageUrl?: string; // Single image
-    images?: string[]; // Multiple images
-  };
+  // Extra images
   extraImages?: {
     title: string;
     description: string;
     images: string[];
   };
-  extraText?: string;
-  extraSection?: {
-    title: string;
-    content: string;
-  };
+
+  // Custom sections
   customSections?: Array<{
     title: string;
     content: string;
     image?: string;
   }>;
-  // Process section configuration
+
+  // Process section configuration (legacy)
   processTitle?: string;
   processDescription?: string;
   processPhases?: Array<{
@@ -90,7 +120,13 @@ export interface Project extends ProjectCardData {
     description: string;
     image?: string;
   }>;
-  // Table of contents configuration
+
+  // Section ID mapping - maps standard sections to their IDs for TOC navigation
+  sectionIds?: Partial<Record<SectionIdKey, string>> & {
+    customSectionIds?: string[];
+  };
+
+  // Table of contents (legacy name, also supports toc)
   tableOfContents?: {
     title?: string;
     items: Array<{
@@ -101,23 +137,5 @@ export interface Project extends ProjectCardData {
         label: string;
       }>;
     }>;
-  };
-  // Section ID mapping - maps standard section names to their IDs for TOC
-  sectionIds?: {
-    hero?: string;
-    overview?: string;
-    solution?: string;
-    challenge?: string;
-    process?: string;
-    images?: string;
-    extraImage01?: string;
-    extraImage02?: string;
-    extraImage03?: string;
-    extraImage04?: string;
-    extraImage05?: string;
-    extraImages?: string;
-    newSection?: string;
-    customSectionIds?: string[]; // Array of IDs for custom sections (index-based)
-    results?: string;
   };
 }

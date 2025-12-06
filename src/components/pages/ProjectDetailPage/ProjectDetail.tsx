@@ -4,6 +4,8 @@ import { ArrowLeft, Search, Lightbulb, Palette, Rocket } from "lucide-react";
 import { CTASection } from "../../ui/CTASection";
 import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
+import { ExtraImageSection } from "./ExtraImageSection";
+import { DescriptionSection } from "./DescriptionSection";
 
 interface ProjectDetailProps {
   project: Project;
@@ -17,35 +19,9 @@ interface ProjectDetailProps {
 const projectDetails = {
   backToHome: "Back to Home",
   backToProjects: "Back to Projects",
-  projects: "Projects",
-  pageTitle: "Projects",
-  pageDescription:
-    "A collection of my work across different platforms and industries",
-  grandBank: {
-    title: "Grand Bank",
-    tags: ["Mobile app", "Banking", "SaaS"],
-  },
-  productCard: {
-    title: "Product card",
-    tags: ["Re-design", "Loan application", "SaaS"],
-  },
-  oneView: {
-    title: "One view",
-    tags: ["Dashboard", "SaaS"],
-  },
-  promoEbook: {
-    title: "Promo E-Book",
-    tags: ["FinOps", "Marketing", "Freelance"],
-  },
-  kiosk: {
-    title: "Kiosk",
-    tags: ["SaaS", "Large screen"],
-  },
-  funProjects: {
-    title: "Fun projects",
-    tags: ["UI experimentations", "Personal project"],
-  },
 };
+
+const defaultIcons = [Search, Lightbulb, Palette, Rocket];
 
 export function ProjectDetail({
   project,
@@ -54,9 +30,16 @@ export function ProjectDetail({
 }: ProjectDetailProps) {
   const t = projectDetails;
 
+  // Helper function to get section ID from project's sectionIds mapping
+  const getSectionId = (
+    sectionKey: keyof NonNullable<Project["sectionIds"]>
+  ): string | undefined => {
+    const id = project.sectionIds?.[sectionKey];
+    if (Array.isArray(id)) return undefined;
+    return id;
+  };
+
   // Use custom process phases if provided, otherwise use default structure
-  // Only create phases if there's process data available
-  const defaultIcons = [Search, Lightbulb, Palette, Rocket];
   const hasDefaultProcessData =
     project.discovery &&
     project.exploration &&
@@ -102,15 +85,8 @@ export function ProjectDetail({
 
   const hasProcessSection = phases.length > 0;
 
-  // Helper function to get section ID from project's sectionIds mapping
-  const getSectionId = (
-    sectionKey: keyof NonNullable<Project["sectionIds"]>
-  ): string | undefined => {
-    const id = project.sectionIds?.[sectionKey];
-    // Handle array case (for customSections)
-    if (Array.isArray(id)) return undefined;
-    return id;
-  };
+  // Use tableOfContents
+  const toc = project.tableOfContents;
 
   return (
     <div>
@@ -122,33 +98,28 @@ export function ProjectDetail({
         </Button>
       </div>
 
-      {/* Table of contents - reusable component for all projects */}
-      {project.tableOfContents && (
-        <TableOfContents
-          title={project.tableOfContents.title}
-          items={project.tableOfContents.items}
-        />
-      )}
+      {/* Table of contents */}
+      {toc && <TableOfContents title={toc.title} items={toc.items} />}
 
       {/* Hero Section */}
       <section
-        className="container mx-auto max-w-6xl  mb-10"
+        className="container mx-auto max-w-6xl px-6 mb-10"
         id={getSectionId("hero")}
       >
-        <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
+        <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
           Project
         </p>
         <h1 className="text-4xl font-bold mb-2 max-w-6xl leading-tight">
           {project.title}
         </h1>
-        <p className="tracking-wide text-muted-foreground mt-3 pb-4">
+        <p className="tracking-wide text-gray-500 mt-3 pb-4">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2 mb-8">
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs"
+              className="px-3 py-1 bg-orange-50 border border-orange-200/20 rounded-full text-orange-600 text-xs"
             >
               {tag}
             </span>
@@ -156,7 +127,7 @@ export function ProjectDetail({
         </div>
 
         {/* Hero Image */}
-        <div className="rounded-2xl overflow-hidden bg-muted aspect-video">
+        <div className="rounded-2xl overflow-hidden bg-gray-100 aspect-video">
           <img
             src={project.imageUrl}
             alt={project.title}
@@ -173,7 +144,7 @@ export function ProjectDetail({
           id={getSectionId("overview")}
         >
           <h2 className="text-3xl font-bold mb-2">Project overview</h2>
-          <p className=" text-2xl text-muted-foreground leading-relaxed">
+          <p className="text-2xl text-gray-500 leading-relaxed">
             {project.overview}
           </p>
         </div>
@@ -182,7 +153,7 @@ export function ProjectDetail({
         {project.challenge && (
           <div className="mb-10 p-8 bg-gray-100 border-dotted border-gray-200 border-t-3 border-b-3">
             <h2 className="text-lg mb-2">The Challenge</h2>
-            <p className="tracking-wide text-md text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-md text-gray-500 leading-relaxed">
               {project.challenge}
             </p>
           </div>
@@ -192,7 +163,7 @@ export function ProjectDetail({
         {project.solution && (
           <div className="mb-20" id={getSectionId("solution")}>
             <h2 className="text-3xl mb-6">The Solution</h2>
-            <p className="tracking-wide text-lg text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
               {project.solution}
             </p>
           </div>
@@ -201,7 +172,7 @@ export function ProjectDetail({
         {/* Extra Text Section - Conditionally rendered */}
         {project.extraText && (
           <div className="mb-20">
-            <p className="tracking-wide text-lg text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
               {project.extraText}
             </p>
           </div>
@@ -211,7 +182,7 @@ export function ProjectDetail({
         {project.extraSection && (
           <div className="mb-20">
             <h2 className="text-3xl mb-6">{project.extraSection.title}</h2>
-            <p className="tracking-wide text-lg text-muted-foreground leading-relaxed">
+            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
               {project.extraSection.content}
             </p>
           </div>
@@ -225,7 +196,7 @@ export function ProjectDetail({
             <h2 className="text-4xl mb-4">
               {project.processTitle || "The Process"}
             </h2>
-            <p className="tracking-wide text-muted-foreground max-w-6xl mx-auto">
+            <p className="tracking-wide text-gray-500 max-w-6xl mx-auto">
               {project.processDescription ||
                 "The project was flexible but followed somehow structured process to allow me to explore and deliver the best solution for the users."}
             </p>
@@ -244,12 +215,12 @@ export function ProjectDetail({
                   </div>
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6" />
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-2xl">{phase.title}</h3>
                   </div>
                   {phase.image && (
-                    <div className="mb-6 rounded-xl overflow-hidden bg-muted">
+                    <div className="mb-6 rounded-xl overflow-hidden bg-gray-100">
                       <img
                         src={phase.image}
                         alt={`${phase.title} - Process image`}
@@ -257,7 +228,7 @@ export function ProjectDetail({
                       />
                     </div>
                   )}
-                  <p className="tracking-wide text-muted-foreground leading-relaxed">
+                  <p className="tracking-wide text-gray-500 leading-relaxed">
                     {phase.description}
                   </p>
                 </div>
@@ -268,7 +239,7 @@ export function ProjectDetail({
       )}
 
       {/* Project Images */}
-      {project.images.length > 0 && (
+      {project.images && project.images.length > 0 && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-20"
           id={getSectionId("images")}
@@ -278,7 +249,7 @@ export function ProjectDetail({
             {project.images.map((image, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
+                className="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]"
               >
                 <img
                   src={image}
@@ -291,389 +262,188 @@ export function ProjectDetail({
         </section>
       )}
 
-      {/* Extra Image 01- Conditionally rendered */}
-      {project.extraImage01 &&
-        (() => {
-          const extraImage = project.extraImage01;
-          return (
-            <section
-              className="container mx-auto max-w-6xl px-6 mb-10"
-              id={getSectionId("extraImage01")}
-            >
-              <div className="flex flex-col gap-2 mb-4">
-                <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-                  {extraImage.description}
-                </p>
-              </div>
+      {/* Extra Image 01-05 */}
+      {[
+        project.extraImage01,
+        project.extraImage02,
+        project.extraImage03,
+        project.extraImage04,
+        project.extraImage05,
+      ].map((extraImage, idx) => {
+        if (!extraImage) return null;
 
-              {extraImage.images && extraImage.images.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-6 py-4">
-                  {extraImage.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="w-full rounded-xl overflow-hidden"
-                    >
-                      <img
-                        src={image}
-                        alt={`${project.title} - ${extraImage.title} - Image ${
-                          index + 1
-                        }`}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : extraImage.imageUrl ? (
-                <div className="w-full rounded-xl overflow-hidden py-4">
-                  <img
-                    src={extraImage.imageUrl}
-                    alt={`${project.title} - ${extraImage.title}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ) : null}
-            </section>
-          );
-        })()}
+        const sectionKey = `extraImage0${idx + 1}` as keyof NonNullable<
+          Project["sectionIds"]
+        >;
+        return (
+          <ExtraImageSection
+            key={idx}
+            sectionId={getSectionId(sectionKey)}
+            data={extraImage}
+            projectTitle={project.title}
+          />
+        );
+      })}
 
-      {/* Extra Image 02- Conditionally rendered */}
-      {project.extraImage02 &&
-        (() => {
-          const extraImage = project.extraImage02;
-          return (
-            <section
-              className="container mx-auto max-w-6xl px-6 mb-10"
-              id={getSectionId("extraImage02")}
-            >
-              <div className="flex flex-col gap-2 mb-4">
-                <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-                  {extraImage.description}
-                </p>
-              </div>
+      {/* Description Extra 01-05 */}
+      {[
+        project.descriptionExtra01,
+        project.descriptionExtra02,
+        project.descriptionExtra03,
+        project.descriptionExtra04,
+        project.descriptionExtra05,
+      ].map((description, idx) => {
+        if (!description) return null;
+        return (
+          <DescriptionSection
+            key={idx}
+            descriptions={description}
+            // Add custom className here if needed, e.g.:
+            // className="container mx-auto max-w-6xl px-6 mb-10 custom-class"
+          />
+        );
+      })}
 
-              {extraImage.images && extraImage.images.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-6 py-4">
-                  {extraImage.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="w-full rounded-xl overflow-hidden"
-                    >
-                      <img
-                        src={image}
-                        alt={`${project.title} - ${extraImage.title} - Image ${
-                          index + 1
-                        }`}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : extraImage.imageUrl ? (
-                <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <img
-                    src={extraImage.imageUrl}
-                    alt={`${project.title} - ${extraImage.title}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ) : null}
-            </section>
-          );
-        })()}
-      {/* Extra Image 03- Conditionally rendered */}
-      {project.extraImage03 &&
-        (() => {
-          const extraImage = project.extraImage03;
-          return (
-            <section
-              className="container mx-auto max-w-6xl px-6 mb-10"
-              id={getSectionId("extraImage03")}
-            >
-              <div className="flex flex-col gap-2 mb-4">
-                <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-                  {extraImage.description}
-                </p>
-              </div>
-
-              {extraImage.images && extraImage.images.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-6 py-4">
-                  {extraImage.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="w-full rounded-xl overflow-hidden"
-                    >
-                      <img
-                        src={image}
-                        alt={`${project.title} - ${extraImage.title} - Image ${
-                          index + 1
-                        }`}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : extraImage.imageUrl ? (
-                <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <img
-                    src={extraImage.imageUrl}
-                    alt={`${project.title} - ${extraImage.title}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ) : null}
-            </section>
-          );
-        })()}
-
-      {/* Extra Image 04- Conditionally rendered */}
-      {project.extraImage04 &&
-        (() => {
-          const extraImage = project.extraImage04;
-          return (
-            <section
-              className="container mx-auto max-w-6xl px-6 mb-10"
-              id={getSectionId("extraImage04")}
-            >
-              <div className="flex flex-col gap-2 mb-4">
-                <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-                  {extraImage.description}
-                </p>
-              </div>
-
-              {extraImage.images && extraImage.images.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-6 py-4">
-                  {extraImage.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="w-full rounded-xl overflow-hidden"
-                    >
-                      <img
-                        src={image}
-                        alt={`${project.title} - ${extraImage.title} - Image ${
-                          index + 1
-                        }`}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : extraImage.imageUrl ? (
-                <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <img
-                    src={extraImage.imageUrl}
-                    alt={`${project.title} - ${extraImage.title}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ) : null}
-            </section>
-          );
-        })()}
-
-      {/* Extra Image 05- Conditionally rendered */}
-      {project.extraImage05 &&
-        (() => {
-          const extraImage = project.extraImage05;
-          return (
-            <section
-              className="container mx-auto max-w-6xl px-6 mb-10"
-              id={getSectionId("extraImage05")}
-            >
-              <div className="flex flex-col gap-2 mb-4">
-                <h2 className="text-2xl">{extraImage.title}</h2>
-                <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-                  {extraImage.description}
-                </p>
-              </div>
-
-              {extraImage.images && extraImage.images.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-6 py-4">
-                  {extraImage.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="w-full rounded-xl overflow-hidden"
-                    >
-                      <img
-                        src={image}
-                        alt={`${project.title} - ${extraImage.title} - Image ${
-                          index + 1
-                        }`}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : extraImage.imageUrl ? (
-                <div className="w-full rounded-xl overflow-hidden bg-gray-100 py-4">
-                  <img
-                    src={extraImage.imageUrl}
-                    alt={`${project.title} - ${extraImage.title}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ) : null}
-            </section>
-          );
-        })()}
-      {/* Extra Description 01- Conditionally rendered */}
-      {project.descriptionExtra01 && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10 border-b border-gray-200 pb-10">
-          {project.descriptionExtra01.map((description, index) => (
-            <p
-              key={index}
-              className="tracking-wide text-lg text-muted-foreground leading-relaxed mb-2"
-            >
-              {description}
-            </p>
-          ))}
-        </section>
-      )}
-      {/* Extra Description 02- Conditionally rendered */}
-      {project.descriptionExtra02 && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-            {project.descriptionExtra02}
+      {/* New Section */}
+      {project.newSection01 && (
+        <section
+          className="container mx-auto max-w-6xl px-6 mb-10"
+          id={getSectionId("newSection")}
+        >
+          <h2 className="text-3xl mb-2">{project.newSection01.title}</h2>
+          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
+            {project.newSection01.description}
           </p>
-        </section>
-      )}
-      {/* Extra Description 03- Conditionally rendered */}
-      {project.descriptionExtra03 && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-            {project.descriptionExtra03}
-          </p>
-        </section>
-      )}
-      {/* Extra Description 04- Conditionally rendered */}
-      {project.descriptionExtra04 && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-            {project.descriptionExtra04}
-          </p>
-        </section>
-      )}
-      {/* Extra Description 05- Conditionally rendered */}
-      {project.descriptionExtra05 && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <p className="tracking-wide text-muted-foreground leading-relaxed mb-0">
-            {project.descriptionExtra05}
-          </p>
-        </section>
-      )}
-      {/* New Section - Conditionally rendered */}
-      {project.newSection &&
-        (() => {
-          const newSection = project.newSection;
-          return (
-            <section
-              className="container mx-auto max-w-6xl px-6 mb-10"
-              id={getSectionId("newSection")}
-            >
-              <h2 className="text-3xl mb-2">{newSection.title}</h2>
-              <p className="tracking-wide text-muted-foreground leading-relaxed mb-8">
-                {newSection.description}
-              </p>
 
-              {/* Images */}
-              {newSection.images && newSection.images.length > 0 ? (
-                <div className="grid md:grid-cols-2 gap-6 py-4">
-                  {newSection.images.map((image, index) => (
+          {project.newSection01.images &&
+          project.newSection01.images.length > 0 ? (
+            <div className="grid md:grid-cols-2 gap-6 py-4">
+              {project.newSection01.images.map((image, index) => (
+                <div key={index} className="w-full rounded-xl overflow-hidden">
+                  <img
+                    src={image}
+                    alt={`${project.title} - ${
+                      project.newSection01?.title || "Section"
+                    } - Image ${index + 1}`}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : project.newSection01.imageUrl ? (
+            <div className="w-full rounded-xl overflow-hidden py-4">
+              <img
+                src={project.newSection01.imageUrl}
+                alt={`${project.title} - ${project.newSection01.title}`}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          ) : null}
+        </section>
+      )}
+
+      {/* New Section 01 */}
+      {project.newSection02 && (
+        <section
+          className="container mx-auto max-w-6xl px-6 mb-10"
+          id={getSectionId("newSection01")}
+        >
+          <h2 className="text-3xl mb-2">{project.newSection02.title}</h2>
+          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
+            {project.newSection02.description}
+          </p>
+
+          {/* Subsection 1 - Experimentation phase */}
+          {project.newSection02.images &&
+            project.newSection02.images.length > 0 && (
+              <div id="leaflet-section-1" className="mb-8">
+                <h3 className="text-xl mb-4">Experimentation phase</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {project.newSection02.images.map((image, index) => (
                     <div
                       key={index}
                       className="w-full rounded-xl overflow-hidden"
                     >
                       <img
                         src={image}
-                        alt={`${project.title} - ${newSection.title} - Image ${
-                          index + 1
-                        }`}
+                        alt={`${
+                          project.newSection02?.title || "Section"
+                        } - Image ${index + 1}`}
                         className="w-full h-auto object-contain"
                       />
                     </div>
                   ))}
                 </div>
-              ) : newSection.imageUrl ? (
-                <div className="w-full rounded-xl overflow-hidden py-4">
+              </div>
+            )}
+
+          {/* Subsection 2 - Examples for client */}
+          {project.newSection02.imageUrl && (
+            <div id="leaflet-section-2" className="mb-8">
+              <h3 className="text-xl mb-4">Examples for client</h3>
+              <div className="w-full rounded-xl overflow-hidden">
+                <img
+                  src={project.newSection02.imageUrl}
+                  alt={`${project.newSection02.title} - Final`}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          )}
+        </section>
+      )}
+
+      {project.newSection03 && (
+        <section
+          className="container mx-auto max-w-6xl px-6 mb-10"
+          id={getSectionId("newSection03")}
+        >
+          <h2 className="text-3xl mb-2">{project.newSection03.title}</h2>
+          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
+            {project.newSection03.description}
+          </p>
+          {project.newSection03.images &&
+          project.newSection03.images.length > 0 ? (
+            <div className="grid md:grid-cols-2 gap-6 py-4">
+              {project.newSection03.images.map((image, index) => (
+                <div key={index} className="w-full rounded-xl overflow-hidden">
                   <img
-                    src={newSection.imageUrl}
-                    alt={`${project.title} - ${newSection.title}`}
+                    src={image}
+                    alt={`${project.title} - ${
+                      project.newSection03?.title || "Section"
+                    } - Image ${index + 1}`}
                     className="w-full h-auto object-contain"
                   />
                 </div>
-              ) : null}
-            </section>
-          );
-        })()}
-      {/* New Section 01 - Conditionally rendered */}
-      {project.newSection01 &&
-        (() => {
-          const newSection01 = project.newSection01;
-          return (
-            <section
-              className="container mx-auto max-w-6xl px-6 mb-10"
-              id={getSectionId("newSection01")}
-            >
-              <h2 className="text-3xl mb-2">{newSection01.title}</h2>
-              <p className="tracking-wide text-muted-foreground leading-relaxed mb-8">
-                {newSection01.description}
-              </p>
+              ))}
+            </div>
+          ) : project.newSection03.imageUrl ? (
+            <div className="w-full rounded-xl overflow-hidden py-4">
+              <img
+                src={project.newSection03.imageUrl}
+                alt={`${project.title} - ${project.newSection03.title}`}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          ) : null}
+        </section>
+      )}
 
-              {/* Subsection 1 - Experimentation phase */}
-              {newSection01.images && newSection01.images.length > 0 && (
-                <div id="leaflet-section-1" className="mb-8">
-                  <h3 className="text-xl mb-4">Experimentation phase</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {newSection01.images.map((image, index) => (
-                      <div
-                        key={index}
-                        className="w-full rounded-xl overflow-hidden"
-                      >
-                        <img
-                          src={image}
-                          alt={`${newSection01.title} - Image ${index + 1}`}
-                          className="w-full h-auto object-contain"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Subsection 2 - Examples for client */}
-              {newSection01.imageUrl && (
-                <div id="leaflet-section-2" className="mb-8">
-                  <h3 className="text-xl mb-4">Examples for client</h3>
-                  <div className="w-full rounded-xl overflow-hidden">
-                    <img
-                      src={newSection01.imageUrl}
-                      alt={`${newSection01.title} - Final`}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
-                </div>
-              )}
-            </section>
-          );
-        })()}
-      {/* Extra Images - Conditionally rendered */}
+      {/* Extra Images */}
       {project.extraImages && project.extraImages.images.length > 0 && (
         <section
-          className="container mx-auto max-w-6xl  mb-20"
+          className="container mx-auto max-w-6xl px-6 mb-20"
           id={getSectionId("extraImages")}
         >
           <h2 className="text-3xl mb-2">{project.extraImages.title}</h2>
-          <p className="tracking-wide text-muted-foreground leading-relaxed mb-8">
+          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
             {project.extraImages.description}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             {project.extraImages.images.map((image, index) => (
               <div
                 key={index}
-                className="rounded-xl overflow-hidden bg-muted aspect-[4/3]"
+                className="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]"
               >
                 <img
                   src={image}
@@ -686,17 +456,17 @@ export function ProjectDetail({
         </section>
       )}
 
-      {/* Custom Sections - Conditionally rendered */}
+      {/* Custom Sections */}
       {project.customSections && project.customSections.length > 0 && (
         <section className="container mx-auto max-w-6xl px-6 mb-20">
           {project.customSections.map((section, index) => (
             <div key={index} className="mb-20">
               <h2 className="text-3xl mb-6">{section.title}</h2>
-              <p className="tracking-wide text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="tracking-wide text-lg text-gray-500 leading-relaxed mb-6">
                 {section.content}
               </p>
               {section.image && (
-                <div className="rounded-xl overflow-hidden bg-muted aspect-video">
+                <div className="rounded-xl overflow-hidden bg-gray-100 aspect-video">
                   <img
                     src={section.image}
                     alt={`${project.title} - ${section.title}`}
@@ -709,7 +479,7 @@ export function ProjectDetail({
         </section>
       )}
 
-      {/* Results - Only show if results are provided */}
+      {/* Results */}
       {project.results && project.results.length > 0 && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-20"
@@ -720,10 +490,10 @@ export function ProjectDetail({
             {project.results.map((result, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl bg-accent/30 border border-border"
+                className="p-6 rounded-xl bg-orange-100/30 border border-orange-200/15"
               >
                 <div className="text-4xl mb-3">{index + 1}</div>
-                <p className="tracking-wide text-muted-foreground leading-relaxed">
+                <p className="tracking-wide text-gray-500 leading-relaxed">
                   {result}
                 </p>
               </div>

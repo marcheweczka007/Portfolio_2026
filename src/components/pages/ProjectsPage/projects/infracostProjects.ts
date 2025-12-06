@@ -51,7 +51,7 @@ export const infracostProjects: Project = {
     "For the last page, the requirement was to have a call to action button for potential customers to encourage them to sign up for a free trial.",
   ],
 
-  newSection: {
+  newSection01: {
     title: "Business card",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
@@ -59,15 +59,13 @@ export const infracostProjects: Project = {
       "/src/assets/E-bookProject/BusinessCards02.png",
       "/src/assets/E-bookProject/BusinessCardsSection01.png",
     ],
-    descriptionExtra02: ["Test", "Test 02"],
   },
 
-  newSection01: {
+  newSection02: {
     title: "Feaflet",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
     images: ["", ""],
-    descriptionExtra03: ["Test 03", "Test 03"],
   },
 
   extraImages: {
