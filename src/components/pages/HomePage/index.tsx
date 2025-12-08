@@ -13,6 +13,7 @@ import { CTASection } from "../../ui/CTASection.tsx";
 export default function HomePage() {
   const navigate = useNavigate();
   return (
+  
     <PageLayout>
       {/* Hero Section */}
       <section id="home" className="relative pt-14 pb-10 px-6 overflow-hidden">

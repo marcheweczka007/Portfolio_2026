@@ -1,4 +1,5 @@
 import { Project } from "./types";
+import { ScrollProgress } from "../../../ui/scrollProgress";
 
 export const infracostProjects: Project = {
   //Add a button when the user can view or download the e-book
@@ -81,7 +82,7 @@ export const infracostProjects: Project = {
     {
       title: "Examples for client",
       description:
-        "I created a few different versions to show the client the options.",
+        "I created a few different versions to show the client the options. The client liked the middle option the most. But they wanted to see few more veriations of this option.",
       image: "/src/assets/E-bookProject/BusinessCardsSection01.png",
     },
   ],
@@ -95,14 +96,14 @@ export const infracostProjects: Project = {
     {
       title: "Experimentation phase",
       description:
-        "I like to start broad, and experiment with different colours, logo and layout of the business card to see what options we have. At this stage, I try different colour combinations and layouts to see what works best.",
-      image: "/src/assets/E-bookProject/BusinessCards02.png",
+        "For the leaflet, I was given a colour palette and few examples of the leaflet. I started with a moodboard to get a sense of the look and feel of the leaflet. I then created a few different versions to show the client the options.",
+      image: "/src/assets/E-bookProject/LeafletExperiment.png",
     },
     {
       title: "Examples for client",
       description:
-        "I created a few different versions to show the client the options.",
-      image: "/src/assets/E-bookProject/BusinessCardsSection01.png",
+        "The leaflet was the most challenging from all the mini projects. As it contained a lot of text and images, I had to be careful with the layout and spacing. I was required to show all the imformation, and still make it look visually appealing. I think the most difficult about design is the content, and how to presemt it well whch keeping all the required information.",
+      image: "/src/assets/E-bookProject/LeafletExamples.png",
     },
   ],
 
@@ -116,8 +117,7 @@ export const infracostProjects: Project = {
       "/src/assets/E-bookProject/EbookFinal02.png",
     ],
   },
-  images: [],
-  // Section ID mapping - maps standard sections to their IDs for TOC navigation
+
   sectionIds: {
     sectionStart: "projectSectionDescriptionStart",
     imageSection01: "Image01",
@@ -129,6 +129,10 @@ export const infracostProjects: Project = {
     showcaseGallery: "final-outcome",
     overviewTitle: "overviewTitle",
   },
+    results: [
+    "The e-book was well received by the client and was used to promote the FinOps community.",
+    "The business card was well received by the client and was used to promote the FinOps community.",
+  ],
   tableOfContents: {
     title: "Table of Contents",
     items: [

@@ -14,6 +14,7 @@ import { TableOfContents } from "./TableOfContents";
 import { ExtraImageSection } from "./ExtraImageSection";
 import { DescriptionSection } from "./DescriptionSection";
 import { ProjectSectionDescription } from "./ProjectSectionDescription";
+import { ScrollProgress } from "../../ui/scrollProgress";
 
 interface ProjectDetailProps {
   project: Project;
@@ -37,7 +38,7 @@ export function ProjectDetail({
   fromProjectsPage,
 }: ProjectDetailProps) {
   const t = projectDetails;
-
+  
   // Helper function to get section ID from project's sectionIds mapping
   const getSectionId = (
     sectionKey: keyof NonNullable<Project["sectionIds"]>
@@ -97,7 +98,9 @@ export function ProjectDetail({
   const toc = project.tableOfContents;
 
   return (
+  
     <div>
+    <ScrollProgress />
       {/* Back Button */}
       <div className="container mx-auto max-w-6xl px-6 mb-8">
         <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
@@ -388,7 +391,7 @@ export function ProjectDetail({
                   className="flex flex-col md:flex-row items-start gap-8"
                 >
                   {/* IMAGE */}
-                  <div className="w-full md:w-1/2 rounded-xl overflow-hidden bg-gray-100">
+                  <div className="w-full md:w-1/2 rounded-xl overflow-hidden">
                     <img
                       src={section.image}
                       alt={`${project.title} - ${section.title}`}
@@ -440,7 +443,7 @@ export function ProjectDetail({
                     </p>
                   </div>
                   {/* IMAGE */}
-                  <div className="w-full md:w-1/2 rounded-xl overflow-hidden bg-gray-100">
+                  <div className="w-full md:w-1/2 rounded-xl overflow-hidden">
                     <img
                       src={section.image}
                       alt={`${project.title} - ${section.title}`}
@@ -452,6 +455,29 @@ export function ProjectDetail({
             </div>
           </section>
         )}
+
+      {/* Results */}
+      {project.results && project.results.length > 0 && (
+        <section
+          className="container mx-auto max-w-6xl px-6 mb-20"
+          id={getSectionId("results")}
+        >
+          <h2 className="text-3xl mb-8">Reflection on the project</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {project.results.map((result, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-gray-100 border border-gray-200/20"
+              >
+                <div className="text-xl mb-3 text-gray-900">{index + 1}</div>
+                <p className="tracking-wide text-md text-gray-600 leading-relaxed">
+                  {result}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Showcase Gallery */}
       {project.showcaseGallery && project.showcaseGallery.images.length > 0 && (
@@ -500,29 +526,6 @@ export function ProjectDetail({
               )}
             </div>
           ))}
-        </section>
-      )}
-
-      {/* Results */}
-      {project.results && project.results.length > 0 && (
-        <section
-          className="container mx-auto max-w-6xl px-6 mb-20"
-          id={getSectionId("results")}
-        >
-          <h2 className="text-3xl mb-8">Results & Impact</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {project.results.map((result, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-orange-100/30 border border-orange-200/15"
-              >
-                <div className="text-4xl mb-3">{index + 1}</div>
-                <p className="tracking-wide text-gray-500 leading-relaxed">
-                  {result}
-                </p>
-              </div>
-            ))}
-          </div>
         </section>
       )}
 

@@ -132,6 +132,12 @@ export interface Project extends ProjectCardData {
     imagePosition?: "right";
   }>;
 
+  reflectionSection?: {
+    title: string;
+    description: string;
+    bullets?: string[];
+  };
+
 
   // Section ID mapping - maps standard sections to their IDs for TOC navigation
   sectionIds?: Partial<Record<SectionIdKey, string>> & {
