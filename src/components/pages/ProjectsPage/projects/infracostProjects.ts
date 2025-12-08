@@ -64,7 +64,7 @@ export const infracostProjects: Project = {
     "For the last page, the requirement was to have a call to action button for potential customers to encourage them to sign up for a free trial.",
   ],
 
-  contentSection01: {
+  projectSectionDescriptionMiddle: {
     title: "Business card",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
@@ -99,7 +99,7 @@ export const infracostProjects: Project = {
     imageSection02: "Image02",
     imageSection03: "Image03",
     imageSection04: "Image04",
-    contentSection01: "business-card",
+    projectSectionDescriptionMiddle: "business-card",
     contentSection02: "leaflet",
     showcaseGallery: "final-outcome",
     overviewTitle: "overviewTitle",

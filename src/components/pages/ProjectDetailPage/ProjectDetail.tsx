@@ -200,10 +200,10 @@ export function ProjectDetail({
         {/* Project Section Description Start */}
         {project.projectSectionDescriptionStart && (
           <div
-            className="flex flex-col gap-2 m-6"
+            className="flex flex-col gap-2 m-6 mb-16"
             id={getSectionId("projectSectionDescriptionStart")}
           >
-            <h2 className="text-2xl uppercase">
+            <h2 className="text-2xl font-bold">
               {project.projectSectionDescriptionStart.overviewTitle}
             </h2>
             <p className="tracking-wide text-md pb-4 text-gray-500 leading-relaxed">
@@ -376,36 +376,44 @@ export function ProjectDetail({
       })}
 
       {/* Content Section 01 */}
-      {project.contentSection01 && (
+      {project.projectSectionDescriptionMiddle && (
         <section
           className="container mx-auto max-w-6xl px-6 mb-10"
-          id={getSectionId("contentSection01")}
+          id={getSectionId("projectSectionDescriptionMiddle")}
         >
-          <h2 className="text-3xl mb-2">{project.contentSection01.title}</h2>
+          <h2 className="text-2xl font-bold">
+            {project.projectSectionDescriptionMiddle.title}
+          </h2>
           <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
-            {project.contentSection01.description}
+            {project.projectSectionDescriptionMiddle.description}
           </p>
 
-          {project.contentSection01.images &&
-          project.contentSection01.images.length > 0 ? (
+          {project.projectSectionDescriptionMiddle.images &&
+          project.projectSectionDescriptionMiddle.images.length > 0 ? (
             <div className="grid md:grid-cols-2 gap-6 py-4">
-              {project.contentSection01.images.map((image, index) => (
-                <div key={index} className="w-full rounded-xl overflow-hidden">
-                  <img
-                    src={image}
-                    alt={`${project.title} - ${
-                      project.contentSection01?.title || "Section"
-                    } - Image ${index + 1}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ))}
+              {project.projectSectionDescriptionMiddle.images.map(
+                (image, index) => (
+                  <div
+                    key={index}
+                    className="w-full rounded-xl overflow-hidden"
+                  >
+                    <img
+                      src={image}
+                      alt={`${project.title} - ${
+                        project.projectSectionDescriptionMiddle?.title ||
+                        "Section"
+                      } - Image ${index + 1}`}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                )
+              )}
             </div>
-          ) : project.contentSection01.imageUrl ? (
+          ) : project.projectSectionDescriptionMiddle.imageUrl ? (
             <div className="w-full rounded-xl overflow-hidden py-4">
               <img
-                src={project.contentSection01.imageUrl}
-                alt={`${project.title} - ${project.contentSection01.title}`}
+                src={project.projectSectionDescriptionMiddle.imageUrl}
+                alt={`${project.title} - ${project.projectSectionDescriptionMiddle.title}`}
                 className="w-full h-auto object-contain"
               />
             </div>

@@ -40,7 +40,7 @@ export type SectionIdKey =
   | "imageSection05"
   | "showcaseGallery"
   | "contentSection"
-  | "contentSection01"
+  | "projectSectionDescriptionMiddle"
   | "contentSection02"
   | "contentSection03"
   | "results";
@@ -101,7 +101,7 @@ export interface Project extends ProjectCardData {
   textBlock05?: string;
 
   // Content/media sections
-  contentSection01?: ContentSectionData;
+  projectSectionDescriptionMiddle?: ContentSectionData;
   contentSection02?: ContentSectionData;
   contentSection03?: ContentSectionData;
 

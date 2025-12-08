@@ -16,7 +16,7 @@ export function ExtraImageSection({
   return (
     <section className="container mx-auto max-w-6xl px-6 mb-10" id={sectionId}>
       <div className="flex flex-col gap-2 mb-4">
-        <h2 className="text-2xl">{data.title}</h2>
+        <h2 className="text-md font-bold">{data.title}</h2>
         <p className="tracking-wide text-gray-500 leading-relaxed mb-0">
           {data.description}
         </p>
