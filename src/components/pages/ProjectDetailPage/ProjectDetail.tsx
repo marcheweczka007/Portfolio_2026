@@ -1,6 +1,13 @@
 import React from "react";
 import { Button } from "../../ui/button";
-import { ArrowLeft, Search, Lightbulb, Palette, Rocket } from "lucide-react";
+import {
+  ArrowLeft,
+  Search,
+  Lightbulb,
+  Palette,
+  Rocket,
+  Check,
+} from "lucide-react";
 import { CTASection } from "../../ui/CTASection";
 import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
@@ -140,18 +147,60 @@ export function ProjectDetail({
       <section className="container mx-auto max-w-6xl px-0 mb-6">
         {/* Overview */}
         <div
-          className="mb-10 border-b border-gray-200 pb-10"
+          className="flex flex-col gap-10 m-6 p-10 border rounded-xl border-gray-200 pb-10 bg-gray-900"
           id={getSectionId("overview")}
         >
-          <h2 className="text-3xl font-bold mb-2">Project overview</h2>
-          <p className="text-2xl text-gray-500 leading-relaxed">
-            {project.overview}
-          </p>
+          {/* OVERVIEW ROW */}
+          <div className="flex flex-row gap-6">
+            <h2 className="w-40 text-md text-gray-50 uppercase">Overview</h2>
+            <p className="flex-1 text-md text-gray-50 leading-relaxed">
+              {project.overviewSection.overviewDescription}
+            </p>
+          </div>
+
+          {/* EXECUTION ROW */}
+          {project.overviewSection.executionTitle && (
+            <div className="flex flex-row gap-6">
+              <h2 className="w-40 text-md text-gray-50 uppercase">Execution</h2>
+
+              <div className="flex-1 flex flex-col gap-3">
+                <p className="text-md text-gray-50 leading-relaxed">
+                  {project.overviewSection.executionDescription}
+                </p>
+
+                {/* EXECUTION BULLETS */}
+                {project.overviewSection.exectutionBullets && (
+                  <ul className="flex flex-col gap-2 text-md text-gray-50 leading-relaxed">
+                    {project.overviewSection.exectutionBullets.map(
+                      (bullet, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start gap-4 pt-6 border-b border-gray-700 pb-6 text-sm tracking-wide  last:border-b-0 text-gray-200"
+                        >
+                          <Check className="bg-orange-100 rounded-full p-0.5 w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                          <span>{bullet}</span>
+                        </li>
+                      )
+                    )}
+                  </ul>
+                )}
+              </div>
+            </div>
+          )}
+          {/* EXECUTION ENDING */}
+          {project.overviewSection.executionEnding && (
+            <div className="flex flex-row gap-6">
+              <h2 className="flex-1 w-40 text-md ">Execution</h2>
+              <p className="text-md text-gray-500 leading-relaxed">
+                {project.overviewSection.executionEnding}
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Challenge - Only show if provided */}
         {project.challenge && (
-          <div className="mb-10 p-8 bg-gray-100 border-dotted border-gray-200 border-t-3 border-b-3">
+          <div className="mb-10 p-8 bg-gray-200">
             <h2 className="text-lg mb-2">The Challenge</h2>
             <p className="tracking-wide text-md text-gray-500 leading-relaxed">
               {project.challenge}

@@ -55,10 +55,15 @@ export interface ProjectCardData {
 }
 
 export interface Project extends ProjectCardData {
-  role: string;
-  client?: string;
   duration?: string;
-  overview: string;
+  overviewSection: {
+    overviewTitle: string;
+    overviewDescription: string;
+    executionTitle?: string;
+    executionDescription?: string;
+    exectutionBullets?: string[];
+    executionEnding?: string;
+  };
   // Allow additional properties for flexibility
   [key: string]: any;
   challenge?: string;

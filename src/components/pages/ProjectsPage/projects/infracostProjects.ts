@@ -9,12 +9,19 @@ export const infracostProjects: Project = {
   imageUrl: "/src/assets/E-BookProject/EBookHero.png",
   tags: ["E-book", "Business card", "Leaflet"],
   year: "2024",
-  role: "Graphic Designer (Freelance)",
-  client: "Infracost",
-  duration: "1 month",
-  overview:
-    "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
-  solution: "",
+  overviewSection: {
+    overviewTitle: "Overview",
+    overviewDescription:
+      "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
+    executionTitle: "Execution",
+    executionDescription:
+      "This project was a collaboration with Infracost to create an e-book for  a FinOps community. Along with the e-book I designed a leaflet and business cards that were used diging the conference.",
+    exectutionBullets: [
+      "Design and showcade the business cards.",
+      "Ensure the leaflet is consistent with the company branding and prepare for printing.",
+      "Create illustrations for the e-book to help visualise the benefits of FinOps and how it can help businesses save money.",
+    ],
+  },
   summaryText: "",
   imageSection01: {
     title: "Requirements",
@@ -93,6 +100,10 @@ export const infracostProjects: Project = {
   tableOfContents: {
     title: "Table of Contents",
     items: [
+      {
+        id: "overview",
+        label: "Overview",
+      },
       {
         id: "ebook-design",
         label: "E-book",
