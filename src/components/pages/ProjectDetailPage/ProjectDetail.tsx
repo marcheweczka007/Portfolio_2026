@@ -199,7 +199,10 @@ export function ProjectDetail({
         </div>
         {/* Project Section Description Start */}
         {project.projectSectionDescriptionStart && (
-          <div className="flex flex-col gap-2 m-6">
+          <div
+            className="flex flex-col gap-2 m-6"
+            id={getSectionId("projectSectionDescriptionStart")}
+          >
             <h2 className="text-2xl uppercase">
               {project.projectSectionDescriptionStart.overviewTitle}
             </h2>

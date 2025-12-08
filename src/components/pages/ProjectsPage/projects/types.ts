@@ -28,6 +28,7 @@ export type SectionIdKey =
   | "hero"
   | "overview"
   | "overviewTitle"
+  | "projectSectionDescriptionStart"
   | "solution"
   | "challenge"
   | "process"
