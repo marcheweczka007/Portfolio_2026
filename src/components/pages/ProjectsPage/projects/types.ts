@@ -61,14 +61,10 @@ export interface ProjectSectionDescriptionStart {
 }
 export interface Project extends ProjectCardData {
   duration?: string;
-  // Section descriptions (shorter names)
+  // Section descriptions
   sectionStart?: ProjectSectionDescriptionStart;
   sectionMiddle?: ContentSectionData;
   sectionEnd?: ContentSectionData;
-
-  // Legacy names (for backward compatibility)
-  projectSectionDescriptionStart?: ProjectSectionDescriptionStart;
-  projectSectionDescriptionMiddle?: ContentSectionData;
   overviewSection: {
     overviewTitle: string;
     overviewDescription: string;
@@ -105,8 +101,7 @@ export interface Project extends ProjectCardData {
   textBlock04?: string;
   textBlock05?: string;
 
-  // Content/media sections (legacy - use sectionMiddle/sectionEnd instead)
-  contentSection02?: ContentSectionData;
+  // Content/media sections (legacy - use sectionEnd instead)
   contentSection03?: ContentSectionData;
 
   // Highlight/featured section

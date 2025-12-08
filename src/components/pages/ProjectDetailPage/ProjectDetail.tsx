@@ -199,44 +199,41 @@ export function ProjectDetail({
           )}
         </div>
 
-      
         {/* Section Start */}
-        {(project.sectionStart || project.projectSectionDescriptionStart) && (
+        {project.sectionStart && (
           <ProjectSectionDescription
-            data={
-              project.sectionStart || project.projectSectionDescriptionStart!
-            }
+            data={project.sectionStart}
             sectionIdKey="sectionStart"
             projectTitle={project.title}
             getSectionId={getSectionId}
           />
         )}
 
-      {/* Section Middle */}
-      {(project.sectionMiddle || project.projectSectionDescriptionMiddle) && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <ProjectSectionDescription
-            data={
-              project.sectionMiddle || project.projectSectionDescriptionMiddle!
-            }
-            sectionIdKey="sectionMiddle"
-            projectTitle={project.title}
-            getSectionId={getSectionId}
-          />
-        </section>
-      )}
+        {/* Section Middle */}
+        {project.sectionMiddle && (
+          <section className="container mx-auto max-w-6xl px-6 mb-10">
+            <ProjectSectionDescription
+              data={project.sectionMiddle}
+              sectionIdKey="sectionMiddle"
+              projectTitle={project.title}
+              getSectionId={getSectionId}
+              className="flex flex-col gap-2 mb-16"
+            />
+          </section>
+        )}
 
-      {/* Section End */}
-      {(project.sectionEnd || project.contentSection02) && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <ProjectSectionDescription
-            data={project.sectionEnd || project.contentSection02!}
-            sectionIdKey="sectionEnd"
-            projectTitle={project.title}
-            getSectionId={getSectionId}
-          />
-        </section>
-      )}
+        {/* Section End */}
+        {project.sectionEnd && (
+          <section className="container mx-auto max-w-6xl px-6 mb-10">
+            <ProjectSectionDescription
+              data={project.sectionEnd}
+              sectionIdKey="sectionEnd"
+              projectTitle={project.title}
+              getSectionId={getSectionId}
+              className="flex flex-col gap-2 mb-16"
+            />
+          </section>
+        )}
 
         {/* Challenge - Only show if provided */}
         {project.challenge && (
@@ -392,7 +389,6 @@ export function ProjectDetail({
           />
         );
       })}
-
 
       {/* Showcase Gallery */}
       {project.showcaseGallery && project.showcaseGallery.images.length > 0 && (
