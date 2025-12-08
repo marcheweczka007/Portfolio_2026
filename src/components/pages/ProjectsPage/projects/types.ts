@@ -58,6 +58,7 @@ export interface ProjectCardData {
 export interface ProjectSectionDescriptionStart {
   overviewTitle: string;
   description: string;
+  imageUrl?: string;
 }
 export interface Project extends ProjectCardData {
   duration?: string;

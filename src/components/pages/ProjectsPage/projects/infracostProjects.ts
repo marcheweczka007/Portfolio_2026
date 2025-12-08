@@ -6,7 +6,7 @@ export const infracostProjects: Project = {
   title: "Infracost (Graphic design projects) ",
   description:
     "This project is a collection of graphic design projects I have worked on for Infracost. I have created a consistent look and feel for the 3 items.",
-  imageUrl: "/src/assets/E-BookProject/EBookHero.png",
+  imageUrl: "/src/assets/E-BookProject/InfraHero.png",
   tags: ["E-book", "Business card", "Leaflet"],
   year: "2024",
   overviewSection: {
@@ -26,7 +26,8 @@ export const infracostProjects: Project = {
 
   projectSectionDescriptionStart: {
     overviewTitle: "E-book project",
-    description: "Description of the first section",
+    description: "The e-book project focused on designing an online resourse for the potential customers to learn about the benefits of FinOps. I was given lot of creative freedom, when working on this project, it was one of my favourite projects to work on.",
+    imageUrl: "/src/assets/E-bookProject/EBookHero.png",
   },
   imageSection01: {
     title: "Requirements",

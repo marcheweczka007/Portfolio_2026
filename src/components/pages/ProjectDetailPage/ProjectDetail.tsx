@@ -134,7 +134,7 @@ export function ProjectDetail({
         </div>
 
         {/* Hero Image */}
-        <div className="rounded-2xl overflow-hidden bg-gray-100 aspect-video">
+        <div className="rounded-2xl overflow-hidden bg-gray-100">
           <img
             src={project.imageUrl}
             alt={project.title}
@@ -144,10 +144,10 @@ export function ProjectDetail({
       </section>
 
       {/* Project Content */}
-      <section className="container mx-auto max-w-6xl px-0 mb-6">
+      <section className="container mx-auto max-w-6xl mb-6">
         {/* Overview */}
         <div
-          className="flex flex-col gap-10 m-6 p-10 border rounded-xl border-gray-200 pb-10 bg-gray-900"
+          className="flex flex-col gap-10 m-6 p-10  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
           id={getSectionId("overviewTitle")}
         >
           {/* OVERVIEW ROW */}
@@ -197,14 +197,23 @@ export function ProjectDetail({
             </div>
           )}
         </div>
+        {/* Project Section Description Start */}
         {project.projectSectionDescriptionStart && (
           <div className="flex flex-col gap-2 m-6">
-            <h2 className="text-2xl mb-2 uppercase">
+            <h2 className="text-2xl uppercase">
               {project.projectSectionDescriptionStart.overviewTitle}
             </h2>
-            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
+            <p className="tracking-wide text-md pb-4 text-gray-500 leading-relaxed">
               {project.projectSectionDescriptionStart.description}
             </p>
+            {project.projectSectionDescriptionStart.imageUrl && (
+              <div className="rounded-xl bg-gray-100 overflow-hidden">
+                <img
+                  src={project.projectSectionDescriptionStart.imageUrl}
+                  alt={project.projectSectionDescriptionStart.overviewTitle}
+                />
+              </div>
+            )}
           </div>
         )}
 
