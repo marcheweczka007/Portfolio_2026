@@ -198,21 +198,45 @@ export function ProjectDetail({
             </div>
           )}
         </div>
-        {/* Project Section Description Start */}
+
+      
+        {/* Section Start */}
         {(project.sectionStart || project.projectSectionDescriptionStart) && (
           <ProjectSectionDescription
             data={
               project.sectionStart || project.projectSectionDescriptionStart!
             }
-            sectionIdKey={
-              project.sectionStart
-                ? "sectionStart"
-                : "projectSectionDescriptionStart"
-            }
+            sectionIdKey="sectionStart"
             projectTitle={project.title}
             getSectionId={getSectionId}
           />
         )}
+
+      {/* Section Middle */}
+      {(project.sectionMiddle || project.projectSectionDescriptionMiddle) && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <ProjectSectionDescription
+            data={
+              project.sectionMiddle || project.projectSectionDescriptionMiddle!
+            }
+            sectionIdKey="sectionMiddle"
+            projectTitle={project.title}
+            getSectionId={getSectionId}
+          />
+        </section>
+      )}
+
+      {/* Section End */}
+      {(project.sectionEnd || project.contentSection02) && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <ProjectSectionDescription
+            data={project.sectionEnd || project.contentSection02!}
+            sectionIdKey="sectionEnd"
+            projectTitle={project.title}
+            getSectionId={getSectionId}
+          />
+        </section>
+      )}
 
         {/* Challenge - Only show if provided */}
         {project.challenge && (
@@ -369,79 +393,11 @@ export function ProjectDetail({
         );
       })}
 
-      {/* Content Section 01 */}
-      {(project.sectionMiddle || project.projectSectionDescriptionMiddle) && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <ProjectSectionDescription
-            data={
-              project.sectionMiddle || project.projectSectionDescriptionMiddle!
-            }
-            sectionIdKey={
-              project.sectionMiddle
-                ? "sectionMiddle"
-                : "projectSectionDescriptionMiddle"
-            }
-            projectTitle={project.title}
-            getSectionId={getSectionId}
-          />
-        </section>
-      )}
-
-      {/* Content Section 02 */}
-      {(project.sectionEnd || project.contentSection02) && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <ProjectSectionDescription
-            data={project.sectionEnd || project.contentSection02!}
-            sectionIdKey={
-              project.sectionEnd ? "sectionEnd" : "contentSection02"
-            }
-            projectTitle={project.title}
-            getSectionId={getSectionId}
-          />
-        </section>
-      )}
-
-      {/* Content Section 03 */}
-      {project.contentSection03 && (
-        <section
-          className="container mx-auto max-w-6xl px-6 mb-10"
-          id={getSectionId("contentSection03")}
-        >
-          <h2 className="text-3xl mb-2">{project.contentSection03.title}</h2>
-          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
-            {project.contentSection03.description}
-          </p>
-          {project.contentSection03.images &&
-          project.contentSection03.images.length > 0 ? (
-            <div className="grid md:grid-cols-2 gap-6 py-4">
-              {project.contentSection03.images.map((image, index) => (
-                <div key={index} className="w-full rounded-xl overflow-hidden">
-                  <img
-                    src={image}
-                    alt={`${project.title} - ${
-                      project.contentSection03?.title || "Section"
-                    } - Image ${index + 1}`}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          ) : project.contentSection03.imageUrl ? (
-            <div className="w-full rounded-xl overflow-hidden py-4">
-              <img
-                src={project.contentSection03.imageUrl}
-                alt={`${project.title} - ${project.contentSection03.title}`}
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          ) : null}
-        </section>
-      )}
 
       {/* Showcase Gallery */}
       {project.showcaseGallery && project.showcaseGallery.images.length > 0 && (
         <section
-          className="container mx-auto max-w-6xl px-6 mb-20"
+          className=" container mx-auto max-w-6xl px-6 mb-20"
           id={getSectionId("showcaseGallery")}
         >
           <h2 className="text-3xl mb-2">{project.showcaseGallery.title}</h2>

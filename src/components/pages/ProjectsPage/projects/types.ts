@@ -26,7 +26,6 @@ export type ContentSectionData = {
 // Section ID keys for TOC navigation
 export type SectionIdKey =
   | "hero"
-  | "overview"
   | "overviewTitle"
   | "sectionStart"
   | "sectionMiddle"
@@ -42,7 +41,6 @@ export type SectionIdKey =
   | "imageSection05"
   | "showcaseGallery"
   | "contentSection"
-  | "contentSection03"
   | "results";
 
 // Minimal type for ProjectCard display

@@ -71,7 +71,6 @@ export const infracostProjects: Project = {
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
     imageUrl: "/src/assets/E-bookProject/BusinessCardSectionMiddle.png",
   },
-
   sectionEnd: {
     title: "Feaflet",
     description:

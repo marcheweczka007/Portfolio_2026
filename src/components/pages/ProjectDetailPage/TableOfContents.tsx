@@ -47,7 +47,7 @@ export function TableOfContents({
           {items.map((item, index) => (
             <div
               key={item.id}
-              className={index > 0 ? "border-t border-gray-100 pt-4" : ""}
+              className={index > 0 ? "" : ""}
             >
               <button
                 type="button"
