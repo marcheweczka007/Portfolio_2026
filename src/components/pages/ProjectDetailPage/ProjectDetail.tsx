@@ -397,10 +397,6 @@ export function ProjectDetail({
             }
             projectTitle={project.title}
             getSectionId={getSectionId}
-            subsectionIds={{
-              subsection1: "leaflet-section-1",
-              subsection2: "leaflet-section-2",
-            }}
           />
         </section>
       )}
