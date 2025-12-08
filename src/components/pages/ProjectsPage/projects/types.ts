@@ -1,13 +1,3 @@
-export interface ProjectSection {
-  id?: string; // for navigation
-  title?: string;
-  description?: string;
-  image?: string; // single image
-  images?: string[]; // multiple images
-  extraText?: string;
-  bullets?: string[];
-}
-
 // Type aliases for repeated structures
 export type ImageSectionData = {
   title: string;
@@ -40,7 +30,6 @@ export type SectionIdKey =
   | "imageSection04"
   | "imageSection05"
   | "showcaseGallery"
-  | "contentSection"
   | "results";
 
 // Minimal type for ProjectCard display
@@ -60,7 +49,6 @@ export interface ProjectSectionDescriptionStart {
   imageUrl?: string;
 }
 export interface Project extends ProjectCardData {
-  duration?: string;
   // Section descriptions
   sectionStart?: ProjectSectionDescriptionStart;
   sectionMiddle?: ContentSectionData;
@@ -101,9 +89,6 @@ export interface Project extends ProjectCardData {
   textBlock04?: string;
   textBlock05?: string;
 
-  // Content/media sections (legacy - use sectionEnd instead)
-  contentSection03?: ContentSectionData;
-
   // Highlight/featured section
   highlightSection?: {
     title: string;
@@ -131,6 +116,14 @@ export interface Project extends ProjectCardData {
     title: string;
     description: string;
     image?: string;
+  }>;
+
+  // Side by side sections
+  sideBySideSections?: Array<{
+    title: string;
+    description: string;
+    image?: string;
+    imagePosition?: "left" | "right";
   }>;
 
   // Section ID mapping - maps standard sections to their IDs for TOC navigation
