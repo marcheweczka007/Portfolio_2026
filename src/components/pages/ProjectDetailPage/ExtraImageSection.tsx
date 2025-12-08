@@ -1,9 +1,9 @@
 import React from "react";
-import { ExtraImageData } from "../ProjectsPage/projects/types";
+import { ImageSectionData } from "../ProjectsPage/projects/types";
 
 interface ExtraImageSectionProps {
   sectionId?: string;
-  data: ExtraImageData;
+  data: ImageSectionData;
   projectTitle: string;
   key?: string | number;
 }

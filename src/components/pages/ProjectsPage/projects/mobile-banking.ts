@@ -21,11 +21,11 @@ export const mobileBanking: Project = {
   design: "Placeholder",
   shipping:
     "I worked closely with the developers to ship the project. We would check on frequently to make sure the project is on the right track. ",
-  extraSection: {
+  highlightSection: {
     title: "Extra Section",
     content: "Placeholder text",
   },
   results: ["Placeholder", "Placeholder", "Placeholder", "Placeholder"],
-  extraText: "Placeholder text",
+  summaryText: "Placeholder text",
   images: [],
 };

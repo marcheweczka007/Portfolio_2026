@@ -9,14 +9,14 @@ export interface ProjectSection {
 }
 
 // Type aliases for repeated structures
-export type ExtraImageData = {
+export type ImageSectionData = {
   title: string;
   description: string;
   imageUrl?: string;
   images?: string[];
 };
 
-export type NewSectionData = {
+export type ContentSectionData = {
   title: string;
   description: string;
   imageUrl?: string;
@@ -31,16 +31,16 @@ export type SectionIdKey =
   | "challenge"
   | "process"
   | "images"
-  | "extraImage01"
-  | "extraImage02"
-  | "extraImage03"
-  | "extraImage04"
-  | "extraImage05"
-  | "extraImages"
-  | "newSection"
-  | "newSection01"
-  | "newSection02"
-  | "newSection03"
+  | "imageSection01"
+  | "imageSection02"
+  | "imageSection03"
+  | "imageSection04"
+  | "imageSection05"
+  | "showcaseGallery"
+  | "contentSection"
+  | "contentSection01"
+  | "contentSection02"
+  | "contentSection03"
   | "results";
 
 // Minimal type for ProjectCard display
@@ -63,7 +63,7 @@ export interface Project extends ProjectCardData {
   [key: string]: any;
   challenge?: string;
   solution?: string;
-  extraText?: string;
+  summaryText?: string;
   images?: string[];
 
   // Legacy fields for backward compatibility
@@ -73,33 +73,33 @@ export interface Project extends ProjectCardData {
   shipping?: string;
   results?: string[];
 
-  // Extra image sections
-  extraImage01?: ExtraImageData;
-  extraImage02?: ExtraImageData;
-  extraImage03?: ExtraImageData;
-  extraImage04?: ExtraImageData;
-  extraImage05?: ExtraImageData;
+  // Image gallery sections
+  imageSection01?: ImageSectionData;
+  imageSection02?: ImageSectionData;
+  imageSection03?: ImageSectionData;
+  imageSection04?: ImageSectionData;
+  imageSection05?: ImageSectionData;
 
-  // Extra description fields
-  descriptionExtra01?: string[];
-  descriptionExtra02?: string;
-  descriptionExtra03?: string;
-  descriptionExtra04?: string;
-  descriptionExtra05?: string;
+  // Text description blocks
+  textBlock01?: string[];
+  textBlock02?: string;
+  textBlock03?: string;
+  textBlock04?: string;
+  textBlock05?: string;
 
-  // New section fields
-  newSection01?: NewSectionData;
-  newSection02?: NewSectionData;
-  newSection03?: NewSectionData;
+  // Content/media sections
+  contentSection01?: ContentSectionData;
+  contentSection02?: ContentSectionData;
+  contentSection03?: ContentSectionData;
 
-  // Extra section
-  extraSection?: {
+  // Highlight/featured section
+  highlightSection?: {
     title: string;
     content: string;
   };
 
-  // Extra images
-  extraImages?: {
+  // Final showcase gallery
+  showcaseGallery?: {
     title: string;
     description: string;
     images: string[];

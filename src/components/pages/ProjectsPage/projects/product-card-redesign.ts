@@ -17,13 +17,13 @@ export const productCardRedesign: Project = {
     "Unlike most projects, I wasn’t restricted by a design system. As it was one of my first projects at the company , my manager encouraged me to be creative and explore new approaches. The key challenge for me was understanding what information borrowers actually need from the product cards. Since I was working mostly independently, I asked many questions and collaborated closely with the developer and product manager to build a strong understanding of what was the card's role in the application flow.",
   solution:
     "I designed a mobile-first experience with rich product imagery, AR try-on features, and a streamlined checkout process. The new design includes personalized recommendations, social proof elements, and a persistent mini-cart that keeps users informed without interrupting their browsing. We also implemented a one-click checkout option and guest checkout to reduce friction.",
-  extraImage01: {
+  imageSection01: {
     title: "The Original Product Cards",
     description:
       "There was a lot of information for the user to unfold here. The next objective was to reduce all the information that was excessive.",
     imageUrl: "/src/assets/ApplicationCards/01_OriginalProductCard.png",
   },
-  extraImage02: {
+  imageSection02: {
     title: "Sketches, wireframes, flows.",
     description:
       "Once I understood the problems and requirements, I explored different ways of structuring the product card to improve clarity and reduce text overload. I started with quick sketches and low-fidelity wireframes to test different information hierarchies. The focus was on making the application status clear at a glance while keeping the design engaging and easy to scan.",
