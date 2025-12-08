@@ -209,32 +209,6 @@ export function ProjectDetail({
           />
         )}
 
-        {/* Section Middle */}
-        {project.sectionMiddle && (
-          <section className="container mx-auto max-w-6xl px-6 mb-10">
-            <ProjectSectionDescription
-              data={project.sectionMiddle}
-              sectionIdKey="sectionMiddle"
-              projectTitle={project.title}
-              getSectionId={getSectionId}
-              className="flex flex-col gap-2 mb-16"
-            />
-          </section>
-        )}
-
-        {/* Section End */}
-        {project.sectionEnd && (
-          <section className="container mx-auto max-w-6xl px-6 mb-10">
-            <ProjectSectionDescription
-              data={project.sectionEnd}
-              sectionIdKey="sectionEnd"
-              projectTitle={project.title}
-              getSectionId={getSectionId}
-              className="flex flex-col gap-2 mb-16"
-            />
-          </section>
-        )}
-
         {/* Challenge - Only show if provided */}
         {project.challenge && (
           <div className="mb-10 p-8 bg-gray-200">
@@ -389,6 +363,95 @@ export function ProjectDetail({
           />
         );
       })}
+
+      {/* Section Middle */}
+      {project.sectionMiddle && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <ProjectSectionDescription
+            data={project.sectionMiddle}
+            sectionIdKey="sectionMiddle"
+            projectTitle={project.title}
+            getSectionId={getSectionId}
+            className="flex flex-col gap-2 mb-16"
+          />
+        </section>
+      )}
+
+      {/* Side by side sections Left */}
+      {project.sideBySideSectionsLeft &&
+        project.sideBySideSectionsLeft.length > 0 && (
+          <section className="container mx-auto max-w-6xl px-6 mb-16">
+            <div className="flex flex-col gap-16">
+              {project.sideBySideSectionsLeft.map((section, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col md:flex-row items-start gap-8"
+                >
+                  {/* IMAGE */}
+                  <div className="w-full md:w-1/2 rounded-xl overflow-hidden bg-gray-100">
+                    <img
+                      src={section.image}
+                      alt={`${project.title} - ${section.title}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  {/* TEXT */}
+                  <div className="w-full md:w-1/2">
+                    <h2 className="text-md font-bold mb-3">{section.title}</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                      {section.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+      {/* Section End */}
+      {project.sectionEnd && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <ProjectSectionDescription
+            data={project.sectionEnd}
+            sectionIdKey="sectionEnd"
+            projectTitle={project.title}
+            getSectionId={getSectionId}
+            className="flex flex-col gap-2 mb-16"
+          />
+        </section>
+      )}
+
+      {/* Side by side sections Right */}
+      {project.sideBySideSectionsRight &&
+        project.sideBySideSectionsRight.length > 0 && (
+          <section className="container mx-auto max-w-6xl px-6 mb-10">
+            <div className="flex flex-col gap-16">
+              {project.sideBySideSectionsRight.map((section, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col md:flex-row items-start gap-8"
+                >
+                  {/* TEXT */}
+                  <div className="w-full md:w-1/2">
+                    <h2 className="text-md font-bold mb-3">{section.title}</h2>
+                    <p className="text-gray-600 leading-relaxed">
+                      {section.description}
+                    </p>
+                  </div>
+                  {/* IMAGE */}
+                  <div className="w-full md:w-1/2 rounded-xl overflow-hidden bg-gray-100">
+                    <img
+                      src={section.image}
+                      alt={`${project.title} - ${section.title}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
       {/* Showcase Gallery */}
       {project.showcaseGallery && project.showcaseGallery.images.length > 0 && (

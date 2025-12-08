@@ -118,13 +118,20 @@ export interface Project extends ProjectCardData {
     image?: string;
   }>;
 
-  // Side by side sections
-  sideBySideSections?: Array<{
+  // Side by side sections 
+  sideBySideSectionsLeft?: Array<{
     title: string;
     description: string;
     image?: string;
-    imagePosition?: "left" | "right";
+    imagePosition?: "left";
   }>;
+  sideBySideSectionsRight?: Array<{
+    title: string;
+    description: string;
+    image?: string;
+    imagePosition?: "right";
+  }>;
+
 
   // Section ID mapping - maps standard sections to their IDs for TOC navigation
   sectionIds?: Partial<Record<SectionIdKey, string>> & {

@@ -71,12 +71,40 @@ export const infracostProjects: Project = {
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
     imageUrl: "/src/assets/E-bookProject/BusinessCardSectionMiddle.png",
   },
+  sideBySideSectionsLeft: [
+    {
+      title: "Experimentation phase",
+      description:
+        "I like to start broad, and experiment with different colours, logo and layout of the business card to see what options we have. At this stage, I try different colour combinations and layouts to see what works best.",
+      image: "/src/assets/E-bookProject/BusinessCards02.png",
+    },
+    {
+      title: "Examples for client",
+      description:
+        "I created a few different versions to show the client the options.",
+      image: "/src/assets/E-bookProject/BusinessCardsSection01.png",
+    },
+  ],
   sectionEnd: {
     title: "Feaflet",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
     imageUrl: "/src/assets/E-bookProject/LeafletSectionEnd.png",
   },
+  sideBySideSectionsRight: [
+    {
+      title: "Experimentation phase",
+      description:
+        "I like to start broad, and experiment with different colours, logo and layout of the business card to see what options we have. At this stage, I try different colour combinations and layouts to see what works best.",
+      image: "/src/assets/E-bookProject/BusinessCards02.png",
+    },
+    {
+      title: "Examples for client",
+      description:
+        "I created a few different versions to show the client the options.",
+      image: "/src/assets/E-bookProject/BusinessCardsSection01.png",
+    },
+  ],
 
   showcaseGallery: {
     title: "Final outcome",
