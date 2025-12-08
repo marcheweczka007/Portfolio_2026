@@ -17,12 +17,17 @@ export const infracostProjects: Project = {
     executionDescription:
       "This project was a collaboration with Infracost to create an e-book for  a FinOps community. Along with the e-book I designed a leaflet and business cards that were used diging the conference.",
     exectutionBullets: [
-      "Design and showcade the business cards.",
-      "Ensure the leaflet is consistent with the company branding and prepare for printing.",
-      "Create illustrations for the e-book to help visualise the benefits of FinOps and how it can help businesses save money.",
+      "Design and showcase the business cards",
+      "Ensure the leaflet is consistent with the company branding and prepare for printing",
+      "Create illustrations for the e-book to help visualise the benefits of FinOps and how it can help businesses save money",
     ],
   },
   summaryText: "",
+
+  projectSectionDescriptionStart: {
+    overviewTitle: "E-book project",
+    description: "Description of the first section",
+  },
   imageSection01: {
     title: "Requirements",
     description:
@@ -88,7 +93,7 @@ export const infracostProjects: Project = {
   images: [],
   // Section ID mapping - maps standard sections to their IDs for TOC navigation
   sectionIds: {
-    hero: "ebook-design",
+    projectSectionDescriptionStart: "projectSectionDescriptionStart",
     imageSection01: "Image01",
     imageSection02: "Image02",
     imageSection03: "Image03",
@@ -96,17 +101,18 @@ export const infracostProjects: Project = {
     contentSection01: "business-card",
     contentSection02: "leaflet",
     showcaseGallery: "final-outcome",
+    overviewTitle: "overviewTitle",
   },
   tableOfContents: {
     title: "Table of Contents",
     items: [
       {
-        id: "overview",
+        id: "overviewTitle",
         label: "Overview",
       },
       {
-        id: "ebook-design",
-        label: "E-book",
+        id: "projectSectionDescriptionStart",
+        label: "E-book project",
         subsections: [
           { id: "Image01", label: "Requirements" },
           { id: "Image02", label: "Moodboard" },

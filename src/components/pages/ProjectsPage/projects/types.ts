@@ -27,6 +27,7 @@ export type ContentSectionData = {
 export type SectionIdKey =
   | "hero"
   | "overview"
+  | "overviewTitle"
   | "solution"
   | "challenge"
   | "process"
@@ -54,8 +55,13 @@ export interface ProjectCardData {
   comingSoon?: boolean;
 }
 
+export interface ProjectSectionDescriptionStart {
+  overviewTitle: string;
+  description: string;
+}
 export interface Project extends ProjectCardData {
   duration?: string;
+  projectSectionDescriptionStart?: ProjectSectionDescriptionStart;
   overviewSection: {
     overviewTitle: string;
     overviewDescription: string;

@@ -148,7 +148,7 @@ export function ProjectDetail({
         {/* Overview */}
         <div
           className="flex flex-col gap-10 m-6 p-10 border rounded-xl border-gray-200 pb-10 bg-gray-900"
-          id={getSectionId("overview")}
+          id={getSectionId("overviewTitle")}
         >
           {/* OVERVIEW ROW */}
           <div className="flex flex-row gap-6">
@@ -197,6 +197,16 @@ export function ProjectDetail({
             </div>
           )}
         </div>
+        {project.projectSectionDescriptionStart && (
+          <div className="flex flex-col gap-2 m-6">
+            <h2 className="text-2xl mb-2 uppercase">
+              {project.projectSectionDescriptionStart.overviewTitle}
+            </h2>
+            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
+              {project.projectSectionDescriptionStart.description}
+            </p>
+          </div>
+        )}
 
         {/* Challenge - Only show if provided */}
         {project.challenge && (
