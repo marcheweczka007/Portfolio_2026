@@ -13,6 +13,7 @@ import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
 import { ExtraImageSection } from "./ExtraImageSection";
 import { DescriptionSection } from "./DescriptionSection";
+import { ProjectSectionDescription } from "./ProjectSectionDescription";
 
 interface ProjectDetailProps {
   project: Project;
@@ -198,26 +199,19 @@ export function ProjectDetail({
           )}
         </div>
         {/* Project Section Description Start */}
-        {project.projectSectionDescriptionStart && (
-          <div
-            className="flex flex-col gap-2 m-6 mb-16"
-            id={getSectionId("projectSectionDescriptionStart")}
-          >
-            <h2 className="text-2xl font-bold">
-              {project.projectSectionDescriptionStart.overviewTitle}
-            </h2>
-            <p className="tracking-wide text-md pb-4 text-gray-500 leading-relaxed">
-              {project.projectSectionDescriptionStart.description}
-            </p>
-            {project.projectSectionDescriptionStart.imageUrl && (
-              <div className="rounded-xl bg-gray-100 overflow-hidden">
-                <img
-                  src={project.projectSectionDescriptionStart.imageUrl}
-                  alt={project.projectSectionDescriptionStart.overviewTitle}
-                />
-              </div>
-            )}
-          </div>
+        {(project.sectionStart || project.projectSectionDescriptionStart) && (
+          <ProjectSectionDescription
+            data={
+              project.sectionStart || project.projectSectionDescriptionStart!
+            }
+            sectionIdKey={
+              project.sectionStart
+                ? "sectionStart"
+                : "projectSectionDescriptionStart"
+            }
+            projectTitle={project.title}
+            getSectionId={getSectionId}
+          />
         )}
 
         {/* Challenge - Only show if provided */}
@@ -376,99 +370,38 @@ export function ProjectDetail({
       })}
 
       {/* Content Section 01 */}
-      {project.projectSectionDescriptionMiddle && (
-        <section
-          className="container mx-auto max-w-6xl px-6 mb-10"
-          id={getSectionId("projectSectionDescriptionMiddle")}
-        >
-          <h2 className="text-2xl font-bold">
-            {project.projectSectionDescriptionMiddle.title}
-          </h2>
-          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
-            {project.projectSectionDescriptionMiddle.description}
-          </p>
-
-          {project.projectSectionDescriptionMiddle.images &&
-          project.projectSectionDescriptionMiddle.images.length > 0 ? (
-            <div className="grid md:grid-cols-2 gap-6 py-4">
-              {project.projectSectionDescriptionMiddle.images.map(
-                (image, index) => (
-                  <div
-                    key={index}
-                    className="w-full rounded-xl overflow-hidden"
-                  >
-                    <img
-                      src={image}
-                      alt={`${project.title} - ${
-                        project.projectSectionDescriptionMiddle?.title ||
-                        "Section"
-                      } - Image ${index + 1}`}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
-                )
-              )}
-            </div>
-          ) : project.projectSectionDescriptionMiddle.imageUrl ? (
-            <div className="w-full rounded-xl overflow-hidden py-4">
-              <img
-                src={project.projectSectionDescriptionMiddle.imageUrl}
-                alt={`${project.title} - ${project.projectSectionDescriptionMiddle.title}`}
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          ) : null}
+      {(project.sectionMiddle || project.projectSectionDescriptionMiddle) && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <ProjectSectionDescription
+            data={
+              project.sectionMiddle || project.projectSectionDescriptionMiddle!
+            }
+            sectionIdKey={
+              project.sectionMiddle
+                ? "sectionMiddle"
+                : "projectSectionDescriptionMiddle"
+            }
+            projectTitle={project.title}
+            getSectionId={getSectionId}
+          />
         </section>
       )}
 
       {/* Content Section 02 */}
-      {project.contentSection02 && (
-        <section
-          className="container mx-auto max-w-6xl px-6 mb-10"
-          id={getSectionId("contentSection02")}
-        >
-          <h2 className="text-3xl mb-2">{project.contentSection02.title}</h2>
-          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
-            {project.contentSection02.description}
-          </p>
-
-          {/* Subsection 1 - Experimentation phase */}
-          {project.contentSection02.images &&
-            project.contentSection02.images.length > 0 && (
-              <div id="leaflet-section-1" className="mb-8">
-                <h3 className="text-xl mb-4">Experimentation phase</h3>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {project.contentSection02.images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="w-full rounded-xl overflow-hidden"
-                    >
-                      <img
-                        src={image}
-                        alt={`${
-                          project.contentSection02?.title || "Section"
-                        } - Image ${index + 1}`}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-          {/* Subsection 2 - Examples for client */}
-          {project.contentSection02.imageUrl && (
-            <div id="leaflet-section-2" className="mb-8">
-              <h3 className="text-xl mb-4">Examples for client</h3>
-              <div className="w-full rounded-xl overflow-hidden">
-                <img
-                  src={project.contentSection02.imageUrl}
-                  alt={`${project.contentSection02.title} - Final`}
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            </div>
-          )}
+      {(project.sectionEnd || project.contentSection02) && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <ProjectSectionDescription
+            data={project.sectionEnd || project.contentSection02!}
+            sectionIdKey={
+              project.sectionEnd ? "sectionEnd" : "contentSection02"
+            }
+            projectTitle={project.title}
+            getSectionId={getSectionId}
+            subsectionIds={{
+              subsection1: "leaflet-section-1",
+              subsection2: "leaflet-section-2",
+            }}
+          />
         </section>
       )}
 

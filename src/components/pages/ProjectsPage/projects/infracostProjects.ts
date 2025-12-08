@@ -24,9 +24,10 @@ export const infracostProjects: Project = {
   },
   summaryText: "",
 
-  projectSectionDescriptionStart: {
+  sectionStart: {
     overviewTitle: "E-book project",
-    description: "The e-book project focused on designing an online resourse for the potential customers to learn about the benefits of FinOps. I was given lot of creative freedom, when working on this project, it was one of my favourite projects to work on.",
+    description:
+      "The e-book project focused on designing an online resourse for the potential customers to learn about the benefits of FinOps. I was given lot of creative freedom, when working on this project, it was one of my favourite projects to work on.",
     imageUrl: "/src/assets/E-bookProject/EBookHero.png",
   },
   imageSection01: {
@@ -64,21 +65,18 @@ export const infracostProjects: Project = {
     "For the last page, the requirement was to have a call to action button for potential customers to encourage them to sign up for a free trial.",
   ],
 
-  projectSectionDescriptionMiddle: {
+  sectionMiddle: {
     title: "Business card",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
-    images: [
-      "/src/assets/E-bookProject/BusinessCards02.png",
-      "/src/assets/E-bookProject/BusinessCardsSection01.png",
-    ],
+    imageUrl: "/src/assets/E-bookProject/BusinessCardSectionMiddle.png",
   },
 
-  contentSection02: {
+  sectionEnd: {
     title: "Feaflet",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
-    images: ["", ""],
+    imageUrl: "/src/assets/E-bookProject/LeafletSectionEnd.png",
   },
 
   showcaseGallery: {
@@ -94,13 +92,13 @@ export const infracostProjects: Project = {
   images: [],
   // Section ID mapping - maps standard sections to their IDs for TOC navigation
   sectionIds: {
-    projectSectionDescriptionStart: "projectSectionDescriptionStart",
+    sectionStart: "projectSectionDescriptionStart",
     imageSection01: "Image01",
     imageSection02: "Image02",
     imageSection03: "Image03",
     imageSection04: "Image04",
-    projectSectionDescriptionMiddle: "business-card",
-    contentSection02: "leaflet",
+    sectionMiddle: "business-card",
+    sectionEnd: "leaflet",
     showcaseGallery: "final-outcome",
     overviewTitle: "overviewTitle",
   },

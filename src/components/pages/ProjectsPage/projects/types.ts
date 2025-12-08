@@ -28,7 +28,9 @@ export type SectionIdKey =
   | "hero"
   | "overview"
   | "overviewTitle"
-  | "projectSectionDescriptionStart"
+  | "sectionStart"
+  | "sectionMiddle"
+  | "sectionEnd"
   | "solution"
   | "challenge"
   | "process"
@@ -40,8 +42,6 @@ export type SectionIdKey =
   | "imageSection05"
   | "showcaseGallery"
   | "contentSection"
-  | "projectSectionDescriptionMiddle"
-  | "contentSection02"
   | "contentSection03"
   | "results";
 
@@ -63,7 +63,14 @@ export interface ProjectSectionDescriptionStart {
 }
 export interface Project extends ProjectCardData {
   duration?: string;
+  // Section descriptions (shorter names)
+  sectionStart?: ProjectSectionDescriptionStart;
+  sectionMiddle?: ContentSectionData;
+  sectionEnd?: ContentSectionData;
+
+  // Legacy names (for backward compatibility)
   projectSectionDescriptionStart?: ProjectSectionDescriptionStart;
+  projectSectionDescriptionMiddle?: ContentSectionData;
   overviewSection: {
     overviewTitle: string;
     overviewDescription: string;
@@ -100,8 +107,7 @@ export interface Project extends ProjectCardData {
   textBlock04?: string;
   textBlock05?: string;
 
-  // Content/media sections
-  projectSectionDescriptionMiddle?: ContentSectionData;
+  // Content/media sections (legacy - use sectionMiddle/sectionEnd instead)
   contentSection02?: ContentSectionData;
   contentSection03?: ContentSectionData;
 
