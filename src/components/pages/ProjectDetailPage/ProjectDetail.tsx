@@ -13,7 +13,7 @@ import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
 import { ExtraImageSection } from "./ExtraImageSection";
 import { DescriptionSection } from "./DescriptionSection";
-import { ProjectSectionDescription } from "./ProjectSectionDescription";
+import { ProjectSectionDescription } from "./ProjectSection";
 import { ScrollProgress } from "../../ui/scrollProgress";
 
 interface ProjectDetailProps {

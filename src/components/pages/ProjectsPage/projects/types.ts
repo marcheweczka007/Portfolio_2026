@@ -47,14 +47,15 @@ export interface ProjectCardData {
   comingSoon?: boolean;
 }
 
-export interface ProjectSectionDescriptionStart {
+export interface ProjectSection {
   overviewTitle: string;
   description: string;
   imageUrl?: string;
+  images?: string[];
 }
 export interface Project extends ProjectCardData {
   // Section descriptions
-  sectionStart?: ProjectSectionDescriptionStart;
+  sectionStart?: ProjectSection;
   sectionMiddle?: ContentSectionData;
   sectionEnd?: ContentSectionData;
   overviewSection?: {

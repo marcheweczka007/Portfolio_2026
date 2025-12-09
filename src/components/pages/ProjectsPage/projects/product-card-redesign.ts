@@ -11,12 +11,26 @@ export const productCardRedesign: Project = {
   role: "Product Designer",
   client: "Ascent Platform",
   duration: "2 months",
-  overview:
-    "Re-design and imporve the overall experience for the borrower when they are applying for a loan. By improving the product card interface, and help borrower understand their loan stageg and progress.",
-  challenge:
-    "Unlike most projects, I wasn’t restricted by a design system. As it was one of my first projects at the company , my manager encouraged me to be creative and explore new approaches. The key challenge for me was understanding what information borrowers actually need from the product cards. Since I was working mostly independently, I asked many questions and collaborated closely with the developer and product manager to build a strong understanding of what was the card's role in the application flow.",
-  solution:
-    "I designed a mobile-first experience with rich product imagery, AR try-on features, and a streamlined checkout process. The new design includes personalized recommendations, social proof elements, and a persistent mini-cart that keeps users informed without interrupting their browsing. We also implemented a one-click checkout option and guest checkout to reduce friction.",
+  overviewSection: {
+    overviewTitle: "Overview",
+    overviewDescription:
+      "Re-design and imporve the overall experience for the borrower when they are applying for a loan. By improving the product card interface, and help borrower understand their loan stageg and progress.",
+    executionTitle: "Execution",
+    executionDescription:
+      "As it was one of my first projects at the company , my manager encouraged me to be creative and explore new approaches. The key challenge for me was understanding what information borrowers actually need from the product cards. Since I was working mostly independently, I asked many questions and collaborated closely with the developer and product manager to build a strong understanding of what was the card's role in the application flow.",
+    exectutionBullets: [
+      "Improved and simplified interface for the product cards for the borrower to understand their loan stage and progress",
+      "Rething the layout and hierarchy of the product cards to make it easier to understand in at a glance",
+    ],
+  },
+  sectionStart: {
+    overviewTitle: "One view",
+    description: "Placeholder Text",
+    images: [
+      "/src/assets/ApplicationCards/01_OriginalProductCard.png",
+      "/src/assets/ApplicationCards/03_InitialSketches.png",
+    ],
+  },
   imageSection01: {
     title: "The Original Product Cards",
     description:
