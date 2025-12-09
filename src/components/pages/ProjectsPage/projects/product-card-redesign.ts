@@ -24,11 +24,11 @@ export const productCardRedesign: Project = {
     ],
   },
   sectionStart: {
-    overviewTitle: "One view",
+    overviewTitle: "Discovery",
     description: "Placeholder Text",
     images: [
+      "/src/assets/ApplicationCards/02_MappingTheFlow.png",
       "/src/assets/ApplicationCards/01_OriginalProductCard.png",
-      "/src/assets/ApplicationCards/03_InitialSketches.png",
     ],
   },
   imageSection01: {
@@ -41,51 +41,15 @@ export const productCardRedesign: Project = {
     title: "Sketches, wireframes, flows.",
     description:
       "Once I understood the problems and requirements, I explored different ways of structuring the product card to improve clarity and reduce text overload. I started with quick sketches and low-fidelity wireframes to test different information hierarchies. The focus was on making the application status clear at a glance while keeping the design engaging and easy to scan.",
-    imageUrl: "/src/assets/ApplicationCards/02_MappingTheFlow.png",
+    imageUrl: "/src/assets/ApplicationCards/",
   },
-  discovery:
-    "I conducted extensive user research including shopping behavior analysis, cart abandonment surveys, and heatmap studies. We interviewed 30 target customers to understand their fashion shopping habits and pain points. The research revealed that trust, visual presentation, and mobile experience were the three critical factors affecting conversion.",
-  exploration:
-    "I explored various approaches to product presentation, including grid vs. masonry layouts, different filtering systems, and innovative checkout flows. We tested AR try-on features, virtual styling assistants, and social shopping features. I created clickable prototypes for each major concept and conducted A/B testing with real users to validate design decisions.",
-  design:
-    "The final design emphasized visual storytelling with large, high-quality product imagery and immersive full-screen views. I designed a smart filtering system that learns from user preferences, a streamlined checkout that works seamlessly on mobile, and integrated social proof elements throughout the shopping journey. The design system was built mobile-first with careful attention to touch targets and gesture interactions.",
-  shipping:
-    "We launched the redesign using a phased rollout strategy, starting with 10% of traffic and gradually increasing based on performance metrics. I worked with the development team to ensure pixel-perfect implementation and smooth animations. Post-launch, we ran continuous optimization experiments based on user behavior analytics and feedback.",
-  results: [
-    "Overall conversion rate increased from 1.2% to 3.8%",
-    "Mobile conversion rate increased by 215%",
-    "Cart abandonment reduced from 78% to 52%",
-    "Average order value increased by 34%",
-  ],
-  images: [],
-  // Process section configuration (optional - will use defaults if not provided)
-  processTitle: "The Process",
-  processDescription:
-    "The project was flexible but followed a structured process to allow me to explore and deliver the best solution for the users.",
-  processPhases: [
-    {
-      title: "Discovery",
-      description:
-        "I conducted extensive user research including shopping behavior analysis, cart abandonment surveys, and heatmap studies. We interviewed 30 target customers to understand their fashion shopping habits and pain points.",
-      // image: "/src/assets/ApplicationCards/discovery-phase.png", // Optional image
-    },
-    {
-      title: "Exploration",
-      description:
-        "I explored various approaches to product presentation, including grid vs. masonry layouts, different filtering systems, and innovative checkout flows. We tested AR try-on features and virtual styling assistants.",
-      // image: "/src/assets/ApplicationCards/exploration-phase.png", // Optional image
-    },
-    {
-      title: "Design",
-      description:
-        "The final design emphasized visual storytelling with large, high-quality product imagery and immersive full-screen views. I designed a smart filtering system that learns from user preferences.",
-      // image: "/src/assets/ApplicationCards/design-phase.png", // Optional image
-    },
-    {
-      title: "Shipping",
-      description:
-        "We launched the redesign using a phased rollout strategy, starting with 10% of traffic and gradually increasing based on performance metrics. Post-launch, we ran continuous optimization experiments.",
-      // image: "/src/assets/ApplicationCards/shipping-phase.png", // Optional image
-    },
-  ],
+  sectionMiddle: {
+    title: "Placeholder",
+    description: "Placeholder Text",
+    images: [
+      "/src/assets/ApplicationCards/",
+      "/src/assets/ApplicationCards/",
+    ],
+  },
+
 };

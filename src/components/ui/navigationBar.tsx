@@ -42,7 +42,7 @@ export function NavigationBar() {
         w-full"
         >
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 lg:mr-52 ">
             <img
               src={logoImage}
               alt="Logo"
@@ -53,7 +53,7 @@ export function NavigationBar() {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex flex-1 items-center justify-center">
-            <nav className="flex gap-6 xl:gap-10">
+            <nav className="flex flex-1 justify-center gap-12 ">
               {/* HOME */}
               <button
                 type="button"
