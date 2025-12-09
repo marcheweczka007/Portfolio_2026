@@ -202,7 +202,7 @@ export default function AboutPage() {
             >
               <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-orange-00 flex items-center justify-center shrink-0">
                     <Code2 className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.coding}</span>
@@ -248,7 +248,7 @@ export default function AboutPage() {
                 icon: grafterrLogo,
                 company: "Grafterr",
                 role: "Junior UX Designer",
-                year: "2023",
+                year: "2022-2023",
               },
             ]}
           />
