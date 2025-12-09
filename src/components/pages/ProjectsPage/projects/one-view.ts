@@ -1,4 +1,5 @@
 import { Project } from "./types";
+import { sectionIdsOneView } from "./types";
 
 export const oneView: Project = {
   id: "One-view",
@@ -7,59 +8,123 @@ export const oneView: Project = {
     "A story about joining a team with an existing design system and discovering the challenges of maintaining alignment between designers and developers. Through this experience, I learned that true consistency comes from collaboration, communication, and shared ownership.",
   imageUrl: "/src/assets/OneView/OneView.png",
   tags: ["SaaS", "Dashboard", "UI/UX"],
-  year: "2024-2025",
+  year: "2025",
   role: "Product Designer",
   client: "Internal Project",
   duration: "4 months",
-  overview:
-    "When I joined Ascent, I was introduced to our existing component library - which already included a wide range of components. However, many were inconsistent, outdated, or 'broken'. I was advised to create new components if I designed improved versions, rather than editing the existing ones. This approach made sense to me, especially after coming from my previous company, where no official design system existed. In that role, I noticed major inconsistencies across projects and took the initiative to create reusable components to bridge that gap. I aimed to bring visual and functional consistency to the product, even without formal guidance or a structured system.",
-  challenge:
-    "A few months later, a large bank client requested a custom loan application flow. The project became a turning point — it led to the decision to develop white-labelling capabilities so that the same flow could be adapted for multiple clients.Working closely with a developer, I conducted a page-by-page audit to align design and code. During this process, I discovered a critical issue:Our Figma components and the developers' code library were based on different versions of Material UI.This mismatch explained the frequent misalignments we had been seeing in design reviews and build outputs. At the same time, our internal design review process was overly rigid and pixel-perfect–focused. Instead of collaborative UI reviews to ensure usability and alignment, the reviews became detailed inspections of spacing, layer naming, and colour application. This slowed down progress and discouraged iteration.",
-  solution:
-    "I designed a modular dashboard system with pre-built templates and drag-and-drop functionality. The new interface features intelligent defaults, contextual help, and a progressive learning curve that reveals advanced features as users become more comfortable. We introduced data storytelling capabilities and collaborative features that transformed how teams work with data.",
-  discovery:
-    "Through contextual inquiry sessions with 20 users across different skill levels, I observed how they interacted with data visualization tools. I analyzed support tickets and conducted stakeholder interviews to identify the most critical pain points. The research phase included a comprehensive audit of the existing platform and competitive benchmarking.",
-  exploration:
-    "I facilitated design thinking workshops to generate ideas for simplifying complex workflows. We explored different approaches to progressive disclosure, template systems, and collaborative features. I created multiple concept sketches and tested them with users to validate assumptions before investing in high-fidelity designs.",
-  design:
-    "The design phase focused on creating a flexible component library that could support both simple and complex use cases. I designed an intelligent template system that learns from user behavior, a contextual toolbar that adapts based on the selected element, and a robust theming system. Every interaction was carefully crafted to feel responsive and predictable.",
-  shipping:
-    "I partnered with engineering to implement the design in sprints, prioritizing the template system and core visualization components first. We ran a closed beta with 50 power users who provided valuable feedback that shaped the final release. I created comprehensive documentation and tutorial videos to support the launch.",
-  results: [
-    "New user activation increased by 156% within first week",
-    "Time to create first dashboard reduced from 45 minutes to 8 minutes",
-    "Customer churn rate decreased by 42%",
-    "Average session duration increased by 89%",
+  overviewSection: {
+    overviewTitle: "Overview",
+    overviewDescription:
+      "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
+    executionTitle: "Execution",
+    executionDescription:
+      "This project was a collaboration with Infracost to create an e-book for  a FinOps community. Along with the e-book I designed a leaflet and business cards that were used diging the conference.",
+    exectutionBullets: [
+      "Design and showcase the business cards",
+      "Ensure the leaflet is consistent with the company branding and prepare for printing",
+      "Create illustrations for the e-book to help visualise the benefits of FinOps and how it can help businesses save money",
+    ],
+  },
+  sectionStart: {
+    overviewTitle: "One view",
+    description: "Placeholder Text",
+    imageUrl: "/src/assets/OneView/SectionStart.png",
+  },
+  imageSection01: {
+    title: "Requirements",
+    description: "Placeholder Text",
+    imageUrl: "/src/assets/OneView/Requirements.png",
+  },
+  imageSection02: {
+    title: "The Process",
+    description: "Placeholder Text",
+    images: [
+      "/src/assets/OneView/Wireframes.png",
+      "/src/assets/OneView/OneViewTasks.png",
+    ],
+  },
+  sectionMiddle: {
+    title: "Members view",
+    description: "Placeholder Text",
+    imageUrl: "/src/assets/OneView/Widgets.png",
+  },
+  sideBySideSectionsLeft: [
+    {
+      title: "Invite member",
+      description: "Placeholder Text",
+      image: "/src/assets/OneView/InviteMember.png",
+    },
+    {
+      title: "Lender view",
+      description: "Placeholder Text",
+      image: "/src/assets/OneView/LenderView.png",
+    },
   ],
-  images: [],
-  
-    tableOfContents: {
+  sectionEnd: {
+    title: "Team view",
+    description: "Placeholder Text",
+    imageUrl: "/src/assets/OneView/FinalOutcome.png",
+  },
+  sideBySideSectionsRight: [
+    {
+      title: "Final outcome",
+      description: "Placeholder Text",
+      image: "/src/assets/OneView/FinalOutcome.png",
+    },
+    {
+      title: "Final outcome",
+      description: "Placeholder Text",
+      image: "/src/assets/OneView/FinalOutcome.png",
+    },
+  ],
+      results: [
+    "The e-book was well received by the client and was used to promote the FinOps community.",
+    "The business card was well received by the client and was used to promote the FinOps community.",
+  ],
+
+  showcaseGallery: {
+    title: "Final outcome",
+    description: "Final outcome of the one view dashboard.",
+    images: [
+      "/src/assets/OneView/FinalOutcome.png",
+      "/src/assets/OneView/FinalOutcome.png",
+    ],
+  },
+
+  sectionIdsOneView: {
+    overviewSection: "Overview",
+  },
+
+  tableOfContents: {
     title: "Table of Contents",
     items: [
       {
-        id: "One-view",
-        label: "One view dashboard",
+        id: "Overview",
+        label: "Overview",
+      },
+      {
+        id: "Discovery-wireframes",
+        label: "One view",
         subsections: [
-          { id: "ebook-section-1", label: "Overview" },
-          { id: "ebook-section-2", label: "The Process" },
-          { id: "discovery", label: "Discovery" },
-          { id: "ebook-section-4", label: "Requirements" },
+          { id: "requirements", label: "Requirements" },
+          { id: "process", label: "The Process" },
+          { id: "widgets", label: "Widgets & components" },
         ],
       },
       {
-        id: "business-card",
-        label: "Business Card",
+        id: "All-members",
+        label: "Members view",
         subsections: [
-          { id: "business-card-section-1", label: "Sketches" },
-          { id: "business-card-section-2", label: "Design Process" },
+          { id: "dashboard", label: "Dashboard" },
+          { id: "business-card-section-2", label: "Consumer view" },
         ],
       },
       {
-        id: "leaflet",
-        label: "Leaflet",
+        id: "Team-view",
+        label: "Team view",
         subsections: [
-          { id: "leaflet-section-1", label: "Design Exploration" },
-          { id: "leaflet-section-2", label: "Final Design" },
+          { id: "leaflet-section-1", label: "Invite member" },
+          { id: "leaflet-section-2", label: "Lender view" },
         ],
       },
       {

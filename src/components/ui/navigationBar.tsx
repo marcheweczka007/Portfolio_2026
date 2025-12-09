@@ -35,7 +35,12 @@ export function NavigationBar() {
   return (
     <header className="fixed left-1/2 -translate-x-1/2 top-4 w-full z-50 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="backdrop-blur-xl border border-orange-200/15 shadow-lg px-4 py-2 rounded-full flex items-center justify-between gap-4 md:grid md:grid-cols-[auto,1fr,auto] md:gap-8 w-full">
+        <div
+          className="backdrop-blur-xl  shadow-lg px-4 py-2 rounded-full
+        flex items-center justify-between gap-4
+        lg:grid lg:grid-cols-[auto,1fr,auto,auto] lg:gap-8
+        w-full"
+        >
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
@@ -47,8 +52,8 @@ export function NavigationBar() {
           </div>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex flex-1 items-center justify-center">
-            <nav className="flex gap-8 lg:gap-10 w-16">
+          <div className="hidden lg:flex flex-1 items-center justify-center">
+            <nav className="flex gap-6 xl:gap-10">
               {/* HOME */}
               <button
                 type="button"
@@ -128,7 +133,7 @@ export function NavigationBar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex justify-end">
+          <div className="hidden lg:flex justify-end">
             <Button size="lg" asChild>
               <a
                 href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together"
@@ -141,7 +146,7 @@ export function NavigationBar() {
           </div>
 
           {/* Desktop CTA - Download Resume */}
-          <div className="hidden md:flex justify-end">
+          <div className="hidden lg:flex justify-end">
             <Button size="lg" variant="outline" asChild>
               <a
                 href="/src/assets/Other/CV_Zuza-ProdDes.pdf"
@@ -154,23 +159,25 @@ export function NavigationBar() {
             </Button>
           </div>
 
-          {/* Mobile hamburger - only visible on mobile */}
-          <button
-            type="button"
-            className="mobile-hamburger inline-flex items-center justify-center p-2 rounded-full text-gray-800 hover:bg-orange-50 transition-colors"
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </button>
+          {/* Mobile hamburger */}
+          <div className="flex lg:!hidden xl:!hidden">
+            <button
+              type="button"
+              className="inline-flex items-center justify-center p-2 rounded-full text-gray-800 hover:bg-orange-50 transition-colors"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu panel */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-2 bg-white border border-orange-200/40 rounded-2xl shadow-lg px-4 py-3 backdrop-blur-xl">
+          <div className="lg:hidden mt-2 bg-white/10 rounded-2xl shadow-xl px-4 py-3 backdrop-blur-xl">
             <nav className="flex flex-col gap-3">
               <button
                 type="button"
@@ -231,16 +238,26 @@ export function NavigationBar() {
               >
                 {content.about}
               </button>
-
-              <div className="pt-2">
-                <Button size="lg" asChild className="w-full justify-between">
+              <div className="flex gap-2 pt-4 justify-end">
+                <Button size="sm" asChild>
                   <a
                     href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together"
-                    className="flex items-center justify-center gap-2"
+                    className="flex gap-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {headerContent.getInTouch}
                     <SendHorizontal className="w-4 h-4" />
+                  </a>
+                </Button>
+
+                <Button size="sm" variant="outline" asChild>
+                  <a
+                    href="/src/assets/Other/CV_Zuza-ProdDes.pdf"
+                    className="flex items-center gap-2"
+                    download="Zuza-CV.pdf"
+                  >
+                    {headerContent.downloadResume}
+                    <Download className="w-4 h-4" />
                   </a>
                 </Button>
               </div>

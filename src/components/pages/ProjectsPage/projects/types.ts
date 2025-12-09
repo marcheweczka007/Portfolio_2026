@@ -13,6 +13,10 @@ export type ContentSectionData = {
   images?: string[];
 };
 
+export type sectionIdsOneView = {
+  overviewSection: string;
+};
+
 // Section ID keys for TOC navigation
 export type SectionIdKey =
   | "hero"
@@ -53,7 +57,7 @@ export interface Project extends ProjectCardData {
   sectionStart?: ProjectSectionDescriptionStart;
   sectionMiddle?: ContentSectionData;
   sectionEnd?: ContentSectionData;
-  overviewSection: {
+  overviewSection?: {
     overviewTitle: string;
     overviewDescription: string;
     executionTitle?: string;
@@ -118,7 +122,7 @@ export interface Project extends ProjectCardData {
     image?: string;
   }>;
 
-  // Side by side sections 
+  // Side by side sections
   sideBySideSectionsLeft?: Array<{
     title: string;
     description: string;
@@ -137,7 +141,6 @@ export interface Project extends ProjectCardData {
     description: string;
     bullets?: string[];
   };
-
 
   // Section ID mapping - maps standard sections to their IDs for TOC navigation
   sectionIds?: Partial<Record<SectionIdKey, string>> & {

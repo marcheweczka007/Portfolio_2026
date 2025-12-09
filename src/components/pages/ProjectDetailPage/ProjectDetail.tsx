@@ -38,7 +38,7 @@ export function ProjectDetail({
   fromProjectsPage,
 }: ProjectDetailProps) {
   const t = projectDetails;
-  
+
   // Helper function to get section ID from project's sectionIds mapping
   const getSectionId = (
     sectionKey: keyof NonNullable<Project["sectionIds"]>
@@ -98,9 +98,8 @@ export function ProjectDetail({
   const toc = project.tableOfContents;
 
   return (
-  
     <div>
-    <ScrollProgress />
+      <ScrollProgress />
       {/* Back Button */}
       <div className="container mx-auto max-w-6xl px-6 mb-8">
         <Button variant="ghost" onClick={onBack} className="gap-2 -ml-4">
@@ -150,57 +149,61 @@ export function ProjectDetail({
       {/* Project Content */}
       <section className="container mx-auto max-w-6xl mb-6">
         {/* Overview */}
-        <div
-          className="flex flex-col gap-10 m-6 p-10  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
-          id={getSectionId("overviewTitle")}
-        >
-          {/* OVERVIEW ROW */}
-          <div className="flex flex-row gap-6">
-            <h2 className="w-40 text-md text-gray-50 uppercase">Overview</h2>
-            <p className="flex-1 text-md text-gray-50 leading-relaxed">
-              {project.overviewSection.overviewDescription}
-            </p>
-          </div>
-
-          {/* EXECUTION ROW */}
-          {project.overviewSection.executionTitle && (
+        {project.overviewSection && (
+          <div
+            className="flex flex-col gap-10 m-6 p-10  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
+            id={getSectionId("overviewTitle")}
+          >
+            {/* OVERVIEW ROW */}
             <div className="flex flex-row gap-6">
-              <h2 className="w-40 text-md text-gray-50 uppercase">Execution</h2>
-
-              <div className="flex-1 flex flex-col gap-3">
-                <p className="text-md text-gray-50 leading-relaxed">
-                  {project.overviewSection.executionDescription}
-                </p>
-
-                {/* EXECUTION BULLETS */}
-                {project.overviewSection.exectutionBullets && (
-                  <ul className="flex flex-col gap-2 text-md text-gray-50 leading-relaxed">
-                    {project.overviewSection.exectutionBullets.map(
-                      (bullet, index) => (
-                        <li
-                          key={index}
-                          className="flex items-start gap-4 pt-6 border-b border-gray-700 pb-6 text-sm tracking-wide  last:border-b-0 text-gray-200"
-                        >
-                          <Check className="bg-orange-100 rounded-full p-0.5 w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
-                          <span>{bullet}</span>
-                        </li>
-                      )
-                    )}
-                  </ul>
-                )}
-              </div>
-            </div>
-          )}
-          {/* EXECUTION ENDING */}
-          {project.overviewSection.executionEnding && (
-            <div className="flex flex-row gap-6">
-              <h2 className="flex-1 w-40 text-md ">Execution</h2>
-              <p className="text-md text-gray-500 leading-relaxed">
-                {project.overviewSection.executionEnding}
+              <h2 className="w-40 text-md text-gray-50 uppercase">Overview</h2>
+              <p className="flex-1 text-md text-gray-50 leading-relaxed">
+                {project.overviewSection.overviewDescription}
               </p>
             </div>
-          )}
-        </div>
+
+            {/* EXECUTION ROW */}
+            {project.overviewSection.executionTitle && (
+              <div className="flex flex-row gap-6">
+                <h2 className="w-40 text-md text-gray-50 uppercase">
+                  Execution
+                </h2>
+
+                <div className="flex-1 flex flex-col gap-3">
+                  <p className="text-md text-gray-50 leading-relaxed">
+                    {project.overviewSection.executionDescription}
+                  </p>
+
+                  {/* EXECUTION BULLETS */}
+                  {project.overviewSection.exectutionBullets && (
+                    <ul className="flex flex-col gap-2 text-md text-gray-50 leading-relaxed">
+                      {project.overviewSection.exectutionBullets.map(
+                        (bullet, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start gap-4 pt-6 border-b border-gray-700 pb-6 text-sm tracking-wide  last:border-b-0 text-gray-200"
+                          >
+                            <Check className="bg-orange-100 rounded-full p-0.5 w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                            <span>{bullet}</span>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            )}
+            {/* EXECUTION ENDING */}
+            {project.overviewSection.executionEnding && (
+              <div className="flex flex-row gap-6">
+                <h2 className="flex-1 w-40 text-md ">Execution</h2>
+                <p className="text-md text-gray-500 leading-relaxed">
+                  {project.overviewSection.executionEnding}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Section Start */}
         {project.sectionStart && (
