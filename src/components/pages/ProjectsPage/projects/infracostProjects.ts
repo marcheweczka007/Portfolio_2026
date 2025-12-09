@@ -9,7 +9,7 @@ export const infracostProjects: Project = {
     "This project is a collection of graphic design projects I have worked on for Infracost. I have created a consistent look and feel for the 3 items.",
   imageUrl: "/src/assets/E-BookProject/InfraHero.png",
   tags: ["E-book", "Business card", "Leaflet"],
-  year: "2024",
+  year: "",
   overviewSection: {
     overviewTitle: "Overview",
     overviewDescription:

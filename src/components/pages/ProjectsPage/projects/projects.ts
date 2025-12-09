@@ -1,5 +1,5 @@
 import { Project, ProjectCardData } from "./types";
-import { mobileBanking } from "./mobile-banking";
+import { mobileBanking } from "./KitchenDisplay";
 import { oneView } from "./one-view";
 import { productCardRedesign } from "./product-card-redesign";
 import { infracostProjects } from "./infracostProjects";

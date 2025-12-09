@@ -8,7 +8,7 @@ export const oneView: Project = {
     "A story about joining a team with an existing design system and discovering the challenges of maintaining alignment between designers and developers. Through this experience, I learned that true consistency comes from collaboration, communication, and shared ownership.",
   imageUrl: "/src/assets/OneView/OneView.png",
   tags: ["SaaS", "Dashboard", "UI/UX"],
-  year: "2025",
+  year: "",
   role: "Product Designer",
   client: "Internal Project",
   duration: "4 months",
@@ -39,14 +39,14 @@ export const oneView: Project = {
     title: "The Process",
     description: "Placeholder Text",
     images: [
-      "/src/assets/OneView/Wireframes.png",
       "/src/assets/OneView/OneViewTasks.png",
+      "/src/assets/OneView/Wireframes.png",
     ],
   },
   sectionMiddle: {
     title: "Members view",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/OneView/Widgets.png",
+    imageUrl: "/src/assets/OneView/SectionMid.png",
   },
   sideBySideSectionsLeft: [
     {
@@ -63,7 +63,7 @@ export const oneView: Project = {
   sectionEnd: {
     title: "Team view",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/OneView/FinalOutcome.png",
+    imageUrl: "/src/assets/OneView/SectionEnd.png",
   },
   sideBySideSectionsRight: [
     {
@@ -77,7 +77,7 @@ export const oneView: Project = {
       image: "/src/assets/OneView/FinalOutcome.png",
     },
   ],
-      results: [
+  results: [
     "The e-book was well received by the client and was used to promote the FinOps community.",
     "The business card was well received by the client and was used to promote the FinOps community.",
   ],

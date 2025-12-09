@@ -7,7 +7,7 @@ export const productCardRedesign: Project = {
     "Improve the UX and design of the product card interface for loan applications.",
   imageUrl: "/src/assets/ApplicationCards/ApplicationCards.png",
   tags: ["Re-design", "Loan Application", "SaaS"],
-  year: "2025",
+  year: "",
   role: "Product Designer",
   client: "Ascent Platform",
   duration: "2 months",
