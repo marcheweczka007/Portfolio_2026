@@ -55,7 +55,7 @@ export default function AboutPage() {
 
         {/* Expertise Sections */}
         <section className="container mx-auto max-w-6xl px-6 mb-20">
-          <h2 className="mb-8">{aboutContent.expertiseTitle}</h2>
+          <h2 className="mb-8 text-2xl font-bold">{aboutContent.expertiseTitle}</h2>
 
           <Accordion type="multiple" className="space-y-4">
             <AccordionItem value="lean-ux">
@@ -141,7 +141,6 @@ export default function AboutPage() {
                   <li>{aboutContent.designSystemPoint4}</li>
                   <li>{aboutContent.designSystemPoint5}</li>
                   <li>{aboutContent.designSystemPoint6}</li>
-                  <li>{aboutContent.designSystemPoint7}</li>
                 </ul>
               </AccordionContent>
             </AccordionItem>
@@ -158,15 +157,15 @@ export default function AboutPage() {
                   <li>{aboutContent.codingPoint4}</li>
                   <li>{aboutContent.codingPoint5}</li>
                   <li>{aboutContent.codingPoint6}</li>
-                  <li>{aboutContent.codingPoint7}</li>
-                  <li>{aboutContent.codingPoint8}</li>
+                  {/* <li>{aboutContent.codingPoint7}</li>
+                  <li>{aboutContent.codingPoint8}</li> */}
                 </ul>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </section>
 
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
+        <section className=" mb-8 text-2xl font-bold container mx-auto max-w-6xl px-6 mb-10">
           Work Experience
         </section>
         {/* Experience Timeline */}

@@ -88,7 +88,7 @@ function AccordionContent({
     >
       <div
         className={cn(
-          "text-gray-500 leading-relaxed pb-6 pl-[52px] pt-0",
+          "text-gray-500 tracking-wide leading-relaxed pb-6 pl-[52px] pt-0",
           className
         )}
       >

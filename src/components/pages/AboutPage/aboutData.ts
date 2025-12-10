@@ -9,7 +9,8 @@ const aboutContent = {
     "I’ve worked solo and inside cross-functional teams, and I’ve learned that the best work happens when everyone builds together.",
   bioP4: "Open to new opportunities where I can contribute and grow.",
   resumeButton: "Resume",
-  expertiseTitle: "Areas of Expertise",
+  expertiseTitle: "My focus areas",
+  
   leanUx: "Lean UX",
   leanUxContent1:
     "I practice Lean UX to minimize waste and maximize learning through rapid experimentation. This approach focuses on getting ideas in front of users quickly, gathering feedback, and iterating based on real-world insights rather than assumptions.",
@@ -19,17 +20,19 @@ const aboutContent = {
   leanUxPoint3: "Continuous user validation throughout the design process",
   leanUxPoint4: "Prioritizing outcomes over outputs",
   leanUxPoint5: "Embracing uncertainty and learning from failure",
+
   research: "Research",
   researchContent1:
-    "Research is the foundation of all my design decisions. I employ both qualitative and quantitative methods to deeply understand user behaviors, motivations, and pain points.",
+    "My formal training in UX research developed during my undergraduate studies, prepared me to use both qualitative and quantitative methods to understand user behaviors, motivations, and pain points.",
   researchContent2: "My research toolkit includes:",
-  researchPoint1: "User interviews and contextual inquiry",
-  researchPoint2: "Usability testing (moderated and unmoderated)",
-  researchPoint3: "Survey design and analysis",
-  researchPoint4: "Analytics interpretation and behavioral data analysis",
+  researchPoint1: "Co-design workshops",
+  researchPoint2: "Usability testing",
+  researchPoint3: "Card-sorting exercises",
+  researchPoint4: "Individual user interviews",
   researchPoint5: "Competitive analysis and market research",
-  researchPoint6: "Journey mapping and service design blueprints",
-  researchPoint7: "Card sorting and tree testing for information architecture",
+  researchPoint6: "Journey mapping",
+  researchPoint7: "Card sorting",
+
   ooux: "OOUX",
   oouxContent1:
     "Object-Oriented UX (OOUX) is a methodology that helps me design scalable, coherent digital systems by thinking in terms of objects rather than pages or screens.",
@@ -43,6 +46,7 @@ const aboutContent = {
   oouxPoint5: "Collaborating with developers using a shared mental model",
   oouxPoint6:
     "Reducing technical debt through thoughtful object-based design decisions",
+
   aiPrototyping: "AI + Rapid Prototyping",
   aiPrototypingContent1:
     "I leverage cutting-edge AI tools to accelerate the design process and explore more possibilities in less time. AI enhances rather than replaces the creative process, allowing me to focus on strategic thinking and user empathy.",
@@ -58,6 +62,7 @@ const aboutContent = {
   aiPrototypingPoint6: "Building interactive, high-fidelity prototypes faster",
   aiPrototypingPoint7:
     "Exploring AI-powered personalization and adaptive interfaces",
+    
   designSystem: "Design Systems",
   designSystemContent1:
     "I believe in the power of design systems to create consistency, accelerate product development, and improve collaboration between design and engineering teams.",
@@ -70,23 +75,22 @@ const aboutContent = {
     "Document patterns and usage guidelines for the entire team",
   designSystemPoint4: "Establish design token architecture for scalability",
   designSystemPoint5:
-    "Create governance processes that balance consistency with innovation",
-  designSystemPoint6:
     "Prioritize accessibility and inclusive design from the start",
-  designSystemPoint7:
+  designSystemPoint6:
     "Leverage existing systems (Material, Ant Design, shadcn/ui) when appropriate",
-  coding: "Coding",
+
+  coding: "Coding (Self-taught)",
   codingContent1:
-    "My coding skills enable me to communicate more effectively with engineering teams, prototype interactions that would be difficult to convey in static designs, and understand technical constraints early in the design process.",
+    "I'm still early in my coding journey, but I can see the value of being able to code myself and understand the technical constraints early in the design process. I'm currently learning to code myself and I'm using AI tools to help me learn.",
   codingContent2: "Technical capabilities:",
   codingPoint1: "HTML, CSS, and modern JavaScript (ES6+)",
   codingPoint2: "React and component-based architecture",
   codingPoint3: "CSS frameworks (Tailwind CSS, styled-components)",
-  codingPoint4: "Building functional prototypes with real data",
+  codingPoint4: "Building functional prototypes",
   codingPoint5: "Version control with Git and collaborative workflows",
   codingPoint6: "Understanding of responsive design implementation",
-  codingPoint7: "Basic knowledge of APIs and data structures",
-  codingPoint8: "Performance optimization and accessibility best practices",
+  // codingPoint7: "Basic knowledge of APIs and data structures",
+  // codingPoint8: "Performance optimization and accessibility best practices",
 };
 
 export default aboutContent;
