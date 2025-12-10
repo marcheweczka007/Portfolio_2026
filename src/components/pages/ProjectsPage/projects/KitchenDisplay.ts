@@ -1,6 +1,6 @@
 import { Project } from "./types";
 
-export const mobileBanking: Project = {
+export const kitchenDisplay: Project = {
   id: "kitchen-display",
   title: "Kitchen Display System",
   description:
