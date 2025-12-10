@@ -64,11 +64,8 @@ export default function AboutPage() {
           <h2 className="mb-8">{aboutContent.expertiseTitle}</h2>
 
           <Accordion type="multiple" className="space-y-4">
-            <AccordionItem
-              value="lean-ux"
-              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-            >
-              <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
+            <AccordionItem value="lean-ux">
+              <AccordionTrigger>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
                     <Zap className="w-5 h-5 text-orange-600" />
@@ -76,7 +73,7 @@ export default function AboutPage() {
                   <span className="text-xl">{aboutContent.leanUx}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent>
                 <p className="mb-4">{aboutContent.leanUxContent1}</p>
                 <p className="mb-4">{aboutContent.leanUxContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -89,11 +86,8 @@ export default function AboutPage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem
-              value="research"
-              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-            >
-              <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
+            <AccordionItem value="research">
+              <AccordionTrigger>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
                     <Search className="w-5 h-5 text-orange-600" />
@@ -101,7 +95,7 @@ export default function AboutPage() {
                   <span className="text-xl">{aboutContent.research}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent>
                 <p className="mb-4">{aboutContent.researchContent1}</p>
                 <p className="mb-4">{aboutContent.researchContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -116,11 +110,8 @@ export default function AboutPage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem
-              value="ooux"
-              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-            >
-              <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
+            <AccordionItem value="ooux">
+              <AccordionTrigger>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
                     <Box className="w-5 h-5 text-orange-600" />
@@ -128,7 +119,7 @@ export default function AboutPage() {
                   <span className="text-xl">{aboutContent.ooux}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent>
                 <p className="mb-4">{aboutContent.oouxContent1}</p>
                 <p className="mb-4">{aboutContent.oouxContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -142,11 +133,8 @@ export default function AboutPage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem
-              value="ai-prototyping"
-              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-            >
-              <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
+            <AccordionItem value="ai-prototyping">
+              <AccordionTrigger>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
                     <Sparkles className="w-5 h-5 text-orange-600" />
@@ -154,7 +142,7 @@ export default function AboutPage() {
                   <span className="text-xl">{aboutContent.aiPrototyping}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent>
                 <p className="mb-4">{aboutContent.aiPrototypingContent1}</p>
                 <p className="mb-4">{aboutContent.aiPrototypingContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -169,11 +157,8 @@ export default function AboutPage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem
-              value="design-system"
-              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-            >
-              <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
+            <AccordionItem value="design-system">
+              <AccordionTrigger>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
                     <Layers className="w-5 h-5 text-orange-600" />
@@ -181,7 +166,7 @@ export default function AboutPage() {
                   <span className="text-xl">{aboutContent.designSystem}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent>
                 <p className="mb-4">{aboutContent.designSystemContent1}</p>
                 <p className="mb-4">{aboutContent.designSystemContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -196,19 +181,16 @@ export default function AboutPage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem
-              value="coding"
-              className="border border-orange-200/20 rounded-2xl px-6 bg-orange-50/50 hover:bg-orange-100/50 transition-colors"
-            >
-              <AccordionTrigger className="hover:no-underline py-6 [&>svg]:shrink-0">
+            <AccordionItem value="coding">
+              <AccordionTrigger>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-00 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
                     <Code2 className="w-5 h-5 text-orange-600" />
                   </div>
                   <span className="text-xl">{aboutContent.coding}</span>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="text-gray-500 leading-relaxed pb-6 pl-[52px]">
+              <AccordionContent>
                 <p className="mb-4">{aboutContent.codingContent1}</p>
                 <p className="mb-4">{aboutContent.codingContent2}</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -225,6 +207,7 @@ export default function AboutPage() {
             </AccordionItem>
           </Accordion>
         </section>
+
         <section className="container mx-auto max-w-6xl px-6 mb-10">
           Work Experience
         </section>
