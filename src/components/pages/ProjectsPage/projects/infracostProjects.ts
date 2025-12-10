@@ -106,7 +106,7 @@ export const infracostProjects: Project = {
       image: "/src/assets/E-bookProject/LeafletExamples.png",
     },
   ],
-  
+
   button: {
     title: "View the e-book",
     link: "https://www.infracost.io/shifting-finops-left-linkedin/",
@@ -121,7 +121,11 @@ export const infracostProjects: Project = {
       "/src/assets/E-bookProject/EbookFinal02.png",
     ],
   },
-
+  results: [
+    "I can honestly say, this project was so much fun to work on. I had pleasure to work with Infracost team, and they were great in to work with. I'm please with the outcome and the work we did together.",
+    "I’m always excited to take on new projects and challenge myself, whether it’s a graphic design project or a coding project. I’m keen to challenge myself and learn new things along the way.",
+  ],
+  
   sectionIds: {
     sectionStart: "projectSectionDescriptionStart",
     imageSection01: "Image01",
@@ -133,10 +137,7 @@ export const infracostProjects: Project = {
     showcaseGallery: "final-outcome",
     overviewTitle: "overviewTitle",
   },
-  results: [
-    "I can honestly say, this project was so much fun to work on. I had pleasure to work with Infracost team, and they were great in to work with. I'm please with the outcome and the work we did together.",
-    "I’m always excited to take on new projects and challenge myself, whether it’s a graphic design project or a coding project. I’m keen to challenge myself and learn new things along the way.",
-  ],
+
   tableOfContents: {
     title: "Table of Contents",
     items: [
