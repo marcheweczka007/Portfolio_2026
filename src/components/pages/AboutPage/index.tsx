@@ -38,16 +38,10 @@ export default function AboutPage() {
 
             <div className="md:w-3/5">
               <h1 className="mb-6">{aboutContent.pageTitle}</h1>
-              <div className="space-y-4">
-                <p className="text-gray-500 leading-relaxed">
-                  {aboutContent.bioP1}
-                </p>
-                <p className="text-gray-500 leading-relaxed">
-                  {aboutContent.bioP2}
-                </p>
-                <p className="text-gray-500 leading-relaxed">
-                  {aboutContent.bioP3}
-                </p>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>{aboutContent.bioP1}</p>
+                <p>{aboutContent.bioP2}</p>
+                <p>{aboutContent.bioP3}</p>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-200/20 mt-2">
                   <Sparkles className="w-4 h-4 text-orange-600" />
                   <span className="text-xs text-orange-600">

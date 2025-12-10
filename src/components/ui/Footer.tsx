@@ -8,7 +8,7 @@ export function Footer() {
   const navigate = useNavigate();
 
   return (
-    <footer className="max-w-5xl mx-auto py-6 px-6 border-t border-border">
+    <footer className="max-w-7xl mx-auto py-6 px-6 border-t border-border">
       <div className="container mx-auto max-w-8xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <nav className="flex gap-8">
