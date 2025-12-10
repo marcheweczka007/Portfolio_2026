@@ -28,19 +28,19 @@ export const infracostProjects: Project = {
   sectionStart: {
     overviewTitle: "E-book project",
     description:
-      "The e-book project focused on designing an online resourse for the potential customers to learn about the benefits of FinOps. I was given lot of creative freedom, when working on this project, it was one of my favourite projects to work on.",
+      "The main focus of this project was to design a FinOps e-book that would promote the framework and its benefits to potential clients and companies. I was given a lot of creative freedom, which made it one of my favourite projects to work on. It allowed for a more playful approach and required me to create illustrations and lean into a more graphic-design–driven style.",
     imageUrl: "/src/assets/E-bookProject/EBookHero.png",
   },
   imageSection01: {
     title: "Requirements",
     description:
-      "When I got the requirements, I decided to devide the e-book into presentation slides, to help me structure the content. This helped me recognise how many illustrations I need to create for the e-book.",
+      "Once I had the requirements, I created a visual representation of every page to better understand the content and structure of the e-book. This helped me determine how many illustrations I needed to create and allowed me to give the client an accurate project estimate.",
     imageUrl: "/src/assets/E-bookProject/Requirements.png",
   },
   imageSection02: {
     title: "Moodboard",
     description:
-      "Once I understood the problems and requirements, I explored different ways of structuring the product card to improve clarity and reduce text overload. I started with quick sketches and low-fidelity wireframes to test different information hierarchies. The focus was on making the application status clear at a glance while keeping the design engaging and easy to scan.",
+      "Once I understood the requirements what content would go into the e-book, the illustrations, and the overall direction, I shifted into my creative mode. I explored different examples, colours, and layout approaches to gather inspiration. I started with a moodboard to help define the look and feel I wanted to achieve. The client already had an established colour palette, which I incorporated into the moodboard. The core themes included shifting left, engineering, cost optimisation, and other FinOps-related topics.",
     images: [
       "/src/assets/E-bookProject/Moodboard.png",
       "/src/assets/E-bookProject/Moodboard01.png",
@@ -49,21 +49,21 @@ export const infracostProjects: Project = {
   imageSection03: {
     title: "Cover examples",
     description:
-      "I usually create 3–5 cover concepts so the client has options to react to. It gives them space to share feedback and helps us decide which direction to develop further.",
+      "The project was divided into three parts—or rather, three feedback loops. The first focused on the cover design. I created three different concepts with several variations to show the client possible directions for the e-book. The middle pink cover was the one the client selected. From there, I refined the design further and added more detail and polish.",
     imageUrl: "/src/assets/E-bookProject/Covers.png",
   },
   imageSection04: {
     title: "First and last page examples",
     description:
-      "Examples of first and last page of the e-book, to show the client how the e-book will look like.",
+      "With the cover selected, I had better idea on what the first and last pages will look like. Next step was to provide examples of these pages to show the client how the e-book will look like.",
     images: [
       "/src/assets/E-bookProject/FrontPages.png",
       "/src/assets/E-bookProject/EndPages.png",
     ],
   },
+
   textBlock01: [
-    "The examples of the pages were designed to show the client how the e-book will look like. I sticked to the same content but mostly played with the layout and colour.",
-    "For the last page, the requirement was to have a call to action button for potential customers to encourage them to sign up for a free trial.",
+    "The rest of the project was focused on the content and illustrations. Where I had to create illustrations for the content and make sure the layout is consistent and easy to read.",
   ],
 
   sectionMiddle: {
@@ -106,7 +106,11 @@ export const infracostProjects: Project = {
       image: "/src/assets/E-bookProject/LeafletExamples.png",
     },
   ],
-
+  
+  button: {
+    title: "View the e-book",
+    link: "https://www.infracost.io/shifting-finops-left-linkedin/",
+  },
   showcaseGallery: {
     title: "Final outcome",
     description: "Final outcome of the e-book, business card and leaflet.",
@@ -129,9 +133,9 @@ export const infracostProjects: Project = {
     showcaseGallery: "final-outcome",
     overviewTitle: "overviewTitle",
   },
-    results: [
-    "The e-book was well received by the client and was used to promote the FinOps community.",
-    "The business card was well received by the client and was used to promote the FinOps community.",
+  results: [
+    "I can honestly say, this project was so much fun to work on. I had pleasure to work with Infracost team, and they were great in to work with. I'm please with the outcome and the work we did together.",
+    "I’m always excited to take on new projects and challenge myself, whether it’s a graphic design project or a coding project. I’m keen to challenge myself and learn new things along the way.",
   ],
   tableOfContents: {
     title: "Table of Contents",

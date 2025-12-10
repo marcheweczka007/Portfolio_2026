@@ -363,6 +363,21 @@ export function ProjectDetail({
         );
       })}
 
+      {/* Button */}
+      {project.button && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <Button asChild>
+            <a
+              href={project.button.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.button.title}
+            </a>
+          </Button>
+        </section>
+      )}
+
       {/* Section Middle */}
       {project.sectionMiddle && (
         <section className="container mx-auto max-w-6xl px-6 mb-10">

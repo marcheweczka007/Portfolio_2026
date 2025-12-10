@@ -87,6 +87,7 @@ export interface Project extends ProjectCardData {
   imageSection04?: ImageSectionData;
   imageSection05?: ImageSectionData;
 
+
   // Text description blocks
   textBlock01?: string[];
   textBlock02?: string;
@@ -100,6 +101,10 @@ export interface Project extends ProjectCardData {
     content: string;
   };
 
+  button?: {
+    title: string;
+    link: string;
+  };
   // Final showcase gallery
   showcaseGallery?: {
     title: string;

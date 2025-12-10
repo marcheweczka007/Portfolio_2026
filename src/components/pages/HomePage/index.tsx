@@ -13,7 +13,6 @@ import { CTASection } from "../../ui/CTASection.tsx";
 export default function HomePage() {
   const navigate = useNavigate();
   return (
-  
     <PageLayout>
       {/* Hero Section */}
       <section id="home" className="relative pt-14 pb-10 px-6 overflow-hidden">
@@ -173,28 +172,23 @@ export default function HomePage() {
             </Button>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {projects.map((project, index) => {
-              const isDisabled =
-                project.id === "Coding Poject 1" ||
-                project.id === "Coding Poject 2";
-              return (
-                <div
-                  key={project.id}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                  className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-                >
-                  <ProjectCard
-                    {...project}
-                    onClick={() => {
-                      if (!isDisabled) {
-                        navigate(`/projects/${project.id}`);
-                      }
-                    }}
-                    disabled={isDisabled}
-                  />
-                </div>
-              );
-            })}
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                style={{ animationDelay: `${index * 100}ms` }}
+                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+              >
+                <ProjectCard
+                  {...project}
+                  onClick={() => {
+                    if (!project.comingSoon) {
+                      navigate(`/projects/${project.id}`);
+                    }
+                  }}
+                  disabled={project.comingSoon}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
