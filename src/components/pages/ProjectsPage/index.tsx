@@ -29,24 +29,19 @@ export default function ProjectsPage() {
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            {projectCardsData.map((project, index) => {
-              const isDisabled =
-                project.id === "coding-Project-1" ||
-                project.id === "coding-Project-2";
-              return (
-                <div
-                  key={project.id}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                  className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-                >
-                  <ProjectCard
-                    {...project}
-                    onClick={() => navigate(`/projects/${project.id}`)}
-                    disabled={isDisabled}
-                  />
-                </div>
-              );
-            })}
+            {projectCardsData.map((project, index) => (
+              <div
+                key={project.id}
+                style={{ animationDelay: `${index * 100}ms` }}
+                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+              >
+                <ProjectCard
+                  {...project}
+                  onClick={() => navigate(`/projects/${project.id}`)}
+                  disabled={project.comingSoon}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
