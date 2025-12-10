@@ -436,69 +436,41 @@ export function ProjectDetail({
         project.sideBySideSectionsRight.length > 0 && (
           <section className="container mx-auto max-w-6xl px-6 mb-10">
             <div className="flex flex-col gap-16">
-              {project.sideBySideSectionsRight.map((section, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col md:flex-row items-start gap-8"
-                >
-                  {/* TEXT */}
-                  <div className="w-full md:w-1/2">
-                    <h2 className="text-md font-bold mb-3">{section.title}</h2>
-                    <p className="text-gray-600 leading-relaxed">
-                      {section.description}
-                    </p>
+              {project.sideBySideSectionsRight.map((section, index) => {
+                // Map to TOC subsection IDs for leaflet
+                const subsectionIds = [
+                  "leaflet-section-1",
+                  "leaflet-section-2",
+                ];
+                return (
+                  <div
+                    key={index}
+                    id={subsectionIds[index]}
+                    className="flex flex-col md:flex-row items-start gap-8"
+                  >
+                    {/* TEXT */}
+                    <div className="w-full md:w-1/2">
+                      <h2 className="text-md font-bold mb-3">
+                        {section.title}
+                      </h2>
+                      <p className="text-gray-600 leading-relaxed">
+                        {section.description}
+                      </p>
+                    </div>
+                    {/* IMAGE */}
+                    <div className="w-full md:w-1/2 rounded-xl overflow-hidden">
+                      <img
+                        src={section.image}
+                        alt={`${project.title} - ${section.title}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                  {/* IMAGE */}
-                  <div className="w-full md:w-1/2 rounded-xl overflow-hidden">
-                    <img
-                      src={section.image}
-                      alt={`${project.title} - ${section.title}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
         )}
-
-      {/* Results */}
-      {project.results && project.results.length > 0 && (
-        <section
-          className="container mx-auto max-w-6xl px-6 mb-20"
-          id={getSectionId("results")}
-        >
-          <h2 className="text-3xl mb-8">Reflection on the project</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {project.results.map((result, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-orange-200/20 border border-orange-200/80"
-              >
-                <div className="text-xl mb-3 text-gray-900">{index + 1}</div>
-                <p className="tracking-wide text-md text-gray-600 leading-relaxed">
-                  {result}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Button */}
-      {project.button && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10">
-          <Button asChild>
-            <a
-              href={project.button.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {project.button.title}
-            </a>
-          </Button>
-        </section>
-      )}
 
       {/* Showcase Gallery */}
       {project.showcaseGallery && project.showcaseGallery.images.length > 0 && (
@@ -521,6 +493,44 @@ export function ProjectDetail({
                   alt={`${project.title} - Showcase image ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Button */}
+      {project.button && (
+        <section className="container mx-auto max-w-6xl px-6 mb-10">
+          <Button asChild>
+            <a
+              href={project.button.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.button.title}
+            </a>
+          </Button>
+        </section>
+      )}
+
+      {/* Results */}
+      {project.results && project.results.length > 0 && (
+        <section
+          className="container mx-auto max-w-6xl px-6 mb-20"
+          id={getSectionId("results")}
+        >
+          <h2 className="text-3xl mb-8">Reflection on the project</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {project.results.map((result, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-orange-200/20 border border-orange-200/80"
+              >
+                <div className="text-xl mb-3 text-gray-900">{index + 1}</div>
+                <p className="tracking-wide text-md text-gray-600 leading-relaxed">
+                  {result}
+                </p>
               </div>
             ))}
           </div>
