@@ -65,14 +65,7 @@ export default function AboutPage() {
 
           <Accordion type="multiple" className="space-y-4">
             <AccordionItem value="lean-ux">
-              <AccordionTrigger>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Zap className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <span className="text-xl">{aboutContent.leanUx}</span>
-                </div>
-              </AccordionTrigger>
+              <AccordionTrigger icon={Zap} title={aboutContent.leanUx} />
               <AccordionContent>
                 <p className="mb-4">{aboutContent.leanUxContent1}</p>
                 <p className="mb-4">{aboutContent.leanUxContent2}</p>
@@ -87,14 +80,7 @@ export default function AboutPage() {
             </AccordionItem>
 
             <AccordionItem value="research">
-              <AccordionTrigger>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Search className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <span className="text-xl">{aboutContent.research}</span>
-                </div>
-              </AccordionTrigger>
+              <AccordionTrigger icon={Search} title={aboutContent.research} />
               <AccordionContent>
                 <p className="mb-4">{aboutContent.researchContent1}</p>
                 <p className="mb-4">{aboutContent.researchContent2}</p>
@@ -111,14 +97,7 @@ export default function AboutPage() {
             </AccordionItem>
 
             <AccordionItem value="ooux">
-              <AccordionTrigger>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Box className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <span className="text-xl">{aboutContent.ooux}</span>
-                </div>
-              </AccordionTrigger>
+              <AccordionTrigger icon={Box} title={aboutContent.ooux} />
               <AccordionContent>
                 <p className="mb-4">{aboutContent.oouxContent1}</p>
                 <p className="mb-4">{aboutContent.oouxContent2}</p>
@@ -134,14 +113,10 @@ export default function AboutPage() {
             </AccordionItem>
 
             <AccordionItem value="ai-prototyping">
-              <AccordionTrigger>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <span className="text-xl">{aboutContent.aiPrototyping}</span>
-                </div>
-              </AccordionTrigger>
+              <AccordionTrigger
+                icon={Sparkles}
+                title={aboutContent.aiPrototyping}
+              />
               <AccordionContent>
                 <p className="mb-4">{aboutContent.aiPrototypingContent1}</p>
                 <p className="mb-4">{aboutContent.aiPrototypingContent2}</p>
@@ -158,14 +133,10 @@ export default function AboutPage() {
             </AccordionItem>
 
             <AccordionItem value="design-system">
-              <AccordionTrigger>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Layers className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <span className="text-xl">{aboutContent.designSystem}</span>
-                </div>
-              </AccordionTrigger>
+              <AccordionTrigger
+                icon={Layers}
+                title={aboutContent.designSystem}
+              />
               <AccordionContent>
                 <p className="mb-4">{aboutContent.designSystemContent1}</p>
                 <p className="mb-4">{aboutContent.designSystemContent2}</p>
@@ -182,14 +153,7 @@ export default function AboutPage() {
             </AccordionItem>
 
             <AccordionItem value="coding">
-              <AccordionTrigger>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Code2 className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <span className="text-xl">{aboutContent.coding}</span>
-                </div>
-              </AccordionTrigger>
+              <AccordionTrigger icon={Code2} title={aboutContent.coding} />
               <AccordionContent>
                 <p className="mb-4">{aboutContent.codingContent1}</p>
                 <p className="mb-4">{aboutContent.codingContent2}</p>
