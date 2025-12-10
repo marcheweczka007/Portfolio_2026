@@ -31,8 +31,8 @@ export default function ProjectsPage() {
           <div className="grid md:grid-cols-2 gap-4">
             {projectCardsData.map((project, index) => {
               const isDisabled =
-                project.id === "Coding Poject 1" ||
-                project.id === "Coding Poject 2";
+                project.id === "coding-Project-1" ||
+                project.id === "coding-Project-2";
               return (
                 <div
                   key={project.id}
