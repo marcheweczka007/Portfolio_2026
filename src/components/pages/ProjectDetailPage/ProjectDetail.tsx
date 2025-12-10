@@ -15,6 +15,7 @@ import { ExtraImageSection } from "./ExtraImageSection";
 import { DescriptionSection } from "./DescriptionSection";
 import { ProjectSectionDescription } from "./ProjectSection";
 import { ScrollProgress } from "../../ui/scrollProgress";
+import { ScrollToTop } from "../../ui/scrollToTop";
 
 interface ProjectDetailProps {
   project: Project;
@@ -562,6 +563,9 @@ export function ProjectDetail({
 
       {/* CTA Section */}
       <CTASection />
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }

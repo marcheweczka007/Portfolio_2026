@@ -5,6 +5,7 @@ import { projectCardsData } from "./projects/projects.ts";
 import projectsData from "./projectsData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import BackButton from "../../pageUtilities/BackButton.tsx";
+import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 
 export default function ProjectsPage() {
   const navigate = useNavigate();
@@ -44,6 +45,8 @@ export default function ProjectsPage() {
             ))}
           </div>
         </div>
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
       </section>
     </PageLayout>
   );

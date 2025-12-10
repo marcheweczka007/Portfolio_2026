@@ -5,6 +5,7 @@ import grafterrLogo from "../../../assets/experience/grafterrLogo.png";
 import infracostLogo from "../../../assets/experience/infracostLogo.png";
 import aboutContent from "./aboutData.ts";
 import { Button } from "../../ui/button.tsx";
+import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 
 import { Zap, Search, Box, Sparkles, Layers, Code2 } from "lucide-react";
 import portraitImage from "../../../assets/zuza_portfolio.png";
@@ -193,6 +194,8 @@ export default function AboutPage() {
             ]}
           />
         </section>
+        {/* Scroll to Top Button */}
+          <ScrollToTop />
       </div>
     </PageLayout>
   );

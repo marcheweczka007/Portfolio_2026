@@ -9,6 +9,7 @@ import { projects } from "../ProjectsPage/projects/projects.ts";
 import homeContent from "./homeData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import { CTASection } from "../../ui/CTASection.tsx";
+import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -190,11 +191,15 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          {/* Scroll to Top Button */}
+          <ScrollToTop />
         </div>
       </section>
 
       {/* CTA Section */}
       <CTASection />
     </PageLayout>
+    
+
   );
 }

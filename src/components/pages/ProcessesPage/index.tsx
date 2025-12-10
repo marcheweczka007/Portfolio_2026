@@ -7,6 +7,7 @@ import processes, { sections } from "./aboutProcesses.ts";
 import BackButton from "../../pageUtilities/BackButton.tsx";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import { CTASection } from "../../ui/CTASection.tsx";
+import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 export default function ProcessesPage() {
   const navigate = useNavigate();
   const processesContent = processes;
@@ -454,6 +455,8 @@ export default function ProcessesPage() {
 
         {/* Final CTA */}
         <CTASection />
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
       </div>
     </PageLayout>
   );
