@@ -1,30 +1,28 @@
 import { Project } from "./types";
-import { sectionIdsOneView } from "./types";
 
 export const oneView: Project = {
   id: "One-view",
   title: "One view dashboard",
   description:
-    "A story about joining a team with an existing design system and discovering the challenges of maintaining alignment between designers and developers. Through this experience, I learned that true consistency comes from collaboration, communication, and shared ownership.",
+    "Developing a dashboard for lenders to manage clients and make better, more personalised decisions. The dashboard brings all borrower information into one place, creating a full 360° view of the customer. This view combines data from the Ascent platform with external sources, helping lenders understand each borrower’s situation more clearly. Because the data and requirements were still evolving, the project involved a lot of iteration and exploring different ways to visualise what this 360° view could look like.",
   imageUrl: "/src/assets/OneView/OneView.png",
-  tags: ["SaaS", "Dashboard", "UI/UX"],
-  year: "",
-  role: "Product Designer",
-  client: "Internal Project",
-  duration: "4 months",
+  tags: ["SaaS Product", "Dashboard", "FinTech UX"],
   overviewSection: {
     overviewTitle: "Overview",
     overviewDescription:
-      "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
+      "Designing a dashboard that gives lenders a clear, unified 360° view of each borrower. The goal was to bring all key information into one place, helping lenders make better, more personalised decisions based on data from the Ascent platform and external sources.",
+
     executionTitle: "Execution",
     executionDescription:
-      "This project was a collaboration with Infracost to create an e-book for  a FinOps community. Along with the e-book I designed a leaflet and business cards that were used diging the conference.",
+      "The project focused on exploring how the ‘one view’ of a borrower could be displayed in a simple and useful way. As the data and requirements were still evolving, the work involved iterating on layouts, visuals, and information hierarchy to define what this dashboard could become.",
+
     exectutionBullets: [
-      "Design and showcase the business cards",
-      "Ensure the leaflet is consistent with the company branding and prepare for printing",
-      "Create illustrations for the e-book to help visualise the benefits of FinOps and how it can help businesses save money",
+      "Map out what data should appear in the 360° borrower view",
+      "Explore layouts and visual patterns for a simple, easy-to-read dashboard",
+      "Design early dashboard concepts showing how lenders could use the one-view experience to make informed decisions",
     ],
   },
+
   sectionStart: {
     overviewTitle: "One view",
     description: "Placeholder Text",
@@ -43,6 +41,11 @@ export const oneView: Project = {
       "/src/assets/OneView/Wireframes.png",
     ],
   },
+  imageSection03: {
+    title: "Widgets & components",
+    description: "Placeholder Text",
+    imageUrl: "/src/assets/OneView/Widgets.png",
+  },
   sectionMiddle: {
     title: "Members view",
     description: "Placeholder Text",
@@ -50,12 +53,12 @@ export const oneView: Project = {
   },
   sideBySideSectionsLeft: [
     {
-      title: "Invite member",
+      title: "Dashboard",
       description: "Placeholder Text",
       image: "/src/assets/OneView/InviteMember.png",
     },
     {
-      title: "Lender view",
+      title: "Consumer view",
       description: "Placeholder Text",
       image: "/src/assets/OneView/LenderView.png",
     },
@@ -67,12 +70,12 @@ export const oneView: Project = {
   },
   sideBySideSectionsRight: [
     {
-      title: "Final outcome",
+      title: "Invite member",
       description: "Placeholder Text",
       image: "/src/assets/OneView/FinalOutcome.png",
     },
     {
-      title: "Final outcome",
+      title: "Lender view",
       description: "Placeholder Text",
       image: "/src/assets/OneView/FinalOutcome.png",
     },
@@ -91,8 +94,16 @@ export const oneView: Project = {
     ],
   },
 
-  sectionIdsOneView: {
-    overviewSection: "Overview",
+  sectionIds: {
+    overviewTitle: "Overview",
+    sectionStart: "projectSectionStart",
+    imageSection01: "requirements",
+    imageSection02: "process",
+    imageSection03: "widgets",
+    sectionMiddle: "All-members",
+    sectionEnd: "Team-view",
+    showcaseGallery: "final-outcome",
+    results: "results",
   },
 
   tableOfContents: {
@@ -103,7 +114,7 @@ export const oneView: Project = {
         label: "Overview",
       },
       {
-        id: "Discovery-wireframes",
+        id: "projectSectionStart",
         label: "One view",
         subsections: [
           { id: "requirements", label: "Requirements" },
@@ -115,7 +126,7 @@ export const oneView: Project = {
         id: "All-members",
         label: "Members view",
         subsections: [
-          { id: "dashboard", label: "Dashboard" },
+          { id: "business-card-section-1", label: "Dashboard" },
           { id: "business-card-section-2", label: "Consumer view" },
         ],
       },
@@ -130,6 +141,7 @@ export const oneView: Project = {
       {
         id: "final-outcome",
         label: "Final outcome",
+        subsections: [{ id: "results", label: "Reflection" }],
       },
     ],
   },

@@ -125,9 +125,9 @@ export const infracostProjects: Project = {
     "I can honestly say, this project was so much fun to work on. I had pleasure to work with Infracost team, and they were great in to work with. I'm please with the outcome and the work we did together.",
     "I’m always excited to take on new projects and challenge myself, whether it’s a graphic design project or a coding project. I’m keen to challenge myself and learn new things along the way.",
   ],
-  
+
   sectionIds: {
-    sectionStart: "projectSectionDescriptionStart",
+    sectionStart: "projectSectionStart",
     imageSection01: "Image01",
     imageSection02: "Image02",
     imageSection03: "Image03",
@@ -136,6 +136,7 @@ export const infracostProjects: Project = {
     sectionEnd: "leaflet",
     showcaseGallery: "final-outcome",
     overviewTitle: "overviewTitle",
+    results: "results",
   },
 
   tableOfContents: {
@@ -146,7 +147,7 @@ export const infracostProjects: Project = {
         label: "Overview",
       },
       {
-        id: "projectSectionDescriptionStart",
+        id: "projectSectionStart",
         label: "E-book project",
         subsections: [
           { id: "Image01", label: "Requirements" },
@@ -174,6 +175,7 @@ export const infracostProjects: Project = {
       {
         id: "final-outcome",
         label: "Final outcome",
+        subsections: [{ id: "results", label: "Reflection" }],
       },
     ],
   },
