@@ -2,6 +2,7 @@
 export type ImageSectionData = {
   title: string;
   description: string;
+  description2?: string;
   imageUrl?: string;
   images?: string[];
 };

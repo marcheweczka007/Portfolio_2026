@@ -25,26 +25,32 @@ export const oneView: Project = {
 
   sectionStart: {
     overviewTitle: "One view",
-    description: "Placeholder Text",
+    description:
+      "My responsibilities on this project included designing what the 360° borrower view could look like, creating the widgets and components used in the dashboard, and shaping the overall dashboard layout. I worked closely with the VP of Design throughout the process. This project gave me the chance to design a variety of widgets, refine their usability, and ensure they worked well together within the dashboard.",
     imageUrl: "/src/assets/OneView/SectionStart.png",
   },
   imageSection01: {
     title: "Requirements",
-    description: "Placeholder Text",
-    imageUrl: "/src/assets/OneView/Requirements.png",
+    description:
+      "The requirements were layed out by the design team. At first we had a brainstorming session to figure out what data should be included in the 360° borrower view. As it was new feature and not yet defined, we had to explore different ways to visualise the data. I remember in particular the discussion around the data quality indicators, and how to visualise them in a way that was easy to understand and use.",
+    images: [
+      "/src/assets/OneView/Requirements.png",
+      "/src/assets/OneView/requirements2.png",
+    ],
   },
   imageSection02: {
     title: "The Process",
-    description: "Placeholder Text",
+    description: "This stage focused on understanding what information lenders need when viewing a borrower and how that information connects. I started by mapping out key data points—such as personal details, accounts, relationships, credit information, and tasks—to see how they relate to each other and what actions a lender might want to take from each area. Using sticky notes, I explored questions like: What is the lender trying to do when they click on a specific user? Are they checking eligibility, reviewing accounts, or looking for upsell opportunities? How should different pieces of information connect to create a clear 360° view?",
+    description2: "This mapping exercise helped define the structure of the dashboard, identify the main widgets and sections needed, and clarify how the user flow should work. It also guided early decisions about hierarchy, layout, and what information should be surfaced first.",
     images: [
-      "/src/assets/OneView/OneViewTasks.png",
-      "/src/assets/OneView/Wireframes.png",
+      "/src/assets/OneView/userType.png",
+      "/src/assets/OneView/relationships.png",
     ],
   },
   imageSection03: {
     title: "Widgets & components",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/OneView/Widgets.png",
+    imageUrl: "/src/assets/OneView/widgets.png",
   },
   sectionMiddle: {
     title: "Members view",

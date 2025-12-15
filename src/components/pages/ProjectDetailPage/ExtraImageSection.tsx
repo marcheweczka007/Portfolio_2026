@@ -20,6 +20,11 @@ export function ExtraImageSection({
         <p className="tracking-wide text-gray-500 leading-relaxed mb-0">
           {data.description}
         </p>
+        {data.description2 && (
+          <p className="tracking-wide text-gray-500 leading-relaxed mb-0">
+            {data.description2}
+          </p>
+        )}
       </div>
 
       {data.images && data.images.length > 0 ? (
