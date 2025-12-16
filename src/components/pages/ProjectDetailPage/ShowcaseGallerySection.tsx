@@ -18,10 +18,7 @@ export function ShowcaseGallerySection({
   if (!images || images.length === 0) return null;
 
   return (
-    <section
-      className=" container mx-auto max-w-6xl px-6 mb-20"
-      id={sectionId}
-    >
+    <section className=" container mx-auto max-w-6xl px-6 mb-20" id={sectionId}>
       <h2 className="text-3xl mb-2">{title}</h2>
       <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
         {description}
@@ -43,5 +40,3 @@ export function ShowcaseGallerySection({
     </section>
   );
 }
-
-
