@@ -20,6 +20,13 @@ export function ExtraImageSection({
         <p className="tracking-wide text-gray-500 leading-relaxed mb-0">
           {data.description}
         </p>
+        {data.bullets && data.bullets.length > 0 && (
+          <ul className="list-disc list-inside tracking-wide text-gray-500 font-medium leading-relaxed mb-2">
+            {data.bullets.map((bullet, index) => (
+              <li key={index}>{bullet}</li>
+            ))}
+          </ul>
+        )}
         {data.description2 && (
           <p className="tracking-wide text-gray-500 leading-relaxed mb-0">
             {data.description2}
@@ -50,6 +57,16 @@ export function ExtraImageSection({
           />
         </div>
       ) : null}
+
+      {data.bottomImageUrl && (
+        <div className="w-full rounded-xl overflow-hidden py-4">
+          <img
+            src={data.bottomImageUrl}
+            alt={`${projectTitle} - ${data.title} - Bottom image`}
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      )}
     </section>
   );
 }

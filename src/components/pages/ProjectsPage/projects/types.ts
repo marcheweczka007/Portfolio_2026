@@ -3,8 +3,10 @@ export type ImageSectionData = {
   title: string;
   description: string;
   description2?: string;
+  bullets?: string[];
   imageUrl?: string;
   images?: string[];
+  bottomImageUrl?: string;
 };
 
 export type ContentSectionData = {
@@ -88,7 +90,6 @@ export interface Project extends ProjectCardData {
   imageSection04?: ImageSectionData;
   imageSection05?: ImageSectionData;
 
-
   // Text description blocks
   textBlock01?: string[];
   textBlock02?: string;
@@ -133,6 +134,7 @@ export interface Project extends ProjectCardData {
   sideBySideSectionsLeft?: Array<{
     title: string;
     description: string;
+    description2?: string;
     image?: string;
     imagePosition?: "left";
   }>;
@@ -142,6 +144,11 @@ export interface Project extends ProjectCardData {
     image?: string;
     imagePosition?: "right";
   }>;
+
+  twoColumnSection?: [
+    { title: string; description: string; image: string },
+    { title: string; description: string; image: string }
+  ];
 
   reflectionSection?: {
     title: string;

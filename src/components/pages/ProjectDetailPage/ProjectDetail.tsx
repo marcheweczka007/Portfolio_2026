@@ -16,6 +16,7 @@ import { DescriptionSection } from "./DescriptionSection";
 import { ProjectSectionDescription } from "./ProjectSection";
 import { ScrollProgress } from "../../ui/scrollProgress";
 import { ScrollToTop } from "../../ui/scrollToTop";
+import { TwoColumnSection } from "../../ui/twoColSection";
 
 interface ProjectDetailProps {
   project: Project;
@@ -377,6 +378,11 @@ export function ProjectDetail({
         </section>
       )}
 
+      {/*Two column section*/}
+      {project.twoColumnSection && (
+        <TwoColumnSection items={project.twoColumnSection} />
+      )}
+
       {/* Side by side sections Left */}
       {project.sideBySideSectionsLeft &&
         project.sideBySideSectionsLeft.length > 0 && (
@@ -408,9 +414,14 @@ export function ProjectDetail({
                       <h2 className="text-md font-bold mb-3">
                         {section.title}
                       </h2>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed mb-4">
                         {section.description}
                       </p>
+                      {section.description2 && (
+                        <p className="text-gray-600 leading-relaxed">
+                          {section.description2}
+                        </p>
+                      )}
                     </div>
                   </div>
                 );

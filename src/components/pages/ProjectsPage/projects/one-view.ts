@@ -33,40 +33,55 @@ export const oneView: Project = {
     title: "Requirements",
     description:
       "The requirements were layed out by the design team. At first we had a brainstorming session to figure out what data should be included in the 360° borrower view. As it was new feature and not yet defined, we had to explore different ways to visualise the data. I remember in particular the discussion around the data quality indicators, and how to visualise them in a way that was easy to understand and use.",
-    images: [
-      "/src/assets/OneView/Requirements.png",
-      "/src/assets/OneView/requirements2.png",
-    ],
+    imageUrl: "/src/assets/OneView/Requirements.png",
   },
   imageSection02: {
     title: "The Process",
-    description: "This stage focused on understanding what information lenders need when viewing a borrower and how that information connects. I started by mapping out key data points—such as personal details, accounts, relationships, credit information, and tasks—to see how they relate to each other and what actions a lender might want to take from each area. Using sticky notes, I explored questions like: What is the lender trying to do when they click on a specific user? Are they checking eligibility, reviewing accounts, or looking for upsell opportunities? How should different pieces of information connect to create a clear 360° view?",
-    description2: "This mapping exercise helped define the structure of the dashboard, identify the main widgets and sections needed, and clarify how the user flow should work. It also guided early decisions about hierarchy, layout, and what information should be surfaced first.",
+    description:
+      "This stage focused on understanding what information lenders need when viewing a borrower and how that information connects. I started by mapping out key data points—such as personal details, accounts, relationships, credit information, and tasks—to see how they relate to each other and what actions a lender might want to take from each area. Using sticky notes, I explored questions like:",
+    bullets: [
+      "What is the lender trying to do when they click on a specific user?",
+      "Are they checking eligibility, reviewing accounts, or looking for upsell opportunities?",
+      "How should different pieces of information connect to create a clear 360° view?",
+    ],
+    description2:
+      "This mapping exercise helped define the structure of the dashboard, identify the main widgets and sections needed, and clarify how the user flow should work. It also guided early decisions about hierarchy, layout, and what information should be surfaced first.",
     images: [
       "/src/assets/OneView/userType.png",
       "/src/assets/OneView/relationships.png",
     ],
+    bottomImageUrl: "/src/assets/OneView/sketchesOneView.png",
   },
   imageSection03: {
     title: "Widgets & components",
-    description: "Placeholder Text",
-    imageUrl: "/src/assets/OneView/widgets.png",
+    description:
+      "This stage focused on designing the core building blocks of the 360° borrower view. I explored different ways to present key information, such as personal details, financial data, products, and credit insights—in a clean and readable format.",
+    description2:
+      "I created a range of widget layouts, testing how each one could be used within the dashboard. The goal was to make the widgets flexible, easy to understand, and consistent across different borrower types. I also designed a widget management panel, allowing lenders to add, remove, or reorder widgets based on their needs. This work helped define the visual language of the dashboard and ensured that each component could scale as more data and features were added.",
+    images: [
+      "/src/assets/OneView/widgets01.png",
+      "/src/assets/OneView/widgets02.png",
+    ],
   },
   sectionMiddle: {
     title: "Members view",
-    description: "Placeholder Text",
+    description:
+      "The members view provides a quick overview of each borrower’s personal details and financial information. Lenders can search for a specific borrower or filter the entire member list using a wide range of criteria, depending on the context or the type of loan they want to recommend. They can also switch between a list view and a grid view to see all members in whichever format suits their workflow best.",
     imageUrl: "/src/assets/OneView/SectionMid.png",
   },
   sideBySideSectionsLeft: [
     {
-      title: "Dashboard",
-      description: "Placeholder Text",
-      image: "/src/assets/OneView/InviteMember.png",
+      title: "Wireframes",
+      description:
+        "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.",
+      description2:
+        "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.",
+      image: "/src/assets/OneView/",
     },
     {
-      title: "Consumer view",
-      description: "Placeholder Text",
-      image: "/src/assets/OneView/LenderView.png",
+      title: "Member card",
+      description: "I have build the components for the member card, featuring the grid & list view. The cards included key information about the membet, with the ability to see more details on the one view page.",
+      image: "/src/assets/OneView/Member.png",
     },
   ],
   sectionEnd: {
@@ -85,6 +100,10 @@ export const oneView: Project = {
       description: "Placeholder Text",
       image: "/src/assets/OneView/FinalOutcome.png",
     },
+  ],
+  twoColumnSection: [
+    { title: "Wireframes", description: "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.", image: "/src/assets/OneView/gridLow.png" },
+    { title: "Chatbot", description: "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.", image: "/src/assets/OneView/chatLow.png" },
   ],
   results: [
     "The e-book was well received by the client and was used to promote the FinOps community.",
@@ -132,8 +151,8 @@ export const oneView: Project = {
         id: "All-members",
         label: "Members view",
         subsections: [
-          { id: "business-card-section-1", label: "Dashboard" },
-          { id: "business-card-section-2", label: "Consumer view" },
+          { id: "business-card-section-1", label: "Wireframes" },
+          { id: "business-card-section-2", label: "Member card" },
         ],
       },
       {
