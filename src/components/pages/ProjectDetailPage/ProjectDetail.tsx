@@ -8,7 +8,7 @@ import {
   Rocket,
   Check,
 } from "lucide-react";
-import { CTASection } from "../../ui/CTASection";
+import { CTASection } from "../../ui/Custom UI/CTASection";
 import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
 import { ExtraImageSection } from "./ExtraImageSection";
@@ -16,8 +16,10 @@ import { DescriptionSection } from "./DescriptionSection";
 import { ProjectSectionDescription } from "./ProjectSection";
 import { ScrollProgress } from "../../ui/scrollProgress";
 import { ScrollToTop } from "../../ui/scrollToTop";
-import { TwoColumnSection } from "../../ui/twoColSection";
+import { TwoColumnSection } from "./twoColSection";
 import { ProjectImagesSection } from "./ProjectImagesSection";
+import { ProjectResultsSection } from "./ProjectResultsSection";
+import { ShowcaseGallerySection } from "./ShowcaseGallerySection";
 
 interface ProjectDetailProps {
   project: Project;
@@ -336,29 +338,13 @@ export function ProjectDetail({
 
       {/* Showcase Gallery */}
       {project.showcaseGallery && project.showcaseGallery.images.length > 0 && (
-        <section
-          className=" container mx-auto max-w-6xl px-6 mb-20"
-          id={getSectionId("showcaseGallery")}
-        >
-          <h2 className="text-3xl mb-2">{project.showcaseGallery.title}</h2>
-          <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
-            {project.showcaseGallery.description}
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {project.showcaseGallery.images.map((image, index) => (
-              <div
-                key={index}
-                className="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]"
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} - Showcase image ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+        <ShowcaseGallerySection
+          title={project.showcaseGallery.title}
+          description={project.showcaseGallery.description}
+          images={project.showcaseGallery.images}
+          projectTitle={project.title}
+          sectionId={getSectionId("showcaseGallery")}
+        />
       )}
 
       {/* Button */}
@@ -378,25 +364,10 @@ export function ProjectDetail({
 
       {/* Results */}
       {project.results && project.results.length > 0 && (
-        <section
-          className="container mx-auto max-w-6xl px-6 mb-20"
-          id={getSectionId("results")}
-        >
-          <h2 className="text-3xl mb-8">Reflection on the project</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {project.results.map((result, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-orange-200/20 border border-orange-200/80"
-              >
-                <div className="text-xl mb-3 text-gray-900">{index + 1}</div>
-                <p className="tracking-wide text-md text-gray-600 leading-relaxed">
-                  {result}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <ProjectResultsSection
+          results={project.results}
+          sectionId={getSectionId("results")}
+        />
       )}
 
       {/* CTA Section */}
