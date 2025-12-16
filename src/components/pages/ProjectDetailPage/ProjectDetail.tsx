@@ -162,45 +162,6 @@ export function ProjectDetail({
             getSectionId={getSectionId}
           />
         )}
-
-        {/* Challenge - Only show if provided */}
-        {project.challenge && (
-          <div className="mb-10 p-8 bg-gray-200">
-            <h2 className="text-lg mb-2">The Challenge</h2>
-            <p className="tracking-wide text-md text-gray-500 leading-relaxed">
-              {project.challenge}
-            </p>
-          </div>
-        )}
-
-        {/* Solution - Only show if provided */}
-        {project.solution && (
-          <div className="mb-20" id={getSectionId("solution")}>
-            <h2 className="text-3xl mb-6">The Solution</h2>
-            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
-              {project.solution}
-            </p>
-          </div>
-        )}
-
-        {/* Summary Text Section - Conditionally rendered */}
-        {project.summaryText && (
-          <div className="mb-20">
-            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
-              {project.summaryText}
-            </p>
-          </div>
-        )}
-
-        {/* Highlight Section - Conditionally rendered */}
-        {project.highlightSection && (
-          <div className="mb-20">
-            <h2 className="text-3xl mb-6">{project.highlightSection.title}</h2>
-            <p className="tracking-wide text-lg text-gray-500 leading-relaxed">
-              {project.highlightSection.content}
-            </p>
-          </div>
-        )}
       </section>
 
       {/* Project Images */}
@@ -435,29 +396,6 @@ export function ProjectDetail({
               </div>
             ))}
           </div>
-        </section>
-      )}
-
-      {/* Custom Sections */}
-      {project.customSections && project.customSections.length > 0 && (
-        <section className="container mx-auto max-w-6xl px-6 mb-20">
-          {project.customSections.map((section, index) => (
-            <div key={index} className="mb-20">
-              <h2 className="text-3xl mb-6">{section.title}</h2>
-              <p className="tracking-wide text-lg text-gray-500 leading-relaxed mb-6">
-                {section.content}
-              </p>
-              {section.image && (
-                <div className="rounded-xl overflow-hidden bg-gray-100 aspect-video">
-                  <img
-                    src={section.image}
-                    alt={`${project.title} - ${section.title}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
-            </div>
-          ))}
         </section>
       )}
 
