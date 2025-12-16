@@ -38,17 +38,14 @@ export function TableOfContents({
 
   return (
     <div className="hidden xl:block fixed left-6 top-40 z-30 w-46">
-      <div className="rounded-2xl bg-white/30 backdrop-blur shadow-md border border-gray-100 px-5 py-4">
+      <div className="rounded-2xl bg-white/30 backdrop-blur shadow-sm border border-gray-100 px-5 py-4">
         <div className="flex items-center justify-between mb-4">
           <p className="text-sm font-semibold text-gray-900">{title}</p>
         </div>
 
         <div className="space-y-7 text-xs text-gray-900 pl-1">
           {items.map((item, index) => (
-            <div
-              key={item.id}
-              className={index > 0 ? "" : ""}
-            >
+            <div key={item.id} className={index > 0 ? "" : ""}>
               <button
                 type="button"
                 onClick={() => handleScrollTo(item.id)}

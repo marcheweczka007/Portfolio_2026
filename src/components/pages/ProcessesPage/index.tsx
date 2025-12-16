@@ -6,7 +6,7 @@ import { ArrowRight, Check } from "lucide-react";
 import processes, { sections } from "./aboutProcesses.ts";
 import BackButton from "../../pageUtilities/BackButton.tsx";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
-import { CTASection } from "../../ui/CTASection.tsx";
+import { CTASection } from "../../ui/CustomUI/CTASection";
 import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 export default function ProcessesPage() {
   const navigate = useNavigate();

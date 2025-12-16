@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectCard } from "../../ui/ProjectCard.tsx";
+import { ProjectCard } from "../../ui/CustomUI/ProjectCard";
 import { useNavigate } from "react-router-dom";
 import { projectCardsData } from "./projects/projects.ts";
 import projectsData from "./projectsData.ts";

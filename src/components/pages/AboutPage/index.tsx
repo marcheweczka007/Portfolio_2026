@@ -1,5 +1,5 @@
 import React from "react";
-import Timeline from "../../ui/timeline";
+import Timeline from "../../ui/CustomUI/Timeline";
 import ascentLogo from "../../../assets/experience/ascentplatformLogo.jpg";
 import grafterrLogo from "../../../assets/experience/grafterrLogo.png";
 import infracostLogo from "../../../assets/experience/infracostLogo.png";
@@ -56,7 +56,9 @@ export default function AboutPage() {
 
         {/* Expertise Sections */}
         <section className="container mx-auto max-w-6xl px-6 mb-20">
-          <h2 className="mb-8 text-2xl font-bold">{aboutContent.expertiseTitle}</h2>
+          <h2 className="mb-8 text-2xl font-bold">
+            {aboutContent.expertiseTitle}
+          </h2>
 
           <Accordion type="multiple" className="space-y-4">
             <AccordionItem value="lean-ux">
@@ -195,7 +197,7 @@ export default function AboutPage() {
           />
         </section>
         {/* Scroll to Top Button */}
-          <ScrollToTop />
+        <ScrollToTop />
       </div>
     </PageLayout>
   );

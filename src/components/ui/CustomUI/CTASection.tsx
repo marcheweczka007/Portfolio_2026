@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "./button";
+import { Button } from "../button";
 import { SendHorizontal, Download } from "lucide-react";
 import homeContent from "../pages/HomePage/homeData";
 

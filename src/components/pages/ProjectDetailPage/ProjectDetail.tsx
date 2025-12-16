@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../ui/button";
 import { ArrowLeft } from "lucide-react";
-import { CTASection } from "../../ui/Custom UI/CTASection";
+import { CTASection } from "../../ui/CustomUI/CTASection";
 import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
 import { ExtraImageSection } from "./ExtraImageSection";

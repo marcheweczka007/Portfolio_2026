@@ -1,4 +1,4 @@
-import { Footer } from "../ui/Footer";
+import { Footer } from "../ui/CustomUI/Footer";
 import { NavigationBar } from "../ui/navigationBar";
 import React from "react";
 

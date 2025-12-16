@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectCard } from "../../ui/ProjectCard";
+import { ProjectCard } from "../../ui/CustomUI/ProjectCard";
 import { Button } from "../../ui/button";
 import { Card, CardContent } from "../../ui/card";
 import { ArrowRight, Lightbulb, Target, Mail } from "lucide-react";
@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { projects } from "../ProjectsPage/projects/projects.ts";
 import homeContent from "./homeData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
-import { CTASection } from "../../ui/CTASection.tsx";
+import { CTASection } from "../../ui/CustomUI/CTASection";
 import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 
 export default function HomePage() {
@@ -199,7 +199,5 @@ export default function HomePage() {
       {/* CTA Section */}
       <CTASection />
     </PageLayout>
-    
-
   );
 }
