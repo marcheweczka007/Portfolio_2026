@@ -380,7 +380,10 @@ export function ProjectDetail({
 
       {/*Two column section*/}
       {project.twoColumnSection && (
-        <TwoColumnSection items={project.twoColumnSection} />
+        <TwoColumnSection
+          items={project.twoColumnSection}
+          sectionId="business-card-section-1"
+        />
       )}
 
       {/* Side by side sections Left */}

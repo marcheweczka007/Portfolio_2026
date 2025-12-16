@@ -9,16 +9,20 @@ interface SideBySideItem {
 
 interface TwoColumnSectionProps {
   items: SideBySideItem[]; // expecting exactly 2 items
+  sectionId?: string;
 }
 
-export function TwoColumnSection({ items }: TwoColumnSectionProps) {
+export function TwoColumnSection({ items, sectionId }: TwoColumnSectionProps) {
   // Safety fallback in case something is missing
   if (!items || items.length < 2) return null;
 
   const [left, right] = items;
 
   return (
-    <section className="mt-16 container mx-auto max-w-6xl px-6 pb-16">
+    <section
+      className="mt-16 container mx-auto max-w-6xl px-6 pb-16"
+      id={sectionId}
+    >
       {/* Images Row */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 w-max-w-6xl">
         <div className=" overflow-hidden rounded-xl bg-muted">
@@ -46,11 +50,11 @@ export function TwoColumnSection({ items }: TwoColumnSectionProps) {
             {left.description}
           </p>
         </div>
-        <div className="flex-1 flex flex-col gap-4"> 
-        <h3 className="text-xl font-semibold pr-12">{right.title}</h3>
-        <p className="text-muted-foreground leading-relaxed">
-          {right.description}
-        </p>
+        <div className="flex-1 flex flex-col gap-4">
+          <h3 className="text-xl font-semibold pr-12">{right.title}</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            {right.description}
+          </p>
         </div>
       </div>
     </section>
