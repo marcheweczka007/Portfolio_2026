@@ -382,7 +382,7 @@ export function ProjectDetail({
       {project.twoColumnSection && (
         <TwoColumnSection
           items={project.twoColumnSection}
-          sectionId="business-card-section-1"
+          sectionId="members-wireframes"
         />
       )}
 
@@ -394,8 +394,8 @@ export function ProjectDetail({
               {project.sideBySideSectionsLeft.map((section, index) => {
                 // Map to TOC subsection IDs for business card
                 const subsectionIds = [
-                  "business-card-section-1",
-                  "business-card-section-2",
+                  "members-wireframes",
+                  "members-card",
                 ];
                 return (
                   <div

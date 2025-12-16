@@ -71,16 +71,17 @@ export const oneView: Project = {
   },
   sideBySideSectionsLeft: [
     {
-      title: "Wireframes",
+      title: "Detailed member view",
       description:
-        "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.",
+        "These wireframes focused on determinating what key information should be diplayed for each member, but alos what type of filters and sorting options should be displayed to the lender.",
       description2:
-        "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.",
-      image: "/src/assets/OneView/",
+        "The initilal idea was to show filters in form of buttons, where the lender can click on the button to filter the members by the selected criteria.",
+      image: "/src/assets/OneView/detailedMView.png",
     },
     {
       title: "Member card",
-      description: "I have build the components for the member card, featuring the grid & list view. The cards included key information about the membet, with the ability to see more details on the one view page.",
+      description:
+        "I have build the components for the member card, featuring the grid & list view. The cards included key information about the membet, with the ability to see more details on the one view page.",
       image: "/src/assets/OneView/Member.png",
     },
   ],
@@ -102,8 +103,18 @@ export const oneView: Project = {
     },
   ],
   twoColumnSection: [
-    { title: "Wireframes", description: "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.", image: "/src/assets/OneView/gridLow.png" },
-    { title: "Chatbot", description: "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.", image: "/src/assets/OneView/chatLow.png" },
+    {
+      title: "Wireframes",
+      description:
+        "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.",
+      image: "/src/assets/OneView/gridLow.png",
+    },
+    {
+      title: "Chatbot",
+      description:
+        "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.",
+      image: "/src/assets/OneView/chatLow.png",
+    },
   ],
   results: [
     "The e-book was well received by the client and was used to promote the FinOps community.",
@@ -151,8 +162,8 @@ export const oneView: Project = {
         id: "All-members",
         label: "Members view",
         subsections: [
-          { id: "business-card-section-1", label: "Wireframes" },
-          { id: "business-card-section-2", label: "Member card" },
+          { id: "members-wireframes", label: "Wireframes" },
+          { id: "members-card", label: "Member card" },
         ],
       },
       {
