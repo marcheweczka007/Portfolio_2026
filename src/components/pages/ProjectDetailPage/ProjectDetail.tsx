@@ -15,6 +15,7 @@ import { ProjectResultsSection } from "./ProjectResultsSection";
 import { ShowcaseGallerySection } from "./ShowcaseGallerySection";
 import { SideBySideSection } from "./SideBySideSection";
 import { OverviewSection } from "./OverviewSection";
+import { ProjectHeroSection } from "./ProjectHeroSection";
 
 interface ProjectDetailProps {
   project: Project;
@@ -64,39 +65,13 @@ export function ProjectDetail({
       {toc && <TableOfContents title={toc.title} items={toc.items} />}
 
       {/* Hero Section */}
-      <section
-        className="container mx-auto max-w-6xl px-6 mb-10"
-        id={getSectionId("hero")}
-      >
-        <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
-          Project
-        </p>
-        <h1 className="text-4xl font-bold mb-2 max-w-6xl leading-tight">
-          {project.title}
-        </h1>
-        <p className="tracking-wide text-gray-500 mt-3 pb-4">
-          {project.description}
-        </p>
-        <div className="flex flex-wrap gap-2 mb-8">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 bg-orange-50 border border-orange-200/20 rounded-full text-orange-600 text-xs"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {/* Hero Image */}
-        <div className="rounded-2xl overflow-hidden bg-gray-100">
-          <img
-            src={project.imageUrl}
-            alt={project.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
+      <ProjectHeroSection
+        title={project.title}
+        description={project.description}
+        tags={project.tags}
+        imageUrl={project.imageUrl}
+        sectionId={getSectionId("hero")}
+      />
 
       {/* Project Content */}
       <section className="container mx-auto max-w-6xl mb-6">
