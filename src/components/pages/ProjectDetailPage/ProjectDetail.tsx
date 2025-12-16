@@ -17,6 +17,7 @@ import { ProjectSectionDescription } from "./ProjectSection";
 import { ScrollProgress } from "../../ui/scrollProgress";
 import { ScrollToTop } from "../../ui/scrollToTop";
 import { TwoColumnSection } from "../../ui/twoColSection";
+import { ProjectImagesSection } from "./ProjectImagesSection";
 
 interface ProjectDetailProps {
   project: Project;
@@ -301,26 +302,11 @@ export function ProjectDetail({
 
       {/* Project Images */}
       {project.images && project.images.length > 0 && (
-        <section
-          className="container mx-auto max-w-6xl px-6 mb-20"
-          id={getSectionId("images")}
-        >
-          <h2 className="text-3xl mb-8">Visual Showcase</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {project.images.map((image, index) => (
-              <div
-                key={index}
-                className="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]"
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+        <ProjectImagesSection
+          images={project.images}
+          projectTitle={project.title}
+          sectionId={getSectionId("images")}
+        />
       )}
 
       {/* Image Sections 01-05 */}
@@ -393,10 +379,7 @@ export function ProjectDetail({
             <div className="flex flex-col gap-16">
               {project.sideBySideSectionsLeft.map((section, index) => {
                 // Map to TOC subsection IDs for business card
-                const subsectionIds = [
-                  "members-wireframes",
-                  "members-card",
-                ];
+                const subsectionIds = ["members-wireframes", "members-card"];
                 return (
                   <div
                     key={index}

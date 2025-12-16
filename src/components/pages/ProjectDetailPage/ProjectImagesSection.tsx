@@ -1,0 +1,40 @@
+import React from "react";
+
+interface ProjectImagesSectionProps {
+  images: string[];
+  projectTitle: string;
+  sectionId?: string;
+}
+
+export function ProjectImagesSection({
+  images,
+  projectTitle,
+  sectionId,
+}: ProjectImagesSectionProps) {
+  if (!images || images.length === 0) return null;
+
+  return (
+    <section
+      className="container mx-auto max-w-6xl px-6 mb-20"
+      id={sectionId}
+    >
+      <h2 className="text-3xl mb-8">Visual Showcase</h2>
+      <div className="grid md:grid-cols-2 gap-6">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]"
+          >
+            <img
+              src={image}
+              alt={`${projectTitle} - Image ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+
