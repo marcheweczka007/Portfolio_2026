@@ -37,8 +37,8 @@ export function TableOfContents({
   };
 
   return (
-    <div className="hidden xl:block fixed left-6 top-40 z-30 w-46">
-      <div className="rounded-2xl bg-white/30 backdrop-blur shadow-sm border border-gray-100 px-5 py-4">
+    <div className="hidden xl:block fixed left-6 top-40 z-30 w-58">
+      <div className="rounded-lg bg-white-80/20 shadow-sm border border-gray-100 px-5 py-4">
         <div className="flex items-center justify-between mb-4">
           <p className="text-sm font-semibold text-gray-900">{title}</p>
         </div>
@@ -62,7 +62,7 @@ export function TableOfContents({
                         key={subsection.id}
                         type="button"
                         onClick={() => handleScrollTo(subsection.id)}
-                        className="block w-full rounded-lg pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
+                        className="block w-full rounded-sm pl-1.5 pr-2 py-1 text-left font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 cursor-pointer"
                       >
                         {subsection.label}
                       </button>

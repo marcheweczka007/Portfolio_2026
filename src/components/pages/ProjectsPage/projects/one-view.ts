@@ -147,7 +147,7 @@ export const oneView: Project = {
     items: [
       {
         id: "Overview",
-        label: "Overview",
+        label: "Project Overview",
       },
       {
         id: "projectSectionStart",
