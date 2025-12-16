@@ -33,8 +33,6 @@ const projectDetails = {
   backToProjects: "Back to Projects",
 };
 
-const defaultIcons = [Search, Lightbulb, Palette, Rocket];
-
 export function ProjectDetail({
   project,
   onBack,
@@ -50,52 +48,6 @@ export function ProjectDetail({
     if (Array.isArray(id)) return undefined;
     return id;
   };
-
-  // Use custom process phases if provided, otherwise use default structure
-  const hasDefaultProcessData =
-    project.discovery &&
-    project.exploration &&
-    project.design &&
-    project.shipping;
-
-  const phases = project.processPhases
-    ? project.processPhases.map((phase, index) => ({
-        icon: defaultIcons[index] || Search,
-        title: phase.title,
-        description: phase.description,
-        image: phase.image,
-        color: "bg-gray-100",
-      }))
-    : hasDefaultProcessData
-    ? [
-        {
-          icon: Search,
-          title: "Discovery",
-          description: project.discovery!,
-          color: "bg-gray-100",
-        },
-        {
-          icon: Lightbulb,
-          title: "Exploration",
-          description: project.exploration!,
-          color: "bg-gray-100",
-        },
-        {
-          icon: Palette,
-          title: "Design",
-          description: project.design!,
-          color: "bg-gray-100",
-        },
-        {
-          icon: Rocket,
-          title: "Shipping",
-          description: project.shipping!,
-          color: "bg-gray-100",
-        },
-      ]
-    : [];
-
-  const hasProcessSection = phases.length > 0;
 
   // Use tableOfContents
   const toc = project.tableOfContents;
@@ -250,55 +202,6 @@ export function ProjectDetail({
           </div>
         )}
       </section>
-
-      {/* Process Phases - Only show if there's process data */}
-      {hasProcessSection && (
-        <section className="container mx-auto max-w-6xl px-6 mb-10 bg-gray-200 py-10 rounded-md">
-          <div className="text-left mb-10">
-            <h2 className="text-4xl mb-4">
-              {project.processTitle || "The Process"}
-            </h2>
-            <p className="tracking-wide text-gray-500 max-w-6xl mx-auto">
-              {project.processDescription ||
-                "The project was flexible but followed somehow structured process to allow me to explore and deliver the best solution for the users."}
-            </p>
-          </div>
-          {/* Process Boxes */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {phases.map((phase, index) => {
-              const Icon = phase.icon;
-              return (
-                <div
-                  key={phase.title}
-                  className={`group relative p-8 rounded-2xl bg-gradient-to-br ${phase.color} border-0 hover:border-gray-300 transition-all duration-300`}
-                >
-                  <div className="absolute top-6 right-6 text-6xl font-mono opacity-[0.05] select-none">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-2xl">{phase.title}</h3>
-                  </div>
-                  {phase.image && (
-                    <div className="mb-6 rounded-xl overflow-hidden bg-gray-100">
-                      <img
-                        src={phase.image}
-                        alt={`${phase.title} - Process image`}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  )}
-                  <p className="tracking-wide text-gray-500 leading-relaxed">
-                    {phase.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      )}
 
       {/* Project Images */}
       {project.images && project.images.length > 0 && (
