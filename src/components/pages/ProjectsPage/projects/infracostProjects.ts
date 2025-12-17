@@ -144,7 +144,7 @@ export const infracostProjects: Project = {
     items: [
       {
         id: "overviewTitle",
-        label: "Overview",
+        label: "Project Overview",
       },
       {
         id: "projectSectionStart",

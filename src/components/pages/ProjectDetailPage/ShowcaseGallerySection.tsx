@@ -27,7 +27,7 @@ export function ShowcaseGallerySection({
         {images.map((image, index) => (
           <div
             key={index}
-            className="rounded-xl overflow-hidden bg-gray-100 aspect-[4/3]"
+            className="rounded-xl overflow-hidden"
           >
             <img
               src={image}

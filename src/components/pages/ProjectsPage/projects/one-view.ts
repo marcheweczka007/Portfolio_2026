@@ -69,6 +69,20 @@ export const oneView: Project = {
       "The members view provides a quick overview of each borrower’s personal details and financial information. Lenders can search for a specific borrower or filter the entire member list using a wide range of criteria, depending on the context or the type of loan they want to recommend. They can also switch between a list view and a grid view to see all members in whichever format suits their workflow best.",
     imageUrl: "/src/assets/OneView/SectionMid.png",
   },
+    twoColumnSection: [
+    {
+      title: "Wireframes",
+      description:
+        "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.",
+      image: "/src/assets/OneView/gridLow.png",
+    },
+    {
+      title: "Chatbot",
+      description:
+        "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.",
+      image: "/src/assets/OneView/chatLow.png",
+    },
+  ],
   sideBySideSectionsLeft: [
     {
       title: "Detailed member view",
@@ -87,46 +101,42 @@ export const oneView: Project = {
   ],
   sectionEnd: {
     title: "Team view",
-    description: "Placeholder Text",
+    description:
+      "This feature gives lenders a personalised starting point where they can quickly access key tools and teams they work with. Each card highlights a service area, like Universal Banking, Account Opening, or Treasury Management with a brief description and the team members involved. Features outside the lender’s current plan appear locked with an upgrade option, making it clear what’s available and what requires higher access. ",
     imageUrl: "/src/assets/OneView/SectionEnd.png",
   },
   sideBySideSectionsRight: [
     {
       title: "Invite member",
-      description: "Placeholder Text",
-      image: "/src/assets/OneView/FinalOutcome.png",
+      description:
+        "The Team View gives lenders a clear overview of the borrowers assigned to a specific banking team. It lists each member along with key details such as years with the institution, account number, and the financial products they hold. A search bar and filters help lenders quickly find a specific borrower, and an invite button allows them to add new members to the team.This view helps lenders manage their portfolio more efficiently by keeping all team-related borrower information in one organised place.",
+      image: "/src/assets/OneView/UBT.png",
     },
     {
-      title: "Lender view",
-      description: "Placeholder Text",
-      image: "/src/assets/OneView/FinalOutcome.png",
+      title: "Account Opening",
+      description:
+        "This view allows lenders to see all new account applications as they come in. Each lead includes key borrower details, the products they’re interested in, and a timestamp showing when the application was submitted. Lenders can quickly scan new leads, search for a specific applicant, and open any profile to review the details or take the next action.",
+      image: "/src/assets/OneView/AO.png",
     },
   ],
-  twoColumnSection: [
-    {
-      title: "Wireframes",
-      description:
-        "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.",
-      image: "/src/assets/OneView/gridLow.png",
-    },
-    {
-      title: "Chatbot",
-      description:
-        "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.",
-      image: "/src/assets/OneView/chatLow.png",
-    },
-  ],
+
   results: [
-    "The e-book was well received by the client and was used to promote the FinOps community.",
-    "The business card was well received by the client and was used to promote the FinOps community.",
+    "This feature was used as a selling point for the Ascent platform clients to showcase the power of the platform and the value it can bring to their business.",
+    "I was leading the user interface design for this project, and collaborated with the VP of design and UX designer to bring the feature to life.",
+    "This project was a great opportunity to design a variety of widgets, refine their usability, and ensure they worked well together within the dashboard.",
+    "I really enjoyed working on the early stages of the project, where the requirements were still evolving, but my creativity and ability to iterate quickly were put to the test.",
   ],
 
   showcaseGallery: {
     title: "Final outcome",
     description: "Final outcome of the one view dashboard.",
     images: [
-      "/src/assets/OneView/FinalOutcome.png",
-      "/src/assets/OneView/FinalOutcome.png",
+      "/src/assets/OneView/1.png",
+      "/src/assets/OneView/2.png",
+      "/src/assets/OneView/3.png",
+      "/src/assets/OneView/4.png",
+      "/src/assets/OneView/5.png",
+      "/src/assets/OneView/6.png",
     ],
   },
 
@@ -171,7 +181,7 @@ export const oneView: Project = {
         label: "Team view",
         subsections: [
           { id: "leaflet-section-1", label: "Invite member" },
-          { id: "leaflet-section-2", label: "Lender view" },
+          { id: "leaflet-section-2", label: "Account Opening" },
         ],
       },
       {

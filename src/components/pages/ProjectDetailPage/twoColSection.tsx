@@ -25,7 +25,7 @@ export function TwoColumnSection({ items, sectionId }: TwoColumnSectionProps) {
     >
       {/* Images Row */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 w-max-w-6xl">
-        <div className=" overflow-hidden rounded-xl bg-muted">
+        <div className=" overflow-hidden rounded-xl ">
           <img
             src={left.image}
             alt={left.title}
@@ -33,7 +33,7 @@ export function TwoColumnSection({ items, sectionId }: TwoColumnSectionProps) {
           />
         </div>
 
-        <div className=" overflow-hidden rounded-xl bg-muted">
+        <div className=" overflow-hidden rounded-xl ">
           <img
             src={right.image}
             alt={right.title}
