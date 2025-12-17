@@ -31,18 +31,33 @@ export const productCardRedesign: Project = {
     title: "Requirements",
     description:
       "The requirements for this feature focused on showing the borrower which stage of the application they were currently in. There were three main stages: Eligibility Checker (stage one), Full Application (stage two), and Submitted, which means the borrower has completed the process. In addition to the stage, the design also needed to show the status of the application — indicating whose hands the application was currently in. Both the stage and the status needed to be flexible, as they could change over time.",
-    imageUrl: "/src/assets/ApplicationCards/02_MappingTheFlow.png",
+    images: [
+      "/src/assets/ApplicationCards/TheFlow.png",
+      "/src/assets/ApplicationCards/ProductCardElements.png",
+    ],
   },
   imageSection02: {
-    title: "Sketches, wireframes, flows.",
-    description: "Placeholder Text",
-    imageUrl: "/src/assets/ApplicationCards/03_SketchesWireframes.png",
+    title: "Moodboard",
+    description:
+      "Like with most of my projects, I started with a moodboard. This helped me understand the look and feel I wanted to achieve. For this card, I needed to include many elements, such as the logo, application stages, statuses, and other details. Having a moodboard and some visual examples gave me a good starting point and made it easier to explore different ideas.",
+    imageUrl: "/src/assets/ApplicationCards/moodboard.png",
+  },
+  imageSection03: {
+    title: "Wireframes",
+    description:
+      "At this stage, I explored different layout ideas for the product card and identified the key information the borrower needed to see. I sketched out early concepts on paper and then moved into low-fidelity wireframes to test structure, hierarchy, and content placement.",
+    description2:
+      "The wireframes helped me organise elements such as the logo, application stage, status, dates, call-to-action buttons, and any required user actions. I also mapped simple logic flows, like when the “Continue” button should appear and when the user should see an action required.This process of iteration made it easier to compare different layouts, remove unnecessary elements, and focus on the clearest way to show the application state. Usually I sak for a lot of feedback during this phase to make sure I'm on the right track.",
+    images: [
+      "/src/assets/ApplicationCards/wireframes.png",
+      "/src/assets/ApplicationCards/wireframes02.png",
+    ],
   },
 
   sectionMiddle: {
-    title: "Moodboard",
+    title: "High fidelity design",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/ApplicationCards/04_Moodboard.png",
+    imageUrl: "/src/assets/ApplicationCards/hiFi.png",
   },
 
   showcaseGallery: {
@@ -60,11 +75,12 @@ export const productCardRedesign: Project = {
     "I’m always excited to take on new projects and challenge myself, whether it’s a graphic design project or a coding project. I’m keen to challenge myself and learn new things along the way.",
   ],
   sectionIds: {
-    overviewTitle: "Overview",
+    overviewTitle: "overviewTitle",
     sectionStart: "projectSectionStart",
-    imageSection01: "imageSection01",
-    imageSection02: "imageSection02",
-    sectionMiddle: "sectionMiddle",
+    imageSection01: "Image01",
+    imageSection02: "Image02",
+    imageSection03: "Image03",
+    sectionMiddle: "hiFidelity",
     showcaseGallery: "final-outcome",
     results: "results",
   },
@@ -73,7 +89,7 @@ export const productCardRedesign: Project = {
     items: [
       {
         id: "overviewTitle",
-        label: "Overview",
+        label: "Project Overview",
       },
       {
         id: "projectSectionStart",
@@ -81,13 +97,12 @@ export const productCardRedesign: Project = {
         subsections: [
           { id: "Image01", label: "Requirements" },
           { id: "Image02", label: "Moodboard" },
-          { id: "Image03", label: "Cover examples" },
-          { id: "Image04", label: "First and last page" },
+          { id: "Image03", label: "Wireframes" },
         ],
       },
       {
-        id: "business-card",
-        label: "Business Card",
+        id: "hiFidelity",
+        label: "High fidelity design",
         subsections: [
           { id: "business-card-section-1", label: "Experimentation phase" },
           { id: "business-card-section-2", label: "Examples for client" },
