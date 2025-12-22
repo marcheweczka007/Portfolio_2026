@@ -106,14 +106,8 @@ export const productCardRedesign: Project = {
         subsections: [
           { id: "business-card-section-1", label: "Experimentation phase" },
           { id: "business-card-section-2", label: "Examples for client" },
-        ],
-      },
-      {
-        id: "leaflet",
-        label: "Leaflet",
-        subsections: [
-          { id: "leaflet-section-1", label: "Experimentation phase" },
-          { id: "leaflet-section-2", label: "Examples for client" },
+          { id: "business-card-section-3", label: "Final outcome" },
+          { id: "business-card-section-4", label: "Reflection" },
         ],
       },
       {

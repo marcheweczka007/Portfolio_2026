@@ -47,7 +47,7 @@ export function ProjectSectionDescription({
           ))}
         </div>
       ) : imageUrl ? (
-        <div className="rounded-xl bg-gray-100 overflow-hidden">
+        <div className="rounded-xl overflow-hidden">
           <img
             src={imageUrl}
             alt={`${projectTitle} - ${title}`}
