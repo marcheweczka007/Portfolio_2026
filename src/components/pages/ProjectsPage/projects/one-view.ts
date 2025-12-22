@@ -4,7 +4,7 @@ export const oneView: Project = {
   id: "One-view",
   title: "One view dashboard",
   description:
-    "Developing a dashboard for lenders to manage clients and make better, more personalised decisions. The dashboard brings all borrower information into one place, creating a full 360° view of the customer. This view combines data from the Ascent platform with external sources, helping lenders understand each borrower’s situation more clearly. Because the data and requirements were still evolving, the project involved a lot of iteration and exploring different ways to visualise what this 360° view could look like.",
+    "Developing a dashboard that helps lenders manage clients and make more personalised decisions. The dashboard brings all borrower information into one place, creating a clear 360° view by combining data from the Ascent platform with external sources. Because the data and requirements were still evolving, the work involved a lot of iteration and exploring different ways to visualise this view.",
   imageUrl: "/src/assets/OneView/OneView.png",
   tags: ["SaaS Product", "Dashboard", "FinTech UX"],
   overviewSection: {
