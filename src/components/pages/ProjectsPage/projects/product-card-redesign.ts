@@ -5,7 +5,7 @@ export const productCardRedesign: Project = {
   title: "Product Card Redesign",
   description:
     "Improve the UX and design of the product card interface for loan applications.",
-  imageUrl: "/src/assets/ApplicationCards/ApplicationCards.png",
+  imageUrl: "/src/assets/MyProjects/ApplicationCards/ApplicationCards.png",
   tags: ["Re-design", "Loan Application", "SaaS"],
   overviewSection: {
     overviewTitle: "Overview",
@@ -25,22 +25,22 @@ export const productCardRedesign: Project = {
     overviewTitle: "Product Card Redesign",
     description:
       "The product card is the first thing a borrower sees in the application flow, so it had to be clear and easy to understand. The card changes depending on the stage of the journey, but this version shows the very beginning of the application. At this point, I was trying different ideas with illustrations, colours, and photos to see what worked best and still met the project requirements.",
-    imageUrl: "/src/assets/ApplicationCards/startSection.png",
+    imageUrl: "/src/assets/MyProjects/ApplicationCards/startSection.png",
   },
   imageSection01: {
     title: "Requirements",
     description:
       "The requirements for this feature focused on showing the borrower which stage of the application they were currently in. There were three main stages: Eligibility Checker (stage one), Full Application (stage two), and Submitted, which means the borrower has completed the process. In addition to the stage, the design also needed to show the status of the application — indicating whose hands the application was currently in. Both the stage and the status needed to be flexible, as they could change over time.",
     images: [
-      "/src/assets/ApplicationCards/TheFlow.png",
-      "/src/assets/ApplicationCards/ProductCardElements.png",
+      "/src/assets/MyProjects/ApplicationCards/TheFlow.png",
+      "/src/assets/MyProjects/ApplicationCards/ProductCardElements.png",
     ],
   },
   imageSection02: {
     title: "Moodboard",
     description:
       "Like with most of my projects, I started with a moodboard. This helped me understand the look and feel I wanted to achieve. For this card, I needed to include many elements, such as the logo, application stages, statuses, and other details. Having a moodboard and some visual examples gave me a good starting point and made it easier to explore different ideas.",
-    imageUrl: "/src/assets/ApplicationCards/moodboard.png",
+    imageUrl: "/src/assets/MyProjects/ApplicationCards/moodboard.png",
   },
   imageSection03: {
     title: "Wireframes",
@@ -49,15 +49,15 @@ export const productCardRedesign: Project = {
     description2:
       "The wireframes helped me organise elements such as the logo, application stage, status, dates, call-to-action buttons, and any required user actions. I also mapped simple logic flows, like when the “Continue” button should appear and when the user should see an action required.This process of iteration made it easier to compare different layouts, remove unnecessary elements, and focus on the clearest way to show the application state. Usually I sak for a lot of feedback during this phase to make sure I'm on the right track.",
     images: [
-      "/src/assets/ApplicationCards/wireframes.png",
-      "/src/assets/ApplicationCards/wireframes02.png",
+      "/src/assets/MyProjects/ApplicationCards/wireframes.png",
+      "/src/assets/MyProjects/ApplicationCards/wireframes02.png",
     ],
   },
 
   sectionMiddle: {
     title: "High fidelity design",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/ApplicationCards/hiFi.png",
+    imageUrl: "/src/assets/MyProjects/ApplicationCards/hiFi.png",
   },
 
   showcaseGallery: {
