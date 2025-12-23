@@ -31,21 +31,6 @@ export default function ProjectsPage() {
           </div>
           {/* Projects Cards Group */}
           <ProjectCardsGrid projects={projectCardsData} />
-          {/* <div className="grid md:grid-cols-2 gap-12">
-            {projectCardsData.map((project, index) => (
-              <div
-                key={project.id}
-                style={{ animationDelay: `${index * 100}ms` }}
-                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
-              >
-                <ProjectCard
-                  {...project}
-                  onClick={() => navigate(`/projects/${project.id}`)}
-                  disabled={project.comingSoon}
-                />
-              </div>
-            ))}
-          </div> */}
         </div>
         {/* Scroll to Top Button */}
         <ScrollToTop />
