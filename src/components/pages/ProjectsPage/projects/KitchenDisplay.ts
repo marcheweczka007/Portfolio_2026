@@ -5,7 +5,7 @@ export const kitchenDisplay: Project = {
   title: "Kitchen Display System",
   description:
     "Designed an alternative application flow for declined credit card applicants to apply for Grand Bank loans with customizable add-ons, e-sign their application, and track status via mobile app.",
-  imageUrl: "/src/assets/KitchenDisplay/Hero.png",
+  imageUrl: "/src/assets/MyProjects/KitchenDisplay/Hero.png",
   tags: ["Kitchen Display", "SaaS", "Business"],
   year: "",
   role: "Product Designer",
@@ -28,14 +28,14 @@ export const kitchenDisplay: Project = {
   sectionStart: {
     overviewTitle: "Discovery",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/KitchenDisplay/moodboard.png",
+    imageUrl: "/src/assets/MyProjects/KitchenDisplay/moodboard.png",
   },
 
   imageSection01: {
     title: "Personas",
     description:
       "This is a mapping of the loan application flow for Grand Bank. It shows the different steps involved in the loan application process. We used this to understand the user flow and design around any constraints or limitations.",
-    imageUrl: "/src/assets/KitchenDisplay/Personas.png",
+    imageUrl: "/src/assets/MyProjects/KitchenDisplay/personas.png",
   },
   imageSection02: {
     title: "Low fidelity sketches",
@@ -58,18 +58,18 @@ export const kitchenDisplay: Project = {
   sectionMiddle: {
     title: "Members view",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/OneView/SectionMid.png",
+    imageUrl: "/src/assets/MyProjects/OneView/SectionMid.png",
   },
   sideBySideSectionsLeft: [
     {
       title: "Invite member",
       description: "Placeholder Text",
-      image: "/src/assets/OneView/InviteMember.png",
+      image: "/src/assets/MyProjects/OneView/InviteMember.png",
     },
     {
       title: "Lender view",
       description: "Placeholder Text",
-      image: "/src/assets/OneView/LenderView.png",
+      image: "/src/assets/MyProjects/OneView/LenderView.png",
     },
   ],
 
