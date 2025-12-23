@@ -1,8 +1,8 @@
 import React from "react";
 import Timeline from "../../ui/CustomUI/Timeline";
-import ascentLogo from "../../../assets/experience/ascentplatformLogo.jpg";
-import grafterrLogo from "../../../assets/experience/grafterrLogo.png";
-import infracostLogo from "../../../assets/experience/infracostLogo.png";
+import ascentLogo from "../../../assets/EmployersLogos/ascentplatformLogo.jpg";
+import grafterrLogo from "../../../assets/EmployersLogos/grafterrLogo.png";
+import infracostLogo from "../../../assets/EmployersLogos/infracostLogo.png";
 import aboutContent from "./aboutData.ts";
 import { Button } from "../../ui/button.tsx";
 import { ScrollToTop } from "../../ui/scrollToTop.tsx";
