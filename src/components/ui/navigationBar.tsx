@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import logoImage from "../../assets/LogoZuPortfolioV2.svg?url";
+import logoImage from "../../assets/Logo/LogoZuPortfolioV2.svg?url";
 import { Button } from "./button";
 import { SendHorizontal, Menu, X, Download } from "lucide-react";
 const headerContent = {
