@@ -10,6 +10,8 @@ import homeContent from "./homeData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import { CTASection } from "../../ui/CustomUI/CTASection";
 import { ScrollToTop } from "../../ui/scrollToTop.tsx";
+import { ProjectCardsGrid } from "../ProjectDetailPage/ProjectsCardsGroup.tsx";
+import { projectCardsData } from "../ProjectsPage/projects/projects.ts";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -173,7 +175,8 @@ export default function HomePage() {
             </Button>
           </div>
           {/* Projects Cards Group */}
-          <div className="grid md:grid-cols-2 gap-12">
+          <ProjectCardsGrid projects={projectCardsData} />
+          {/* <div className="grid md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
               <div
                 key={project.id}
@@ -191,8 +194,8 @@ export default function HomePage() {
                 />
               </div>
             ))}
-          </div>
-          
+          </div> */}
+
           {/* Scroll to Top Button */}
           <ScrollToTop />
         </div>

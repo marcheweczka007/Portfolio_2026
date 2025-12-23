@@ -6,7 +6,7 @@ import projectsData from "./projectsData.ts";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import BackButton from "../../pageUtilities/BackButton.tsx";
 import { ScrollToTop } from "../../ui/scrollToTop.tsx";
-
+import { ProjectCardsGrid } from "../ProjectDetailPage/ProjectsCardsGroup.tsx";
 export default function ProjectsPage() {
   const navigate = useNavigate();
 
@@ -30,7 +30,8 @@ export default function ProjectsPage() {
             </div>
           </div>
           {/* Projects Cards Group */}
-          <div className="grid md:grid-cols-2 gap-12">
+          <ProjectCardsGrid projects={projectCardsData} />
+          {/* <div className="grid md:grid-cols-2 gap-12">
             {projectCardsData.map((project, index) => (
               <div
                 key={project.id}
@@ -44,7 +45,7 @@ export default function ProjectsPage() {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         {/* Scroll to Top Button */}
         <ScrollToTop />
