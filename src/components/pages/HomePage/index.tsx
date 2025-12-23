@@ -112,7 +112,7 @@ export default function HomePage() {
 
             {/* Projects Overview */}
             <Card
-              className="group relative bg-gradient-to-br from-orange-500 to-orange-300 text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient p-0"
+              className="group relative bg-gradient-to-br from-orange-500 to-orange-300 text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient "
               onClick={() => navigate("/projects")}
             >
               <div className="absolute top-8 right-8 text-[120px] leading-none opacity-[0.08] select-none">
@@ -172,12 +172,13 @@ export default function HomePage() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Projects Cards Group */}
+          <div className="grid md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
               <div
                 key={project.id}
                 style={{ animationDelay: `${index * 100}ms` }}
-                className="animate-in fade-in slide-in-from-bottom-4 duration-500"
+                className="animate-in fade-in slide-in-from-bottom-4 duration-500 "
               >
                 <ProjectCard
                   {...project}
@@ -191,6 +192,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          
           {/* Scroll to Top Button */}
           <ScrollToTop />
         </div>

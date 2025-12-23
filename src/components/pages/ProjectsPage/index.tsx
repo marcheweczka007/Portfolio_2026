@@ -29,7 +29,8 @@ export default function ProjectsPage() {
               </p>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-4">
+          {/* Projects Cards Group */}
+          <div className="grid md:grid-cols-2 gap-12">
             {projectCardsData.map((project, index) => (
               <div
                 key={project.id}

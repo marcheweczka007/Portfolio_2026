@@ -37,9 +37,7 @@ export function ProjectCard({
   return (
     <div
       aria-disabled={disabled}
-      className={`group ${
-        disabled ? "cursor-not-allowed" : "cursor-pointer"
-      }`}
+      className={`group ${disabled ? "cursor-not-allowed" : "cursor-pointer"}`}
       onClick={disabled ? undefined : onClick}
     >
       <div
