@@ -4,7 +4,7 @@ export const productCardRedesign: Project = {
   id: "Product-Card-Redesign",
   title: "Product Card Redesign",
   description:
-    "Improve the UX and design of the product card interface for loan applications.",
+    "This project required me to improve the interface but also the information that is displayed on the card, to increase the application completion rate. The project was a collaboration with the product manager and the developer, and I was given a lot of creative freedom to explore new layouts and visual ideas.",
   imageUrl: "/src/assets/MyProjects/ApplicationCards/ApplicationCards.png",
   tags: ["Re-design", "Loan Application", "SaaS"],
   overviewSection: {
