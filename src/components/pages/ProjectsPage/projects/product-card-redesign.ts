@@ -59,21 +59,25 @@ export const productCardRedesign: Project = {
   },
     sectionMiddle: {
     title: "Product Categories",
-    description: "Placeholder Text",
+    description: "Each product category has a different card design to help the borrower understand the product and what they need to do to apply. The initial idea was to use, photos, illustrations, or just a colour to distinguish the different categories. My goal was to ensure the card is accessible, so the only colour to distingusing the categories was not an option, as it would not be accessible for users with colour blindness. I was leaning to develop simple illustartions to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
     imageUrl: "/src/assets/MyProjects/ApplicationCards/sizing.png",
   },
 
   sideBySideSectionsLeft: [
     {
-      title: "Product Categories",
-      description: "Placeholder Text",
-      image: "/src/assets/MyProjects/ApplicationCards/categories.png",
+      title: "Colour only",
+      description: "The only colour to distinguish the categories was not an option, as it would not be accessible for users with colour blindness.",
+      image: "/src/assets/MyProjects/ApplicationCards/colourOnly.png",
     },
     {
-      title: "Sizes",
-      description:
-        "Ensure the card is responsive and looks good on all devices. We needed to make sure the illustration will still look good on smaller horizontal cards.",
-      image: "/src/assets/MyProjects/ApplicationCards/sizing.png",
+      title: "Illustrations",
+      description: "Illustrations were another option to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
+      image: "/src/assets/MyProjects/ApplicationCards/illustrations.png",
+    },
+    {
+      title: "Photos",
+      description: "Photos were the final option to distinguish the categories, and I ended up using photos to make the card more engaging and visually appealing.",
+      image: "/src/assets/MyProjects/ApplicationCards/photos.png",
     },
   ],
 
@@ -102,10 +106,8 @@ export const productCardRedesign: Project = {
     title: "Final outcome",
     description: "Final outcome of the e-book, business card and leaflet.",
     images: [
-      "/src/assets/E-bookProject/BusinessCardsFinal.png",
-      "/src/assets/E-bookProject/LeafletFinal.png",
-      "/src/assets/E-bookProject/EbookFinal01.png",
-      "/src/assets/E-bookProject/EbookFinal02.png",
+      "/src/assets/MyProjects/ApplicationCards/final01.png",
+      "/src/assets/MyProjects/ApplicationCards/final02.png",
     ],
   },
   results: [
