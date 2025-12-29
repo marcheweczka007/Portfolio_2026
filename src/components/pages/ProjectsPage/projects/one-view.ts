@@ -8,6 +8,10 @@ export const oneView: Project = {
   imageUrl: "/src/assets/MyProjects/OneView/OneView.png",
   tags: ["SaaS Product", "Dashboard", "FinTech UX"],
   overviewSection: {
+    overviewYear: "2025",
+    overviewDuration: "6 months",
+    overviewRole: "Product Designer",
+    overviewClient: "Ascent Platform",
     overviewTitle: "Overview",
     overviewDescription:
       "Designing a dashboard that gives lenders a clear, unified 360° view of each borrower. The goal was to bring all key information into one place, helping lenders make better, more personalised decisions based on data from the Ascent platform and external sources.",
