@@ -7,11 +7,11 @@ export const kitchenDisplay: Project = {
     "Designed an alternative application flow for declined credit card applicants to apply for Grand Bank loans with customizable add-ons, e-sign their application, and track status via mobile app.",
   imageUrl: "/src/assets/MyProjects/KitchenDisplay/Hero.png",
   tags: ["Kitchen Display", "SaaS", "Business"],
-  year: "",
-  role: "Product Designer",
-  client: "Grand Bank",
-  duration: "2 months",
   overviewSection: {
+    overviewYear: "2023",
+    overviewDuration: "4 months",
+    overviewRole: "Junior UX/UI Designer",
+    overviewClient: "Grafterr",
     overviewTitle: "Overview",
     overviewDescription:
       "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
