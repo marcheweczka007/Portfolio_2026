@@ -11,6 +11,10 @@ export const infracostProjects: Project = {
   tags: ["E-book", "Business card", "Leaflet"],
   year: "",
   overviewSection: {
+    overviewYear: "2024",
+    overviewDuration: "1 month",
+    overviewRole: "Graphic Designer",
+    overviewClient: "Infracost",
     overviewTitle: "Overview",
     overviewDescription:
       "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
@@ -70,7 +74,8 @@ export const infracostProjects: Project = {
     title: "Business card",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
-    imageUrl: "/src/assets/MyProjects/E-bookProject/BusinessCardSectionMiddle.png",
+    imageUrl:
+      "/src/assets/MyProjects/E-bookProject/BusinessCardSectionMiddle.png",
   },
   sideBySideSectionsLeft: [
     {
