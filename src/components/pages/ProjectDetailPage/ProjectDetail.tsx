@@ -47,6 +47,13 @@ export function ProjectDetail({
     return id;
   };
 
+  // Helper function to get subsection IDs from TOC for a given section
+  const getSubsectionIds = (sectionId: string | undefined): string[] => {
+    if (!sectionId || !toc) return [];
+    const tocItem = toc.items.find((item) => item.id === sectionId);
+    return tocItem?.subsections?.map((sub) => sub.id) || [];
+  };
+
   // Use tableOfContents
   const toc = project.tableOfContents;
 
@@ -172,7 +179,7 @@ export function ProjectDetail({
           <SideBySideSection
             sections={project.sideBySideSectionsLeft}
             imagePosition="left"
-            subsectionIds={["members-wireframes", "members-card"]}
+            subsectionIds={getSubsectionIds(getSectionId("sectionMiddle"))}
             projectTitle={project.title}
             className="mb-16"
           />
@@ -197,7 +204,7 @@ export function ProjectDetail({
           <SideBySideSection
             sections={project.sideBySideSectionsRight}
             imagePosition="right"
-            subsectionIds={["leaflet-section-1", "leaflet-section-2"]}
+            subsectionIds={getSubsectionIds(getSectionId("sectionEnd"))}
             projectTitle={project.title}
           />
         )}

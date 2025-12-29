@@ -57,26 +57,30 @@ export const productCardRedesign: Project = {
       "/src/assets/MyProjects/ApplicationCards/wireframes02.png",
     ],
   },
-    sectionMiddle: {
+  sectionMiddle: {
     title: "Product Categories",
-    description: "Each product category has a different card design to help the borrower understand the product and what they need to do to apply. The initial idea was to use, photos, illustrations, or just a colour to distinguish the different categories. My goal was to ensure the card is accessible, so the only colour to distingusing the categories was not an option, as it would not be accessible for users with colour blindness. I was leaning to develop simple illustartions to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
+    description:
+      "Each product category has a different card design to help the borrower understand the product and what they need to do to apply. The initial idea was to use, photos, illustrations, or just a colour to distinguish the different categories. My goal was to ensure the card is accessible, so the only colour to distingusing the categories was not an option, as it would not be accessible for users with colour blindness. I was leaning to develop simple illustartions to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
     imageUrl: "/src/assets/MyProjects/ApplicationCards/sizing.png",
   },
 
   sideBySideSectionsLeft: [
     {
       title: "Colour only",
-      description: "The only colour to distinguish the categories was not an option, as it would not be accessible for users with colour blindness.",
+      description:
+        "The only colour to distinguish the categories was not an option, as it would not be accessible for users with colour blindness.",
       image: "/src/assets/MyProjects/ApplicationCards/colourOnly.png",
     },
     {
       title: "Illustrations",
-      description: "Illustrations were another option to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
+      description:
+        "Illustrations were another option to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
       image: "/src/assets/MyProjects/ApplicationCards/illustrations.png",
     },
     {
       title: "Photos",
-      description: "Photos were the final option to distinguish the categories, and I ended up using photos to make the card more engaging and visually appealing.",
+      description:
+        "Photos were the final option to distinguish the categories, and I ended up using photos to make the card more engaging and visually appealing.",
       image: "/src/assets/MyProjects/ApplicationCards/photos.png",
     },
   ],
@@ -90,29 +94,30 @@ export const productCardRedesign: Project = {
   sideBySideSectionsRight: [
     {
       title: "Before re-design",
-      description: "Placeholder Text",
+      description:
+        "Before the redesign, the cards displayed too much content, which made it hard for users to find the information they needed. The colours and icons were not consistent, and colour was sometimes misleading—for example, a blue tick suggested that no action was required. The cards were also not responsive and did not look good across all devices.",
       image: "/src/assets/MyProjects/ApplicationCards/before.png",
     },
     {
       title: "After re-design",
       description:
-        "Ensure the card is responsive and looks good on all devices. We needed to make sure the illustration will still look good on smaller horizontal cards.",
+        "After the redesign, the cards followed a more consistent design with a clear hierarchy and colour scheme. Icons and colours were used consistently, making the information easier to understand. The cards were also responsive and looked good across all devices.",
       image: "/src/assets/MyProjects/ApplicationCards/DevReady.pdf",
     },
   ],
 
-
   showcaseGallery: {
     title: "Final outcome",
-    description: "Final outcome of the e-book, business card and leaflet.",
+    description:
+      "The final design gives borrowers a clear place to see all their applications and products. Current applications are easy to understand, with clear statuses, stages, and next steps, so borrowers know what is in progress and what they need to do next. Available products are shown as simple cards, making it easy to compare options and start a new application. Overall, the experience feels more organised, reduces confusion, and helps borrowers move through the application flow with more confidence.",
     images: [
       "/src/assets/MyProjects/ApplicationCards/final01.png",
       "/src/assets/MyProjects/ApplicationCards/final02.png",
     ],
   },
   results: [
-    "I can honestly say, this project was so much fun to work on. I had pleasure to work with Infracost team, and they were great in to work with. I'm please with the outcome and the work we did together.",
-    "I’m always excited to take on new projects and challenge myself, whether it’s a graphic design project or a coding project. I’m keen to challenge myself and learn new things along the way.",
+    "I’m overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
+    "Working on this project solo was exciting, as it gave me the freedom to explore different design ideas and bring them to life. I worked closely with the product manager and developer to understand the business needs and how the cards fit into the overall application flow.",
   ],
   sectionIds: {
     overviewTitle: "overviewTitle",
@@ -120,11 +125,12 @@ export const productCardRedesign: Project = {
     imageSection01: "Image01",
     imageSection02: "Image02",
     imageSection03: "Image03",
-    sectionMiddle: "hiFidelity",
+    sectionMiddle: "product-categories",
+    sideBySideSectionsLeft: "product-options",
+    sectionEnd: "high-fidelity-design",
+    sideBySideSectionsRight: "before-after",
     showcaseGallery: "final-outcome",
     results: "results",
-    sideBySideSectionsLeft: "sideBySideSectionsLeft",
-    sideBySideSectionsRight: "sideBySideSectionsRight",
   },
   tableOfContents: {
     title: "Table of Contents",
@@ -143,16 +149,18 @@ export const productCardRedesign: Project = {
         ],
       },
       {
-        id: "sectionMiddle",
+        id: "product-categories",
         label: "Product Categories",
         subsections: [
-          { id: "sideBySideSectionsLeft", label: "Type of product" },
+          { id: "colour-only", label: "Colour only" },
+          { id: "illustrations", label: "Illustrations" },
+          { id: "photos", label: "Photos" },
         ],
       },
       {
-        id: "sectionEnd",
+        id: "high-fidelity-design",
         label: "High fidelity design",
-        subsections: [{ id: "results", label: "Before vs After" }],
+        subsections: [{ id: "before-after", label: "Before vs After" }],
       },
       {
         id: "final-outcome",
