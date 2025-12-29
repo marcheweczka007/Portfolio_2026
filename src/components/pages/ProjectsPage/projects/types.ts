@@ -37,7 +37,9 @@ export type SectionIdKey =
   | "imageSection04"
   | "imageSection05"
   | "showcaseGallery"
-  | "results";
+  | "results"
+  | "sideBySideSectionsLeft"
+  | "sideBySideSectionsRight";
 
 // Minimal type for ProjectCard display
 export interface ProjectCardData {

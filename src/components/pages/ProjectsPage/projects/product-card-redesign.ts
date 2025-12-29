@@ -53,12 +53,46 @@ export const productCardRedesign: Project = {
       "/src/assets/MyProjects/ApplicationCards/wireframes02.png",
     ],
   },
-
-  sectionMiddle: {
-    title: "High fidelity design",
+    sectionMiddle: {
+    title: "Product Categories",
     description: "Placeholder Text",
+    imageUrl: "/src/assets/MyProjects/ApplicationCards/sizing.png",
+  },
+
+  sideBySideSectionsLeft: [
+    {
+      title: "Product Categories",
+      description: "Placeholder Text",
+      image: "/src/assets/MyProjects/ApplicationCards/categories.png",
+    },
+    {
+      title: "Sizes",
+      description:
+        "Ensure the card is responsive and looks good on all devices. We needed to make sure the illustration will still look good on smaller horizontal cards.",
+      image: "/src/assets/MyProjects/ApplicationCards/sizing.png",
+    },
+  ],
+
+  sectionEnd: {
+    title: "High fidelity design",
+    description:
+      "The high-fidelity designs below show three different states of the product card, based on the stage of the application. The top left card is what the borrower sees first when looking for the right loan to apply for. The top right card shows an application in progress, where the borrower can see where they left off and what they need to do next. The bottom left card represents a live application, showing the current status, submission date, and amount borrowed. From here, the borrower can view the application or add any missing information. ",
     imageUrl: "/src/assets/MyProjects/ApplicationCards/hiFi.png",
   },
+  sideBySideSectionsRight: [
+    {
+      title: "Before re-design",
+      description: "Placeholder Text",
+      image: "/src/assets/MyProjects/ApplicationCards/before.png",
+    },
+    {
+      title: "After re-design",
+      description:
+        "Ensure the card is responsive and looks good on all devices. We needed to make sure the illustration will still look good on smaller horizontal cards.",
+      image: "/src/assets/MyProjects/ApplicationCards/DevReady.pdf",
+    },
+  ],
+
 
   showcaseGallery: {
     title: "Final outcome",
@@ -83,6 +117,8 @@ export const productCardRedesign: Project = {
     sectionMiddle: "hiFidelity",
     showcaseGallery: "final-outcome",
     results: "results",
+    sideBySideSectionsLeft: "sideBySideSectionsLeft",
+    sideBySideSectionsRight: "sideBySideSectionsRight",
   },
   tableOfContents: {
     title: "Table of Contents",
@@ -101,14 +137,16 @@ export const productCardRedesign: Project = {
         ],
       },
       {
-        id: "hiFidelity",
-        label: "High fidelity design",
+        id: "sectionMiddle",
+        label: "Product Categories",
         subsections: [
-          { id: "business-card-section-1", label: "Experimentation phase" },
-          { id: "business-card-section-2", label: "Examples for client" },
-          { id: "business-card-section-3", label: "Final outcome" },
-          { id: "business-card-section-4", label: "Reflection" },
+          { id: "sideBySideSectionsLeft", label: "Type of product" },
         ],
+      },
+      {
+        id: "sectionEnd",
+        label: "High fidelity design",
+        subsections: [{ id: "results", label: "Before vs After" }],
       },
       {
         id: "final-outcome",

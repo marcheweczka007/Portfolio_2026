@@ -89,7 +89,7 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.processesTitle}</h2>
                 </div>
-                <p className="text-md text-gray-600 mb-8 leading-relaxed">
+                <p className="text-md text-gray-800 mb-8 leading-relaxed">
                   {homeContent.processesDescription}
                 </p>
                 <div className="space-y-1">
@@ -114,7 +114,7 @@ export default function HomePage() {
 
             {/* Projects Overview */}
             <Card
-              className="group relative bg-gradient-to-br from-orange-500 to-orange-300 text-white rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient "
+              className="group relative bg-gradient-to-br from-orange-300 to-orange-200 text-black rounded-3xl border-0 overflow-hidden hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 cursor-pointer animate-gradient "
               onClick={() => navigate("/projects")}
             >
               <div className="absolute top-8 right-8 text-[120px] leading-none opacity-[0.08] select-none">
@@ -128,7 +128,7 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.projectsTitle}</h2>
                 </div>
-                <p className="text-md text-white/90 mb-8 leading-relaxed">
+                <p className="text-md text-gray-800 mb-8 leading-relaxed">
                   {homeContent.projectsDescription}
                 </p>
                 <div className="space-y-1">
