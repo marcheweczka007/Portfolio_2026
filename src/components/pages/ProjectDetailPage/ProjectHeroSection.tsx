@@ -1,4 +1,5 @@
 import React from "react";
+import { Tag } from "../../ui/CustomUI/tag";
 
 interface ProjectHeroSectionProps {
   title: string;
@@ -16,10 +17,7 @@ export function ProjectHeroSection({
   sectionId,
 }: ProjectHeroSectionProps) {
   return (
-    <section
-      className="container mx-auto max-w-6xl px-6 mb-10"
-      id={sectionId}
-    >
+    <section className="container mx-auto max-w-6xl px-6 mb-10" id={sectionId}>
       <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
         Project
       </p>
@@ -29,12 +27,9 @@ export function ProjectHeroSection({
       <p className="tracking-wide text-gray-500 mt-3 pb-4">{description}</p>
       <div className="flex flex-wrap gap-2 mb-8">
         {tags.map((tag) => (
-          <span
-            key={tag}
-            className="px-3 py-1 bg-orange-50 border border-orange-200/20 rounded-full text-orange-600 text-xs"
-          >
+          <Tag key={tag} size="sm">
             {tag}
-          </span>
+          </Tag>
         ))}
       </div>
 
@@ -49,4 +44,3 @@ export function ProjectHeroSection({
     </section>
   );
 }
-

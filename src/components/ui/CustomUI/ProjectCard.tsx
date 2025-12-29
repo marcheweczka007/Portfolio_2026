@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { Tag } from "./tag";
 
 interface ProjectCardProps {
   title: string;
@@ -71,12 +72,9 @@ export function ProjectCard({
       <div className="flex items-center justify-between mb-4">
         <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 bg-orange-50 border border-orange-200/20 text-orange-600 rounded-full text-xs"
-            >
+            <Tag key={tag} size="xs">
               {tag}
-            </span>
+            </Tag>
           ))}
         </div>
         {year && (
