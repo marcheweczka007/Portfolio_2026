@@ -8,6 +8,11 @@ interface OverviewSectionData {
   executionDescription?: string;
   exectutionBullets?: string[];
   executionEnding?: string;
+  overviewYear?: string;
+  overviewDuration?: string;
+  overviewRole?: string;
+  overviewClient?: string;
+  detailsTitle?: string;
 }
 
 interface OverviewSectionProps {
@@ -21,10 +26,52 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
       className="flex flex-col gap-10 m-6 p-10  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
       id={sectionId}
     >
+      {/* OVERVIEW DETAILS */}
+      <div className="flex flex-row gap-4">
+        <h2 className="md:w-40 text-md text-gray-50 uppercase">Detials</h2>
+        <div className="flex flex-row gap-4 justify-between flex-1">
+          <div className="flex flex-col gap-2">
+            <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
+              Role
+            </p>
+            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+              {data.overviewRole}
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            {" "}
+            <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
+              Client
+            </p>
+            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+              {data.overviewClient}
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
+              Duration
+            </p>
+            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+              {data.overviewDuration}
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
+              Year
+            </p>
+            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+              {data.overviewYear}
+            </p>
+          </div>
+        </div>
+      </div>
       {/* OVERVIEW ROW */}
       <div className="flex flex-col md:flex-row gap-4">
         <h2 className="md:w-40 text-md text-gray-50 uppercase">Overview</h2>
-        <p className="flex-1 text-md text-gray-50 leading-7 tracking-wide">
+        <p className="flex-1 text-md text-gray-50 leading-7 text-justify tracking-wide">
           {data.overviewDescription}
         </p>
       </div>
@@ -35,7 +82,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
           <h2 className="md:w-40 text-md text-gray-50 uppercase">Execution</h2>
 
           <div className="flex-1 flex flex-col gap-3">
-            <p className="text-md text-gray-50 leading-7 tracking-wide le">
+            <p className="text-md text-gray-50 leading-7 text-justify tracking-wide le">
               {data.executionDescription}
             </p>
 
@@ -47,7 +94,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
                     key={index}
                     className="flex items-start gap-4 pt-6 border-b border-gray-700 pb-6 text-sm tracking-wide leading-relaxed tracking-wide last:border-b-0 text-gray-200"
                   >
-                    <Check className="bg-orange-50 rounded-full p-0.5 w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <Check className="bg-orange-50/10 rounded-full p-0.5 w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
                     <span>{bullet}</span>
                   </li>
                 ))}
