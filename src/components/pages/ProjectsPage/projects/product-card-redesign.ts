@@ -8,7 +8,11 @@ export const productCardRedesign: Project = {
   imageUrl: "/src/assets/MyProjects/ApplicationCards/ApplicationCards.png",
   tags: ["Re-design", "Loan Application", "SaaS"],
   overviewSection: {
+    overviewYear: "2025",
+    overviewDuration: "2 months",
+    overviewRole: "Product Designer",
     overviewTitle: "Overview",
+    overviewClient: "Ascent Platform",
     overviewDescription:
       "This project focused on redesigning the product cards borrowers interact with during the application flow. Unlike many other projects, I wasn’t limited by a design system, which gave me the freedom to explore new layouts and visual ideas. A core challenge was understanding how borrowers used these cards and why many struggled to recognise which applications were active, incomplete, or required action.",
     executionTitle: "Execution",

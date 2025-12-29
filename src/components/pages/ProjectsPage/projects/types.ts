@@ -70,6 +70,11 @@ export interface Project extends ProjectCardData {
     executionDescription?: string;
     exectutionBullets?: string[];
     executionEnding?: string;
+    overviewYear?: string;
+    overviewDuration?: string;
+    overviewRole?: string;
+    overviewClient?: string;
+    detailsTitle?: string;
   };
   // Allow additional properties for flexibility
   [key: string]: any;
