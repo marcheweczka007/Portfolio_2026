@@ -51,6 +51,47 @@ export const kiosk: Project = {
     description: "Placeholder Text",
     imageUrl: "/src/assets/MyProjects/Kiosk/wireframes.png",
   },
+
+  sectionMiddle: {
+    title: "Wireframes",
+    description: "Placeholder Text",
+    imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+  },
+  sideBySideSectionsLeft: [
+    {
+      title: "Self-checkout experience",
+      description: "Placeholder Text",
+      imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+    },
+  ],
+  twoColumnSection: [
+    {
+      title: "Wireframes",
+      description: "Placeholder Text",
+      images: ["/src/assets/MyProjects/Kiosk/KioskUser.png", "/src/assets/MyProjects/Kiosk/KioskUser.png"],
+    },
+  ],
+  sectionEnd: {
+    title: "High fidelity designs",
+    description: "Placeholder Text",
+    imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+  },
+  sideBySideSectionsRight: [
+    {
+      title: "High fidelity flows",
+      description: "Placeholder Text",
+      imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+    },
+  ],
+  showcaseGallery: {
+    title: "Final outcome",
+    description: "Placeholder Text",
+    images: ["/src/assets/MyProjects/Kiosk/KioskUser.png", "/src/assets/MyProjects/Kiosk/KioskUser.png"],
+  },
+  results: [
+    "I'm overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
+  ],
+  
   sectionIds: {
     overviewTitle: "overviewTitle",
     sectionStart: "self-checkout-experience",
