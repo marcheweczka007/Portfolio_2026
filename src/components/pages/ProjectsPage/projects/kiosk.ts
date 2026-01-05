@@ -49,43 +49,44 @@ export const kiosk: Project = {
   imageSection03: {
     title: "Moodboard",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/MyProjects/Kiosk/wireframes.png",
+    imageUrl: "/src/assets/MyProjects/Kiosk/moodboard.png",
   },
 
   sectionMiddle: {
     title: "Wireframes",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+    imageUrl: "/src/assets/MyProjects/Kiosk/moodbaord.png",
   },
   sideBySideSectionsLeft: [
     {
-      title: "Initial Sketches",
+      title: "Original kiosk design",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      image: "/src/assets/MyProjects/Kiosk/OriginalKiosk.png",
     },
   ],
   twoColumnSection: [
     {
-      title: "Original kiosk design",
+      title: "Components",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      image: "/src/assets/MyProjects/Kiosk/Components.png",
     },
     {
-      title: "Wireframes Detail",
+      title: "Wireframe sketches",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      image: "/src/assets/MyProjects/Kiosk/Sketch.png",
     },
   ],
   sectionEnd: {
     title: "High fidelity designs",
-    description: "Placeholder Text",
-    imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+    description:
+      "White labelling was a key requirement for the kiosk. We needed to be able to brand the kiosk with the client's logo and colours.",
+    imageUrl: "/src/assets/MyProjects/Kiosk/ExampleScreensKiosk.png",
   },
   sideBySideSectionsRight: [
     {
-      title: "High fidelity flows",
+      title: "White labelling",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      image: "/src/assets/MyProjects/Kiosk/WhiteLabelling.png",
     },
   ],
   showcaseGallery: {
