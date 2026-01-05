@@ -51,4 +51,32 @@ export const kiosk: Project = {
     description: "Placeholder Text",
     imageUrl: "/src/assets/MyProjects/Kiosk/wireframes.png",
   },
+  sectionIds: {
+    overviewTitle: "overviewTitle",
+    sectionStart: "self-checkout-experience",
+    imageSection01: "competitor-analysis",
+    imageSection02: "requirements",
+    imageSection03: "moodboard",
+  },
+  tableOfContents: {
+    title: "Table of Contents",
+    items: [
+      {
+        id: "overviewTitle",
+        label: "Project Overview",
+      },
+      {
+        id: "self-checkout-experience",
+        label: "Self-checkout experience",
+        subsections: [
+          {
+            id: "competitor-analysis",
+            label: "Competitor Analysis & Initial Sketch",
+          },
+          { id: "requirements", label: "Requirements" },
+          { id: "moodboard", label: "Moodboard" },
+        ],
+      },
+    ],
+  },
 };
