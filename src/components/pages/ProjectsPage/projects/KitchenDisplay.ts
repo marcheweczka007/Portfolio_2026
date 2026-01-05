@@ -4,25 +4,25 @@ export const kitchenDisplay: Project = {
   id: "kitchen-display",
   title: "Kitchen Display System",
   description:
-    "Designed an alternative application flow for declined credit card applicants to apply for Grand Bank loans with customizable add-ons, e-sign their application, and track status via mobile app.",
+    "This project involved designing new features for a restaurant kitchen display system used by chefs, servers, and kitchen staff. The system supports day-to-day kitchen operations by showing orders, their status, and what actions are needed next. The new functionality aimed to improve communication across teams, reduce delays, and make it easier to manage complex order flows in busy restaurant environments.",
   imageUrl: "/src/assets/MyProjects/KitchenDisplay/Hero.png",
   tags: ["Kitchen Display", "SaaS", "Business"],
   overviewSection: {
     overviewYear: "2023",
-    overviewDuration: "4 months",
+    overviewDuration: "3 months",
     overviewRole: "Junior UX/UI Designer",
     overviewClient: "Grafterr",
     overviewTitle: "Overview",
     overviewDescription:
-      "Collaboration with Infracost to create an e-book for the FinOps community. The e-book helped visualise the benefits of FinOps and how it can help businesses save money.",
+      "This project focused on designing new functionality for a restaurant kitchen display system. The goal was to improve communication between servers, chefs, and kitchen staff, while helping teams manage orders more efficiently. The requirements covered the full order lifecycle, from course progression and cooking status to cancellations, timing alerts, and completed orders.",
     executionTitle: "Execution",
     executionDescription:
-      "This project was a collaboration with Infracost to create an e-book for  a FinOps community. Along with the e-book I designed a leaflet and business cards that were used diging the conference.",
+      "I started by reviewing the requirements and mapping out how orders move through the kitchen, from being placed to being served or completed. I focused on making key actions and statuses easy to understand at a glance, especially in a fast-paced kitchen environment. The design needed to clearly show what required attention, what was ready, and what had changed, while keeping the interface simple and easy to scan.",
     exectutionBullets: [
-      "Design and showcase the business cards",
-      "Ensure the leaflet is consistent with the company branding and prepare for printing",
-      "Create illustrations for the e-book to help visualise the benefits of FinOps and how it can help businesses save money",
-      "Create illustrations for the e-book to help visualise the benefits of FinOps and how it can help businesses save money",
+      "Designed clear visual states for orders, including timing alerts, cancellations, and ready-to-serve status",
+      "Explored colour-coding and visual cues to highlight urgent or overdue orders",
+      "Considered different workflows such as course-based and order-based serving",
+      "Supported more complex setups like multiple kitchen areas and supply chain flows",
     ],
   },
   sectionStart: {
@@ -38,21 +38,30 @@ export const kitchenDisplay: Project = {
     imageUrl: "/src/assets/MyProjects/KitchenDisplay/personas.png",
   },
   imageSection02: {
-    title: "Low fidelity sketches",
+    title: "Scenarios",
     description:
       "When time allowed, I would sketch out the different screens and flows for the loan application process. My go to tool was excalidraw. As it allows me to quickly sketch out ideas and iterate on them. I would then share the sketches with the team and get feedback on the different screens and flows. For this particular project, I did both desktop and mobile sketches. The clients requirement wa to go mobile first.",
     images: [
-      "/src/assets/GrandBank/Ideation/LowFiGB.png",
-      "/src/assets/GrandBank/Ideation/LowFiMobile.png",
+      "/src/assets/MyProjects/KitchenDisplay/scenarios.png",
+      "/src/assets/MyProjects/KitchenDisplay/scenarios02.png",
     ],
   },
   imageSection03: {
+    title: "Wireframes",
+    description:
+      "",
+    images: [
+      "/src/assets/MyProjects/KitchenDisplay/personaFlow.png",
+      "/src/assets/MyProjects/KitchenDisplay/notify.png",
+    ],
+  },
+  imageSection04: {
     title: "High fidelity wireframes",
     description:
-      "After the low fidelity sketches, I would then create high fidelity wireframes for the loan application process. I used Figma to create the wireframes. The client was able to see the different screens and flows for the loan application process and provide feedback on the different screens and flows. The client was also able to see the different interactions for the loan application process and provide feedback on the different interactions.",
+      "After the wireframes, I would then create high fidelity wireframes for the loan application process. I used Figma to create the wireframes. The client was able to see the different screens and flows for the loan application process and provide feedback on the different screens and flows. The client was also able to see the different interactions for the loan application process and provide feedback on the different interactions.",
     images: [
-      "/src/assets/GrandBank/Wireframes/WireframeGB.png",
-      "/src/assets/GrandBank/Wireframes/WireframeMobile.png",
+      "/src/assets/MyProjects/KitchenDisplay/hfWireframes.png",
+      "/src/assets/MyProjects/KitchenDisplay/hfWireframes02.png",
     ],
   },
   sectionMiddle: {
@@ -84,9 +93,10 @@ export const kitchenDisplay: Project = {
         id: "Placeholder Text",
         label: "Discovery",
         subsections: [
-          { id: "requirements", label: "Personas" },
-          { id: "process", label: "The Process" },
-          { id: "widgets", label: "Widgets & components" },
+          { id: "personas", label: "Personas" },
+          { id: "scenarios", label: "Scenarios" },
+          { id: "wireframes", label: "Wireframes" },
+          { id: "hfWireframes", label: "High fidelity wireframes" },
         ],
       },
       {

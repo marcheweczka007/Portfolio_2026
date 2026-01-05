@@ -3,7 +3,7 @@ import { kitchenDisplay } from "./KitchenDisplay";
 import { oneView } from "./one-view";
 import { productCardRedesign } from "./product-card-redesign";
 import { infracostProjects } from "./infracostProjects";
-import { codingProject1 } from "./coding-project-1";
+import { kiosk } from "./kiosk";
 import { codingProject2 } from "./coding-project-2";
 
 // Helper function to extract only ProjectCard required fields
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   infracostProjects,
   productCardRedesign,
   kitchenDisplay,
-  codingProject1,
+  kiosk,
   codingProject2,
 ];
 
