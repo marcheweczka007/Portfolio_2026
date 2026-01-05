@@ -33,7 +33,7 @@ export const kiosk: Project = {
     imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
   },
   imageSection01: {
-    title: "Competitor Analysis & Initial Sketch",
+    title: "Competitor Analysis",
     description:
       "At first I wanted to better understand how our competitors are approaching, not just the self-checkout experience, but the general purchasing process. I lookat at few different apps and went to a local fast food restaurant to observe the process in real life.",
     images: [
@@ -59,16 +59,21 @@ export const kiosk: Project = {
   },
   sideBySideSectionsLeft: [
     {
-      title: "Self-checkout experience",
+      title: "Initial Sketches",
       description: "Placeholder Text",
-      imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
     },
   ],
   twoColumnSection: [
     {
-      title: "Wireframes",
+      title: "Original kiosk design",
       description: "Placeholder Text",
-      images: ["/src/assets/MyProjects/Kiosk/KioskUser.png", "/src/assets/MyProjects/Kiosk/KioskUser.png"],
+      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+    },
+    {
+      title: "Wireframes Detail",
+      description: "Placeholder Text",
+      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
     },
   ],
   sectionEnd: {
@@ -80,24 +85,34 @@ export const kiosk: Project = {
     {
       title: "High fidelity flows",
       description: "Placeholder Text",
-      imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      image: "/src/assets/MyProjects/Kiosk/KioskUser.png",
     },
   ],
   showcaseGallery: {
     title: "Final outcome",
     description: "Placeholder Text",
-    images: ["/src/assets/MyProjects/Kiosk/KioskUser.png", "/src/assets/MyProjects/Kiosk/KioskUser.png"],
+    images: [
+      "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      "/src/assets/MyProjects/Kiosk/KioskUser.png",
+    ],
   },
   results: [
     "I'm overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
+    "I'm overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
   ],
-  
+
   sectionIds: {
     overviewTitle: "overviewTitle",
     sectionStart: "self-checkout-experience",
     imageSection01: "competitor-analysis",
     imageSection02: "requirements",
     imageSection03: "moodboard",
+    sectionMiddle: "wireframes",
+    sideBySideSectionsLeft: "self-checkout-experience-detail",
+    sectionEnd: "high-fidelity-designs",
+    sideBySideSectionsRight: "high-fidelity-flows",
+    showcaseGallery: "final-outcome",
+    results: "results",
   },
   tableOfContents: {
     title: "Table of Contents",
@@ -112,11 +127,34 @@ export const kiosk: Project = {
         subsections: [
           {
             id: "competitor-analysis",
-            label: "Competitor Analysis & Initial Sketch",
+            label: "Competitor Analysis",
           },
           { id: "requirements", label: "Requirements" },
           { id: "moodboard", label: "Moodboard" },
         ],
+      },
+      {
+        id: "wireframes",
+        label: "Wireframes",
+        subsections: [
+          {
+            id: "self-checkout-experience-detail",
+            label: "Initial Sketches",
+          },
+          { id: "before-and-after", label: "Original kiosk design" },
+        ],
+      },
+      {
+        id: "high-fidelity-designs",
+        label: "High fidelity designs",
+        subsections: [
+          { id: "high-fidelity-flows", label: "High fidelity flows" },
+        ],
+      },
+      {
+        id: "final-outcome",
+        label: "Final outcome",
+        subsections: [{ id: "results", label: "Reflection" }],
       },
     ],
   },
