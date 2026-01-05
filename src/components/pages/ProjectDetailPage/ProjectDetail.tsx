@@ -169,7 +169,20 @@ export function ProjectDetail({
       {project.twoColumnSection && (
         <TwoColumnSection
           items={project.twoColumnSection}
-          sectionId="members-wireframes"
+          sectionId={(() => {
+            // Try to find twoColumnSection ID from TOC
+            if (!toc) return "members-wireframes";
+            // Look for a subsection with "before-and-after" or similar
+            for (const item of toc.items) {
+              if (item.subsections) {
+                const subsection = item.subsections.find(
+                  (sub) => sub.id === "before-and-after"
+                );
+                if (subsection) return subsection.id;
+              }
+            }
+            return "members-wireframes"; // fallback
+          })()}
         />
       )}
 
