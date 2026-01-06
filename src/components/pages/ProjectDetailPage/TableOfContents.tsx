@@ -37,7 +37,7 @@ export function TableOfContents({
   };
 
   return (
-    <div className="hidden xl:block fixed left-6 top-40 z-30 w-58">
+    <div className="hidden xl:block fixed left-6 top-40 z-30 w-48">
       <div className="rounded-lg bg-white-80/20 shadow-lg border border-gray-100 px-5 py-4">
         <div className="flex items-center justify-between mb-4">
           <p className="text-sm font-semibold text-gray-900">{title}</p>
