@@ -57,27 +57,27 @@ export const kiosk: Project = {
     imageUrl: "/src/assets/MyProjects/Kiosk/wireframesGroup.png",
   },
   twoColumnSection: [
-    {
-      title: "Flows",
-      description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/Flow01.png",
+      {
+      title: "Detailed sketch",
+      description: "",
+      image: "/src/assets/MyProjects/Kiosk/Sketch.png",
     },
     {
-      title: "Query purchase",
-      description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/Flow02Query.png",
+      title: "Original Kiosk Design",
+      description: "",
+      image: "/src/assets/MyProjects/Kiosk/OriginalKiosk.png",
     },
   ],
   sideBySideSectionsLeft: [
     {
-      title: "Original kiosk design",
+      title: "Set meal flow",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/OriginalKiosk.png",
+      image: "/src/assets/MyProjects/Kiosk/Flow01.png",
     },
     {
-      title: "More detialed sketches",
+      title: "Query purchase flow",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/Sketch.png",
+      image: "/src/assets/MyProjects/Kiosk/Flow02Query.png",
     },
   ],
 
