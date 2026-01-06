@@ -109,7 +109,7 @@ export default function AboutPage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="ai-prototyping">
+            {/* <AccordionItem value="ai-prototyping">
               <AccordionTrigger
                 icon={Sparkles}
                 title={aboutContent.aiPrototyping}
@@ -122,12 +122,9 @@ export default function AboutPage() {
                   <li>{aboutContent.aiPrototypingPoint2}</li>
                   <li>{aboutContent.aiPrototypingPoint3}</li>
                   <li>{aboutContent.aiPrototypingPoint4}</li>
-                  <li>{aboutContent.aiPrototypingPoint5}</li>
-                  <li>{aboutContent.aiPrototypingPoint6}</li>
-                  <li>{aboutContent.aiPrototypingPoint7}</li>
                 </ul>
               </AccordionContent>
-            </AccordionItem>
+            </AccordionItem> */}
 
             <AccordionItem value="design-system">
               <AccordionTrigger

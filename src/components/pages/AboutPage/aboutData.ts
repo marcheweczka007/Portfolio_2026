@@ -47,25 +47,20 @@ const aboutContent = {
   oouxPoint6:
     "Reducing technical debt through thoughtful object-based design decisions",
 
-  aiPrototyping: "AI + Rapid Prototyping",
-  aiPrototypingContent1:
-    "I leverage cutting-edge AI tools to accelerate the design process and explore more possibilities in less time. AI enhances rather than replaces the creative process, allowing me to focus on strategic thinking and user empathy.",
-  aiPrototypingContent2: "My AI-enhanced workflow includes:",
-  aiPrototypingPoint1: "Using AI for rapid ideation and concept generation",
-  aiPrototypingPoint2: "Generating realistic copy and content for prototypes",
-  aiPrototypingPoint3:
-    "Creating multiple design variations to test different approaches",
-  aiPrototypingPoint4:
-    "Automating repetitive tasks to focus on high-impact work",
-  aiPrototypingPoint5:
-    "Synthesizing research findings and identifying patterns",
-  aiPrototypingPoint6: "Building interactive, high-fidelity prototypes faster",
-  aiPrototypingPoint7:
-    "Exploring AI-powered personalization and adaptive interfaces",
+  // aiPrototyping: "AI + Rapid Prototyping",
+  // aiPrototypingContent1:
+  //   "I use available AI tools to speed up the design process and build prototypes in code. I'm currently using Cursor, and frameworks like shadcn/ui, Tailwing CSS and React to build prototypes.",
+  // aiPrototypingContent2: "My AI-enhanced workflow includes:",
+  // aiPrototypingPoint1: "Using AI for rapid ideation and concept generation",
+  // aiPrototypingPoint2: "Generating realistic copy and content for prototypes",
+  // aiPrototypingPoint3:
+  //   "Creating multiple design variations to test different approaches",
+  // aiPrototypingPoint4:
+  //   "Automating repetitive tasks to focus on high-impact work",
     
-  designSystem: "Design Systems",
+  designSystem: "Design Systems + Storybook",
   designSystemContent1:
-    "I believe in the power of design systems to create consistency, accelerate product development, and improve collaboration between design and engineering teams.",
+    "As a product designer, I was often tasked with building or maintaining design systems. I've learned a lot about how to create a design system and how to use it to create a consistent user experience. But I've also learned why it's important to keep the codebase clean and maintainable.",
   designSystemContent2: "My design system philosophy:",
   designSystemPoint1:
     "Start small with foundational elements (colors, typography, spacing)",
@@ -77,11 +72,11 @@ const aboutContent = {
   designSystemPoint5:
     "Prioritize accessibility and inclusive design from the start",
   designSystemPoint6:
-    "Leverage existing systems (Material, Ant Design, shadcn/ui) when appropriate",
+    "Borrow from existing systems (Material, Ant Design, shadcn/ui) when appropriate",
 
-  coding: "Coding (Self-taught)",
+  coding: "Coding + AI (Self-taught)",
   codingContent1:
-    "I'm still early in my coding journey, but I can see the value of being able to code myself and understand the technical constraints early in the design process. I'm currently learning to code myself and I'm using AI tools to help me learn.",
+    "I'm still early in my coding journey, but I can see the value of being able to code myself and understand the technical constraints early in the design process. I'm currently learning to code myself and I'm using AI tools to help me learn. I'm currently using Cursor, and frameworks like shadcn/ui, Tailwing CSS and React to build prototypes.",
   codingContent2: "Technical capabilities:",
   codingPoint1: "HTML, CSS, and modern JavaScript (ES6+)",
   codingPoint2: "React and component-based architecture",
