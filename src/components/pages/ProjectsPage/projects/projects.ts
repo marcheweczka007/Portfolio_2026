@@ -1,5 +1,5 @@
 import { Project, ProjectCardData } from "./types";
-import { kitchenDisplay } from "./KitchenDisplay";
+// import { kitchenDisplay } from "./KitchenDisplay";
 import { oneView } from "./one-view";
 import { productCardRedesign } from "./product-card-redesign";
 import { infracostProjects } from "./infracostProjects";
@@ -22,7 +22,7 @@ export const projects: Project[] = [
   oneView,
   infracostProjects,
   productCardRedesign,
-  kitchenDisplay,
+  // kitchenDisplay,
   kiosk,
   codingProject2,
 ];
