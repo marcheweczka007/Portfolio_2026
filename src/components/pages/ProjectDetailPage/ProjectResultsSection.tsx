@@ -12,11 +12,8 @@ export function ProjectResultsSection({
   if (!results || results.length === 0) return null;
 
   return (
-    <section
-      className="container mx-auto max-w-6xl px-6 mb-20"
-      id={sectionId}
-    >
-      <h2 className="text-3xl mb-8">Reflection on the project</h2>
+    <section className="container mx-auto max-w-6xl px-6 mb-20" id={sectionId}>
+      <h2 className="text-2xl font-bold mb-8">Reflection on the project</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {results.map((result, index) => (
           <div
@@ -33,5 +30,3 @@ export function ProjectResultsSection({
     </section>
   );
 }
-
-
