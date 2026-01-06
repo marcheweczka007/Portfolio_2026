@@ -53,11 +53,11 @@ export const kiosk: Project = {
 
   sectionMiddle: {
     title: "Wireframes",
-    description: "Placeholder Text",
+    description: "Wireframes helped me to test the layout and iterate quickly on the design. I like to draw out the diffrent screens, flows and test before moving to the next stage.",
     imageUrl: "/src/assets/MyProjects/Kiosk/wireframesGroup.png",
   },
   twoColumnSection: [
-      {
+    {
       title: "Detailed sketch",
       description: "",
       image: "/src/assets/MyProjects/Kiosk/Sketch.png",
@@ -71,12 +71,13 @@ export const kiosk: Project = {
   sideBySideSectionsLeft: [
     {
       title: "Set meal flow",
-      description: "Placeholder Text",
+      description:
+        "This flow guides the user through building a set meal step by step. At the top, a progress indicator shows each stage of the process, helping the user understand where they are and what’s coming next. As the user selects items, completed steps are clearly marked. The user must complete the required selection before continuing, and helpful messages appear if something is missing. Users can go back to previous steps to change their choices, and the basket updates as they go. This keeps the process structured, clear, and easy to follow, while still giving users control over their order.",
       image: "/src/assets/MyProjects/Kiosk/Flow01.png",
     },
     {
       title: "Query purchase flow",
-      description: "Placeholder Text",
+      description: "This flow introduces a quick add-on option while the user is browsing the menu. When a relevant item is selected, the user is asked if they would like to add a related meal deal, such as coffee and cake. The prompt is simple and easy to dismiss, so it doesn’t interrupt the main journey. If the user accepts the offer, they are guided through a short, focused flow to customise their selection, such as choosing a drink, milk type, or cake. Each step is clear and requires a selection before moving on. The price updates as choices are made, and the item can be added to the basket once the selection is complete. This approach encourages add-ons in a natural way, without making the ordering process feel complicated or forced.",
       image: "/src/assets/MyProjects/Kiosk/Flow02Query.png",
     },
   ],
@@ -84,13 +85,13 @@ export const kiosk: Project = {
   sectionEnd: {
     title: "High fidelity designs",
     description:
-      "White labelling was a key requirement for the kiosk. We needed to be able to brand the kiosk with the client's logo and colours.",
+      "At this stage, the focus was on refining the interface and improving the overall look and feel of the kiosk. The design uses more white space, a clearer visual hierarchy, and consistent spacing to make the screens easier to scan and interact with. Key actions and choices are more prominent, helping users move through the flow with less effort. The updated UI feels cleaner and more modern, while still supporting all required steps, from item customisation to payment. Overall, the high-fidelity design improves usability and creates a more visually pleasing experience for users in a real-world kiosk environment.",
     imageUrl: "/src/assets/MyProjects/Kiosk/ExampleScreensKiosk.png",
   },
   sideBySideSectionsRight: [
     {
       title: "White labelling",
-      description: "Placeholder Text",
+      description: "White labelling was a key requirement for the kiosk. We needed to be able to brand the kiosk with the client's logo and colours.",
       image: "/src/assets/MyProjects/Kiosk/WhiteLabelling.png",
     },
   ],
