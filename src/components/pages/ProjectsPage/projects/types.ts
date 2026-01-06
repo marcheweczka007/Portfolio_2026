@@ -121,6 +121,8 @@ export interface Project extends ProjectCardData {
     images: string[];
   };
 
+
+
   // Custom sections
   customSections?: Array<{
     title: string;
