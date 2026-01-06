@@ -53,18 +53,19 @@ export const kiosk: Project = {
 
   sectionMiddle: {
     title: "Wireframes",
-    description: "Wireframes helped me to test the layout and iterate quickly on the design. I like to draw out the diffrent screens, flows and test before moving to the next stage.",
+    description:
+      "Wireframes helped me to test the layout and iterate quickly on the design. I like to draw out the diffrent screens, flows and test before moving to the next stage.",
     imageUrl: "/src/assets/MyProjects/Kiosk/wireframesGroup.png",
   },
   twoColumnSection: [
     {
       title: "Detailed sketch",
-      description: "",
+      description: "Drawing on paper helps me to quickly sketch out ideas and iterate on them. I like to use it as a starting point for the design.",
       image: "/src/assets/MyProjects/Kiosk/Sketch.png",
     },
     {
       title: "Original Kiosk Design",
-      description: "",
+      description: "The original kiosk design was a staerting point for the re-design. It helped me understand the current state of the kiosk and the limitations of the design.",
       image: "/src/assets/MyProjects/Kiosk/OriginalKiosk.png",
     },
   ],
@@ -77,7 +78,8 @@ export const kiosk: Project = {
     },
     {
       title: "Query purchase flow",
-      description: "This flow introduces a quick add-on option while the user is browsing the menu. When a relevant item is selected, the user is asked if they would like to add a related meal deal, such as coffee and cake. The prompt is simple and easy to dismiss, so it doesn’t interrupt the main journey. If the user accepts the offer, they are guided through a short, focused flow to customise their selection, such as choosing a drink, milk type, or cake. Each step is clear and requires a selection before moving on. The price updates as choices are made, and the item can be added to the basket once the selection is complete. This approach encourages add-ons in a natural way, without making the ordering process feel complicated or forced.",
+      description:
+        "This flow introduces a quick add-on option while the user is browsing the menu. When a relevant item is selected, the user is asked if they would like to add a related meal deal, such as coffee and cake. The prompt is simple and easy to dismiss, so it doesn’t interrupt the main journey. If the user accepts the offer, they are guided through a short, focused flow to customise their selection, such as choosing a drink, milk type, or cake. Each step is clear and requires a selection before moving on. The price updates as choices are made, and the item can be added to the basket once the selection is complete. This approach encourages add-ons in a natural way, without making the ordering process feel complicated or forced.",
       image: "/src/assets/MyProjects/Kiosk/Flow02Query.png",
     },
   ],
@@ -91,22 +93,26 @@ export const kiosk: Project = {
   sideBySideSectionsRight: [
     {
       title: "White labelling",
-      description: "White labelling was a key requirement for the kiosk. We needed to be able to brand the kiosk with the client's logo and colours.",
+      description:
+        "White labelling was a key requirement for the kiosk. We needed to be able to brand the kiosk with the client's logo and colours.",
       image: "/src/assets/MyProjects/Kiosk/WhiteLabelling.png",
     },
   ],
   showcaseGallery: {
     title: "Final outcome",
-    description: "Placeholder Text",
+    description:
+      "Project was succesfully delivered and the kiosk is now used by real clients.",
     images: [
-      "/src/assets/MyProjects/Kiosk/KioskUser.png",
-      "/src/assets/MyProjects/Kiosk/KioskUser.png",
+      "/src/assets/MyProjects/Kiosk/heroKiosk.png",
+      "/src/assets/MyProjects/Kiosk/basketOverview.png",
+      "/src/assets/MyProjects/Kiosk/NewUserPayment.png",
+      "/src/assets/MyProjects/Kiosk/components.png",
     ],
   },
-  
+
   results: [
-    "I'm overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
-    "I'm overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
+    "Tackling this project on my own was a great learning expereince. I had to figure out, how to design on large touchscreen device, ensure the self-service kiosk is easy to use and still provide a clear and consistent user experience.It was not always easy, but I'm happy with the outcome and the kiosk is now used by real clients.",
+    "If i were to do this project again, I would focus more on the inital flows, constraints and limitations of the kiosk. I would also focus more on the user research and testing to ensure the kiosk is easy to use and provides a clear and consistent user experience.",
   ],
 
   sectionIds: {
@@ -116,9 +122,9 @@ export const kiosk: Project = {
     imageSection02: "requirements",
     imageSection03: "moodboard",
     sectionMiddle: "wireframes",
-    sideBySideSectionsLeft: "self-checkout-experience-detail",
+    sideBySideSectionsLeft: "flows",
     sectionEnd: "high-fidelity-designs",
-    sideBySideSectionsRight: "high-fidelity-flows",
+    sideBySideSectionsRight: "white-labelling",
     showcaseGallery: "final-outcome",
     results: "results",
   },
@@ -145,18 +151,18 @@ export const kiosk: Project = {
         id: "wireframes",
         label: "Wireframes",
         subsections: [
-          {
-            id: "self-checkout-experience-detail",
-            label: "Initial Sketches",
-          },
           { id: "before-and-after", label: "Original kiosk design" },
+          {
+            id: "flows",
+            label: "Flows",
+          },
         ],
       },
       {
         id: "high-fidelity-designs",
         label: "High fidelity designs",
         subsections: [
-          { id: "high-fidelity-flows", label: "High fidelity flows" },
+          { id: "white-labelling", label: "White labelling" },
         ],
       },
       {
