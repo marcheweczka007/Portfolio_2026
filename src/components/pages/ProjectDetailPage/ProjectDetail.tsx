@@ -17,6 +17,14 @@ import { SideBySideSection } from "./SideBySideSection";
 import { OverviewSection } from "./OverviewSection";
 import { ProjectHeroSection } from "./ProjectHeroSection";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../ui/carousel";
+
 interface ProjectDetailProps {
   project: Project;
   onBack: () => void;
@@ -232,6 +240,9 @@ export function ProjectDetail({
           sectionId={getSectionId("showcaseGallery")}
         />
       )}
+
+      {/* Carousel Section */}
+
 
       {/* Button */}
       {project.button && (
