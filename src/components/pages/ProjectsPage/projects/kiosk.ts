@@ -103,6 +103,7 @@ export const kiosk: Project = {
       "/src/assets/MyProjects/Kiosk/KioskUser.png",
     ],
   },
+  
   results: [
     "I'm overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
     "I'm overall happy with the outcome and the fresh new look of the cards. If I had the opportunity, I would also redesign the whole product page to add more space and better separate current applications from available products. I believe current applications and live products should live on the same page, where users can focus on managing tasks related to their applications and products. Available products should sit on a separate page, making it easier for users to explore new options without distraction.",
