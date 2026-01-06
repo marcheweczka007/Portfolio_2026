@@ -29,53 +29,58 @@ export const kiosk: Project = {
 
   sectionStart: {
     overviewTitle: "Self-checkout experience",
-    description: "Placeholder Text",
+    description:
+      "This project focused on imporving the user experience and the overall design of the self-checkout kiosk for Grafterr clients.",
     imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
   },
   imageSection01: {
     title: "Competitor Analysis",
     description:
-      "At first I wanted to better understand how our competitors are approaching, not just the self-checkout experience, but the general purchasing process. I lookat at few different apps and went to a local fast food restaurant to observe the process in real life.",
-    images: [
-      "/src/assets/MyProjects/Kiosk/research.png",
-      "/src/assets/MyProjects/Kiosk/sketch.png",
-    ],
+      "As part of the discovery phase, I reviewed the self-checkout kiosk experiences of key competitors, focusing on UI patterns, user flows, and how users are guided through the journey.The analysis revealed clear differences in how each product handles simplicity, feedback, and complexity, as well as common pain points around progress visibility, accessibility, and error handling.These insights helped surface concrete opportunities and informed design decisions aimed at creating a kiosk experience that feels clear, reassuring, and easy to use in real-world environments.",
+    imageUrl: "/src/assets/MyProjects/Kiosk/comparison.png",
   },
   imageSection02: {
     title: "Requirements",
-    description: "Placeholder Text",
-    imageUrl: "/src/assets/MyProjects/Kiosk/scenarios.png",
+    description: "Some of the requirements for the project were:",
+    imageUrl: "/src/assets/MyProjects/Kiosk/ProjectRequrements.jpg",
   },
   imageSection03: {
     title: "Moodboard",
-    description: "Placeholder Text",
+    description:
+      "One of my favorite parts of the project is to create a moodbaord, it always helps me to generate ideas and keeps me excited about the user interface design. I like to see what is out there and what other designers are doing, with similar projects.",
     imageUrl: "/src/assets/MyProjects/Kiosk/moodboard.png",
   },
 
   sectionMiddle: {
     title: "Wireframes",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/MyProjects/Kiosk/moodbaord.png",
+    imageUrl: "/src/assets/MyProjects/Kiosk/wireframesGroup.png",
   },
+  twoColumnSection: [
+    {
+      title: "Flows",
+      description: "Placeholder Text",
+      image: "/src/assets/MyProjects/Kiosk/Flow01.png",
+    },
+    {
+      title: "Query purchase",
+      description: "Placeholder Text",
+      image: "/src/assets/MyProjects/Kiosk/Flow02Query.png",
+    },
+  ],
   sideBySideSectionsLeft: [
     {
       title: "Original kiosk design",
       description: "Placeholder Text",
       image: "/src/assets/MyProjects/Kiosk/OriginalKiosk.png",
     },
-  ],
-  twoColumnSection: [
     {
-      title: "Components",
-      description: "Placeholder Text",
-      image: "/src/assets/MyProjects/Kiosk/Components.png",
-    },
-    {
-      title: "Wireframe sketches",
+      title: "More detialed sketches",
       description: "Placeholder Text",
       image: "/src/assets/MyProjects/Kiosk/Sketch.png",
     },
   ],
+
   sectionEnd: {
     title: "High fidelity designs",
     description:
