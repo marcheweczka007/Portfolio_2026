@@ -19,7 +19,7 @@ export function ShowcaseGallerySection({
 
   return (
     <section className=" container mx-auto max-w-6xl px-6 mb-20" id={sectionId}>
-      <h2 className="text-3xl mb-2">{title}</h2>
+      <h2 className="text-2xl font-bold mb-2">{title}</h2>
       <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
         {description}
       </p>
