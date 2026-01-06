@@ -1,5 +1,13 @@
 import React from "react";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../ui/carousel";
+
 interface ShowcaseGallerySectionProps {
   title: string;
   description: string;
@@ -23,20 +31,23 @@ export function ShowcaseGallerySection({
       <p className="tracking-wide text-gray-500 leading-relaxed mb-8">
         {description}
       </p>
-      <div className="grid md:grid-cols-2 gap-6">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="rounded-xl overflow-hidden"
-          >
-            <img
-              src={image}
-              alt={`${projectTitle} - Showcase image ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
+      <Carousel className="w-full">
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index} className="md:basis-1/2">
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src={image}
+                  alt={`${projectTitle} - Showcase image ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </section>
   );
 }
