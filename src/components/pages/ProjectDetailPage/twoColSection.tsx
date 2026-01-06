@@ -45,13 +45,13 @@ export function TwoColumnSection({ items, sectionId }: TwoColumnSectionProps) {
       {/* Text Block */}
       <div className="mt-6 space-y-4 flex">
         <div className="flex-1 flex flex-col gap-4 pr-12">
-          <h3 className="text-xl font-semibold">{left.title}</h3>
+          <h2 className="text-md font-bold mb-3">{left.title}</h2>
           <p className="text-muted-foreground leading-relaxed">
             {left.description}
           </p>
         </div>
         <div className="flex-1 flex flex-col gap-4">
-          <h3 className="text-xl font-semibold pr-12">{right.title}</h3>
+          <h2 className="text-md font-bold mb-3">{right.title}</h2>
           <p className="text-muted-foreground leading-relaxed">
             {right.description}
           </p>
