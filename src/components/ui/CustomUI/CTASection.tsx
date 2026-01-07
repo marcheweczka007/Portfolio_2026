@@ -8,7 +8,7 @@ export function CTASection() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-20 px-6 mb-20">
+    <section className="py-16 px-6 mb-16">
       <div className="container mx-auto max-w-6xl flex justify-center">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-500 via-orange-500 to-rose-500 text-white w-full">
           {/* Content */}
@@ -20,7 +20,8 @@ export function CTASection() {
               Tell me about your product, team, or idea and we’ll explore how
               design and thoughtful UX can move it forward.
             </p>
-            <div className="flex gap-4 justify-center">
+            {/*Buttons Section*/}
+            <div className="flex gap-2 justify-center md:flex-row flex-col">
               <Button size="lg" variant="default" className="gap-2" asChild>
                 <a href="mailto:zuzanna.marchewka1@gmail.com?subject=Let's work together">
                   Let's chat
