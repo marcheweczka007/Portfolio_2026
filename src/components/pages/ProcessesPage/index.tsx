@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card.tsx";
 import { ArrowRight, Check } from "lucide-react";
 import processes, {
   sections,
-  leanPrototypingContent,
+  requirements,
   componentFirstContent,
 } from "./ProcessesData.ts";
 import BackButton from "../../pageUtilities/BackButton.tsx";
@@ -15,7 +15,7 @@ import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 export default function ProcessesPage() {
   const navigate = useNavigate();
   const processesContent = processes;
-  const leanPrototyping = leanPrototypingContent;
+  const requirementsContent = requirements;
   const componentFirst = componentFirstContent;
   const [activeSection, setActiveSection] = useState("prototyping");
 
@@ -44,7 +44,8 @@ export default function ProcessesPage() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 120;
+      // Account for sticky nav (top-20 = 80px) + nav bar height (~60px) + extra padding
+      const offset = 180;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -93,32 +94,36 @@ export default function ProcessesPage() {
         </div>
       </div>
 
-      {/* Lean Prototyping in code */}
+      {/* Requirements and wireframes */}
       <div className="container mx-auto max-w-6xl px-6 ">
-        <section id="prototyping" className="scroll-mt-32 mb-24">
+        <section id="process" className="scroll-mt-32 mb-24">
           <div className="mb-12">
-            <h2 className="mb-3">{leanPrototypingContent.title}</h2>
-            <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              {leanPrototypingContent.description}
+            <h2 className="mb-3">{requirements.title}</h2>
+            <p className="text-muted-foreground leading-relaxed max-w-6xl">
+              {requirements.description}
             </p>
+            <img
+              src={requirements.image}
+              alt="Requirements and wireframes"
+              className="w-full h-auto rounded-xl my-4"
+            />
           </div>
 
           {/* Lean prototyping - more info */}
           <div className="mb-12">
             <div className="grid lg:grid-cols-2 gap-6">
               {/* Benefits of lean prototyping */}
-              <Card className="bg-muted/50">
+              <Card className="bg-gray-50 border-gray-200">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <Check className="w-6 h-6 " />
-                    Benefits of lean prototyping
+                    {requirements.benefitsTitle}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    {leanPrototypingContent.benefits.map((benefit) => (
+                    {requirements.benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-3">
-                        <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                        <Check className="w-5 h-5 mt-0.5 text-green-600 flex-shrink-0" />
                         <span className="text-muted-foreground text-sm">
                           {benefit}
                         </span>
@@ -135,7 +140,7 @@ export default function ProcessesPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed text-sm">
-                    {leanPrototypingContent.whyItWorks}
+                    {requirements.whyItWorks}
                   </p>
                 </CardContent>
               </Card>
