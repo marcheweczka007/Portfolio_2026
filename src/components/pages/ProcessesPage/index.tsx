@@ -86,7 +86,7 @@ export default function ProcessesPage() {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-6xl ">
+      <div className="container mx-auto max-w-6xl px-6 ">
         {/* Lean Prototyping in code */}
         <section id="prototyping" className="scroll-mt-32 mb-24">
           <div className="mb-12">
