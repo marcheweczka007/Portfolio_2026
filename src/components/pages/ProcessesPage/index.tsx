@@ -54,13 +54,6 @@ export default function ProcessesPage() {
       <BackButton text={processesContent.backToHome} />
 
       {/* Header */}
-      {/* <section className="container mx-auto max-w-6xl px-6 mb-12 relative">
-        <div className="absolute -top-20 right-0 w-64 h-64 blob-purple opacity-30 -z-10 animate-pulse-glow" />
-        <h1 className="mb-6">{processesContent.title}</h1>
-        <p className="text-muted-foreground max-w-6xl leading-relaxed">
-          {processesContent.subtitle}
-        </p>
-      </section> */}
       <div className=" Grid gap-10 container mx-auto max-w-6xl">
         <div>
           <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
@@ -93,7 +86,7 @@ export default function ProcessesPage() {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-6xl px-6">
+      <div className="container mx-auto max-w-6xl ">
         {/* Lean Prototyping in code */}
         <section id="prototyping" className="scroll-mt-32 mb-24">
           <div className="mb-12">
@@ -107,14 +100,6 @@ export default function ProcessesPage() {
 
           {/* Lean prototyping - more info */}
           <div className="mb-12">
-            <h3 className="mb-4">
-              More information about the lean prototyping.
-            </h3>
-            <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-              Tell us how you are applying the lean prototyping in your work or
-              projects.
-            </p>
-
             <div className="grid lg:grid-cols-2 gap-6">
               {/* Benefits of lean prototyping */}
               <Card className="bg-muted/50">

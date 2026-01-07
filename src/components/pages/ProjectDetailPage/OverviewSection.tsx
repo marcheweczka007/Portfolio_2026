@@ -27,7 +27,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
       id={sectionId}
     >
       {/* OVERVIEW DETAILS */}
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         <h2 className="md:w-40 text-md text-gray-50 uppercase">Detials</h2>
         <div className="flex flex-row gap-4 justify-between flex-1">
           <div className="flex flex-col gap-2">
