@@ -3,7 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../../ui/button.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card.tsx";
 import { ArrowRight, Check } from "lucide-react";
-import processes, { sections } from "./aboutProcesses.ts";
+import processes, {
+  sections,
+  leanPrototypingContent,
+  componentFirstContent,
+} from "./ProcessesData.ts";
 import BackButton from "../../pageUtilities/BackButton.tsx";
 import PageLayout from "../../pageUtilities/PageLayout.tsx";
 import { CTASection } from "../../ui/CustomUI/CTASection";
@@ -11,6 +15,8 @@ import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 export default function ProcessesPage() {
   const navigate = useNavigate();
   const processesContent = processes;
+  const leanPrototyping = leanPrototypingContent;
+  const componentFirst = componentFirstContent;
   const [activeSection, setActiveSection] = useState("prototyping");
 
   useEffect(() => {
@@ -54,10 +60,10 @@ export default function ProcessesPage() {
       <BackButton text={processesContent.backToHome} />
 
       {/* Header */}
-      <div className=" Grid gap-10 container mx-auto max-w-6xl">
+      <div className=" Grid gap-10 container mx-auto max-w-6xl px-6">
         <div>
           <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
-            Processes
+            {processesContent.sectionLabel}
           </p>
           <h2 className="text-4xl font-bold">{processesContent.title}</h2>
           <p className="text-muted-foreground mt-3 mb-4">
@@ -65,6 +71,7 @@ export default function ProcessesPage() {
           </p>
         </div>
       </div>
+
       {/* Navigation Pills */}
       <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-primary/10 mb-12">
         <div className="container mx-auto max-w-6xl px-6 py-4">
@@ -86,15 +93,13 @@ export default function ProcessesPage() {
         </div>
       </div>
 
+      {/* Lean Prototyping in code */}
       <div className="container mx-auto max-w-6xl px-6 ">
-        {/* Lean Prototyping in code */}
         <section id="prototyping" className="scroll-mt-32 mb-24">
           <div className="mb-12">
-            <h2 className="mb-3">Lean prototyping in code</h2>
+            <h2 className="mb-3">{leanPrototypingContent.title}</h2>
             <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              Section about the lean prototyping. Add here why you think lean
-              prototyping is best approach for a start-up and how you use it at
-              work or in your experiments.
+              {leanPrototypingContent.description}
             </p>
           </div>
 
@@ -111,17 +116,11 @@ export default function ProcessesPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    {[
-                      "Validate ideas fast",
-                      "You cut down on endless design cycles",
-                      "Engineers love it — it removes ambiguity",
-                      "It reveals technical constraints early",
-                      "Users give better feedback on real interactions",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
+                    {leanPrototypingContent.benefits.map((benefit) => (
+                      <li key={benefit} className="flex items-start gap-3">
                         <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <span className="text-muted-foreground text-sm">
-                          {item}
+                          {benefit}
                         </span>
                       </li>
                     ))}
@@ -136,13 +135,7 @@ export default function ProcessesPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed text-sm">
-                    Lean prototyping works well because it lets teams test ideas
-                    quickly without wasting time on perfect designs. You build
-                    something simple, real, and interactive so you can learn
-                    fast, get clear feedback, and spot technical issues early.
-                    This keeps everyone aligned, reduces back-and-forth, and
-                    helps a small team move forward with{" "}
-                    <span className="italic">confidence and speed</span>.
+                    {leanPrototypingContent.whyItWorks}
                   </p>
                 </CardContent>
               </Card>
@@ -247,7 +240,7 @@ export default function ProcessesPage() {
 
         {/* Component First Thinking */}
         <section id="component-first" className="scroll-mt-32 mb-24">
-          <h2 className="mb-12">Component first thinking</h2>
+          <h2 className="mb-12"> {componentFirstContent.title}</h2>
 
           {/* Reasuable pieces */}
           <div className="mb-12">
@@ -364,33 +357,8 @@ export default function ProcessesPage() {
           </p>
 
           <div className="grid lg:grid-cols-2 gap-6 mb-8">
-            {/* Detailed */}
-            <Card className="bg-primary text-black border-primary">
-              <CardHeader>
-                <CardTitle className="text-primary-foreground flex items-center gap-2">
-                  <Check className="w-5 h-5" />
-                  Lightweight
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {[
-                    "Key points to embark action",
-                    "Not heavy at specs → light note",
-                    "You can ping easily",
-                    "Agile and fast",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check className="w-4 h-4 text-primary-foreground mt-0.5 flex-shrink-0" />
-                      <span className="text-primary-foreground/90">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
             {/* Lightweight */}
-            <Card className="bg-primary text-primary-foreground border-primary">
+            <Card className="bg-primary text-black border-primary">
               <CardHeader>
                 <CardTitle className="text-primary-foreground flex items-center gap-2">
                   <Check className="w-5 h-5" />
@@ -416,7 +384,6 @@ export default function ProcessesPage() {
           </div>
 
           <Card className="border-4 border bg-muted/30">
-            Ctrl/Cmd + Shift + P
             <CardContent className="p-8">
               <p className="text-muted-foreground leading-relaxed mb-4">
                 In fast-moving startups, lightweight handoffs result in faster
