@@ -134,157 +134,82 @@ export default function ProcessesPage() {
               </Card>
 
               {/* Why is working well */}
-              <Card className="bg-muted/50">
+              <Card className="bg-gray-50 border-gray-200">
                 <CardHeader>
                   <CardTitle>Why this approach works well?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                  <p className="text-muted-foreground leading-relaxed text-sm leading-loose">
                     {requirements.whyItWorks}
                   </p>
                 </CardContent>
               </Card>
             </div>
           </div>
-
-          {/* My Perspective */}
-          <div className="mb-12">
-            <h3 className="mb-4">My perspective</h3>
-            <p className="text-muted-foreground mb-8 leading-relaxed max-w-6xl">
-              I believe that when it comes to building for start-ups, having a
-              foundation system (like shadcn/ui or using pre-built design
-              systems) works wonders and lets you create spaces more faster.{" "}
-              <span className="font-medium text-foreground">
-                collaborative faster
-              </span>
-              , at a much lower complexity.
-            </p>
-
-            <div className="grid lg:grid-cols-2 gap-6">
-              {/* Build in-house (Foundation) */}
-              <Card className="bg-primary text-primary-foreground border-primary">
-                <CardHeader>
-                  <CardTitle className="text-primary-foreground flex items-center gap-2">
-                    <Check className="w-5 h-5" />
-                    Build in-house (Foundation)
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {[
-                      "Don't be vendor locked-in to UI lib (Ant, MUI etc.)",
-                      "Start to develop things quicker, so click-thru will take you couple days",
-                      "Don't waste time building library, iterate fast on the actual product",
-                      "Having the open & docs available and copying over is almost zero-effort",
-                      "Having that set-up & code (as it's made by a dev-ish) will almost feel native after implementation",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <Check className="w-4 h-4 text-primary-foreground mt-0.5 flex-shrink-0" />
-                        <span className="text-primary-foreground/90 text-sm">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              {/* Why & Benefits */}
-              <div className="space-y-6">
-                <Card className="bg-muted/50">
-                  <CardHeader>
-                    <CardTitle className="text-lg">Why?</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      You get best time — react on the user & specific
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed mt-3 text-sm">
-                      Or when you hear, "Imagine if building our own (aka we are
-                      going with API component like audit, only users of the
-                      product)".
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-muted/50">
-                  <CardHeader>
-                    <CardTitle className="text-lg">Benefits</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      Need to design helps you to spread out
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed mt-3 text-sm">
-                      As designs are built out — system grows with you
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          {/* Why it matters */}
-          <Card className="border-l-4 border-l-primary bg-muted/30">
-            <CardHeader>
-              <CardTitle>Why it matters</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground leading-relaxed">
-                I can not see any case for our use-case they believe what this.
-                Building a system system from the ground up is an investment
-                that drains time and resources from your core product. Your
-                users don't care about your component library; they care about
-                the value your product brings, and maintaining a foundation
-                based system requires less of capability and at the same time is
-                ready for the users.
-              </p>
-            </CardContent>
-          </Card>
         </section>
 
         {/* Component First Thinking */}
         <section id="component-first" className="scroll-mt-32 mb-24">
-          <h2 className="mb-12"> {componentFirstContent.title}</h2>
+          <h2 className="text-xl font-medium mb-4">
+            {" "}
+            {componentFirstContent.title}
+          </h2>
 
-          {/* Reasuable pieces */}
-          <div className="mb-12">
-            <h3 className="mb-4">Build reusable pieces for your UI</h3>
-            <p className="text-muted-foreground leading-relaxed max-w-3xl">
-              Tools like story book are amazing for applying this approach, it
-              keeps the components and their interactions all in one place. This
-              way design and developers have a plce witha single source of
-              truth.
-            </p>
-          </div>
 
-          {/* Components life cycle */}
+          {/* Step-by-step process */}
           <div className="mb-8">
-            {/* <h3 className="mb-8">Component life cycle</h3> */}
-            <div className="flex flex-col md:flex-row items-center gap-4 mb-8">
-              <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
-                <CardContent className="p-6 text-center">
-                  <p className="text-lg mb-2">Identify</p>
-                  <p className="text-md text-primary-foreground/80">
-                    Look for repetition and patterns
+            <h3 className="mb-8">The steps I would apply when building a product in code, this can vary depending on the project and the team.</h3>
+            <div className="grid grid-cols-3 md:flex-row items-center gap-4 mb-8 justify-center">
+              <Card className=" bg-blue-200/20 border-none  w-full min-w-[200px]">
+                <CardContent className="p-6 text-center text-gray-800">
+                  <p className="text-lg font-medium mb-2">1. Problem definition</p>
+                  <p className="text-sm text-gray-700">
+                    I start by clarifying the problem. I define the product goals, user needs, technical constraints, and success metrics. Understanding constraints early allows me to better plan the project and avoid rework.
                   </p>
                 </CardContent>
               </Card>
-              <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90 md:rotate-0 flex-shrink-0" />
-              <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
+
+              <Card className=" bg-purple-200/20 border-none  w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg mb-2">Build</p>
-                  <p className="text-md text-primary-foreground/80">
-                    Create your components and reuse
+                  <p className="text-lg font-medium mb-2">2. Low-fidelity exploration</p>
+                  <p className="text-sm text-gray-700">
+                    I explore ideas quickly through sketches, wireframes, and rough layout experiments. At this stage, speed matters more than polish, the goal is to validate structure, flow, and intent before investing in detail.
                   </p>
                 </CardContent>
               </Card>
-              <ArrowRight className="w-6 h-6 text-muted-foreground rotate-90 md:rotate-0 flex-shrink-0" />
-              <Card className="flex-1 bg-primary text-primary-foreground border-primary w-full">
+
+              <Card className="flex-1 bg-red-200/20 border-none  w-full">
+                <CardContent className="p-6 text-center text-gray-800">
+                  <p className="text-lg font-medium mb-2">3. Lean prototyping in code</p>
+                  <p className="text-sm text-gray-700">
+                    Rather than relying on static high-fidelity designs, I build interactive prototypes directly in code. I treat code as the highest-fidelity design artefact, allowing it to be explored in the same medium the product will ship in.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="flex-1 bg-yellow-200/20 border-none  w-full">
+                <CardContent className="p-6 text-center text-gray-800">
+                  <p className="text-lg font-medium mb-2">4. Feedback</p>
+                  <p className="text-sm text-gray-700">
+                    Working in code enables early and frequent feedback from users, product managers, and engineers. Because prototypes are interactive, feedback is grounded in real usage rather than interpretation of static screens.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="flex-1 bg-green-200/20 border-none  w-full">
+                <CardContent className="p-6 text-center text-gray-800">
+                  <p className="text-lg font-medium mb-2">5. Visual refinement</p>
+                  <p className="text-sm text-gray-700">
+                    Once flows and interactions are validated, I polish visual hierarchy, spacing, motion, and accessibility directly within the codebase. This ensures design decisions remain aligned with technical realities and production standards.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="flex-1 bg-teal-200/20 border-none  w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg mb-2">Assemble</p>
-                  <p className="text-md text-primary-foreground/80">
-                    Use the componnts as lego blocks
+                  <p className="text-lg font-medium mb-2">6. Production ready handoff</p>
+                  <p className="text-sm text-gray-700">
+                    The result is production-ready code rather than a traditional design handoff. This significantly shortens feedback loops and reduces misalignment between design intent and the final experience
                   </p>
                 </CardContent>
               </Card>
@@ -313,8 +238,8 @@ export default function ProcessesPage() {
         {/* Feedback loop */}
         <section id="feedback-loop" className="scroll-mt-32 mb-24">
           <div className="mb-8">
-            <h2 className="mb-3">Design and development feedback loop</h2>
-            <p className="text-muted-foreground leading-relaxed max-w-3xl">
+            <h2 className="text-xl font-bold mb-3">Feedback loop</h2>
+            <p className="text-muted-foreground leading-relaxed max-w-6xl">
               In this section talk about the design and development feedback
               loop and how important it is, especially in small teams.
             </p>
@@ -352,42 +277,12 @@ export default function ProcessesPage() {
 
         {/* Small team */}
         <section id="small-team" className="scroll-mt-32 mb-24">
-          <h2 className="mb-4 mt-8">
-            How you reduce friction between design and engineering
-          </h2>
-          <p className="mb-8 text-muted-foreground leading-relaxed max-w-3xl">
+          <h2 className="text-xl font-bold mb-4 mt-8">Small team</h2>
+          <p className="mb-8 text-muted-foreground leading-relaxed max-w-6xl">
             Section about the lean prototyping. Add here why you think lean
             prototyping is best approach for a start-up and how you use it at
             work or in your experiments.
           </p>
-
-          <div className="grid lg:grid-cols-2 gap-6 mb-8">
-            {/* Lightweight */}
-            <Card className="bg-primary text-black border-primary">
-              <CardHeader>
-                <CardTitle className="text-primary-foreground flex items-center gap-2">
-                  <Check className="w-5 h-5" />
-                  Lightweight
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {[
-                    "Key points to embark action",
-                    "Not heavy at specs → light note",
-                    "You can ping easily",
-                    "Agile and fast",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <Check className="w-4 h-4 text-primary-foreground mt-0.5 flex-shrink-0" />
-                      <span className="text-primary-foreground/90">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-
           <Card className="border-4 border bg-muted/30">
             <CardContent className="p-8">
               <p className="text-muted-foreground leading-relaxed mb-4">

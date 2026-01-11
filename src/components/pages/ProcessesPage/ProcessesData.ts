@@ -9,24 +9,23 @@ const processes = {
 export const requirements = {
   title: "My process",
   description:
-    "The first step in design engineering is to get the requirements and wireframes right. This is a critical step in the design engineering process because it sets the foundation for the rest of the process. In my opinion wireframes are more important than the high-fidelity design because they are more flexible and can be easily changed. Aslo if I'm the designer who codes them, I dont need to have the high-fidelity design, because I can code them myself.",
+    "I work at the intersection of design and engineering, using code as a core design tool to reduce handover friction and accelerate learning. My process is intentionally lean, iterative, and well-suited to fast-moving product teams.",
   image: "/src/assets/processes/diagramLinear.svg",
-    benefitsTitle: "Benefits of wireframes",
+    benefitsTitle: "Benefits of design + code approach",
   benefits: [
-    "Validate ideas fast",
-    "You cut down on endless design cycles",
-    "Engineers love it — it removes ambiguity",
+    "Interactive prototypes",
+    "Less time spend on handover",
+    "Works well for small teams",
     "It reveals technical constraints early",
-    "Users give better feedback on real interactions",
   ],
   whyItWorks: [
-    "Lean prototyping works well because it lets teams test ideas quickly without wasting time on perfect designs. You build something simple, real, and usable. Then you get feedback from users and iterate based on that feedback.",
+    "I’ve repeatedly seen teams invest heavily in design handovers, only for the final product to fall short of the original intent. By designing in code, this gap is significantly reduced, enabling faster iteration and clearer ownership, particularly valuable in small to mid-sized teams where momentum matters.",
   
   ],
 };
 
 export const componentFirstContent = {
-  title: "Component-first thinking",
+  title: "Steps to build a product in code",
   description:
     "I use component-first thinking to build prototypes. I'm currently using Cursor, and frameworks like shadcn/ui, Tailwing CSS and React to build prototypes.",
 };
@@ -34,8 +33,8 @@ export const componentFirstContent = {
 export const sections = [
   { id: "process", label: "My Process" },
   { id: "component-first", label: "Component-first" },
-  { id: "feedback-loop", label: "Design → Code feedback loop" },
-  { id: "small-team", label: "Making small teams faster" },
+  { id: "feedback-loop", label: "Feedback loop" },
+  { id: "small-team", label: "Small team" },
 ];
 
 export default processes;
