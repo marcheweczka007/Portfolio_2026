@@ -5,7 +5,7 @@ export const kiosk: Project = {
   title: "Kiosk (Self-checkout experience)",
   description:
     "This project involved redesigning a self-checkout kiosk for Grafterr clients. The goal was to simplify the checkout process, reduce friction for users, and create a touch-friendly interface suitable for a 15-inch screen.",
-  imageUrl: "/assets/MyProjects/Kiosk/selfCheckout.png",
+  imageUrl: "/assets/MyProjects/Kiosk/selfcheckout.png",
   tags: ["Kiosk", "Product design", "SaaS"],
   overviewSection: {
     overviewYear: "2023",
@@ -60,12 +60,14 @@ export const kiosk: Project = {
   twoColumnSection: [
     {
       title: "Detailed sketch",
-      description: "Drawing on paper helps me to quickly sketch out ideas and iterate on them. I like to use it as a starting point for the design.",
+      description:
+        "Drawing on paper helps me to quickly sketch out ideas and iterate on them. I like to use it as a starting point for the design.",
       image: "/assets/MyProjects/Kiosk/Sketch.png",
     },
     {
       title: "Original Kiosk Design",
-      description: "The original kiosk design was a staerting point for the re-design. It helped me understand the current state of the kiosk and the limitations of the design.",
+      description:
+        "The original kiosk design was a staerting point for the re-design. It helped me understand the current state of the kiosk and the limitations of the design.",
       image: "/assets/MyProjects/Kiosk/OriginalKiosk.png",
     },
   ],
@@ -161,9 +163,7 @@ export const kiosk: Project = {
       {
         id: "high-fidelity-designs",
         label: "High fidelity designs",
-        subsections: [
-          { id: "white-labelling", label: "White labelling" },
-        ],
+        subsections: [{ id: "white-labelling", label: "White labelling" }],
       },
       {
         id: "final-outcome",
