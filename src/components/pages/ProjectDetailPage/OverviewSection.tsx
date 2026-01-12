@@ -23,7 +23,7 @@ interface OverviewSectionProps {
 export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
   return (
     <div
-      className="flex flex-col gap-8 m-4 p-4  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
+      className="flex flex-col gap-8 m-4 p-4 sm:p-8 border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
       id={sectionId}
     >
       {/* OVERVIEW DETAILS */}
@@ -44,7 +44,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
             <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
               Client
             </p>
-            <p className="flex-1 text-sm text-gray-50 leading-7">
+            <p className="flex-1 text-sm text-gray-50 leading-6">
               {data.overviewClient}
             </p>
           </div>
@@ -53,7 +53,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
             <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
               Duration
             </p>
-            <p className="flex-1 text-sm text-gray-50 leading-7 ">
+            <p className="flex-1 text-sm text-gray-50 leading-6 ">
               {data.overviewDuration}
             </p>
           </div>
@@ -62,7 +62,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
             <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
               Year
             </p>
-            <p className="flex-1 text-sm text-gray-50 leading-7 ">
+            <p className="flex-1 text-sm text-gray-50 leading-6 ">
               {data.overviewYear}
             </p>
           </div>
