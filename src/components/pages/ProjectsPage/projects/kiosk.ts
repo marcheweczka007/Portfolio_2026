@@ -5,7 +5,7 @@ export const kiosk: Project = {
   title: "Kiosk (Self-checkout experience)",
   description:
     "This project involved redesigning a self-checkout kiosk for Grafterr clients. The goal was to simplify the checkout process, reduce friction for users, and create a touch-friendly interface suitable for a 15-inch screen.",
-  imageUrl: "/assets/MyProjects/Kiosk/selfcheckout.png",
+  imageUrl: "../assets/MyProjects/Kiosk/selfcheckout.png",
   tags: ["Kiosk", "Product design", "SaaS"],
   overviewSection: {
     overviewYear: "2023",
@@ -62,7 +62,7 @@ export const kiosk: Project = {
       title: "Detailed sketch",
       description:
         "Drawing on paper helps me to quickly sketch out ideas and iterate on them. I like to use it as a starting point for the design.",
-      image: "/assets/MyProjects/Kiosk/Sketch.png",
+      image: "/assets/MyProjects/Kiosk/sketch.png",
     },
     {
       title: "Original Kiosk Design",
@@ -90,7 +90,7 @@ export const kiosk: Project = {
     title: "High fidelity designs",
     description:
       "At this stage, the focus was on refining the interface and improving the overall look and feel of the kiosk. The design uses more white space, a clearer visual hierarchy, and consistent spacing to make the screens easier to scan and interact with. Key actions and choices are more prominent, helping users move through the flow with less effort. The updated UI feels cleaner and more modern, while still supporting all required steps, from item customisation to payment. Overall, the high-fidelity design improves usability and creates a more visually pleasing experience for users in a real-world kiosk environment.",
-    imageUrl: "/assets/MyProjects/Kiosk/ExampleScreensKiosk.png",
+    imageUrl: "/assets/MyProjects/Kiosk/exampleScreensKiosk.png",
   },
   sideBySideSectionsRight: [
     {
