@@ -31,7 +31,7 @@ export const kiosk: Project = {
     overviewTitle: "Self-checkout experience",
     description:
       "This project focused on imporving the user experience and the overall design of the self-checkout kiosk for Grafterr clients.",
-    imageUrl: "/assets/MyProjects/Kiosk/KioskUser.png",
+    imageUrl: "../assets/MyProjects/Kiosk/KioskUser.png",
   },
   imageSection01: {
     title: "Competitor Analysis",
