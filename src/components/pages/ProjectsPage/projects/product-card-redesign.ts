@@ -89,14 +89,14 @@ export const productCardRedesign: Project = {
     title: "High fidelity design",
     description:
       "The high-fidelity designs below show three different states of the product card, based on the stage of the application. The top left card is what the borrower sees first when looking for the right loan to apply for. The top right card shows an application in progress, where the borrower can see where they left off and what they need to do next. The bottom left card represents a live application, showing the current status, submission date, and amount borrowed. From here, the borrower can view the application or add any missing information. ",
-    imageUrl: "/assets/MyProjects/ApplicationCards/hiFi.png",
+    imageUrl: "/assets/MyProjects/ApplicationCards/ApplicationCards.png",
   },
   sideBySideSectionsRight: [
     {
       title: "Before re-design",
       description:
         "Before the redesign, the cards displayed too much content, which made it hard for users to find the information they needed. The colours and icons were not consistent, and colour was sometimes misleading—for example, a blue tick suggested that no action was required. The cards were also not responsive and did not look good across all devices.",
-      image: "/assets/MyProjects/ApplicationCards/before.png",
+      image: "/assets/MyProjects/ApplicationCards/Before.png",
     },
     {
       title: "After re-design",
