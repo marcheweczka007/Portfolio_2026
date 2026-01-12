@@ -23,7 +23,7 @@ interface OverviewSectionProps {
 export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
   return (
     <div
-      className="flex flex-col gap-8 m-4 p-8  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
+      className="flex flex-col gap-8 m-4 p-4  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
       id={sectionId}
     >
       {/* OVERVIEW DETAILS */}
