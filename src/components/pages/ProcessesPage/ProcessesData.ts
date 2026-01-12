@@ -18,10 +18,6 @@ export const requirements = {
     "Works well for small teams",
     "It reveals technical constraints early",
   ],
-  whyItWorks: [
-    "I’ve repeatedly seen teams invest heavily in design handovers, only for the final product to fall short of the original intent. By designing in code, this gap is significantly reduced, enabling faster iteration and clearer ownership, particularly valuable in small to mid-sized teams where momentum matters.",
-  
-  ],
 };
 
 export const componentFirstContent = {
@@ -32,9 +28,8 @@ export const componentFirstContent = {
 
 export const sections = [
   { id: "process", label: "My Process" },
-  { id: "component-first", label: "Component-first" },
-  { id: "feedback-loop", label: "Feedback loop" },
-  { id: "small-team", label: "Small team" },
+  { id: "component-first", label: "Steps to build a product in code" },
+  { id: "feedback-loop", label: "Why this approach" }
 ];
 
 export default processes;

@@ -74,7 +74,7 @@ export default function ProcessesPage() {
       </div>
 
       {/* Navigation Pills */}
-      <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-primary/10 mb-12">
+      <div className="sticky top-20 z-40 bg-orange-100/10 backdrop-blur-xl border-b border-orange-200/10 mb-12">
         <div className="container mx-auto max-w-6xl px-6 py-4">
           <nav className="flex gap-2 overflow-x-auto scrollbar-hide">
             {sections.map((section) => (
@@ -83,8 +83,8 @@ export default function ProcessesPage() {
                 onClick={() => scrollToSection(section.id)}
                 className={`px-4 py-2 rounded-full text-sm transition-all whitespace-nowrap ${
                   activeSection === section.id
-                    ? "bg-primary text-primary-foreground shadow-md shadow-primary/30"
-                    : "bg-primary/5 text-muted-foreground hover:bg-primary/10 hover:text-foreground"
+                    ? "bg-primary text-primary-foreground shadow-sm shadow-orange-200/50"
+                    : "bg-orange-100 text-muted-foreground hover:bg-orange-200 hover:text-foreground"
                 }`}
               >
                 {section.label}
@@ -111,9 +111,9 @@ export default function ProcessesPage() {
 
           {/* Lean prototyping - more info */}
           <div className="mb-12">
-            <div className="grid lg:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-1 gap-6">
               {/* Benefits of lean prototyping */}
-              <Card className="bg-gray-50 border-gray-200">
+              <Card className="bg-gray-100/20 border-gray-200">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     {requirements.benefitsTitle}
@@ -133,17 +133,7 @@ export default function ProcessesPage() {
                 </CardContent>
               </Card>
 
-              {/* Why is working well */}
-              <Card className="bg-gray-50 border-gray-200">
-                <CardHeader>
-                  <CardTitle>Why this approach works well?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed text-sm leading-loose">
-                    {requirements.whyItWorks}
-                  </p>
-                </CardContent>
-              </Card>
+
             </div>
           </div>
         </section>
@@ -159,9 +149,9 @@ export default function ProcessesPage() {
           {/* Step-by-step process */}
           <div className="mb-8">
             <h3 className="mb-8">The steps I would apply when building a product in code, this can vary depending on the project and the team.</h3>
-            <div className="grid grid-cols-3 md:flex-row items-center gap-4 mb-8 justify-center">
-              <Card className=" bg-blue-200/20 border-none  w-full min-w-[200px]">
-                <CardContent className="p-6 text-center text-gray-800">
+            <div className="grid grid-cols-1 md:grid-cols-3 justify-items-start gap-4 mb-8 justify-center">
+              <Card className=" bg-orange-200/20 border-none  w-full min-w-[200px]">
+                <CardContent className="p-6 text-center">
                   <p className="text-lg font-medium mb-2">1. Problem definition</p>
                   <p className="text-sm text-gray-700">
                     I start by clarifying the problem. I define the product goals, user needs, technical constraints, and success metrics. Understanding constraints early allows me to better plan the project and avoid rework.
@@ -169,7 +159,7 @@ export default function ProcessesPage() {
                 </CardContent>
               </Card>
 
-              <Card className=" bg-purple-200/20 border-none  w-full">
+              <Card className=" bg-orange-200/30 border-none  w-full">
                 <CardContent className="p-6 text-center">
                   <p className="text-lg font-medium mb-2">2. Low-fidelity exploration</p>
                   <p className="text-sm text-gray-700">
@@ -178,8 +168,8 @@ export default function ProcessesPage() {
                 </CardContent>
               </Card>
 
-              <Card className="flex-1 bg-red-200/20 border-none  w-full">
-                <CardContent className="p-6 text-center text-gray-800">
+              <Card className="flex-1 bg-orange-200/40 border-none  w-full">
+                <CardContent className="p-6 text-center">
                   <p className="text-lg font-medium mb-2">3. Lean prototyping in code</p>
                   <p className="text-sm text-gray-700">
                     Rather than relying on static high-fidelity designs, I build interactive prototypes directly in code. I treat code as the highest-fidelity design artefact, allowing it to be explored in the same medium the product will ship in.
@@ -187,8 +177,8 @@ export default function ProcessesPage() {
                 </CardContent>
               </Card>
 
-              <Card className="flex-1 bg-yellow-200/20 border-none  w-full">
-                <CardContent className="p-6 text-center text-gray-800">
+              <Card className="flex-1 bg-orange-200/50 border-none  w-full">
+                <CardContent className="p-6 text-center">
                   <p className="text-lg font-medium mb-2">4. Feedback</p>
                   <p className="text-sm text-gray-700">
                     Working in code enables early and frequent feedback from users, product managers, and engineers. Because prototypes are interactive, feedback is grounded in real usage rather than interpretation of static screens.
@@ -196,8 +186,8 @@ export default function ProcessesPage() {
                 </CardContent>
               </Card>
 
-              <Card className="flex-1 bg-green-200/20 border-none  w-full">
-                <CardContent className="p-6 text-center text-gray-800">
+              <Card className="flex-1 bg-orange-200/60 border-none  w-full">
+                <CardContent className="p-6 text-center">
                   <p className="text-lg font-medium mb-2">5. Visual refinement</p>
                   <p className="text-sm text-gray-700">
                     Once flows and interactions are validated, I polish visual hierarchy, spacing, motion, and accessibility directly within the codebase. This ensures design decisions remain aligned with technical realities and production standards.
@@ -205,7 +195,7 @@ export default function ProcessesPage() {
                 </CardContent>
               </Card>
 
-              <Card className="flex-1 bg-teal-200/20 border-none  w-full">
+              <Card className="flex-1 bg-orange-200/70 border-none  w-full">
                 <CardContent className="p-6 text-center">
                   <p className="text-lg font-medium mb-2">6. Production ready handoff</p>
                   <p className="text-sm text-gray-700">
@@ -215,14 +205,27 @@ export default function ProcessesPage() {
               </Card>
             </div>
 
-            <Card className="bg-muted/30">
+
+          </div>
+        </section>
+
+        {/* Feedback loop */}
+        <section id="feedback-loop" className="scroll-mt-32 mb-24">
+          <div className="mb-8">
+            <h2 className="text-xl font-bold mb-3">Why this approach</h2>
+            <p className="text-muted-foreground leading-relaxed max-w-6xl">
+              An overview of why designing in code reduces friction, improves alignment, and helps teams move faster.
+            </p>
+          </div>
+
+                      <Card className="bg-muted/30">
               <CardContent className="p-6">
+                <p className="text-lg font-medium mb-4">Reasons why this approach works</p>
                 <ul className="space-y-3">
                   {[
-                    "Repeat the 'better UX' loop for each decision point",
-                    "Collaboration over - Programs development kit builds require context",
-                    "Focus on fast iteration and real user feedback",
-                    "Keep process lean and agile",
+                    "This approach works best in fast-moving product teams where learning speed matters as much as execution. By collapsing design and engineering into a single workflow, feedback loops are shorter, intent is clearer, and decisions are validated earlier.",
+                    "Designing in code doesn’t replace design thinking — it relocates it closer to production. Visual decisions, interaction details, and technical constraints are resolved together, rather than across handovers.",
+                    "The result is fewer surprises late in development, stronger ownership of the final experience, and products that ship faster without sacrificing quality.",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
@@ -232,78 +235,11 @@ export default function ProcessesPage() {
                 </ul>
               </CardContent>
             </Card>
-          </div>
+
+
         </section>
 
-        {/* Feedback loop */}
-        <section id="feedback-loop" className="scroll-mt-32 mb-24">
-          <div className="mb-8">
-            <h2 className="text-xl font-bold mb-3">Feedback loop</h2>
-            <p className="text-muted-foreground leading-relaxed max-w-6xl">
-              In this section talk about the design and development feedback
-              loop and how important it is, especially in small teams.
-            </p>
-          </div>
 
-          <Card className="bg-muted/30">
-            <CardContent className="p-8">
-              <ul className="space-y-4">
-                {[
-                  { tool: "Miro", purpose: "team alignment & workshops" },
-                  {
-                    tool: "Figma",
-                    purpose:
-                      "design & prototyping (where we come up with the high-fid idea)",
-                  },
-                  { tool: "Notion", purpose: "documentation & specs" },
-                ].map((item) => (
-                  <li key={item.tool} className="flex items-start gap-4">
-                    <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <div>
-                      <span className="font-medium text-foreground">
-                        {item.tool}
-                      </span>
-                      <span className="text-muted-foreground">
-                        {" "}
-                        — {item.purpose}
-                      </span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Small team */}
-        <section id="small-team" className="scroll-mt-32 mb-24">
-          <h2 className="text-xl font-bold mb-4 mt-8">Small team</h2>
-          <p className="mb-8 text-muted-foreground leading-relaxed max-w-6xl">
-            Section about the lean prototyping. Add here why you think lean
-            prototyping is best approach for a start-up and how you use it at
-            work or in your experiments.
-          </p>
-          <Card className="border-4 border bg-muted/30">
-            <CardContent className="p-8">
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                In fast-moving startups, lightweight handoffs result in faster
-                execution. Detailed files are not always the most effective way
-                to move into product design / start early. I've noticed that
-                over-documenting in the previous startup I was at delayed dev
-                work while lightweight specs helped both designers and
-                developers iterate faster and align better.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                This approach enables collaboration to happen more through
-                conversations than formal documentation. It's both more flexible
-                and cost-efficient in a startup environment with agile
-                requirements, and allows for the right balance of structure
-                without bureaucracy. I don't think we have a need or should be
-                using a handoff approach at a smaller early stage team.
-              </p>
-            </CardContent>
-          </Card>
-        </section>
 
         {/* Final CTA */}
         <CTASection />
