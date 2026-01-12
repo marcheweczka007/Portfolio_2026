@@ -2,7 +2,7 @@ import { Project } from "./types";
 
 export const productCardRedesign: Project = {
   id: "Product-Card-Redesign",
-  title: "Product Card Redesign",
+  title: "Loan application cards",
   description:
     "This project required me to improve the interface but also the information that is displayed on the card, to increase the application completion rate. The project was a collaboration with the product manager and the developer, and I was given a lot of creative freedom to explore new layouts and visual ideas.",
   imageUrl: "/assets/MyProjects/ApplicationCards/ApplicationCards.png",
