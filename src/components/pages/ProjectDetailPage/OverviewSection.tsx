@@ -23,7 +23,7 @@ interface OverviewSectionProps {
 export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
   return (
     <div
-      className="flex flex-col gap-10 m-6 p-10  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
+      className="flex flex-col gap-8 m-4 p-8  border rounded-xl border-gray-200 pb-10 bg-gray-900 mb-16"
       id={sectionId}
     >
       {/* OVERVIEW DETAILS */}
@@ -34,7 +34,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
             <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
               Role
             </p>
-            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+            <p className="flex-1 text-sm text-gray-50 leading-6 ">
               {data.overviewRole}
             </p>
           </div>
@@ -44,7 +44,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
             <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
               Client
             </p>
-            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+            <p className="flex-1 text-sm text-gray-50 leading-7">
               {data.overviewClient}
             </p>
           </div>
@@ -53,7 +53,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
             <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
               Duration
             </p>
-            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+            <p className="flex-1 text-sm text-gray-50 leading-7 ">
               {data.overviewDuration}
             </p>
           </div>
@@ -62,7 +62,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
             <p className="text-md font-bold text-gray-50 leading-7 tracking-wide">
               Year
             </p>
-            <p className="flex-1 text-sm text-gray-50 leading-7 tracking-wide">
+            <p className="flex-1 text-sm text-gray-50 leading-7 ">
               {data.overviewYear}
             </p>
           </div>
@@ -71,7 +71,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
       {/* OVERVIEW ROW */}
       <div className="flex flex-col md:flex-row gap-4">
         <h2 className="md:w-40 text-md text-gray-50 uppercase">Overview</h2>
-        <p className="flex-1 text-md text-gray-50 leading-7 text-justify tracking-wide">
+        <p className="flex-1 text-md text-gray-50 leading-6 tracking-wide">
           {data.overviewDescription}
         </p>
       </div>
@@ -82,7 +82,7 @@ export function OverviewSection({ data, sectionId }: OverviewSectionProps) {
           <h2 className="md:w-40 text-md text-gray-50 uppercase">Execution</h2>
 
           <div className="flex-1 flex flex-col gap-3">
-            <p className="text-md text-gray-50 leading-7 text-justify tracking-wide le">
+            <p className="text-md text-gray-50 leading-6  tracking-wide le">
               {data.executionDescription}
             </p>
 
