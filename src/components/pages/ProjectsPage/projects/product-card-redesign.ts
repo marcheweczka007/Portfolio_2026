@@ -5,7 +5,7 @@ export const productCardRedesign: Project = {
   title: "Product Card Redesign",
   description:
     "This project required me to improve the interface but also the information that is displayed on the card, to increase the application completion rate. The project was a collaboration with the product manager and the developer, and I was given a lot of creative freedom to explore new layouts and visual ideas.",
-  imageUrl: "/src/assets/MyProjects/ApplicationCards/ApplicationCards.png",
+  imageUrl: "/assets/MyProjects/ApplicationCards/ApplicationCards.png",
   tags: ["Re-design", "Loan Application", "SaaS"],
   overviewSection: {
     overviewYear: "2025",
@@ -29,22 +29,22 @@ export const productCardRedesign: Project = {
     overviewTitle: "Product Card Redesign",
     description:
       "The product card is the first thing a borrower sees in the application flow, so it had to be clear and easy to understand. The card changes depending on the stage of the journey, but this version shows the very beginning of the application. At this point, I was trying different ideas with illustrations, colours, and photos to see what worked best and still met the project requirements.",
-    imageUrl: "/src/assets/MyProjects/ApplicationCards/startSection.png",
+    imageUrl: "/assets/MyProjects/ApplicationCards/startSection.png",
   },
   imageSection01: {
     title: "Requirements",
     description:
       "The requirements for this feature focused on showing the borrower which stage of the application they were currently in. There were three main stages: Eligibility Checker (stage one), Full Application (stage two), and Submitted, which means the borrower has completed the process. In addition to the stage, the design also needed to show the status of the application — indicating whose hands the application was currently in. Both the stage and the status needed to be flexible, as they could change over time.",
     images: [
-      "/src/assets/MyProjects/ApplicationCards/TheFlow.png",
-      "/src/assets/MyProjects/ApplicationCards/ProductCardElements.png",
+      "/assets/MyProjects/ApplicationCards/TheFlow.png",
+      "/assets/MyProjects/ApplicationCards/ProductCardElements.png",
     ],
   },
   imageSection02: {
     title: "Moodboard",
     description:
       "Like with most of my projects, I started with a moodboard. This helped me understand the look and feel I wanted to achieve. For this card, I needed to include many elements, such as the logo, application stages, statuses, and other details. Having a moodboard and some visual examples gave me a good starting point and made it easier to explore different ideas.",
-    imageUrl: "/src/assets/MyProjects/ApplicationCards/moodboard.png",
+    imageUrl: "/assets/MyProjects/ApplicationCards/moodboard.png",
   },
   imageSection03: {
     title: "Wireframes",
@@ -53,15 +53,15 @@ export const productCardRedesign: Project = {
     description2:
       "The wireframes helped me organise elements such as the logo, application stage, status, dates, call-to-action buttons, and any required user actions. I also mapped simple logic flows, like when the “Continue” button should appear and when the user should see an action required.This process of iteration made it easier to compare different layouts, remove unnecessary elements, and focus on the clearest way to show the application state. Usually I sak for a lot of feedback during this phase to make sure I'm on the right track.",
     images: [
-      "/src/assets/MyProjects/ApplicationCards/wireframes.png",
-      "/src/assets/MyProjects/ApplicationCards/wireframes02.png",
+      "/assets/MyProjects/ApplicationCards/wireframes.png",
+      "/assets/MyProjects/ApplicationCards/wireframes02.png",
     ],
   },
   sectionMiddle: {
     title: "Product Categories",
     description:
       "Each product category has a different card design to help the borrower understand the product and what they need to do to apply. The initial idea was to use, photos, illustrations, or just a colour to distinguish the different categories. My goal was to ensure the card is accessible, so the only colour to distingusing the categories was not an option, as it would not be accessible for users with colour blindness. I was leaning to develop simple illustartions to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
-    imageUrl: "/src/assets/MyProjects/ApplicationCards/sizing.png",
+    imageUrl: "/assets/MyProjects/ApplicationCards/sizing.png",
   },
 
   sideBySideSectionsLeft: [
@@ -69,19 +69,19 @@ export const productCardRedesign: Project = {
       title: "Colour only",
       description:
         "The only colour to distinguish the categories was not an option, as it would not be accessible for users with colour blindness.",
-      image: "/src/assets/MyProjects/ApplicationCards/colourOnly.png",
+      image: "/assets/MyProjects/ApplicationCards/colourOnly.png",
     },
     {
       title: "Illustrations",
       description:
         "Illustrations were another option to distinguish the categories, but I ended up using photos to make the card more engaging and visually appealing.",
-      image: "/src/assets/MyProjects/ApplicationCards/illustrations.png",
+      image: "/assets/MyProjects/ApplicationCards/illustrations.png",
     },
     {
       title: "Photos",
       description:
         "Photos were the final option to distinguish the categories, and I ended up using photos to make the card more engaging and visually appealing.",
-      image: "/src/assets/MyProjects/ApplicationCards/photos.png",
+      image: "/assets/MyProjects/ApplicationCards/photos.png",
     },
   ],
 
@@ -89,20 +89,20 @@ export const productCardRedesign: Project = {
     title: "High fidelity design",
     description:
       "The high-fidelity designs below show three different states of the product card, based on the stage of the application. The top left card is what the borrower sees first when looking for the right loan to apply for. The top right card shows an application in progress, where the borrower can see where they left off and what they need to do next. The bottom left card represents a live application, showing the current status, submission date, and amount borrowed. From here, the borrower can view the application or add any missing information. ",
-    imageUrl: "/src/assets/MyProjects/ApplicationCards/hiFi.png",
+    imageUrl: "/assets/MyProjects/ApplicationCards/hiFi.png",
   },
   sideBySideSectionsRight: [
     {
       title: "Before re-design",
       description:
         "Before the redesign, the cards displayed too much content, which made it hard for users to find the information they needed. The colours and icons were not consistent, and colour was sometimes misleading—for example, a blue tick suggested that no action was required. The cards were also not responsive and did not look good across all devices.",
-      image: "/src/assets/MyProjects/ApplicationCards/before.png",
+      image: "/assets/MyProjects/ApplicationCards/before.png",
     },
     {
       title: "After re-design",
       description:
         "After the redesign, the cards followed a more consistent design with a clear hierarchy and colour scheme. Icons and colours were used consistently, making the information easier to understand. The cards were also responsive and looked good across all devices.",
-      image: "/src/assets/MyProjects/ApplicationCards/DevReady.pdf",
+      image: "/assets/MyProjects/ApplicationCards/DevReady.pdf",
     },
   ],
 
@@ -111,8 +111,8 @@ export const productCardRedesign: Project = {
     description:
       "The final design gives borrowers a clear place to see all their applications and products. Current applications are easy to understand, with clear statuses, stages, and next steps, so borrowers know what is in progress and what they need to do next. Available products are shown as simple cards, making it easy to compare options and start a new application. Overall, the experience feels more organised, reduces confusion, and helps borrowers move through the application flow with more confidence.",
     images: [
-      "/src/assets/MyProjects/ApplicationCards/final01.png",
-      "/src/assets/MyProjects/ApplicationCards/final02.png",
+      "/assets/MyProjects/ApplicationCards/final01.png",
+      "/assets/MyProjects/ApplicationCards/final02.png",
     ],
   },
   results: [

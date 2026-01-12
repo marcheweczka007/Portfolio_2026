@@ -5,7 +5,7 @@ export const kitchenDisplay: Project = {
   title: "Kitchen Display System",
   description:
     "This project involved designing new features for a restaurant kitchen display system used by chefs, servers, and kitchen staff. The system supports day-to-day kitchen operations by showing orders, their status, and what actions are needed next. The new functionality aimed to improve communication across teams, reduce delays, and make it easier to manage complex order flows in busy restaurant environments.",
-  imageUrl: "/src/assets/MyProjects/KitchenDisplay/Hero.png",
+  imageUrl: "/assets/MyProjects/KitchenDisplay/Hero.png",
   tags: ["Kitchen Display", "SaaS", "Business"],
   overviewSection: {
     overviewYear: "2023",
@@ -28,22 +28,22 @@ export const kitchenDisplay: Project = {
   sectionStart: {
     overviewTitle: "Discovery",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/MyProjects/KitchenDisplay/moodboard.png",
+    imageUrl: "/assets/MyProjects/KitchenDisplay/moodboard.png",
   },
 
   imageSection01: {
     title: "Personas",
     description:
       "This is a mapping of the loan application flow for Grand Bank. It shows the different steps involved in the loan application process. We used this to understand the user flow and design around any constraints or limitations.",
-    imageUrl: "/src/assets/MyProjects/KitchenDisplay/personas.png",
+    imageUrl: "/assets/MyProjects/KitchenDisplay/personas.png",
   },
   imageSection02: {
     title: "Scenarios",
     description:
       "When time allowed, I would sketch out the different screens and flows for the loan application process. My go to tool was excalidraw. As it allows me to quickly sketch out ideas and iterate on them. I would then share the sketches with the team and get feedback on the different screens and flows. For this particular project, I did both desktop and mobile sketches. The clients requirement wa to go mobile first.",
     images: [
-      "/src/assets/MyProjects/KitchenDisplay/scenarios.png",
-      "/src/assets/MyProjects/KitchenDisplay/scenarios02.png",
+      "/assets/MyProjects/KitchenDisplay/scenarios.png",
+      "/assets/MyProjects/KitchenDisplay/scenarios02.png",
     ],
   },
   imageSection03: {
@@ -51,8 +51,8 @@ export const kitchenDisplay: Project = {
     description:
       "",
     images: [
-      "/src/assets/MyProjects/KitchenDisplay/personaFlow.png",
-      "/src/assets/MyProjects/KitchenDisplay/notify.png",
+      "/assets/MyProjects/KitchenDisplay/personaFlow.png",
+      "/assets/MyProjects/KitchenDisplay/notify.png",
     ],
   },
   imageSection04: {
@@ -60,25 +60,25 @@ export const kitchenDisplay: Project = {
     description:
       "After the wireframes, I would then create high fidelity wireframes for the loan application process. I used Figma to create the wireframes. The client was able to see the different screens and flows for the loan application process and provide feedback on the different screens and flows. The client was also able to see the different interactions for the loan application process and provide feedback on the different interactions.",
     images: [
-      "/src/assets/MyProjects/KitchenDisplay/hfWireframes.png",
-      "/src/assets/MyProjects/KitchenDisplay/hfWireframes02.png",
+      "/assets/MyProjects/KitchenDisplay/hfWireframes.png",
+      "/assets/MyProjects/KitchenDisplay/hfWireframes02.png",
     ],
   },
   sectionMiddle: {
     title: "Members view",
     description: "Placeholder Text",
-    imageUrl: "/src/assets/MyProjects/OneView/SectionMid.png",
+    imageUrl: "/assets/MyProjects/OneView/SectionMid.png",
   },
   sideBySideSectionsLeft: [
     {
       title: "Invite member",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/OneView/InviteMember.png",
+      image: "/assets/MyProjects/OneView/InviteMember.png",
     },
     {
       title: "Lender view",
       description: "Placeholder Text",
-      image: "/src/assets/MyProjects/OneView/LenderView.png",
+      image: "/assets/MyProjects/OneView/LenderView.png",
     },
   ],
 

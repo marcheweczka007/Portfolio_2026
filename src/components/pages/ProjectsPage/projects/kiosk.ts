@@ -5,7 +5,7 @@ export const kiosk: Project = {
   title: "Kiosk (Self-checkout experience)",
   description:
     "This project involved redesigning a self-checkout kiosk for Grafterr clients. The goal was to simplify the checkout process, reduce friction for users, and create a touch-friendly interface suitable for a 15-inch screen.",
-  imageUrl: "/src/assets/MyProjects/Kiosk/selfCheckout.png",
+  imageUrl: "/assets/MyProjects/Kiosk/selfCheckout.png",
   tags: ["Kiosk", "Product design", "SaaS"],
   overviewSection: {
     overviewYear: "2023",
@@ -31,42 +31,42 @@ export const kiosk: Project = {
     overviewTitle: "Self-checkout experience",
     description:
       "This project focused on imporving the user experience and the overall design of the self-checkout kiosk for Grafterr clients.",
-    imageUrl: "/src/assets/MyProjects/Kiosk/KioskUser.png",
+    imageUrl: "/assets/MyProjects/Kiosk/KioskUser.png",
   },
   imageSection01: {
     title: "Competitor Analysis",
     description:
       "As part of the discovery phase, I reviewed the self-checkout kiosk experiences of key competitors, focusing on UI patterns, user flows, and how users are guided through the journey.The analysis revealed clear differences in how each product handles simplicity, feedback, and complexity, as well as common pain points around progress visibility, accessibility, and error handling.These insights helped surface concrete opportunities and informed design decisions aimed at creating a kiosk experience that feels clear, reassuring, and easy to use in real-world environments.",
-    imageUrl: "/src/assets/MyProjects/Kiosk/comparison.png",
+    imageUrl: "/assets/MyProjects/Kiosk/comparison.png",
   },
   imageSection02: {
     title: "Requirements",
     description: "Some of the requirements for the project were:",
-    imageUrl: "/src/assets/MyProjects/Kiosk/ProjectRequrements.jpg",
+    imageUrl: "/assets/MyProjects/Kiosk/ProjectRequrements.jpg",
   },
   imageSection03: {
     title: "Moodboard",
     description:
       "One of my favorite parts of the project is to create a moodbaord, it always helps me to generate ideas and keeps me excited about the user interface design. I like to see what is out there and what other designers are doing, with similar projects.",
-    imageUrl: "/src/assets/MyProjects/Kiosk/moodboard.png",
+    imageUrl: "/assets/MyProjects/Kiosk/moodboard.png",
   },
 
   sectionMiddle: {
     title: "Wireframes",
     description:
       "Wireframes helped me to test the layout and iterate quickly on the design. I like to draw out the diffrent screens, flows and test before moving to the next stage.",
-    imageUrl: "/src/assets/MyProjects/Kiosk/wireframesGroup.png",
+    imageUrl: "/assets/MyProjects/Kiosk/wireframesGroup.png",
   },
   twoColumnSection: [
     {
       title: "Detailed sketch",
       description: "Drawing on paper helps me to quickly sketch out ideas and iterate on them. I like to use it as a starting point for the design.",
-      image: "/src/assets/MyProjects/Kiosk/Sketch.png",
+      image: "/assets/MyProjects/Kiosk/Sketch.png",
     },
     {
       title: "Original Kiosk Design",
       description: "The original kiosk design was a staerting point for the re-design. It helped me understand the current state of the kiosk and the limitations of the design.",
-      image: "/src/assets/MyProjects/Kiosk/OriginalKiosk.png",
+      image: "/assets/MyProjects/Kiosk/OriginalKiosk.png",
     },
   ],
   sideBySideSectionsLeft: [
@@ -74,13 +74,13 @@ export const kiosk: Project = {
       title: "Set meal flow",
       description:
         "This flow guides the user through building a set meal step by step. At the top, a progress indicator shows each stage of the process, helping the user understand where they are and what’s coming next. As the user selects items, completed steps are clearly marked. The user must complete the required selection before continuing, and helpful messages appear if something is missing. Users can go back to previous steps to change their choices, and the basket updates as they go. This keeps the process structured, clear, and easy to follow, while still giving users control over their order.",
-      image: "/src/assets/MyProjects/Kiosk/Flow01.png",
+      image: "/assets/MyProjects/Kiosk/Flow01.png",
     },
     {
       title: "Query purchase flow",
       description:
         "This flow introduces a quick add-on option while the user is browsing the menu. When a relevant item is selected, the user is asked if they would like to add a related meal deal, such as coffee and cake. The prompt is simple and easy to dismiss, so it doesn’t interrupt the main journey. If the user accepts the offer, they are guided through a short, focused flow to customise their selection, such as choosing a drink, milk type, or cake. Each step is clear and requires a selection before moving on. The price updates as choices are made, and the item can be added to the basket once the selection is complete. This approach encourages add-ons in a natural way, without making the ordering process feel complicated or forced.",
-      image: "/src/assets/MyProjects/Kiosk/Flow02Query.png",
+      image: "/assets/MyProjects/Kiosk/Flow02Query.png",
     },
   ],
 
@@ -88,14 +88,14 @@ export const kiosk: Project = {
     title: "High fidelity designs",
     description:
       "At this stage, the focus was on refining the interface and improving the overall look and feel of the kiosk. The design uses more white space, a clearer visual hierarchy, and consistent spacing to make the screens easier to scan and interact with. Key actions and choices are more prominent, helping users move through the flow with less effort. The updated UI feels cleaner and more modern, while still supporting all required steps, from item customisation to payment. Overall, the high-fidelity design improves usability and creates a more visually pleasing experience for users in a real-world kiosk environment.",
-    imageUrl: "/src/assets/MyProjects/Kiosk/ExampleScreensKiosk.png",
+    imageUrl: "/assets/MyProjects/Kiosk/ExampleScreensKiosk.png",
   },
   sideBySideSectionsRight: [
     {
       title: "White labelling",
       description:
         "White labelling was a key requirement for the kiosk. We needed to be able to brand the kiosk with the client's logo and colours.",
-      image: "/src/assets/MyProjects/Kiosk/WhiteLabelling.png",
+      image: "/assets/MyProjects/Kiosk/WhiteLabelling.png",
     },
   ],
   showcaseGallery: {
@@ -103,10 +103,10 @@ export const kiosk: Project = {
     description:
       "Project was succesfully delivered and the kiosk is now used by real clients.",
     images: [
-      "/src/assets/MyProjects/Kiosk/heroKiosk.png",
-      "/src/assets/MyProjects/Kiosk/basketOverview.png",
-      "/src/assets/MyProjects/Kiosk/NewUserPayment.png",
-      "/src/assets/MyProjects/Kiosk/components.png",
+      "/assets/MyProjects/Kiosk/heroKiosk.png",
+      "/assets/MyProjects/Kiosk/basketOverview.png",
+      "/assets/MyProjects/Kiosk/NewUserPayment.png",
+      "/assets/MyProjects/Kiosk/components.png",
     ],
   },
 

@@ -10,7 +10,7 @@ export const requirements = {
   title: "My process",
   description:
     "I work at the intersection of design and engineering, using code as a core design tool to reduce handover friction and accelerate learning. My process is intentionally lean, iterative, and well-suited to fast-moving product teams.",
-  image: "/src/assets/processes/diagramLinear.svg",
+  image: "/assets/processes/diagramLinear.svg",
     benefitsTitle: "Benefits of design + code approach",
   benefits: [
     "Interactive prototypes",

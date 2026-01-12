@@ -35,7 +35,7 @@ export function CTASection() {
                 asChild
               >
                 <a
-                  href="/src/assets/Other/CV_Zuza-ProdDes.pdf"
+                  href="/assets/Other/CV_Zuza-ProdDes.pdf"
                   download="Zuza-CV.pdf"
                 >
                   Download resume <Download className="w-4 h-4" />

@@ -5,7 +5,7 @@ export const oneView: Project = {
   title: "One view dashboard",
   description:
     "Developing a dashboard that helps lenders manage clients and make more personalised decisions. The dashboard brings all borrower information into one place, creating a clear 360° view by combining data from the Ascent platform with external sources. Because the data and requirements were still evolving, the work involved a lot of iteration and exploring different ways to visualise this view.",
-  imageUrl: "/src/assets/MyProjects/OneView/OneView.png",
+  imageUrl: "/assets/MyProjects/OneView/OneView.png",
   tags: ["SaaS Product", "Dashboard", "FinTech UX"],
   overviewSection: {
     overviewYear: "2025",
@@ -31,13 +31,13 @@ export const oneView: Project = {
     overviewTitle: "One view",
     description:
       "My responsibilities on this project included designing what the 360° borrower view could look like, creating the widgets and components used in the dashboard, and shaping the overall dashboard layout. I worked closely with the VP of Design throughout the process. This project gave me the chance to design a variety of widgets, refine their usability, and ensure they worked well together within the dashboard.",
-    imageUrl: "/src/assets/MyProjects/OneView/SectionStart.png",
+    imageUrl: "/assets/MyProjects/OneView/SectionStart.png",
   },
   imageSection01: {
     title: "Requirements",
     description:
       "The requirements were layed out by the design team. At first we had a brainstorming session to figure out what data should be included in the 360° borrower view. As it was new feature and not yet defined, we had to explore different ways to visualise the data. I remember in particular the discussion around the data quality indicators, and how to visualise them in a way that was easy to understand and use.",
-    imageUrl: "/src/assets/MyProjects/OneView/Requirements.png",
+    imageUrl: "/assets/MyProjects/OneView/Requirements.png",
   },
   imageSection02: {
     title: "The Process",
@@ -51,10 +51,10 @@ export const oneView: Project = {
     description2:
       "This mapping exercise helped define the structure of the dashboard, identify the main widgets and sections needed, and clarify how the user flow should work. It also guided early decisions about hierarchy, layout, and what information should be surfaced first.",
     images: [
-      "/src/assets/MyProjects/OneView/userType.png",
-      "/src/assets/MyProjects/OneView/relationships.png",
+      "/assets/MyProjects/OneView/userType.png",
+      "/assets/MyProjects/OneView/relationships.png",
     ],
-    bottomImageUrl: "/src/assets/MyProjects/OneView/sketchesOneView.png",
+    bottomImageUrl: "/assets/MyProjects/OneView/sketchesOneView.png",
   },
   imageSection03: {
     title: "Widgets & components",
@@ -63,28 +63,28 @@ export const oneView: Project = {
     description2:
       "I created a range of widget layouts, testing how each one could be used within the dashboard. The goal was to make the widgets flexible, easy to understand, and consistent across different borrower types. I also designed a widget management panel, allowing lenders to add, remove, or reorder widgets based on their needs. This work helped define the visual language of the dashboard and ensured that each component could scale as more data and features were added.",
     images: [
-      "/src/assets/MyProjects/OneView/widgets01.png",
-      "/src/assets/MyProjects/OneView/widgets02.png",
+      "/assets/MyProjects/OneView/widgets01.png",
+      "/assets/MyProjects/OneView/widgets02.png",
     ],
   },
   sectionMiddle: {
     title: "Members view",
     description:
       "The members view provides a quick overview of each borrower’s personal details and financial information. Lenders can search for a specific borrower or filter the entire member list using a wide range of criteria, depending on the context or the type of loan they want to recommend. They can also switch between a list view and a grid view to see all members in whichever format suits their workflow best.",
-    imageUrl: "/src/assets/MyProjects/OneView/SectionMid.png",
+    imageUrl: "/assets/MyProjects/OneView/SectionMid.png",
   },
   twoColumnSection: [
     {
       title: "Wireframes",
       description:
         "The wireframes were the starting point for the members view. They were used to test the layout and the information hierarchy. On the left you can see the top image, with the green (the largest one), yellow, and then red (the smallest one) this idea was proposed to allow the lender to quickly scan and see which member is best suited for the loan they are looking for or for any other purpose the lender filtered for.",
-      image: "/src/assets/MyProjects/OneView/gridLow.png",
+      image: "/assets/MyProjects/OneView/gridLow.png",
     },
     {
       title: "Chatbot",
       description:
         "Additionally, this view included an AI chatbot that helped lenders identify the best members to recommend a loan to. Lenders could either choose from predefined prompts or type in their own custom questions to get personalised recommendations.",
-      image: "/src/assets/MyProjects/OneView/chatLow.png",
+      image: "/assets/MyProjects/OneView/chatLow.png",
     },
   ],
   sideBySideSectionsLeft: [
@@ -94,33 +94,33 @@ export const oneView: Project = {
         "These wireframes focused on determinating what key information should be diplayed for each member, but alos what type of filters and sorting options should be displayed to the lender.",
       description2:
         "The initilal idea was to show filters in form of buttons, where the lender can click on the button to filter the members by the selected criteria.",
-      image: "/src/assets/MyProjects/OneView/detailedMView.png",
+      image: "/assets/MyProjects/OneView/detailedMView.png",
     },
     {
       title: "Member card",
       description:
         "I have build the components for the member card, featuring the grid & list view. The cards included key information about the membet, with the ability to see more details on the one view page.",
-      image: "/src/assets/MyProjects/OneView/Member.png",
+      image: "/assets/MyProjects/OneView/Member.png",
     },
   ],
   sectionEnd: {
     title: "Team view",
     description:
       "This feature gives lenders a personalised starting point where they can quickly access key tools and teams they work with. Each card highlights a service area, like Universal Banking, Account Opening, or Treasury Management with a brief description and the team members involved. Features outside the lender’s current plan appear locked with an upgrade option, making it clear what’s available and what requires higher access. ",
-    imageUrl: "/src/assets/MyProjects/OneView/SectionEnd.png",
+    imageUrl: "/assets/MyProjects/OneView/SectionEnd.png",
   },
   sideBySideSectionsRight: [
     {
       title: "Invite member",
       description:
         "The Team View gives lenders a clear overview of the borrowers assigned to a specific banking team. It lists each member along with key details such as years with the institution, account number, and the financial products they hold. A search bar and filters help lenders quickly find a specific borrower, and an invite button allows them to add new members to the team.This view helps lenders manage their portfolio more efficiently by keeping all team-related borrower information in one organised place.",
-      image: "/src/assets/MyProjects/OneView/UBT.png",
+      image: "/assets/MyProjects/OneView/UBT.png",
     },
     {
       title: "Account Opening",
       description:
         "This view allows lenders to see all new account applications as they come in. Each lead includes key borrower details, the products they’re interested in, and a timestamp showing when the application was submitted. Lenders can quickly scan new leads, search for a specific applicant, and open any profile to review the details or take the next action.",
-      image: "/src/assets/MyProjects/OneView/AO.png",
+      image: "/assets/MyProjects/OneView/AO.png",
     },
   ],
 
@@ -135,12 +135,12 @@ export const oneView: Project = {
     title: "Final outcome",
     description: "Final outcome of the one view dashboard.",
     images: [
-      "/src/assets/MyProjects/OneView/1.png",
-      "/src/assets/MyProjects/OneView/2.png",
-      "/src/assets/MyProjects/OneView/3.png",
-      "/src/assets/MyProjects/OneView/4.png",
-      "/src/assets/MyProjects/OneView/5.png",
-      "/src/assets/MyProjects/OneView/6.png",
+      "/assets/MyProjects/OneView/1.png",
+      "/assets/MyProjects/OneView/2.png",
+      "/assets/MyProjects/OneView/3.png",
+      "/assets/MyProjects/OneView/4.png",
+      "/assets/MyProjects/OneView/5.png",
+      "/assets/MyProjects/OneView/6.png",
     ],
   },
 

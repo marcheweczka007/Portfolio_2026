@@ -149,7 +149,7 @@ export function NavigationBar() {
           <div className="hidden lg:flex justify-end">
             <Button size="lg" variant="outline" asChild>
               <a
-                href="/src/assets/Other/CV_Zuza-ProdDes.pdf"
+                href="/assets/Other/CV_Zuza-ProdDes.pdf"
                 className="flex items-center gap-2"
                 download="Zuza-CV.pdf"
               >
@@ -252,7 +252,7 @@ export function NavigationBar() {
 
                 <Button size="sm" variant="outline" asChild>
                   <a
-                    href="/src/assets/Other/CV_Zuza-ProdDes.pdf"
+                    href="/assets/Other/CV_Zuza-ProdDes.pdf"
                     className="flex items-center gap-2"
                     download="Zuza-CV.pdf"
                   >
