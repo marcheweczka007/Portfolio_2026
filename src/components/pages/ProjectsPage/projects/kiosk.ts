@@ -114,7 +114,7 @@ export const kiosk: Project = {
 
   results: [
     "Tackling this project on my own was a great learning expereince. I had to figure out, how to design on large touchscreen device, ensure the self-service kiosk is easy to use and still provide a clear and consistent user experience.It was not always easy, but I'm happy with the outcome and the kiosk is now used by real clients.",
-    "If i were to do this project again, I would focus more on the inital flows, constraints and limitations of the kiosk. I would also focus more on the user research and testing to ensure the kiosk is easy to use and provides a clear and consistent user experience.",
+    "If I had an opportunity to do this project again, I would spend more time on the inital flows, constraints and limitations of the kiosk. I would also focus more on the user research and testing to ensure the kiosk is easy to use for all users.",
   ],
 
   sectionIds: {
