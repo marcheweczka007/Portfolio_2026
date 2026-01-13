@@ -74,7 +74,7 @@ export default function ProcessesPage() {
       </div>
 
       {/* Navigation Pills */}
-      <div className="sticky top-20 z-40 bg-orange-100/10 backdrop-blur-xl border-b border-orange-200/10 mb-12">
+      <div className="fixed w-full top-20 z-40 bg-orange-100/10 backdrop-blur-xl border-b border-orange-200/10 mb-12">
         <div className="container mx-auto max-w-6xl px-6 py-4">
           <nav className="flex gap-2 overflow-x-auto scrollbar-hide">
             {sections.map((section) => (
@@ -132,8 +132,6 @@ export default function ProcessesPage() {
                   </ul>
                 </CardContent>
               </Card>
-
-
             </div>
           </div>
         </section>
@@ -145,34 +143,51 @@ export default function ProcessesPage() {
             {componentFirstContent.title}
           </h2>
 
-
           {/* Step-by-step process */}
           <div className="mb-8">
-            <h3 className="mb-8">The steps I would apply when building a product in code, this can vary depending on the project and the team.</h3>
+            <h3 className="mb-8">
+              The steps I would apply when building a product in code, this can
+              vary depending on the project and the team.
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 justify-items-start gap-4 mb-8 justify-center">
               <Card className=" bg-orange-200/20 border-none  w-full min-w-[200px]">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-medium mb-2">1. Problem definition</p>
+                  <p className="text-lg font-medium mb-2">
+                    1. Problem definition
+                  </p>
                   <p className="text-sm text-gray-700">
-                    I start by clarifying the problem. I define the product goals, user needs, technical constraints, and success metrics. Understanding constraints early allows me to better plan the project and avoid rework.
+                    I start by clarifying the problem. I define the product
+                    goals, user needs, technical constraints, and success
+                    metrics. Understanding constraints early allows me to better
+                    plan the project and avoid rework.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className=" bg-orange-200/30 border-none  w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-medium mb-2">2. Low-fidelity exploration</p>
+                  <p className="text-lg font-medium mb-2">
+                    2. Low-fidelity exploration
+                  </p>
                   <p className="text-sm text-gray-700">
-                    I explore ideas quickly through sketches, wireframes, and rough layout experiments. At this stage, speed matters more than polish, the goal is to validate structure, flow, and intent before investing in detail.
+                    I explore ideas quickly through sketches, wireframes, and
+                    rough layout experiments. At this stage, speed matters more
+                    than polish, the goal is to validate structure, flow, and
+                    intent before investing in detail.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="flex-1 bg-orange-200/40 border-none  w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-medium mb-2">3. Lean prototyping in code</p>
+                  <p className="text-lg font-medium mb-2">
+                    3. Lean prototyping in code
+                  </p>
                   <p className="text-sm text-gray-700">
-                    Rather than relying on static high-fidelity designs, I build interactive prototypes directly in code. I treat code as the highest-fidelity design artefact, allowing it to be explored in the same medium the product will ship in.
+                    Rather than relying on static high-fidelity designs, I build
+                    interactive prototypes directly in code. I treat code as the
+                    highest-fidelity design artefact, allowing it to be explored
+                    in the same medium the product will ship in.
                   </p>
                 </CardContent>
               </Card>
@@ -181,31 +196,42 @@ export default function ProcessesPage() {
                 <CardContent className="p-6 text-center">
                   <p className="text-lg font-medium mb-2">4. Feedback</p>
                   <p className="text-sm text-gray-700">
-                    Working in code enables early and frequent feedback from users, product managers, and engineers. Because prototypes are interactive, feedback is grounded in real usage rather than interpretation of static screens.
+                    Working in code enables early and frequent feedback from
+                    users, product managers, and engineers. Because prototypes
+                    are interactive, feedback is grounded in real usage rather
+                    than interpretation of static screens.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="flex-1 bg-orange-200/60 border-none  w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-medium mb-2">5. Visual refinement</p>
+                  <p className="text-lg font-medium mb-2">
+                    5. Visual refinement
+                  </p>
                   <p className="text-sm text-gray-700">
-                    Once flows and interactions are validated, I polish visual hierarchy, spacing, motion, and accessibility directly within the codebase. This ensures design decisions remain aligned with technical realities and production standards.
+                    Once flows and interactions are validated, I polish visual
+                    hierarchy, spacing, motion, and accessibility directly
+                    within the codebase. This ensures design decisions remain
+                    aligned with technical realities and production standards.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="flex-1 bg-orange-200/70 border-none  w-full">
                 <CardContent className="p-6 text-center">
-                  <p className="text-lg font-medium mb-2">6. Production ready handoff</p>
+                  <p className="text-lg font-medium mb-2">
+                    6. Production ready handoff
+                  </p>
                   <p className="text-sm text-gray-700">
-                    The result is production-ready code rather than a traditional design handoff. This significantly shortens feedback loops and reduces misalignment between design intent and the final experience
+                    The result is production-ready code rather than a
+                    traditional design handoff. This significantly shortens
+                    feedback loops and reduces misalignment between design
+                    intent and the final experience
                   </p>
                 </CardContent>
               </Card>
             </div>
-
-
           </div>
         </section>
 
@@ -214,32 +240,31 @@ export default function ProcessesPage() {
           <div className="mb-8">
             <h2 className="text-xl font-bold mb-3">Why this approach</h2>
             <p className="text-muted-foreground leading-relaxed max-w-6xl">
-              An overview of why designing in code reduces friction, improves alignment, and helps teams move faster.
+              An overview of why designing in code reduces friction, improves
+              alignment, and helps teams move faster.
             </p>
           </div>
 
-                      <Card className="bg-muted/30">
-              <CardContent className="p-6">
-                <p className="text-lg font-medium mb-4">Reasons why this approach works</p>
-                <ul className="space-y-3">
-                  {[
-                    "This approach works best in fast-moving product teams where learning speed matters as much as execution. By collapsing design and engineering into a single workflow, feedback loops are shorter, intent is clearer, and decisions are validated earlier.",
-                    "Designing in code doesn’t replace design thinking — it relocates it closer to production. Visual decisions, interaction details, and technical constraints are resolved together, rather than across handovers.",
-                    "The result is fewer surprises late in development, stronger ownership of the final experience, and products that ship faster without sacrificing quality.",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-
+          <Card className="bg-muted/30">
+            <CardContent className="p-6">
+              <p className="text-lg font-medium mb-4">
+                Reasons why this approach works
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "This approach works best in fast-moving product teams where learning speed matters as much as execution. By collapsing design and engineering into a single workflow, feedback loops are shorter, intent is clearer, and decisions are validated earlier.",
+                  "Designing in code doesn’t replace design thinking — it relocates it closer to production. Visual decisions, interaction details, and technical constraints are resolved together, rather than across handovers.",
+                  "The result is fewer surprises late in development, stronger ownership of the final experience, and products that ship faster without sacrificing quality.",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </section>
-
-
 
         {/* Final CTA */}
         <CTASection />
