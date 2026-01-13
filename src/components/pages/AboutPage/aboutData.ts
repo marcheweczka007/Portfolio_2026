@@ -10,7 +10,7 @@ const aboutContent = {
   bioP4: "Open to new opportunities where I can contribute and grow.",
   resumeButton: "Resume",
   expertiseTitle: "My focus areas",
-  
+
   leanUx: "Lean UX",
   leanUxContent1:
     "I practice Lean UX to minimize waste and maximize learning through rapid experimentation. This approach focuses on getting ideas in front of users quickly, gathering feedback, and iterating based on real-world insights rather than assumptions.",
@@ -57,8 +57,8 @@ const aboutContent = {
   //   "Creating multiple design variations to test different approaches",
   // aiPrototypingPoint4:
   //   "Automating repetitive tasks to focus on high-impact work",
-    
-  designSystem: "Design Systems + Storybook",
+
+  designSystem: "Design Systems",
   designSystemContent1:
     "As a product designer, I was often tasked with building or maintaining design systems. I've learned a lot about how to create a design system and how to use it to create a consistent user experience. But I've also learned why it's important to keep the codebase clean and maintainable.",
   designSystemContent2: "My design system philosophy:",
@@ -74,10 +74,10 @@ const aboutContent = {
   designSystemPoint6:
     "Borrow from existing systems (Material, Ant Design, shadcn/ui) when appropriate",
 
-  coding: "Coding + AI (Self-taught)",
+  coding: "Coding + AI ",
   codingContent1:
     "I'm still early in my coding journey, but I can see the value of being able to code myself and understand the technical constraints early in the design process. I'm currently learning to code myself and I'm using AI tools to help me learn. I'm currently using Cursor, and frameworks like shadcn/ui, Tailwing CSS and React to build prototypes.",
-  codingContent2: "Technical capabilities:",
+  codingContent2: "Improving my skills in coding and prototyping:",
   codingPoint1: "HTML, CSS, and modern JavaScript (ES6+)",
   codingPoint2: "React and component-based architecture",
   codingPoint3: "CSS frameworks (Tailwind CSS, styled-components)",
