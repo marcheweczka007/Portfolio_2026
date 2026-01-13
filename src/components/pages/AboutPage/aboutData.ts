@@ -13,12 +13,12 @@ const aboutContent = {
 
   leanUx: "Lean UX",
   leanUxContent1:
-    "I practice Lean UX to minimize waste and maximize learning through rapid experimentation. This approach focuses on getting ideas in front of users quickly, gathering feedback, and iterating based on real-world insights rather than assumptions.",
-  leanUxContent2: "Key principles I apply include:",
-  leanUxPoint1: "Cross-functional collaboration from day one",
-  leanUxPoint2: "Building MVPs and testable hypotheses",
-  leanUxPoint3: "Continuous user validation throughout the design process",
-  leanUxPoint4: "Prioritizing outcomes over outputs",
+    "Lean UX has been a great appraoch for small teams I've worked with. It focused on getting ideas in front of stakeholders and users quickly, gathering feedback, and iterating based on user insights rather than assumptions.",
+  leanUxContent2: "How I apply Lean UX:",
+  leanUxPoint1: "Collaboration with wider team from day one",
+  leanUxPoint2: "UI prototypes to test ideas quickly",
+  leanUxPoint3: "Testing (often) with users ",
+  leanUxPoint4: "Focusing on solving the problem",
   leanUxPoint5: "Embracing uncertainty and learning from failure",
 
   research: "Research",
@@ -35,7 +35,7 @@ const aboutContent = {
 
   ooux: "OOUX",
   oouxContent1:
-    "Object-Oriented UX (OOUX) is a methodology that helps me design scalable, coherent digital systems by thinking in terms of objects rather than pages or screens.",
+    "Object-Oriented UX (OOUX) is a methodology that helps me design scalable, digital systems by thinking in terms of objects rather than pages or screens.",
   oouxContent2: "How I apply OOUX:",
   oouxPoint1:
     "Identifying core objects and their relationships early in the design process",
@@ -63,14 +63,14 @@ const aboutContent = {
     "As a product designer, I was often tasked with building or maintaining design systems. I've learned a lot about how to create a design system and how to use it to create a consistent user experience. But I've also learned why it's important to keep the codebase clean and maintainable.",
   designSystemContent2: "My design system philosophy:",
   designSystemPoint1:
-    "Start small with foundational elements (colors, typography, spacing)",
+    "Start small with foundational elements",
   designSystemPoint2:
-    "Build component libraries that are flexible yet opinionated",
+    "Build component libraries that are flexible (or use existing libraries like shadcn/ui)",
   designSystemPoint3:
     "Document patterns and usage guidelines for the entire team",
-  designSystemPoint4: "Establish design token architecture for scalability",
+  designSystemPoint4: "Creating a clear design token structure that makes it easy to scale and maintain the system.",
   designSystemPoint5:
-    "Prioritize accessibility and inclusive design from the start",
+    "Prioritise accessibility and inclusive design from the start",
   designSystemPoint6:
     "Borrow from existing systems (Material, Ant Design, shadcn/ui) when appropriate",
 
