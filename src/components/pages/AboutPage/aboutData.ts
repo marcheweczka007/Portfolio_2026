@@ -1,6 +1,6 @@
 const aboutContent = {
   backToHome: "Back to Home",
-  pageTitle: "Hello again 👋 Here’s a little about me and my experience.",
+  pageTitle: "Hi again 👋 Here’s a little about me and my experience.",
   bioP1:
     "I'm a product designer with nearly 3 years of experience working for SaaS companies. I'm comfortable wearing multiple hats from shaping design systems to putting together an e-book for a marketing campaign. ",
   bioP2:
