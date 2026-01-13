@@ -248,7 +248,7 @@ export default function ProcessesPage() {
           <Card className="bg-muted/30">
             <CardContent className="p-6">
               <p className="text-lg font-medium mb-4">
-                Reasons why this approach works
+                Why I care about implmentation
               </p>
               <ul className="space-y-3">
                 {[
