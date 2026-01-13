@@ -252,9 +252,9 @@ export default function ProcessesPage() {
               </p>
               <ul className="space-y-3">
                 {[
-                  "This approach works best in fast-moving product teams where learning speed matters as much as execution. By collapsing design and engineering into a single workflow, feedback loops are shorter, intent is clearer, and decisions are validated earlier.",
-                  "Designing in code doesn’t replace design thinking — it relocates it closer to production. Visual decisions, interaction details, and technical constraints are resolved together, rather than across handovers.",
-                  "The result is fewer surprises late in development, stronger ownership of the final experience, and products that ship faster without sacrificing quality.",
+                  "I’ve had first hand experience seeing how designers often spend a lot of time creating high-fidelity flows and screens, followed by lengthy handovers and back and forth with engineers. This process is time consuming, and the results are not always what was expected. From my experience, learning to code basic UI using best practices helps close this gap, reduces handover time, and fits more naturally into the engineering workflow.",
+                  "Designing in code doesn’t take away from design thinking, it helps bring it closer to how the product is actually built. Visual decisions and interactions can be tested and adjusted alongside technical constraints, which reduces friction between design and engineering.",
+                  "It's super exciting for me to see how my designes are build in code, and the fact that I can do it myself gives me a lot of confidence and pride in my work."
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />

@@ -1,7 +1,7 @@
 const processes = {
   backToHome: "Back to Home",
   sectionLabel: "Processes",
-  title: "Processes that I use as a design engineer*",
+  title: "My design engineering path*",
   subtitle:
     "*I'm still early in my design engineering journey, but I'm learning a lot and I'm excited to share my processes with you.",
 };
@@ -11,7 +11,7 @@ export const requirements = {
   description:
     "I work at the intersection of design and engineering, using code as a core design tool to reduce handover friction and accelerate learning. My process is intentionally lean, iterative, and well-suited to fast-moving product teams.",
   image: "/assets/processes/diagramLinear.svg",
-    benefitsTitle: "Benefits of design + code approach",
+  benefitsTitle: "Benefits of design + code approach",
   benefits: [
     "Interactive prototypes",
     "Less time spend on handover",
@@ -29,7 +29,7 @@ export const componentFirstContent = {
 export const sections = [
   { id: "process", label: "My Process" },
   { id: "component-first", label: "Steps to build a product in code" },
-  { id: "feedback-loop", label: "Why this approach" }
+  { id: "feedback-loop", label: "Why this approach" },
 ];
 
 export default processes;
