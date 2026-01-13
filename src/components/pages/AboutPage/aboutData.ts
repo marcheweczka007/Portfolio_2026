@@ -2,11 +2,11 @@ const aboutContent = {
   backToHome: "Back to Home",
   pageTitle: "Hello again 👋 Here’s a little about me and my experience.",
   bioP1:
-    "I'm a product designer with nearly 3 years of experience working for SaaS companies. I'm comfortable wearing multiple hats—from shaping design systems to putting together an e-book for a marketing campaign.",
+    "I'm a product designer with nearly 3 years of experience working for SaaS companies. I'm comfortable wearing multiple hats from shaping design systems to putting together an e-book for a marketing campaign. ",
   bioP2:
-    " I work closely with developers, and lately I’ve been learning to code myself. With the help of AI tools, I prototype and test ideas quickly, turning concepts into real, usable solutions much faster.",
+    " I work closely with developers, and lately I’ve been learning to code myself, which been an empowering experience, and I'm taking time to keep growing my coding skills. With the help of AI tools, I prototype and test ideas quickly, turning concepts into real, usable solutions much faster.  ",
   bioP3:
-    "I’ve worked solo and inside cross-functional teams, and I’ve learned that the best work happens when everyone builds together.",
+    "I’ve worked solo and inside cross-functional teams, and I’ve learned that the best work happens when everyone builds together. ",
   bioP4: "Open to new opportunities where I can contribute and grow.",
   resumeButton: "Resume",
   expertiseTitle: "My focus areas",
