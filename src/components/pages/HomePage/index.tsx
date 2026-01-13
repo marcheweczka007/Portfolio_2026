@@ -29,10 +29,10 @@ export default function HomePage() {
 
         <div className="pt-12 container mx-auto max-w-6xl">
           <div className="flex flex-col items-center text-center relative">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl  leading-tight mb-8 tracking-tight font-bold max-w-4xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl  leading-normal mb-8 tracking-tight font-bold max-w-4xl">
               Hey, I'm Zuza 👋 <br /> A SaaS{" "}
-              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-orange-100 border border-orange-200/60 text-orange-600 text-2xl md:text-3xl lg:text-4xl  font-medium mx-1">
-                Product designer
+              <span className="inline-flex items-center px-4 py-1.5 font-extrabold rounded-full bg-orange-100 border border-orange-200/60 text-orange-600 text-3xl md:text-4xl lg:text-5xl  font-medium mx-1">
+                product designer
               </span>{" "}
               with a growing focus on{" "}
               <span
@@ -40,7 +40,7 @@ export default function HomePage() {
                 style={{
                   textDecorationLine: "underline",
                   textDecorationColor: "#1E3A8A",
-                  textDecorationThickness: "2px",
+                  textDecorationThickness: "3px",
                   textDecorationStyle: "wavy",
                 }}
               >
