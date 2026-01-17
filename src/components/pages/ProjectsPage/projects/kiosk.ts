@@ -4,7 +4,7 @@ export const kiosk: Project = {
   id: "kiosk",
   title: "Kiosk (Self-checkout experience)",
   description:
-    "This project involved redesigning a self-checkout kiosk for Grafterr clients. The goal was to simplify the checkout process, reduce friction for users, and create a touch-friendly interface suitable for a 15-inch screen.",
+    "The self-checkout kiosk project involved redesigning and improving the user experience for Grafterr clients. The goal was to simplify the checkout process, reduce friction for users, and create a touch-friendly interface suitable for a 15-inch screen.",
   imageUrl: "../assets/MyProjects/Kiosk/selfcheckout.png",
   tags: ["Kiosk", "Product design", "SaaS"],
   overviewSection: {

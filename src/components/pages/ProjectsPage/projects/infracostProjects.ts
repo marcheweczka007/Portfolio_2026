@@ -6,7 +6,7 @@ export const infracostProjects: Project = {
   id: "E-book-and-business-card-design",
   title: "Infracost (Graphic design projects) ",
   description:
-    "This project is a collection of graphic design projects I have worked on for Infracost. I have created a consistent look and feel for the 3 items.",
+    "A collection of graphic design projects I have worked on for Infracost. It included an FinOps educational e-book, business cards and a leaflet.",
   imageUrl: "/assets/MyProjects/E-bookProject/InfraHero.png",
   tags: ["E-book", "Business card", "Leaflet"],
   year: "",
@@ -74,8 +74,7 @@ export const infracostProjects: Project = {
     title: "Business card",
     description:
       "For this mini project I was given a simple brief and few examples of the business card. The client wanted to keep the same look and feel as the other items. At first I decided to play with colour, logo and layout, just to see what options we have. I created a few different versions to show the client the options.",
-    imageUrl:
-      "/assets/MyProjects/E-bookProject/BusinessCardSectionMiddle.png",
+    imageUrl: "/assets/MyProjects/E-bookProject/BusinessCardSectionMiddle.png",
   },
   sideBySideSectionsLeft: [
     {
