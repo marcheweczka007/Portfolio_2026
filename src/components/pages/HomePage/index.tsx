@@ -89,10 +89,10 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.processesTitle}</h2>
                 </div>
-                <p className="text-md text-gray-800 mb-8 leading-relaxed">
+                <p className="text-md text-gray-800 mb-8 leading-normal tracking-wide">
                   {homeContent.processesDescription}
                 </p>
-                <div className="space-y-1">
+                <div className="text-md text-gray-800 space-y-1 tracking-wide">
                   {[
                     { label: homeContent.processStep1 },
                     { label: homeContent.processStep2 },
@@ -128,10 +128,10 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.projectsTitle}</h2>
                 </div>
-                <p className="text-md text-gray-800 mb-8 leading-relaxed">
+                <p className="text-md text-gray-800 mb-8 leading-relaxed tracking-wide">
                   {homeContent.projectsDescription}
                 </p>
-                <div className="space-y-1">
+                <div className="text-md text-gray-800 space-y-1 tracking-wide">
                   {[
                     { label: homeContent.projectStat1 },
                     { label: homeContent.projectStat2 },
@@ -160,7 +160,9 @@ export default function HomePage() {
               <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
                 {homeContent.featuredWorkLabel}
               </p>
-              <h2 className="text-4xl font-bold">{homeContent.featuredWorkTitle}</h2>
+              <h2 className="text-4xl font-bold">
+                {homeContent.featuredWorkTitle}
+              </h2>
               <p className="text-gray-500 mt-3">
                 {homeContent.featuredWorkDescription}
               </p>

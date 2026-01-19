@@ -67,7 +67,7 @@ export default function ProcessesPage() {
             {processesContent.sectionLabel}
           </p>
           <h2 className="text-4xl font-bold">{processesContent.title}</h2>
-          <p className="text-muted-foreground mt-3 mb-4">
+          <p className="text-muted-foreground text-lg tracking-normal mt-3 mb-8">
             {processesContent.subtitle}
           </p>
         </div>
