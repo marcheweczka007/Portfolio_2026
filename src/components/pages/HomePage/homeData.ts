@@ -11,7 +11,7 @@ const homeContent = {
 
   projectsTitle: "Projects",
   projectsDescription:
-    "I have worked in SaaS start-ups on all kinds of projects, big and small. I really enjoy making interfaces look clean and feel good to use. And honestly, working around tricky constraints is where I have the most fun, that’s usually when the best ideas show up.",
+    "I’ve worked in SaaS start-ups on projects of all sizes, from small improvements to more complex product work. I enjoy making interfaces feel clean, intuitive, and genuinely nice to use, with attention to both usability and detail. Working within real constraints is what I enjoy most, it pushes me to think more creatively, and that’s usually when the best ideas start to emerge.",
   projectStat1: "Mobile Product Design",
   projectStat2: "Web Platforms",
   projectStat3: "Design Systems & UI Libraries",

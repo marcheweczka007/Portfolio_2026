@@ -128,7 +128,7 @@ export default function HomePage() {
                   </div>
                   <h2>{homeContent.projectsTitle}</h2>
                 </div>
-                <p className="text-md text-gray-800 mb-8 leading-relaxed tracking-wide">
+                <p className="text-md text-gray-800 mb-8 leading-normal tracking-wide">
                   {homeContent.projectsDescription}
                 </p>
                 <div className="text-md text-gray-800 space-y-1 tracking-wide">
