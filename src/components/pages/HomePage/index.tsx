@@ -34,7 +34,7 @@ export default function HomePage() {
               <span className="inline-flex items-center px-4 py-1.5 font-extrabold rounded-full bg-orange-100 border border-orange-200/60 text-orange-600 text-3xl md:text-4xl lg:text-5xl  font-medium mx-1">
                 product designer
               </span>{" "}
-              with a growing focus on{" "}
+              {/* with a growing focus on{" "}
               <span
                 className="relative inline-block underline decoration-2 decoration-[#DE5516] underline-offset-4"
                 style={{
@@ -45,8 +45,8 @@ export default function HomePage() {
                 }}
               >
                 building in code
-              </span>{" "}
-              and collaborating hands-on with engineering.
+              </span>{" "} */}
+              who enjoys building closer to code and working hands-on with engineering
             </h1>
             <div className="flex gap-4">
               <Button size="lg" asChild>

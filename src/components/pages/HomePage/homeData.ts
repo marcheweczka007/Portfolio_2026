@@ -7,11 +7,11 @@ const homeContent = {
   processStep1: "Clarify requirements and constraints early",
   processStep2: "Design and prototype closer to implementation",
   processStep3: "Test ideas early and adjust quickly",
-  processStep4: "Work closely with front-end engineers",
+  processStep4: "Collaborate closely with front-end engineers",
 
   projectsTitle: "Projects",
   projectsDescription:
-    "I’ve worked in SaaS start-ups on projects of all sizes, from small improvements to more complex product work. I enjoy making interfaces feel clean, intuitive, and genuinely nice to use, with attention to both usability and detail. Working within real constraints is what I enjoy most, it pushes me to think more creatively, and that’s usually when the best ideas start to emerge.",
+    "I’ve worked in SaaS start-ups on projects of all sizes, from small improvements to more complex product work. I enjoy making interfaces feel clean, intuitive, and genuinely nice to use, with attention to both usability and detail. Working within real constraints is what I enjoy most, it pushes me to think more creatively, and that’s usually where the best ideas come from.",
   projectStat1: "Mobile Product Design",
   projectStat2: "Web Platforms",
   projectStat3: "Design Systems & UI Libraries",
