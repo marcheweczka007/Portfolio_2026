@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../../ui/button.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "../../ui/card.tsx";
-import { ArrowRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import processes, {
   sections,
   requirements,
+  figmaVScodeContent as figmaVScodeContentData,
   componentFirstContent,
 } from "./ProcessesData.ts";
 import BackButton from "../../pageUtilities/BackButton.tsx";
@@ -18,6 +18,7 @@ export default function ProcessesPage() {
   const requirementsContent = requirements;
   const componentFirst = componentFirstContent;
   const [activeSection, setActiveSection] = useState("prototyping");
+  const figmaVScodeContent = figmaVScodeContentData;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -136,16 +137,37 @@ export default function ProcessesPage() {
           </div>
         </section>
 
+        {/* When I design in Figma vs code */}
+        <section id="figmaVScode" className="scroll-mt-32 mb-24">
+          <div className="mb-8">
+            <h2 className="text-xl font-bold mb-3">
+              {figmaVScodeContent.title}
+            </h2>
+            <p className="text-muted-foreground leading-relaxed max-w-6xl">
+              {figmaVScodeContent.description}
+            </p>
+            <p className="text-muted-foreground leading-relaxed max-w-6xl">
+              {figmaVScodeContent.description2}
+            </p>
+            <img
+              src={figmaVScodeContent.image}
+              alt="When I design in Figma vs code"
+              className="w-full h-auto rounded-xl my-4"
+            />
+
+          </div>
+        </section>
+
         {/* Component First Thinking */}
         <section id="component-first" className="scroll-mt-32 mb-24">
-          <h2 className="text-xl font-medium mb-4">
+          <h2 className="text-xl font-bold mb-4">
             {" "}
             {componentFirstContent.title}
           </h2>
 
           {/* Step-by-step process */}
           <div className="mb-8">
-            <h3 className="mb-8">
+            <h3 className="mb-8 ">
               The steps I would apply when building a product in code, this can
               vary depending on the project and the team.
             </h3>
@@ -254,7 +276,7 @@ export default function ProcessesPage() {
                 {[
                   "I’ve had first hand experience seeing how designers often spend a lot of time creating high-fidelity flows and screens, followed by lengthy handovers and back and forth with engineers. This process is time consuming, and the results are not always what was expected. From my experience, learning to code basic UI using best practices helps close this gap, reduces handover time, and fits more naturally into the engineering workflow.",
                   "Designing in code doesn’t take away from design thinking, it helps bring it closer to how the product is actually built. Visual decisions and interactions can be tested and adjusted alongside technical constraints, which reduces friction between design and engineering.",
-                  "It's super exciting for me to see how my designes are build in code, and the fact that I can do it myself gives me a lot of confidence and pride in my work."
+                  "Seeing my designs come to life in real code, and being able to shape that myself, gives me confidence that what I design actually works.",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2.5 flex-shrink-0" />
