@@ -1,13 +1,13 @@
 const aboutContent = {
   backToHome: "Back to Home",
-  pageTitle: "Hi again 👋 Here’s a little about me and my experience.",
+  pageTitle: "Hi, I'm Zuza 👋 Here’s a little about me and my experience.",
   bioP1:
-    "I'm a product designer with nearly 3 years of experience working for SaaS companies. I'm comfortable wearing multiple hats from shaping design systems to putting together an e-book for a marketing campaign. ",
+    "I’m a product designer with experience working on SaaS products, comfortable wearing multiple hats as needed, from shaping design systems to creating things like e-books for marketing campaigns. I enjoy working where design extends beyond screens and supports the product as a whole. ",
   bioP2:
-    " I work closely with developers, and lately I’ve been learning to code myself, which been an empowering experience, and I'm taking time to keep growing my coding skills. With the help of AI tools, I prototype and test ideas quickly, turning concepts into real, usable solutions much faster.  ",
+    "I work closely with developers and have been learning to code myself, which has become a natural extension of my design practice. I’m intentionally developing these skills further, using AI tools to prototype and test ideas quickly.",
   bioP3:
-    "I’ve worked solo and inside cross-functional teams, and I’ve learned that the best work happens when everyone builds together. ",
-  bioP4: "Open to new opportunities where I can contribute and grow.",
+    "I’ve worked both independently and within cross-functional teams, and I’ve learned that the best work happens when everyone builds together. ",
+  bioP4: "Open to new opportunities & freelance work",
   resumeButton: "Resume",
   expertiseTitle: "My focus areas",
 
@@ -62,13 +62,13 @@ const aboutContent = {
   designSystemContent1:
     "As a product designer, I was often tasked with building or maintaining design systems. I've learned a lot about how to create a design system and how to use it to create a consistent user experience. But I've also learned why it's important to keep the codebase clean and maintainable.",
   designSystemContent2: "My design system philosophy:",
-  designSystemPoint1:
-    "Start small with foundational elements",
+  designSystemPoint1: "Start small with foundational elements",
   designSystemPoint2:
     "Build component libraries that are flexible (or use existing libraries like shadcn/ui)",
   designSystemPoint3:
     "Document patterns and usage guidelines for the entire team",
-  designSystemPoint4: "Creating a clear design token structure that makes it easy to scale and maintain the system.",
+  designSystemPoint4:
+    "Creating a clear design token structure that makes it easy to scale and maintain the system.",
   designSystemPoint5:
     "Prioritise accessibility and inclusive design from the start",
   designSystemPoint6:

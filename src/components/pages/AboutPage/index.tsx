@@ -45,7 +45,7 @@ export default function AboutPage() {
                 <p>{aboutContent.bioP3}</p>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 border border-orange-200/20 mt-2">
                   <Sparkles className="w-4 h-4 text-orange-600" />
-                  <span className="text-xs text-orange-600">
+                  <span className="text-sm text-orange-600">
                     {aboutContent.bioP4}
                   </span>
                 </div>
