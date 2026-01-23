@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import logoImage from "/src/assets/Logo/LogoZuPortfolioV2.svg?url";
 import { Button } from "./button";
 import { SendHorizontal, Menu, X, Download } from "lucide-react";
 const headerContent = {
@@ -44,7 +43,7 @@ export function NavigationBar() {
           {/* Logo */}
           <div className="flex-shrink-0 lg:mr-52 ">
             <img
-              src={logoImage}
+              src="/assets/Logo/LogoZuPortfolioV2.svg"
               alt="Logo"
               className="h-8 cursor-pointer hover:opacity-80 transition-opacity"
               onClick={() => navigate("/")}

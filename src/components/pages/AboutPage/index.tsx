@@ -1,14 +1,10 @@
 import React from "react";
 import Timeline from "../../ui/CustomUI/Timeline";
-import ascentLogo from "../../../assets/EmployersLogos/ascentplatformLogo.jpg";
-import grafterrLogo from "../../../assets/EmployersLogos/grafterrLogo.png";
-import infracostLogo from "../../../assets/EmployersLogos/infracostLogo.png";
 import aboutContent from "./aboutData.ts";
 import { Button } from "../../ui/button.tsx";
 import { ScrollToTop } from "../../ui/scrollToTop.tsx";
 
 import { Zap, Search, Box, Sparkles, Layers, Code2 } from "lucide-react";
-import portraitImage from "../../../assets/zuza_portfolio.png";
 import {
   Accordion,
   AccordionContent,
@@ -30,7 +26,7 @@ export default function AboutPage() {
             <div className="md:w-2/5">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden relative group">
                 <img
-                  src={portraitImage}
+                  src="/assets/zuza_portfolio.png"
                   alt="Zuza Marchewka"
                   className="w-full h-full object-cover rounded-8xl"
                 />
@@ -179,19 +175,19 @@ export default function AboutPage() {
           <Timeline
             items={[
               {
-                icon: ascentLogo,
+                icon: "/assets/EmployersLogos/ascentplatformLogo.jpg",
                 company: "Ascent Platform",
                 role: "Product Designer",
                 year: "2024–2025",
               },
               {
-                icon: infracostLogo,
+                icon: "/assets/EmployersLogos/infracostLogo.png",
                 company: "Infracost ",
                 role: " (Freelance) Graphic Designer",
                 year: "2024",
               },
               {
-                icon: grafterrLogo,
+                icon: "/assets/EmployersLogos/grafterrLogo.png",
                 company: "Grafterr",
                 role: "Junior UX Designer",
                 year: "2022-2023",
