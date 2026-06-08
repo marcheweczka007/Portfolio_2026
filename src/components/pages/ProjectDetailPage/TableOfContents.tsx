@@ -37,8 +37,10 @@ export function TableOfContents({
   };
 
   return (
-    <div className="hidden xl:block fixed left-6 top-40 z-30 w-48">
-      <div className="rounded-lg bg-neutral-50 shadow-lg border border-gray-100 px-5 py-4">
+    <nav
+      aria-label={title}
+      className="rounded-lg bg-neutral-50 shadow-lg border border-gray-100 px-5 py-4"
+    >
         <div className="flex items-center justify-between mb-4">
           <p className="text-sm font-semibold text-gray-900">{title}</p>
         </div>
@@ -73,7 +75,6 @@ export function TableOfContents({
             </div>
           ))}
         </div>
-      </div>
-    </div>
+    </nav>
   );
 }

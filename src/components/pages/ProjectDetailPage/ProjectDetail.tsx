@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { CTASection } from "../../ui/CustomUI/CTASection";
 import { Project } from "../ProjectsPage/projects/projects";
 import { TableOfContents } from "./TableOfContents";
+import { StickySidebar } from "./StickySidebar";
 import { ExtraImageSection } from "./ExtraImageSection";
 import { DescriptionSection } from "./DescriptionSection";
 import { ProjectSectionDescription } from "./ProjectSection";
@@ -76,9 +77,20 @@ export function ProjectDetail({
         </Button>
       </div>
 
-      {/* Table of contents */}
-      {toc && <TableOfContents title={toc.title} items={toc.items} />}
+      <div
+        className={
+          toc
+            ? "xl:flex xl:justify-center xl:gap-8 xl:px-6"
+            : undefined
+        }
+      >
+        {toc && (
+          <StickySidebar>
+            <TableOfContents title={toc.title} items={toc.items} />
+          </StickySidebar>
+        )}
 
+        <div className={toc ? "min-w-0 w-full max-w-6xl" : "w-full"}>
       {/* Hero Section */}
       <ProjectHeroSection
         title={project.title}
@@ -272,6 +284,8 @@ export function ProjectDetail({
 
       {/* Scroll to Top Button */}
       <ScrollToTop />
+        </div>
+      </div>
     </div>
   );
 }
